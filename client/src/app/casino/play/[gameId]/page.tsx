@@ -2,8 +2,11 @@
 
 import { use, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 import { Loader2, X, AlertTriangle } from "lucide-react";
 import { openGame } from "@/lib/casino-api";
+import { useAuthStore } from "@/store/auth";
+import { useUiStore } from "@/store/ui";
 
 // Full-screen game launcher: opens a Gamble Hub session for the gameId, then
 // embeds the returned URL in an iframe. Opening is allowed at any balance —
@@ -15,23 +18,39 @@ export default function PlayGamePage({
 }) {
   const { gameId } = use(params);
   const router = useRouter();
+  const accessToken = useAuthStore((s) => s.accessToken);
+  const openLoginModal = useUiStore((s) => s.openLoginModal);
   const [url, setUrl] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    // Safety net behind the card-level gate: guests can't open a session.
+    if (!accessToken) {
+      toast.error("Please log in to play");
+      openLoginModal();
+      router.replace("/casino");
+      return;
+    }
+
     let cancelled = false;
     openGame(decodeURIComponent(gameId))
       .then((res) => {
         if (!cancelled) setUrl(res.url);
       })
       .catch((e) => {
-        if (!cancelled)
-          setError(e?.response?.data?.message || e?.message || "Could not open the game.");
+        if (cancelled) return;
+        if (e?.response?.status === 401) {
+          toast.error("Please log in to play");
+          openLoginModal();
+          router.replace("/casino");
+          return;
+        }
+        setError(e?.response?.data?.message || e?.message || "Could not open the game.");
       });
     return () => {
       cancelled = true;
     };
-  }, [gameId]);
+  }, [gameId, accessToken, openLoginModal, router]);
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-black">

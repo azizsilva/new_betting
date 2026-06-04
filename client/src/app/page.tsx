@@ -1,19 +1,44 @@
-import { Cherry, Club } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/home/hero";
 import { Jackpots } from "@/components/home/jackpots";
 import { CategoryTiles } from "@/components/home/category-tiles";
 import { Promotions } from "@/components/home/promotions";
-import { Section, SectionHeader } from "@/components/ui/section";
-import { Carousel } from "@/components/ui/carousel";
-import { GameCard } from "@/components/casino/game-card";
-import { CASINO_GAMES, LIVE_CASINO } from "@/lib/mock";
+import { HomeGameRows } from "@/components/casino/home-game-rows";
 import { LatestWins } from "@/components/home/latest-wins";
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://afrobet216.com";
+
+// Structured data → richer Google results (org + site search box).
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "AfroBet216",
+      url: SITE_URL,
+      logo: `${SITE_URL}/logo.png`,
+    },
+    {
+      "@type": "WebSite",
+      name: "AfroBet216",
+      url: SITE_URL,
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${SITE_URL}/casino?q={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
+};
 
 export default function HomePage() {
   return (
     <div className="min-h-screen pb-20 lg:pb-0">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
 
       {/* Centered content container with visible side margins (kingsbet-style). */}
@@ -25,38 +50,12 @@ export default function HomePage() {
         <Jackpots />
         <CategoryTiles />
 
-        {/* Casino games */}
-        <Section>
-          <SectionHeader
-            icon={<Cherry className="size-5 text-gold" />}
-            title="Casino Games"
-            actionLabel="All games"
-            actionHref="/casino"
-          />
-          <Carousel slideClassName="w-[44%] sm:w-[31%] lg:w-[15%]">
-            {CASINO_GAMES.map((g) => (
-              <GameCard key={g.id} game={g} />
-            ))}
-          </Carousel>
-        </Section>
+        {/* Live game rows (Casino / Live / Instant), split by category and
+            sharing the cached catalog with /casino. */}
+        <HomeGameRows />
 
         {/* Promotions */}
         <Promotions />
-
-        {/* Live casino */}
-        <Section>
-          <SectionHeader
-            icon={<Club className="size-5 text-gold" />}
-            title="Live Games"
-            actionLabel="All games"
-            actionHref="/live-casino"
-          />
-          <Carousel slideClassName="w-[44%] sm:w-[31%] lg:w-[15%]">
-            {LIVE_CASINO.map((g) => (
-              <GameCard key={g.id} game={g} />
-            ))}
-          </Carousel>
-        </Section>
 
         {/* Latest Wins */}
         <div className="pt-4">

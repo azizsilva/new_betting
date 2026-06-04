@@ -2,19 +2,31 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 import { Play, Heart, Loader2 } from "lucide-react";
 import type { Game } from "@/lib/games";
+import { useAuthStore } from "@/store/auth";
+import { useUiStore } from "@/store/ui";
 import { cn } from "@/lib/utils";
 
 export function CasinoGameCard({ game, large }: { game: Game; large?: boolean }) {
   const router = useRouter();
+  const accessToken = useAuthStore((s) => s.accessToken);
+  const openLoginModal = useUiStore((s) => s.openLoginModal);
   const [likes, setLikes] = useState(0);
   const [liked, setLiked] = useState(false);
   const [launching, setLaunching] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
-  // Launch routes to the play page, which opens the session + renders the iframe.
+  // Launch requires login (real play). Guests get a toast + the login modal —
+  // never the raw 401 page.
   function launch() {
     if (launching) return;
+    if (!accessToken) {
+      toast.error("Please log in to play");
+      openLoginModal();
+      return;
+    }
     setLaunching(true);
     router.push(`/casino/play/${encodeURIComponent(game.gameId ?? game.id)}`);
   }
@@ -23,21 +35,27 @@ export function CasinoGameCard({ game, large }: { game: Game; large?: boolean })
     <button
       onClick={launch}
       className={cn(
-        "group relative block w-full overflow-hidden rounded-2xl border border-white/5 text-left",
+        "group relative block w-full overflow-hidden rounded-2xl border border-white/5 bg-surface text-left",
         large ? "aspect-[4/5] lg:aspect-auto lg:h-full" : "aspect-[4/5]",
       )}
     >
-      {/* thumbnail or gradient placeholder */}
-      {game.imageUrl ? (
+      {/* gradient placeholder underneath — visible until the HD image decodes */}
+      <div className={cn("absolute inset-0 bg-gradient-to-br", game.hue)} />
+
+      {/* HD thumbnail: cover-fit, async-decoded, fades in to avoid a pixelated flash */}
+      {game.imageUrl && (
         // eslint-disable-next-line @next/next/no-img-element -- provider images come from arbitrary hosts
         <img
           src={game.imageUrl}
           alt={game.name}
           loading="lazy"
-          className="absolute inset-0 size-full object-cover"
+          decoding="async"
+          onLoad={() => setLoaded(true)}
+          className={cn(
+            "absolute inset-0 size-full object-cover transition-opacity duration-300",
+            loaded ? "opacity-100" : "opacity-0",
+          )}
         />
-      ) : (
-        <div className={cn("absolute inset-0 bg-gradient-to-br", game.hue)} />
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 

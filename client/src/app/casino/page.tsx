@@ -7,9 +7,16 @@ import { CasinoBrowser } from "@/components/casino/casino-browser";
 import { GameGridSkeleton } from "@/components/ui/skeleton";
 
 export const metadata: Metadata = {
-  title: "Casino — Slots, Live Casino & Instant Games",
+  title: "Casino — Machines à Sous, Casino Live & Jeux Instantanés",
   description:
-    "Play thousands of casino games on BetSlate — top slots, live casino tables, Megaways, bonus-buy and crash games from the best providers.",
+    "Jouez à des milliers de jeux de casino sur AfroBet216 — machines à sous, tables de casino live (Evolution), Megaways, bonus-buy et jeux crash des meilleurs fournisseurs.",
+  alternates: { canonical: "/casino" },
+  openGraph: {
+    title: "Casino — Machines à Sous, Casino Live & Jeux Instantanés · AfroBet216",
+    description:
+      "Des milliers de jeux de casino : machines à sous, casino live, Megaways, bonus-buy et crash.",
+    url: "/casino",
+  },
 };
 
 export default function CasinoPage() {

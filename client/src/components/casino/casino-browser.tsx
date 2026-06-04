@@ -2,10 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useQueryState } from "nuqs";
-import { useQuery } from "@tanstack/react-query";
 import { Heart, Crown, Tag, Rocket, ChevronDown, Search, X } from "lucide-react";
-import { mapCatalog, QUICK_FILTERS, type Game, type GameTab } from "@/lib/games";
-import { fetchGames } from "@/lib/casino-api";
+import { QUICK_FILTERS, type Game, type GameTab } from "@/lib/games";
+import { useGames } from "@/lib/use-games";
 import { CasinoGameCard } from "./casino-game-card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -37,15 +36,8 @@ export function CasinoBrowser() {
   const [search, setSearch] = useState(q);
   const [visible, setVisible] = useState(PAGE_SIZE);
 
-  // Live catalog from Gamble Hub (falls back to empty list on error).
-  // No currency override — the server uses GAMBLEHUB_CURRENCY (TND by default).
-  const { data: catalog, isLoading, isError } = useQuery({
-    queryKey: ["casino-games"],
-    queryFn: () => fetchGames(),
-    staleTime: 5 * 60_000,
-  });
-
-  const games: Game[] = useMemo(() => (catalog ? mapCatalog(catalog) : []), [catalog]);
+  // Shared live catalog (same query as the homepage rows → fetched once, cached).
+  const { games, isLoading, isError } = useGames();
   const providers = useMemo(
     () => Array.from(new Set(games.map((g) => g.provider))).sort(),
     [games],
