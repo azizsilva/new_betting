@@ -41,9 +41,8 @@ casinoRouter.get(
     const games = await getUserGames(currency);
     // Never cache — catalog changes and a stale empty [] breaks the lobby.
     res.setHeader("Cache-Control", "no-store");
-    // Only return enabled games that have a real thumbnail — games without
-    // images render as blank cards in the lobby which looks broken.
-    res.json(games.filter((g) => g.isEnabled && g.imageUrl));
+    // Return all enabled games; those without imageUrl show a gradient placeholder.
+    res.json(games.filter((g) => g.isEnabled));
   }),
 );
 
