@@ -39,10 +39,11 @@ casinoRouter.get(
   asyncHandler(async (req, res) => {
     const currency = (req.query.currency as string)?.toUpperCase() || DEFAULT_CURRENCY;
     const games = await getUserGames(currency);
-    // Never cache — catalog changes and a stale empty [] breaks the lobby.
     res.setHeader("Cache-Control", "no-store");
-    // Return all enabled games; those without imageUrl show a gradient placeholder.
-    res.json(games.filter((g) => g.isEnabled));
+    // Only return games that are enabled AND have a real thumbnail image.
+    // GambleHub returns "" for many IGT/Amatic games — skip those so every
+    // card in the lobby has a proper image.
+    res.json(games.filter((g) => g.isEnabled && g.imageUrl));
   }),
 );
 
