@@ -77,12 +77,18 @@ casinoRouter.post(
       exitUrl: body.exitUrl ?? env.CLIENT_ORIGIN.split(",")[0]!.trim(),
     });
 
-    // Track recently played (idempotent on (userId, gameId)).
-    await prisma.recentGame.upsert({
-      where: { userId_gameId: { userId: user.id, gameId: body.gameId } },
-      create: { userId: user.id, gameId: body.gameId },
-      update: {},
-    });
+    // Track recently played (best-effort). Never let a logging write — or a
+    // concurrent-upsert race (P2002) — break the game launch.
+    try {
+      const gameId = body.gameId.slice(0, 50);
+      await prisma.recentGame.upsert({
+        where: { userId_gameId: { userId: user.id, gameId } },
+        create: { userId: user.id, gameId },
+        update: {}, // playedAt is @updatedAt — Prisma refreshes it automatically
+      });
+    } catch (err) {
+      logger.warn({ err: (err as Error).message }, "recentGame upsert skipped");
+    }
 
     res.json(result);
   }),
