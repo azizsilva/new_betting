@@ -45,6 +45,18 @@ function clientUrl(path: string) {
   return `${env.GAMBLEHUB_CLIENT_URL.replace(/\/$/, "")}${path}`;
 }
 
+// fetch with a hard timeout so a slow/hanging provider returns a clean error
+// instead of holding the request open until nginx 502s.
+async function fetchT(url: string, init: RequestInit, timeoutMs = 12_000): Promise<Response> {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...init, signal: ctrl.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 function assertConfigured() {
   // user_id comes back from the login response, so only login+password are required.
   if (!env.GAMBLEHUB_LOGIN || !env.GAMBLEHUB_PASSWORD) {
@@ -66,7 +78,7 @@ async function login(): Promise<string> {
     login: env.GAMBLEHUB_LOGIN,
     password: env.GAMBLEHUB_PASSWORD,
   });
-  const res = await fetch(officeUrl("/auth/login"), {
+  const res = await fetchT(officeUrl("/auth/login"), {
     method: "POST",
     headers: {
       accept: "application/json",
@@ -104,7 +116,7 @@ export async function getUserGames(currency: string): Promise<GambleHubGame[]> {
     const token = await getToken(attempt > 0);
     // userId() resolves only after login has populated it (or via env override).
     const path = `/users/${userId()}/getUserGames/${currency}`;
-    const res = await fetch(officeUrl(path), {
+    const res = await fetchT(officeUrl(path), {
       headers: { accept: "application/json", authorization: `Bearer ${token}` },
     });
     if (res.status === 401 && attempt === 0) {
@@ -174,7 +186,7 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
   let res: Response;
   let rawText: string;
   try {
-    res = await fetch(clientUrl("/games/openGame"), {
+    res = await fetchT(clientUrl("/games/openGame"), {
       method: "POST",
       headers: {
         accept: "application/json",
