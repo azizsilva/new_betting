@@ -229,9 +229,9 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
   // Don't let a logging-table write failure break the launch — wrap it.
   try {
     await prisma.gameSession.upsert({
-      where: { sessionId: sessionId.slice(0, 128) },
+      where: { sessionId },
       create: {
-        sessionId: sessionId.slice(0, 128),
+        sessionId,
         userId: params.user.id,
         login: playerLogin.slice(0, 100),
         currency: params.currency,
