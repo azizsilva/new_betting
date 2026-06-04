@@ -3,11 +3,21 @@ import { z } from "zod";
 import { asyncHandler } from "../middleware/error.js";
 import { authenticate } from "../middleware/auth.js";
 import { processGameCallback } from "../services/gameCallback.service.js";
+import { getUserGames, openGame } from "../services/gambleHub.service.js";
+import { verifyHmac } from "../lib/hmac.js";
 import { prisma } from "../lib/prisma.js";
+import { env } from "../config/env.js";
+import { logger } from "../lib/logger.js";
+import { NotFound } from "../lib/errors.js";
 
 export const casinoRouter = Router();
 
-// ─── Player-facing ───
+// Default session currency. Gamble Hub configures callbacks per-currency; if you
+// support more than one, derive this per user instead of a constant.
+const DEFAULT_CURRENCY = "USD";
+
+// ─── Player-facing ────────────────────────────────────────────────────────────
+
 casinoRouter.get(
   "/recent",
   authenticate,
@@ -21,28 +31,245 @@ casinoRouter.get(
   }),
 );
 
-// ─── Provider callback (server-to-server) ───
-// In production this endpoint must verify the provider signature/IP allowlist.
-const callbackSchema = z.object({
-  userId: z.number().int().positive(),
-  action: z.enum(["bet", "win", "refund"]),
-  txnId: z.string().min(1),
-  gameUid: z.string().optional(),
-  gameRound: z.string().optional(),
-  betAmount: z.union([z.number(), z.string()]).optional(),
-  winAmount: z.union([z.number(), z.string()]).optional(),
+// Game catalog for the lobby. Cached briefly upstream by the provider; we proxy.
+casinoRouter.get(
+  "/games",
+  authenticate,
+  asyncHandler(async (req, res) => {
+    const currency = (req.query.currency as string)?.toUpperCase() || DEFAULT_CURRENCY;
+    const games = await getUserGames(currency);
+    res.json(games.filter((g) => g.isEnabled));
+  }),
+);
+
+// Open a game session → returns iframe url + sessionId.
+const openSchema = z.object({
+  gameId: z.string().min(1),
+  demo: z.boolean().optional(),
+  language: z.string().min(2).max(5).optional(),
+  exitUrl: z.string().url().optional(),
 });
+
+casinoRouter.post(
+  "/open",
+  authenticate,
+  asyncHandler(async (req, res) => {
+    const body = openSchema.parse(req.body);
+    const user = await prisma.user.findUnique({
+      where: { id: req.user!.id },
+      select: { id: true, username: true, language: true },
+    });
+    if (!user) throw NotFound("User not found");
+
+    // Opening a game is always allowed — even at 0 balance. Betting is enforced
+    // later in the seamless wallet callback, not here.
+    const result = await openGame({
+      user,
+      gameId: body.gameId,
+      currency: DEFAULT_CURRENCY,
+      language: body.language ?? user.language,
+      demo: body.demo,
+      exitUrl: body.exitUrl ?? env.CLIENT_ORIGIN.split(",")[0]!.trim(),
+    });
+
+    // Track recently played (idempotent on (userId, gameId)).
+    await prisma.recentGame.upsert({
+      where: { userId_gameId: { userId: user.id, gameId: body.gameId } },
+      create: { userId: user.id, gameId: body.gameId },
+      update: {},
+    });
+
+    res.json(result);
+  }),
+);
+
+// ─── Seamless wallet callback (server-to-server, provider → us) ────────────────
+// No auth header; integrity is enforced by HMAC over the raw body (doc §6, §7).
+
+interface CallbackOk {
+  balance: number;
+  currency: string;
+  error: string;
+  login: string;
+  status: "success";
+}
+
+const num = z.union([z.number(), z.string()]).transform((v) => Number(v) || 0);
+
+const balanceSchema = z.object({
+  cmd: z.literal("getBalance"),
+  login: z.string(),
+  sessionid: z.string(),
+});
+
+const writeBetSchema = z.object({
+  cmd: z.literal("writeBet"),
+  bet: num.optional(),
+  win: num.optional(),
+  login: z.string(),
+  sessionid: z.string(),
+  transactionId: z.string().min(1),
+  round_finished: z.boolean().nullable().optional(),
+  info: z.string().optional(),
+});
+
+const rollbackSchema = z.object({
+  cmd: z.literal("rollback"),
+  bet: num.optional(),
+  login: z.string(),
+  sessionid: z.string(),
+  transactionId: z.string().min(1),
+  gameId: z.string().optional(),
+});
+
+function fail(res: import("express").Response, currency: string, login: string, message: string) {
+  return res.status(400).json({
+    status: "fail",
+    balance: 0,
+    currency,
+    error: message,
+    login,
+  });
+}
 
 casinoRouter.post(
   "/callback",
   asyncHandler(async (req, res) => {
-    const body = callbackSchema.parse(req.body);
-    const result = await processGameCallback({
-      ...body,
-      requestIp: req.ip,
-      requestUa: req.headers["user-agent"],
-      raw: req.body,
-    });
-    res.json(result);
+    const raw = req.rawBody ?? Buffer.from(JSON.stringify(req.body ?? {}));
+    const signature = (req.headers["x-signature"] as string) || "";
+
+    // 1) Verify HMAC over the exact received bytes.
+    if (!env.GAMBLEHUB_SECRET || !verifyHmac(raw, signature, env.GAMBLEHUB_SECRET)) {
+      logger.warn({ ip: req.ip }, "casino callback: bad signature");
+      return fail(res, DEFAULT_CURRENCY, "", "invalid signature");
+    }
+
+    const cmd = (req.body as { cmd?: string })?.cmd;
+
+    // Resolve the session → our user + currency.
+    const sessionid = (req.body as { sessionid?: string })?.sessionid ?? "";
+    const session = sessionid
+      ? await prisma.gameSession.findUnique({ where: { sessionId: sessionid } })
+      : null;
+    const currency = session?.currency ?? DEFAULT_CURRENCY;
+    const login = (req.body as { login?: string })?.login ?? session?.login ?? "";
+
+    if (!session) {
+      return fail(res, currency, login, "unknown session");
+    }
+
+    try {
+      switch (cmd) {
+        case "getBalance": {
+          balanceSchema.parse(req.body);
+          const user = await prisma.user.findUnique({
+            where: { id: session.userId },
+            select: { balance: true },
+          });
+          if (!user) return fail(res, currency, login, "user not found");
+          const ok: CallbackOk = {
+            balance: Number(user.balance),
+            currency,
+            error: "",
+            login,
+            status: "success",
+          };
+          return res.json(ok);
+        }
+
+        case "writeBet": {
+          const b = writeBetSchema.parse(req.body);
+          const bet = b.bet ?? 0;
+          const win = b.win ?? 0;
+          const gameRound = b.transactionId; // per-round key for exposure tracking
+
+          let balance: string | null = null;
+
+          // bet>0 → debit. Idempotent on (transactionId, "bet").
+          if (bet > 0) {
+            const r = await processGameCallback({
+              userId: session.userId,
+              action: "bet",
+              txnId: b.transactionId,
+              gameUid: session.gameId,
+              gameRound,
+              betAmount: bet,
+              raw: req.body,
+              requestIp: req.ip,
+              requestUa: req.headers["user-agent"],
+            });
+            balance = r.balance;
+          }
+
+          // win>0 → credit. Idempotent on (transactionId, "win"); distinct action
+          // lets a single round carry both bet and win without key collision.
+          if (win > 0) {
+            const r = await processGameCallback({
+              userId: session.userId,
+              action: "win",
+              txnId: b.transactionId,
+              gameUid: session.gameId,
+              gameRound,
+              winAmount: win,
+              raw: req.body,
+              requestIp: req.ip,
+              requestUa: req.headers["user-agent"],
+            });
+            balance = r.balance;
+          }
+
+          // bet=0 & win=0 → bonus / free spin: no balance change, just ack.
+          if (balance === null) {
+            const user = await prisma.user.findUnique({
+              where: { id: session.userId },
+              select: { balance: true },
+            });
+            balance = user ? user.balance.toString() : "0";
+          }
+
+          const ok: CallbackOk = {
+            balance: Number(balance),
+            currency,
+            error: "",
+            login,
+            status: "success",
+          };
+          return res.json(ok);
+        }
+
+        case "rollback": {
+          const b = rollbackSchema.parse(req.body);
+          // Refund the staked amount; keyed on the SAME transactionId as the bet,
+          // but action "refund" so it's independently idempotent.
+          const r = await processGameCallback({
+            userId: session.userId,
+            action: "refund",
+            txnId: b.transactionId,
+            gameUid: b.gameId ?? session.gameId,
+            gameRound: b.transactionId,
+            betAmount: b.bet ?? 0,
+            raw: req.body,
+            requestIp: req.ip,
+            requestUa: req.headers["user-agent"],
+          });
+          const ok: CallbackOk = {
+            balance: Number(r.balance),
+            currency,
+            error: "",
+            login,
+            status: "success",
+          };
+          return res.json(ok);
+        }
+
+        default:
+          return fail(res, currency, login, `unknown cmd: ${cmd}`);
+      }
+    } catch (err) {
+      // Insufficient balance / not found / validation → status fail + HTTP 400 (doc §6.3).
+      const message = err instanceof Error ? err.message : "callback error";
+      logger.warn({ cmd, login, message }, "casino callback failed");
+      return fail(res, currency, login, message);
+    }
   }),
 );

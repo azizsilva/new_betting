@@ -29,6 +29,15 @@ const schema = z.object({
   GAMBLY_API_BASE_URL: z.string().optional().default(""),
   GAMBLY_API_KEY: z.string().optional().default(""),
 
+  // Gamble Hub aggregator (Evolution, Amatic, slots, …) — seamless wallet.
+  GAMBLEHUB_OFFICE_URL: z.string().default("https://office-api.gamble-hub.net"),
+  GAMBLEHUB_CLIENT_URL: z.string().default("https://client-api.gamble-hub.net"),
+  GAMBLEHUB_LOGIN: z.string().optional().default(""),
+  GAMBLEHUB_PASSWORD: z.string().optional().default(""),
+  GAMBLEHUB_USER_ID: z.string().optional().default(""),
+  GAMBLEHUB_SECRET: z.string().optional().default(""), // HMAC-SHA256 user secret
+  GAMBLEHUB_CALLBACK_URL: z.string().optional().default(""), // override admin default; empty = use panel default
+
   PSP_API_BASE_URL: z.string().optional().default(""),
   PSP_API_KEY: z.string().optional().default(""),
   PSP_WEBHOOK_SECRET: z.string().optional().default(""),

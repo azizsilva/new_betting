@@ -2,8 +2,10 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useQueryState } from "nuqs";
+import { useQuery } from "@tanstack/react-query";
 import { Heart, Crown, Tag, Rocket, ChevronDown, Search, X } from "lucide-react";
-import { GAMES, PROVIDERS, QUICK_FILTERS, TOTAL_GAMES, type GameTab } from "@/lib/games";
+import { mapCatalog, QUICK_FILTERS, type Game, type GameTab } from "@/lib/games";
+import { fetchGames } from "@/lib/casino-api";
 import { CasinoGameCard } from "./casino-game-card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -35,6 +37,19 @@ export function CasinoBrowser() {
   const [search, setSearch] = useState(q);
   const [visible, setVisible] = useState(PAGE_SIZE);
 
+  // Live catalog from Gamble Hub (falls back to empty list on error).
+  const { data: catalog, isLoading, isError } = useQuery({
+    queryKey: ["casino-games", "USD"],
+    queryFn: () => fetchGames("USD"),
+    staleTime: 5 * 60_000,
+  });
+
+  const games: Game[] = useMemo(() => (catalog ? mapCatalog(catalog) : []), [catalog]);
+  const providers = useMemo(
+    () => Array.from(new Set(games.map((g) => g.provider))).sort(),
+    [games],
+  );
+
   // Debounce writes to the URL.
   useEffect(() => {
     const t = setTimeout(() => {
@@ -52,7 +67,7 @@ export function CasinoBrowser() {
 
   const filtered = useMemo(() => {
     const term = q.trim().toLowerCase();
-    return GAMES.filter((g) => {
+    return games.filter((g) => {
       if (g.tab !== tab) return false;
       if (quick !== "all" && !g.tags.includes(quick as never)) return false;
       if (provider && g.provider !== provider) return false;
@@ -60,7 +75,7 @@ export function CasinoBrowser() {
         return false;
       return true;
     });
-  }, [tab, q, quick, provider]);
+  }, [games, tab, q, quick, provider]);
 
   const shown = filtered.slice(0, visible);
 
@@ -152,7 +167,7 @@ export function CasinoBrowser() {
                 className="h-11 w-full appearance-none rounded-lg border border-line bg-bg-elevated px-3 pr-9 text-sm text-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50"
               >
                 <option value="">All providers</option>
-                {PROVIDERS.map((p) => (
+                {providers.map((p) => (
                   <option key={p} value={p}>
                     {p}
                   </option>
@@ -165,7 +180,15 @@ export function CasinoBrowser() {
       </div>
 
       {/* Grid */}
-      {shown.length === 0 ? (
+      {isLoading ? (
+        <div className="rounded-2xl border border-line bg-surface py-16 text-center text-muted">
+          Loading games…
+        </div>
+      ) : isError ? (
+        <div className="rounded-2xl border border-line bg-surface py-16 text-center text-muted">
+          Couldn’t load games. Please try again.
+        </div>
+      ) : shown.length === 0 ? (
         <div className="rounded-2xl border border-line bg-surface py-16 text-center text-muted">
           No games match your filters.
         </div>
@@ -188,7 +211,7 @@ export function CasinoBrowser() {
           />
         </div>
         <p className="text-sm text-muted">
-          {shown.length} games of {TOTAL_GAMES.toLocaleString()} loaded
+          {shown.length} games of {filtered.length.toLocaleString()} loaded
         </p>
         {visible < filtered.length && (
           <Button variant="brand" size="lg" onClick={() => setVisible((v) => v + PAGE_SIZE)}>

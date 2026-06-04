@@ -1,23 +1,44 @@
 "use client";
 
 import { useState } from "react";
-import { Play, Heart } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Play, Heart, Loader2 } from "lucide-react";
 import type { Game } from "@/lib/games";
 import { cn } from "@/lib/utils";
 
 export function CasinoGameCard({ game, large }: { game: Game; large?: boolean }) {
+  const router = useRouter();
   const [likes, setLikes] = useState(0);
   const [liked, setLiked] = useState(false);
+  const [launching, setLaunching] = useState(false);
+
+  // Launch routes to the play page, which opens the session + renders the iframe.
+  function launch() {
+    if (launching) return;
+    setLaunching(true);
+    router.push(`/casino/play/${encodeURIComponent(game.gameId ?? game.id)}`);
+  }
 
   return (
     <button
+      onClick={launch}
       className={cn(
         "group relative block w-full overflow-hidden rounded-xl border border-line text-left",
         large ? "row-span-2 aspect-[3/4] md:aspect-auto md:h-full" : "aspect-[3/4]",
       )}
     >
-      {/* placeholder art */}
-      <div className={cn("absolute inset-0 bg-gradient-to-br", game.hue)} />
+      {/* thumbnail or gradient placeholder */}
+      {game.imageUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element -- provider images come from arbitrary hosts
+        <img
+          src={game.imageUrl}
+          alt={game.name}
+          loading="lazy"
+          className="absolute inset-0 size-full object-cover"
+        />
+      ) : (
+        <div className={cn("absolute inset-0 bg-gradient-to-br", game.hue)} />
+      )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 
       {/* tags */}
@@ -30,7 +51,7 @@ export function CasinoGameCard({ game, large }: { game: Game; large?: boolean })
       {/* hover overlay: play + like */}
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/40 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
         <span className="grid size-12 place-items-center rounded-full bg-gold-gradient text-brand-foreground gold-glow">
-          <Play className="size-5 fill-current" />
+          {launching ? <Loader2 className="size-5 animate-spin" /> : <Play className="size-5 fill-current" />}
         </span>
         <span
           role="button"

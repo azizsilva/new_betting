@@ -20,7 +20,16 @@ export function createApp() {
       credentials: true,
     }),
   );
-  app.use(express.json({ limit: "1mb" }));
+  // Capture the raw request body so seamless-wallet callbacks can verify the
+  // HMAC signature over the exact bytes received (doc §7, byte-for-byte).
+  app.use(
+    express.json({
+      limit: "1mb",
+      verify: (req, _res, buf) => {
+        (req as express.Request & { rawBody?: Buffer }).rawBody = buf;
+      },
+    }),
+  );
   app.use(cookieParser());
   app.use(pinoHttp({ logger }));
 

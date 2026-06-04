@@ -8,6 +8,7 @@ declare global {
   namespace Express {
     interface Request {
       user?: { id: number; role: UserRole };
+      rawBody?: Buffer; // set by express.json verify hook for HMAC verification
     }
   }
 }

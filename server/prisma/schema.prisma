@@ -115,6 +115,7 @@ model User {
   loyaltyLedger      LoyaltyLedger[]
   gameCallbackEvents GameCallbackEvent[]
   gameRoundExposures GameRoundExposure[]
+  gameSessions       GameSession[]
   recentGames        RecentGame[]
   userDepositMethods UserDepositMethod[]
   userWithdrawBanks  UserWithdrawBank[]
@@ -360,6 +361,24 @@ model GameRoundExposure {
   @@unique([userId, gameRound])
   @@index([userId])
   @@map("game_round_exposures")
+}
+
+// Maps a Gamble Hub game session (sessionId + player login) back to our local
+// user + currency, so seamless wallet callbacks can resolve whose balance to move.
+model GameSession {
+  id        Int      @id @default(autoincrement())
+  sessionId String   @unique @map("session_id") @db.VarChar(128)
+  userId    Int      @map("user_id")
+  login     String   @db.VarChar(100)
+  currency  String   @db.VarChar(10)
+  gameId    String   @map("game_id") @db.VarChar(100)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@index([login])
+  @@index([userId])
+  @@map("game_sessions")
 }
 
 model RecentGame {

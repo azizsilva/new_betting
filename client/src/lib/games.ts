@@ -12,7 +12,9 @@ export interface Game {
   tab: GameTab;
   tags: GameTag[];
   featured?: boolean; // renders as a larger 2x2 tile
-  hue: string; // gradient placeholder until real thumbnails arrive
+  hue: string; // gradient placeholder / fallback when no thumbnail
+  imageUrl?: string; // real thumbnail from the provider catalog
+  gameId?: string; // provider game id passed to openGame (falls back to id)
 }
 
 // gradient helpers for the placeholder art
@@ -92,3 +94,40 @@ export const QUICK_FILTERS: { id: GameTag | "all"; label: string }[] = [
   { id: "bonus-buy", label: "Bonus Buy" },
   { id: "crash", label: "Crash Games" },
 ];
+
+// ─── Live catalog mapping (Gamble Hub) ────────────────────────────────────────
+
+// Raw shape returned by GET /casino/games.
+export interface CatalogGame {
+  id: string;
+  title: string;
+  imageUrl: string;
+  provider: string;
+  isEnabled?: boolean;
+}
+
+const LIVE_PROVIDERS = /(evolution|ezugi|pragmatic.?play.?live|live)/i;
+const INSTANT_PROVIDERS = /(spribe|aviator|turbo|smartsoft|crash)/i;
+
+// Bucket a provider catalog entry into one of the lobby tabs.
+function tabFor(g: CatalogGame): GameTab {
+  if (LIVE_PROVIDERS.test(g.provider) || /live|roulette|baccarat|blackjack/i.test(g.title))
+    return "live-casino";
+  if (INSTANT_PROVIDERS.test(g.provider)) return "instant";
+  return "casino";
+}
+
+// Convert the provider catalog into the UI's Game shape so the existing browser
+// and card components keep working unchanged.
+export function mapCatalog(games: CatalogGame[]): Game[] {
+  return games.map((g, i) => ({
+    id: g.id,
+    gameId: g.id,
+    name: g.title,
+    provider: g.provider || "Unknown",
+    tab: tabFor(g),
+    tags: [],
+    hue: hue(i),
+    imageUrl: g.imageUrl || undefined,
+  }));
+}
