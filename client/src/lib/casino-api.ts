@@ -6,9 +6,12 @@ export interface OpenGameResult {
   sessionId: string;
 }
 
-// Fetch the live game catalog for a currency (auth required).
-export async function fetchGames(currency = "USD"): Promise<CatalogGame[]> {
-  const { data } = await api.get<CatalogGame[]>("/casino/games", { params: { currency } });
+// Fetch the live game catalog. Currency is optional — when omitted the server
+// uses its configured default (GAMBLEHUB_CURRENCY, e.g. TND).
+export async function fetchGames(currency?: string): Promise<CatalogGame[]> {
+  const { data } = await api.get<CatalogGame[]>("/casino/games", {
+    params: currency ? { currency } : undefined,
+  });
   return data;
 }
 

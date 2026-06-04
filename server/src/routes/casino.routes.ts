@@ -12,9 +12,9 @@ import { NotFound } from "../lib/errors.js";
 
 export const casinoRouter = Router();
 
-// Default session currency. Gamble Hub configures callbacks per-currency; if you
-// support more than one, derive this per user instead of a constant.
-const DEFAULT_CURRENCY = "USD";
+// Default session currency. Games are registered under TND in this operator's account.
+// Override with GAMBLEHUB_CURRENCY env var if needed.
+const DEFAULT_CURRENCY = (env.GAMBLEHUB_CURRENCY || "TND").toUpperCase();
 
 // ─── Player-facing ────────────────────────────────────────────────────────────
 

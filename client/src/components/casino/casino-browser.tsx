@@ -38,9 +38,10 @@ export function CasinoBrowser() {
   const [visible, setVisible] = useState(PAGE_SIZE);
 
   // Live catalog from Gamble Hub (falls back to empty list on error).
+  // No currency override — the server uses GAMBLEHUB_CURRENCY (TND by default).
   const { data: catalog, isLoading, isError } = useQuery({
-    queryKey: ["casino-games", "USD"],
-    queryFn: () => fetchGames("USD"),
+    queryKey: ["casino-games"],
+    queryFn: () => fetchGames(),
     staleTime: 5 * 60_000,
   });
 

@@ -39,6 +39,7 @@ const schema = z.object({
   GAMBLEHUB_USER_ID: z.string().optional().default(""),
   GAMBLEHUB_SECRET: z.string().optional().default(""), // HMAC-SHA256 user secret
   GAMBLEHUB_CALLBACK_URL: z.string().optional().default(""), // override admin default; empty = use panel default
+  GAMBLEHUB_CURRENCY: z.string().optional().default("TND"), // catalog + session currency
 
   PSP_API_BASE_URL: z.string().optional().default(""),
   PSP_API_KEY: z.string().optional().default(""),
