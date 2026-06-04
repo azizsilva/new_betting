@@ -50,12 +50,12 @@ export default function HomePage() {
         <Jackpots />
         <CategoryTiles />
 
+        {/* Promotions first (kingsbet365 order), then the game rows. */}
+        <Promotions />
+
         {/* Live game rows (Casino / Live / Instant), split by category and
             sharing the cached catalog with /casino. */}
         <HomeGameRows />
-
-        {/* Promotions */}
-        <Promotions />
 
         {/* Latest Wins */}
         <div className="pt-4">

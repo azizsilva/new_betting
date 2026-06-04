@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { Play, Heart, Loader2 } from "lucide-react";
+import { Play, Loader2 } from "lucide-react";
 import type { Game } from "@/lib/games";
 import { useAuthStore } from "@/store/auth";
 import { useUiStore } from "@/store/ui";
@@ -13,10 +13,11 @@ export function CasinoGameCard({ game, large }: { game: Game; large?: boolean })
   const router = useRouter();
   const accessToken = useAuthStore((s) => s.accessToken);
   const openLoginModal = useUiStore((s) => s.openLoginModal);
-  const [likes, setLikes] = useState(0);
-  const [liked, setLiked] = useState(false);
   const [launching, setLaunching] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [imgError, setImgError] = useState(false);
+
+  const hasImage = Boolean(game.imageUrl) && !imgError;
 
   // Launch requires login (real play). Guests get a toast + the login modal —
   // never the raw 401 page.
@@ -36,14 +37,15 @@ export function CasinoGameCard({ game, large }: { game: Game; large?: boolean })
       onClick={launch}
       className={cn(
         "group relative block w-full overflow-hidden rounded-2xl border border-white/5 bg-surface text-left",
-        large ? "aspect-[4/5] lg:aspect-auto lg:h-full" : "aspect-[4/5]",
+        large ? "aspect-square lg:aspect-auto lg:h-full" : "aspect-square",
       )}
     >
       {/* gradient placeholder underneath — visible until the HD image decodes */}
       <div className={cn("absolute inset-0 bg-gradient-to-br", game.hue)} />
 
-      {/* HD thumbnail: cover-fit, async-decoded, fades in to avoid a pixelated flash */}
-      {game.imageUrl && (
+      {/* The game art fills the whole card (kingsbet365 style) — the title is
+          part of the artwork, so no text overlay when an image is present. */}
+      {hasImage && (
         // eslint-disable-next-line @next/next/no-img-element -- provider images come from arbitrary hosts
         <img
           src={game.imageUrl}
@@ -51,48 +53,40 @@ export function CasinoGameCard({ game, large }: { game: Game; large?: boolean })
           loading="lazy"
           decoding="async"
           onLoad={() => setLoaded(true)}
+          onError={() => setImgError(true)}
           className={cn(
             "absolute inset-0 size-full object-cover transition-opacity duration-300",
             loaded ? "opacity-100" : "opacity-0",
           )}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 
-      {/* tags */}
+      {/* NEW badge */}
       {game.tags.includes("new") && (
-        <span className="absolute left-2 top-2 rounded-full bg-brand px-2 py-0.5 text-[10px] font-bold text-brand-foreground">
+        <span className="absolute left-2 top-2 z-10 rounded-full bg-brand px-2 py-0.5 text-[10px] font-bold text-brand-foreground">
           NEW
         </span>
       )}
 
-      {/* hover overlay: play + like */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/40 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+      {/* hover overlay: play button */}
+      <div className="absolute inset-0 grid place-items-center bg-black/40 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
         <span className="grid size-12 place-items-center rounded-full bg-gold-gradient text-brand-foreground gold-glow">
           {launching ? <Loader2 className="size-5 animate-spin" /> : <Play className="size-5 fill-current" />}
         </span>
-        <span
-          role="button"
-          tabIndex={0}
-          onClick={(e) => {
-            e.stopPropagation();
-            setLiked((v) => !v);
-            setLikes((n) => (liked ? n - 1 : n + 1));
-          }}
-          className="flex items-center gap-1.5 rounded-full bg-black/70 px-3 py-1 text-xs font-semibold"
-        >
-          <Heart className={cn("size-3.5", liked ? "fill-danger text-danger" : "text-fg")} />
-          {likes}
-        </span>
       </div>
 
-      {/* name + provider */}
-      <div className="absolute inset-x-0 bottom-0 p-2.5">
-        <div className={cn("truncate font-bold leading-tight", large ? "text-lg" : "text-sm")}>
-          {game.name}
-        </div>
-        <div className="truncate text-[11px] text-fg/70">{game.provider}</div>
-      </div>
+      {/* Fallback label — only when we have NO artwork (so the card isn't blank). */}
+      {!hasImage && (
+        <>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 p-2.5">
+            <div className={cn("truncate font-bold leading-tight", large ? "text-lg" : "text-sm")}>
+              {game.name}
+            </div>
+            <div className="truncate text-[11px] text-fg/70">{game.provider}</div>
+          </div>
+        </>
+      )}
     </button>
   );
 }

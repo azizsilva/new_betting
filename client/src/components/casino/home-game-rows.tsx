@@ -17,8 +17,8 @@ function RowSkeleton() {
     <div className="flex gap-3 overflow-hidden">
       {Array.from({ length: 7 }).map((_, i) => (
         <div key={i} className={`${SLIDE} shrink-0`}>
-          {/* matches the card aspect ([4/5]) so there's no layout shift */}
-          <div className="aspect-[4/5] w-full animate-pulse rounded-2xl bg-surface" />
+          {/* matches the card aspect (square) so there's no layout shift */}
+          <div className="aspect-square w-full animate-pulse rounded-2xl bg-surface" />
         </div>
       ))}
     </div>

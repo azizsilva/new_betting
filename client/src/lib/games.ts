@@ -109,6 +109,45 @@ export interface CatalogGame {
 const LIVE_PROVIDERS = /(evolution|ezugi|pragmatic.?play.?live|live)/i;
 const INSTANT_PROVIDERS = /(spribe|aviator|turbo|smartsoft|crash)/i;
 
+function slug(s: string): string {
+  return s.toLowerCase().replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "");
+}
+
+// Local game art lives in /public/images as <PREFIX>-<slug>.png. We match a
+// catalog game to a file by its title slug (provider prefix is just how the file
+// is named). Add files here as you download more art.
+const LOCAL_IMAGES: Record<string, string> = {
+  munchymilo: "/images/HAK-munchymilo.png",
+  bookofdeadgocollect: "/images/PNG-bookofdeadgocollect.png",
+  bookofdead: "/images/PNG-bookofdeadgocollect.png",
+  jellyexpress: "/images/PPC-jellyexpress.png",
+  powerofthormegaways: "/images/PPC-powerofthormegaways.png",
+  powerofthor: "/images/PPC-powerofthormegaways.png",
+  bigbassholdspinnermegaways: "/images/PPC-bigbassholdspinnermegaways.png",
+  bigbassholdspin: "/images/PPC-bigbassholdspinnermegaways.png",
+  bigbasskeepingitreel: "/images/PPC-bigbasskeepingitreel.png",
+  bigbasskeepingit: "/images/PPC-bigbasskeepingitreel.png",
+  // Live casino (Evolution)
+  baccarat: "/images/EVO-baccarat.png",
+  blackjack: "/images/EVO-blackjack.png",
+  crazycoinflip: "/images/EVO-crazycoinflip.png",
+  crazytime: "/images/EVO-crazytime.png",
+  funkytime: "/images/EVO-funkytime.png",
+  monopoly: "/images/EVO-monopoly.png",
+  monopolylive: "/images/EVO-monopoly.png",
+};
+
+// Resolve a catalog game → local image path (if we have art for it).
+function localImage(g: CatalogGame): string | undefined {
+  const key = slug(g.title);
+  if (LOCAL_IMAGES[key]) return LOCAL_IMAGES[key];
+  // Loose contains-match so "Big Bass Hold & Spin Megaways" still resolves.
+  for (const k of Object.keys(LOCAL_IMAGES)) {
+    if (key.includes(k) || k.includes(key)) return LOCAL_IMAGES[k];
+  }
+  return undefined;
+}
+
 // Bucket a provider catalog entry into one of the lobby tabs.
 function tabFor(g: CatalogGame): GameTab {
   if (LIVE_PROVIDERS.test(g.provider) || /live|roulette|baccarat|blackjack/i.test(g.title))
@@ -130,6 +169,7 @@ export function mapCatalog(games: CatalogGame[]): Game[] {
     // Every 9th game becomes a large featured card (same visual rhythm as kingsbet365).
     featured: i % 9 === 0,
     hue: hue(i),
-    imageUrl: g.imageUrl || undefined,
+    // Prefer our local downloaded art, then the provider's own image.
+    imageUrl: localImage(g) || g.imageUrl || undefined,
   }));
 }
