@@ -39,6 +39,8 @@ casinoRouter.get(
   asyncHandler(async (req, res) => {
     const currency = (req.query.currency as string)?.toUpperCase() || DEFAULT_CURRENCY;
     const games = await getUserGames(currency);
+    // Never cache — catalog changes and a stale empty [] breaks the lobby.
+    res.setHeader("Cache-Control", "no-store");
     res.json(games.filter((g) => g.isEnabled));
   }),
 );
