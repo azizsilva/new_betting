@@ -23,8 +23,8 @@ export function CasinoGameCard({ game, large }: { game: Game; large?: boolean })
     <button
       onClick={launch}
       className={cn(
-        "group relative block w-full overflow-hidden rounded-xl border border-line text-left",
-        large ? "row-span-2 aspect-[3/4] md:aspect-auto md:h-full" : "aspect-[3/4]",
+        "group relative block w-full overflow-hidden rounded-2xl border border-white/5 text-left",
+        large ? "aspect-[4/5] lg:aspect-auto lg:h-full" : "aspect-[4/5]",
       )}
     >
       {/* thumbnail or gradient placeholder */}

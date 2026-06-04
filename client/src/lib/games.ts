@@ -127,6 +127,8 @@ export function mapCatalog(games: CatalogGame[]): Game[] {
     provider: g.provider || "Unknown",
     tab: tabFor(g),
     tags: [],
+    // Every 9th game becomes a large featured card (same visual rhythm as kingsbet365).
+    featured: i % 9 === 0,
     hue: hue(i),
     imageUrl: g.imageUrl || undefined,
   }));

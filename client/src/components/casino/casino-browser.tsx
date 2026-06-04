@@ -24,7 +24,7 @@ const QUICK_ICONS: Record<string, typeof Heart> = {
   crash: Rocket,
 };
 
-const PAGE_SIZE = 18;
+const PAGE_SIZE = 30;
 
 export function CasinoBrowser() {
   // URL-backed state — shareable & back-button safe.
@@ -194,9 +194,16 @@ export function CasinoBrowser() {
           No games match your filters.
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 lg:grid-cols-5 lg:gap-3 [grid-auto-rows:1fr] [grid-auto-flow:row_dense]">
           {shown.map((g) => (
-            <div key={g.id} className={cn(g.featured && "col-span-2 row-span-2 sm:col-span-1 lg:col-span-2")}>
+            <div
+              key={g.id}
+              className={cn(
+                g.featured
+                  ? "col-span-2 row-span-2"
+                  : "col-span-1 row-span-1",
+              )}
+            >
               <CasinoGameCard game={g} large={g.featured} />
             </div>
           ))}
