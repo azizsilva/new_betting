@@ -1,0 +1,465 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// BetSlate — Prisma schema (mirrors the real xbet_db, ported to Postgres/Neon)
+//
+// Model: multi-tier agent credit network.
+//   admin_provider → owner → partner → super_admin → admin → agent → player
+// One `users` table, self-referencing via parentId. Money flows down the tree;
+// agents deposit/withdraw for players. Casino game callbacks (bet/win/refund)
+// are idempotent. Sportsbook side via sbMatch + marketExposure.
+// ─────────────────────────────────────────────────────────────────────────────
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ─── Enums ───────────────────────────────────────────────────────────────────
+
+// Chain (top → bottom). Each role can create ANY role below it and fund them.
+enum UserRole {
+  admin_provider // principal/top — creates everyone, infinite balance
+  owner
+  partner
+  super_admin
+  admin
+  agent // the "shop"
+  player
+  provider
+}
+
+enum UserStatus {
+  active
+  locked
+  suspended
+}
+
+enum PaymentChannel {
+  upi
+  bank
+  wallet
+  cash
+  gateway
+  other
+}
+
+enum PaymentType {
+  deposit
+  withdrawal
+  adjustment
+  refund
+}
+
+enum PaymentStatus {
+  pending
+  completed
+  failed
+  reversed
+}
+
+enum TransactionType {
+  deposit
+  withdrawal
+}
+
+enum SettlementStatus {
+  pending
+  completed
+  failed
+}
+
+enum GameAction {
+  bet
+  win
+  refund
+}
+
+enum MatchStatus {
+  upcoming
+  inplay
+  ended
+}
+
+// ─── Users (the whole hierarchy in one table) ──────────────────────────────────
+
+model User {
+  id           Int        @id @default(autoincrement())
+  username     String     @unique @db.VarChar(50)
+  email        String?    @db.VarChar(191)
+  mobile       String     @db.VarChar(15)
+  password     String     @db.VarChar(255) // hashed
+  passwordText String?    @map("password_text") @db.VarChar(255) // plaintext kept by panel (legacy)
+  role         UserRole?
+  parentId     Int?       @map("parent_id")
+
+  creditRef Decimal    @default(0) @map("credit_ref") @db.Decimal(15, 2)
+  balance   Decimal    @default(0) @db.Decimal(15, 2)
+  exposure  Decimal    @default(0) @db.Decimal(15, 2)
+  rate      Decimal    @default(100) @db.Decimal(5, 2)
+  status    UserStatus @default(active)
+
+  language     String   @default("en") @db.VarChar(5)
+  sessionToken String?  @map("session_token") @db.VarChar(64)
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  // Self-referencing hierarchy
+  parent   User?  @relation("UserHierarchy", fields: [parentId], references: [id])
+  children User[] @relation("UserHierarchy")
+
+  // Money & activity (relations are convenience views; no FKs in source)
+  bonusLedger        BonusLedger[]
+  loyaltyLedger      LoyaltyLedger[]
+  gameCallbackEvents GameCallbackEvent[]
+  gameRoundExposures GameRoundExposure[]
+  recentGames        RecentGame[]
+  userDepositMethods UserDepositMethod[]
+  userWithdrawBanks  UserWithdrawBank[]
+
+  @@index([parentId])
+  @@index([role])
+  @@index([status])
+  @@map("users")
+}
+
+// ─── Money: transfers, payments, settlements, ledgers ───────────────────────────
+
+// Simple credit transfer between two users in the tree.
+model Transaction {
+  id          Int             @id @default(autoincrement())
+  senderId    Int             @map("sender_id")
+  receiverId  Int             @map("receiver_id")
+  amount      Decimal         @db.Decimal(15, 2)
+  type        TransactionType
+  description String?         @db.VarChar(255)
+  txnRef      String?         @unique @map("txn_ref") @db.VarChar(100)
+  createdAt   DateTime        @default(now()) @map("created_at")
+
+  @@index([senderId, createdAt])
+  @@index([receiverId, createdAt])
+  @@map("transactions")
+}
+
+// Richer deposit/withdrawal record with fees & payment mode.
+model Payment {
+  id          BigInt        @id @default(autoincrement())
+  payerId     Int?          @map("payer_id")
+  payeeId     Int?          @map("payee_id")
+  createdBy   Int           @map("created_by")
+  modeId      Int?          @map("mode_id")
+  type        PaymentType
+  amount      Decimal       @db.Decimal(15, 2)
+  feePercent  Decimal       @default(0) @map("fee_percent") @db.Decimal(6, 3)
+  feeFlat     Decimal       @default(0) @map("fee_flat") @db.Decimal(15, 2)
+  status      PaymentStatus @default(pending)
+  reference   String?       @db.VarChar(100)
+  note        String?       @db.VarChar(255)
+  metaJson    Json?         @map("meta_json")
+  completedAt DateTime?     @map("completed_at")
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @default(now()) @updatedAt @map("updated_at")
+
+  mode PaymentMode? @relation(fields: [modeId], references: [id])
+
+  @@index([status, createdAt])
+  @@index([payerId, createdAt])
+  @@index([payeeId, createdAt])
+  @@index([createdBy, createdAt])
+  @@index([modeId])
+  @@map("payments")
+}
+
+model PaymentMode {
+  id           Int            @id @default(autoincrement())
+  name         String         @unique @db.VarChar(100)
+  channel      PaymentChannel @default(other)
+  enabled      Boolean        @default(true)
+  feePercent   Decimal        @default(0) @map("fee_percent") @db.Decimal(6, 3)
+  feeFlat      Decimal        @default(0) @map("fee_flat") @db.Decimal(15, 2)
+  allowedRoles String         @default("admin,master,agent") @map("allowed_roles") @db.VarChar(100)
+  configJson   Json?          @map("config_json")
+  createdAt    DateTime       @default(now()) @map("created_at")
+  updatedAt    DateTime       @default(now()) @updatedAt @map("updated_at")
+
+  payments Payment[]
+
+  @@index([enabled])
+  @@map("payment_modes")
+}
+
+// Settling balances between two users (e.g. parent ↔ child).
+model Settlement {
+  id         BigInt           @id @default(autoincrement())
+  fromUserId Int              @map("from_user_id")
+  toUserId   Int              @map("to_user_id")
+  amount     Decimal          @default(0) @db.Decimal(15, 2)
+  status     SettlementStatus @default(completed)
+  note       String?          @db.VarChar(255)
+  createdBy  Int              @map("created_by")
+  createdAt  DateTime         @default(now()) @map("created_at")
+
+  @@index([fromUserId, createdAt])
+  @@index([toUserId, createdAt])
+  @@index([status, createdAt])
+  @@map("settlements")
+}
+
+model BonusLedger {
+  id        BigInt   @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  points    Decimal  @default(0) @db.Decimal(15, 2)
+  note      String?  @db.VarChar(255)
+  createdBy Int      @map("created_by")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@index([userId, createdAt])
+  @@index([createdBy, createdAt])
+  @@map("bonus_ledger")
+}
+
+model LoyaltyLedger {
+  id        BigInt   @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  points    Decimal  @default(0) @db.Decimal(15, 2)
+  note      String?  @db.VarChar(255)
+  createdBy Int      @map("created_by")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@index([userId, createdAt])
+  @@index([createdBy, createdAt])
+  @@map("loyalty_ledger")
+}
+
+// ─── Payment method configuration per level ─────────────────────────────────────
+
+// Methods an owner (any role) exposes to a target role below it.
+model DepositMethod {
+  id             BigInt         @id @default(autoincrement())
+  ownerId        Int            @map("owner_id")
+  targetRole     UserRole       @map("target_role")
+  label          String         @db.VarChar(100)
+  channel        PaymentChannel @default(other)
+  enabled        Boolean        @default(true)
+  sortOrder      Int            @default(0) @map("sort_order")
+  detailsJson    Json?          @map("details_json")
+  sourceMethodId BigInt?        @map("source_method_id")
+  createdAt      DateTime       @default(now()) @map("created_at")
+  updatedAt      DateTime       @default(now()) @updatedAt @map("updated_at")
+
+  @@unique([ownerId, targetRole, label])
+  @@index([ownerId, targetRole, enabled, sortOrder])
+  @@map("deposit_methods")
+}
+
+// Methods an agent exposes specifically to its players.
+model PlayerDepositMethod {
+  id             BigInt         @id @default(autoincrement())
+  agentId        Int            @map("agent_id")
+  label          String         @db.VarChar(100)
+  channel        PaymentChannel @default(other)
+  enabled        Boolean        @default(true)
+  sortOrder      Int            @default(0) @map("sort_order")
+  detailsJson    Json?          @map("details_json")
+  sourceMethodId BigInt?        @map("source_method_id")
+  createdAt      DateTime       @default(now()) @map("created_at")
+  updatedAt      DateTime       @default(now()) @updatedAt @map("updated_at")
+
+  @@unique([agentId, label])
+  @@index([agentId, enabled, sortOrder])
+  @@map("player_deposit_methods")
+}
+
+// A specific user's own configured deposit methods.
+model UserDepositMethod {
+  id             BigInt         @id @default(autoincrement())
+  userId         Int            @map("user_id")
+  label          String         @db.VarChar(100)
+  channel        PaymentChannel @default(other)
+  enabled        Boolean        @default(true)
+  sortOrder      Int            @default(0) @map("sort_order")
+  detailsJson    Json?          @map("details_json")
+  sourceMethodId BigInt?        @map("source_method_id")
+  createdAt      DateTime       @default(now()) @map("created_at")
+  updatedAt      DateTime       @default(now()) @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([userId, label])
+  @@index([userId, enabled, sortOrder])
+  @@map("user_deposit_methods")
+}
+
+model UserWithdrawBank {
+  id            BigInt   @id @default(autoincrement())
+  userId        Int      @map("user_id")
+  bankSlot      Int      @map("bank_slot") @db.SmallInt
+  bankName      String   @map("bank_name") @db.VarChar(120)
+  ifscSwift     String   @map("ifsc_swift") @db.VarChar(32)
+  accountNo     String   @map("account_no") @db.VarChar(40)
+  accountHolder String   @map("account_holder") @db.VarChar(120)
+  enabled       Boolean  @default(true)
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @default(now()) @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([userId, bankSlot])
+  @@index([userId, enabled, updatedAt])
+  @@map("user_withdraw_banks")
+}
+
+// ─── Casino / game integration ──────────────────────────────────────────────────
+
+// Idempotent provider callback log (bet / win / refund) with running balance.
+model GameCallbackEvent {
+  id            BigInt     @id @default(autoincrement())
+  userId        Int        @map("user_id")
+  username      String     @db.VarChar(191)
+  action        GameAction
+  gameUid       String?    @map("game_uid") @db.VarChar(100)
+  txnId         String     @map("txn_id") @db.VarChar(128)
+  gameRound     String?    @map("game_round") @db.VarChar(128)
+  providerTs    DateTime?  @map("provider_ts")
+  betAmount     Decimal    @default(0) @map("bet_amount") @db.Decimal(15, 2)
+  winAmount     Decimal    @default(0) @map("win_amount") @db.Decimal(15, 2)
+  amountDelta   Decimal    @default(0) @map("amount_delta") @db.Decimal(15, 2)
+  balanceBefore Decimal    @default(0) @map("balance_before") @db.Decimal(15, 2)
+  balanceAfter  Decimal    @default(0) @map("balance_after") @db.Decimal(15, 2)
+  resultStatus  Boolean    @default(true) @map("result_status")
+  resultMessage String?    @map("result_message") @db.VarChar(255)
+  requestIp     String?    @map("request_ip") @db.VarChar(64)
+  requestUa     String?    @map("request_ua") @db.VarChar(255)
+  rawJson       Json?      @map("raw_json")
+  createdAt     DateTime   @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([txnId, action])
+  @@index([userId, createdAt])
+  @@index([gameUid, createdAt])
+  @@map("game_callback_events")
+}
+
+model GameRoundExposure {
+  id        BigInt   @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  gameRound String   @map("game_round") @db.VarChar(128)
+  amount    Decimal  @default(0) @db.Decimal(15, 2)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([userId, gameRound])
+  @@index([userId])
+  @@map("game_round_exposures")
+}
+
+model RecentGame {
+  id       Int      @id @default(autoincrement())
+  userId   Int      @map("user_id")
+  gameId   String   @map("game_id") @db.VarChar(50)
+  playedAt DateTime @default(now()) @updatedAt @map("played_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([userId, gameId])
+  @@map("recent_games")
+}
+
+model ProviderConfig {
+  id           Int      @id @default(autoincrement())
+  settingKey   String   @unique @map("setting_key") @db.VarChar(100)
+  settingValue String   @map("setting_value") @db.VarChar(255)
+  updatedAt    DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@map("provider_config")
+}
+
+// ─── Sportsbook ──────────────────────────────────────────────────────────────────
+
+model SbMatch {
+  id         String      @id @db.VarChar(50)
+  sportId    Int         @default(1) @map("sport_id")
+  leagueName String      @default("") @map("league_name") @db.VarChar(200)
+  homeTeam   String      @default("") @map("home_team") @db.VarChar(150)
+  awayTeam   String      @default("") @map("away_team") @db.VarChar(150)
+  startTime  BigInt      @default(0) @map("start_time")
+  status     MatchStatus @default(upcoming)
+  score      String?     @db.VarChar(30)
+  rawJson    Json?       @map("raw_json")
+  createdAt  DateTime    @default(now()) @map("created_at")
+  updatedAt  DateTime    @default(now()) @updatedAt @map("updated_at")
+
+  @@index([startTime])
+  @@index([status])
+  @@index([sportId])
+  @@map("sb_matches")
+}
+
+model MarketExposure {
+  id          BigInt   @id @default(autoincrement())
+  matchId     String   @map("match_id") @db.VarChar(50)
+  marketId    String   @map("market_id") @db.VarChar(50)
+  selectionId String   @map("selection_id") @db.VarChar(100)
+  totalStaked Decimal  @default(0) @map("total_staked") @db.Decimal(15, 2)
+  liability   Decimal  @default(0) @db.Decimal(15, 2)
+  updatedAt   DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@unique([matchId, marketId, selectionId])
+  @@map("market_exposure")
+}
+
+// ─── Ops / settings ────────────────────────────────────────────────────────────────
+
+model AuditLog {
+  id         BigInt   @id @default(autoincrement())
+  actorId    Int      @map("actor_id")
+  actorRole  String   @map("actor_role") @db.VarChar(20)
+  action     String   @db.VarChar(50)
+  entityType String   @map("entity_type") @db.VarChar(50)
+  entityId   String?  @map("entity_id") @db.VarChar(50)
+  ip         String?  @db.VarChar(64)
+  userAgent  String?  @map("user_agent") @db.VarChar(255)
+  oldJson    Json?    @map("old_json")
+  newJson    Json?    @map("new_json")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@index([actorId, createdAt])
+  @@index([entityType, entityId])
+  @@map("audit_logs")
+}
+
+model SystemSetting {
+  settingKey   String   @id @map("setting_key") @db.VarChar(100)
+  settingValue String?  @map("setting_value")
+  updatedBy    Int?     @map("updated_by")
+  updatedAt    DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@map("system_settings")
+}
+
+model WebSetting {
+  id            Int      @id @default(autoincrement())
+  siteLogo      String?  @default("https://moneyking24x7.com/moneyking247.png") @map("site_logo") @db.VarChar(255)
+  telegramLink  String?  @default("#") @map("telegram_link") @db.VarChar(255)
+  instagramLink String?  @default("#") @map("instagram_link") @db.VarChar(255)
+  facebookLink  String?  @default("#") @map("facebook_link") @db.VarChar(255)
+  telegramIcon  String?  @default("fa fa-paper-plane") @map("telegram_icon") @db.VarChar(255)
+  instagramIcon String?  @default("fa fa-instagram") @map("instagram_icon") @db.VarChar(255)
+  facebookIcon  String?  @default("fa fa-facebook") @map("facebook_icon") @db.VarChar(255)
+  countryCode   String?  @default("+91") @map("country_code") @db.VarChar(10)
+  countryName   String?  @default("IN") @map("country_name") @db.VarChar(50)
+  isLoginOn     Boolean? @default(true) @map("is_login_on")
+  isSignupOn    Boolean? @default(true) @map("is_signup_on")
+  updatedAt     DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@map("web_settings")
+}

@@ -1,0 +1,141 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+/* ─────────────────────────────────────────────────────────────
+   BetSlate design system — dark sportsbook theme.
+   Deep midnight base with electric lime + cyan accents.
+   ───────────────────────────────────────────────────────────── */
+
+@theme {
+  /* Brand — AfroBet216 gold + green on pure black (matches the logo) */
+  --color-brand: #e8c349; /* signature gold accent */
+  --color-brand-2: #f6dd86; /* light gold (gradient top) */
+  --color-brand-3: #b8862f; /* deep gold (gradient bottom) */
+  --color-brand-foreground: #100b02;
+  --color-green: #2fbf4f; /* logo green secondary accent */
+  --color-green-2: #66e07f;
+  --color-cyan: #22d3ee;
+  --color-gold: #e8c349;
+  --color-silver: #c9ccd2;
+  --color-bronze: #c9885a;
+  --color-danger: #ec4040; /* EN DIRECT red */
+
+  /* Surfaces — pure black palette */
+  --color-bg: #060606;
+  --color-bg-elevated: #0d0d0e;
+  --color-surface: #131314;
+  --color-surface-2: #1c1c1e;
+  --color-line: #2a2a2d;
+  --color-muted: #8a8a92;
+  --color-fg: #f3f3f5;
+
+  /* Gold gradient used on primary buttons */
+  --gradient-gold: linear-gradient(180deg, #f6dd86 0%, #e8c349 45%, #b8862f 100%);
+
+  --radius: 0.625rem;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-surface-2);
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-line);
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: color-mix(in oklab, var(--color-surface) 72%, transparent);
+    backdrop-filter: blur(12px);
+  }
+  .brand-glow {
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--color-brand) 40%, transparent),
+      0 8px 30px -8px color-mix(in oklab, var(--color-brand) 45%, transparent);
+  }
+  .live-pulse {
+    animation: live-pulse 1.6s ease-in-out infinite;
+  }
+  .odds-flash {
+    animation: odds-flash 0.7s ease-out;
+  }
+  /* Gold gradient surfaces (buttons, accents) */
+  .bg-gold-gradient {
+    background: var(--gradient-gold);
+  }
+  .text-gold-gradient {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .gold-glow {
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--color-brand) 50%, transparent),
+      0 6px 24px -6px color-mix(in oklab, var(--color-brand) 50%, transparent);
+  }
+  /* Skeleton shimmer */
+  .skeleton {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-surface-2);
+  }
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in oklab, var(--color-line) 80%, transparent),
+      transparent
+    );
+    animation: shimmer 1.4s infinite;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes live-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes odds-flash {
+  0% {
+    background-color: color-mix(in oklab, var(--color-brand) 35%, transparent);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
