@@ -31,10 +31,11 @@ casinoRouter.get(
   }),
 );
 
-// Game catalog for the lobby. Cached briefly upstream by the provider; we proxy.
+// Game catalog for the lobby. The catalog is operator-wide (fetched with the
+// operator token, not the player's), so it's public — guests can browse. Playing
+// a game (POST /open) still requires the visitor to be logged in.
 casinoRouter.get(
   "/games",
-  authenticate,
   asyncHandler(async (req, res) => {
     const currency = (req.query.currency as string)?.toUpperCase() || DEFAULT_CURRENCY;
     const games = await getUserGames(currency);
