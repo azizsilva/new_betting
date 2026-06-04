@@ -30,10 +30,10 @@ const schema = z.object({
   GAMBLY_API_KEY: z.string().optional().default(""),
 
   // Gamble Hub aggregator (Evolution, Amatic, slots, …) — seamless wallet.
-  // Defaults to the STAGE (-dev) hosts; override with the prod hosts in .env
-  // once the integration is approved for production.
-  GAMBLEHUB_OFFICE_URL: z.string().default("https://office-api-dev.gamble-hub.net"),
-  GAMBLEHUB_CLIENT_URL: z.string().default("https://client-api-dev.gamble-hub.net"),
+  // Defaults to PRODUCTION hosts. For stage testing override in .env with the
+  // -dev hosts: office-api-dev.gamble-hub.net / client-api-dev.gamble-hub.net.
+  GAMBLEHUB_OFFICE_URL: z.string().default("https://office-api.gamble-hub.net"),
+  GAMBLEHUB_CLIENT_URL: z.string().default("https://client-api.gamble-hub.net"),
   GAMBLEHUB_LOGIN: z.string().optional().default(""),
   GAMBLEHUB_PASSWORD: z.string().optional().default(""),
   GAMBLEHUB_USER_ID: z.string().optional().default(""),

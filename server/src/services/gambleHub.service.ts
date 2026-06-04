@@ -35,6 +35,7 @@ interface OpenGameResponse {
 // ─── Token cache (in-memory, single process) ──────────────────────────────────
 
 let tokenCache: { accessToken: string; expiresAt: number } | null = null;
+let resolvedUserId: string | null = null; // captured from the login response
 const TOKEN_TTL_MS = 10 * 60 * 1000; // access token is short-lived; re-login defensively
 
 function officeUrl(path: string) {
@@ -45,12 +46,20 @@ function clientUrl(path: string) {
 }
 
 function assertConfigured() {
-  if (!env.GAMBLEHUB_LOGIN || !env.GAMBLEHUB_PASSWORD || !env.GAMBLEHUB_USER_ID) {
+  // user_id comes back from the login response, so only login+password are required.
+  if (!env.GAMBLEHUB_LOGIN || !env.GAMBLEHUB_PASSWORD) {
     throw new AppError(503, "Gamble Hub is not configured", "GAMBLEHUB_DISABLED");
   }
 }
 
-/** POST /auth/login (form-encoded). Caches the access token in memory. */
+/** The API user id: env override if set, otherwise captured from login. */
+function userId(): string {
+  const id = env.GAMBLEHUB_USER_ID || resolvedUserId;
+  if (!id) throw new AppError(502, "Gamble Hub user id unavailable (login first)", "GAMBLEHUB_USER_ID");
+  return id;
+}
+
+/** POST /auth/login (form-encoded). Caches the access token + user id in memory. */
 async function login(): Promise<string> {
   assertConfigured();
   const body = new URLSearchParams({
@@ -71,6 +80,7 @@ async function login(): Promise<string> {
   }
   const data = (await res.json()) as LoginResponse;
   tokenCache = { accessToken: data.accessToken, expiresAt: Date.now() + TOKEN_TTL_MS };
+  if (data.user?.id) resolvedUserId = data.user.id; // capture for catalog + openGame
   return data.accessToken;
 }
 
@@ -84,10 +94,11 @@ async function getToken(forceRefresh = false): Promise<string> {
 /** GET the player game catalog for a currency. Retries once on 401. */
 export async function getUserGames(currency: string): Promise<GambleHubGame[]> {
   assertConfigured();
-  const path = `/users/${env.GAMBLEHUB_USER_ID}/getUserGames/${currency}`;
 
   for (let attempt = 0; attempt < 2; attempt++) {
     const token = await getToken(attempt > 0);
+    // userId() resolves only after login has populated it (or via env override).
+    const path = `/users/${userId()}/getUserGames/${currency}`;
     const res = await fetch(officeUrl(path), {
       headers: { accept: "application/json", authorization: `Bearer ${token}` },
     });
@@ -129,6 +140,10 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
     throw new AppError(503, "Gamble Hub signing secret is not configured", "GAMBLEHUB_DISABLED");
   }
 
+  // Ensure we have the API user_id. openGame itself needs no auth, but the id is
+  // captured from login — so log in if we don't have it yet (no env override).
+  if (!env.GAMBLEHUB_USER_ID && !resolvedUserId) await getToken();
+
   // login the provider expects is the per-player identifier we'll match in callbacks.
   const playerLogin = params.user.username;
 
@@ -139,7 +154,7 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
     gameId: params.gameId,
     language: params.language ?? "en",
     player_login: playerLogin,
-    user_id: env.GAMBLEHUB_USER_ID,
+    user_id: userId(),
   };
   if (env.GAMBLEHUB_CALLBACK_URL) payload.callbackUrl = env.GAMBLEHUB_CALLBACK_URL;
 
