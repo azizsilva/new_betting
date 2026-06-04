@@ -56,13 +56,13 @@ export function AccountMenu({ user }: { user: User }) {
             <div className="flex items-center justify-between">
               <span className="text-xs text-muted">Balance</span>
               <span className="font-bold tabular-nums">
-                {formatMoney(user.balance, "")} <span className="text-xs text-muted">USD</span>
+                {formatMoney(user.balance, "")} <span className="text-xs text-muted">TND</span>
               </span>
             </div>
             <div className="mt-1 flex items-center justify-between">
               <span className="text-xs text-muted">Bonus</span>
               <span className="font-bold tabular-nums">
-                0.00 <span className="text-xs text-muted">USD</span>
+                0.00 <span className="text-xs text-muted">TND</span>
               </span>
             </div>
             <Link

@@ -21,7 +21,7 @@ export function ProfileContent({ user, active }: { user: User; active: string })
           <Field label="Player ID" value={String(user.id)} />
           <Field label="Email" value={user.email ?? ""} />
           <Field label="Mobile" value={user.mobile} />
-          <Field label="Currency" value="USD" />
+          <Field label="Currency" value="TND" />
           <Field label="Status" value={user.status} />
         </div>
       </Panel>

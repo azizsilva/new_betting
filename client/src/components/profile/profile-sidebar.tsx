@@ -82,13 +82,13 @@ export function ProfileSidebar({
             <span className="text-sm text-muted">Balance</span>
             <span className="font-bold tabular-nums">
               {formatMoney(user.balance, "")}
-              <span className="ml-1 text-xs text-muted">USD</span>
+              <span className="ml-1 text-xs text-muted">TND</span>
             </span>
           </div>
           <div className="flex items-center justify-between">
             <span className="text-sm text-muted">Bonus</span>
             <span className="font-bold tabular-nums">
-              0.00<span className="ml-1 text-xs text-muted">USD</span>
+              0.00<span className="ml-1 text-xs text-muted">TND</span>
             </span>
           </div>
         </div>
