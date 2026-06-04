@@ -1,6 +1,13 @@
+import { fileURLToPath } from "node:url";
+import path from "node:path";
 import dotenv from "dotenv";
 import { z } from "zod";
 
+// Load .env from the server package root regardless of the process cwd
+// (pm2 / different launch dirs). dist/config/env.js → ../../.env
+const here = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.resolve(here, "../../.env") });
+// Fallback: also try the cwd (dev with tsx).
 dotenv.config();
 
 const schema = z.object({
