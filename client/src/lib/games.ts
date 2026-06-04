@@ -137,15 +137,10 @@ const LOCAL_IMAGES: Record<string, string> = {
   monopolylive: "/images/EVO-monopoly.png",
 };
 
-// Resolve a catalog game → local image path (if we have art for it).
+// Resolve a catalog game → local image path. Exact slug match only — a loose
+// "includes" match wrongly mapped every "Madame Destiny *" variant to one image.
 function localImage(g: CatalogGame): string | undefined {
-  const key = slug(g.title);
-  if (LOCAL_IMAGES[key]) return LOCAL_IMAGES[key];
-  // Loose contains-match so "Big Bass Hold & Spin Megaways" still resolves.
-  for (const k of Object.keys(LOCAL_IMAGES)) {
-    if (key.includes(k) || k.includes(key)) return LOCAL_IMAGES[k];
-  }
-  return undefined;
+  return LOCAL_IMAGES[slug(g.title)];
 }
 
 // Bucket a provider catalog entry into one of the lobby tabs.
@@ -156,20 +151,33 @@ function tabFor(g: CatalogGame): GameTab {
   return "casino";
 }
 
-// Convert the provider catalog into the UI's Game shape so the existing browser
-// and card components keep working unchanged.
+// Convert the provider catalog into the UI's Game shape, dropping duplicates.
+// The catalog can repeat the same game (same id, or same title+provider); we keep
+// the first occurrence so the lobby doesn't show 4× "Madame Destiny".
 export function mapCatalog(games: CatalogGame[]): Game[] {
-  return games.map((g, i) => ({
-    id: g.id,
-    gameId: g.id,
-    name: g.title,
-    provider: g.provider || "Unknown",
-    tab: tabFor(g),
-    tags: [],
-    // Every 9th game becomes a large featured card (same visual rhythm as kingsbet365).
-    featured: i % 9 === 0,
-    hue: hue(i),
-    // Prefer our local downloaded art, then the provider's own image.
-    imageUrl: localImage(g) || g.imageUrl || undefined,
-  }));
+  const seen = new Set<string>();
+  const out: Game[] = [];
+  let i = 0;
+  for (const g of games) {
+    const dedupeKey = g.id || `${slug(g.provider)}:${slug(g.title)}`;
+    const titleKey = `${slug(g.provider)}:${slug(g.title)}`;
+    if (seen.has(dedupeKey) || seen.has(titleKey)) continue;
+    seen.add(dedupeKey);
+    seen.add(titleKey);
+    out.push({
+      id: g.id,
+      gameId: g.id,
+      name: g.title,
+      provider: g.provider || "Unknown",
+      tab: tabFor(g),
+      tags: [],
+      // Every 9th game becomes a large featured card (same rhythm as kingsbet365).
+      featured: i % 9 === 0,
+      hue: hue(i),
+      // Prefer our local downloaded art, then the provider's own image.
+      imageUrl: localImage(g) || g.imageUrl || undefined,
+    });
+    i++;
+  }
+  return out;
 }

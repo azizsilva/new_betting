@@ -171,20 +171,37 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
   const rawBody = JSON.stringify(payload);
   const signature = signHmacSha256Hex(rawBody, env.GAMBLEHUB_SECRET);
 
-  const res = await fetch(clientUrl("/games/openGame"), {
-    method: "POST",
-    headers: {
-      accept: "application/json",
-      "content-type": "application/json",
-      "x-signature": signature,
-    },
-    body: rawBody,
-  });
+  let res: Response;
+  let rawText: string;
+  try {
+    res = await fetch(clientUrl("/games/openGame"), {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json",
+        "x-signature": signature,
+      },
+      body: rawBody,
+    });
+    rawText = await res.text();
+  } catch (err) {
+    logger.error({ gameId: params.gameId, err: (err as Error).message }, "openGame network error");
+    throw BadRequest("Could not reach the game provider. Please try again.");
+  }
 
-  const data = (await res.json().catch(() => ({}))) as OpenGameResponse;
+  let data: OpenGameResponse = {} as OpenGameResponse;
+  try {
+    data = JSON.parse(rawText) as OpenGameResponse;
+  } catch {
+    logger.error(
+      { gameId: params.gameId, status: res.status, body: rawText.slice(0, 200) },
+      "openGame non-JSON response",
+    );
+    throw BadRequest("Game provider returned an unexpected response.");
+  }
 
   if (!res.ok || data.status !== "success") {
-    const msg = data.message || data.error || `Gamble Hub openGame failed (${res.status})`;
+    const msg = data.message || data.error || `Game could not be opened (${res.status})`;
     logger.warn({ gameId: params.gameId, status: res.status, error: data.error, msg }, "openGame failed");
     throw BadRequest(msg);
   }
@@ -192,21 +209,28 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
   const url = data.content?.game?.url;
   const sessionId = data.content?.gameRes?.sessionId;
   if (!url || !sessionId) {
-    throw new AppError(502, "Gamble Hub openGame returned no url/sessionId", "GAMBLEHUB_OPEN");
+    logger.warn({ gameId: params.gameId, data }, "openGame missing url/sessionId");
+    throw BadRequest("Game session could not be created.");
   }
 
   // Persist the session → maps provider sessionId/login back to our user + currency.
-  await prisma.gameSession.upsert({
-    where: { sessionId },
-    create: {
-      sessionId,
-      userId: params.user.id,
-      login: playerLogin,
-      currency: params.currency,
-      gameId: params.gameId,
-    },
-    update: { userId: params.user.id, login: playerLogin, currency: params.currency, gameId: params.gameId },
-  });
+  // Don't let a logging-table write failure break the launch — wrap it.
+  try {
+    await prisma.gameSession.upsert({
+      where: { sessionId: sessionId.slice(0, 128) },
+      create: {
+        sessionId: sessionId.slice(0, 128),
+        userId: params.user.id,
+        login: playerLogin.slice(0, 100),
+        currency: params.currency,
+        gameId: params.gameId.slice(0, 100),
+      },
+      update: { userId: params.user.id, login: playerLogin.slice(0, 100), currency: params.currency },
+    });
+  } catch (err) {
+    logger.error({ sessionId, err: (err as Error).message }, "gameSession upsert failed");
+    // Still return the URL — callbacks will create the mapping lazily if needed.
+  }
 
   return { url, sessionId };
 }
