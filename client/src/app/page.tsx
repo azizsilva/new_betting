@@ -4,7 +4,7 @@ import { Hero } from "@/components/home/hero";
 import { Jackpots } from "@/components/home/jackpots";
 import { CategoryTiles } from "@/components/home/category-tiles";
 import { Promotions } from "@/components/home/promotions";
-import { HomeGameRows } from "@/components/casino/home-game-rows";
+import { HomeCasinoRow, HomeLiveRow } from "@/components/casino/home-game-rows";
 import { LatestWins } from "@/components/home/latest-wins";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://afrobet216.com";
@@ -50,12 +50,10 @@ export default function HomePage() {
         <Jackpots />
         <CategoryTiles />
 
-        {/* Promotions first (kingsbet365 order), then the game rows. */}
+        {/* kingsbet365 order: Jeux de casino → promo banners → Jeux en direct. */}
+        <HomeCasinoRow />
         <Promotions />
-
-        {/* Live game rows (Casino / Live / Instant), split by category and
-            sharing the cached catalog with /casino. */}
-        <HomeGameRows />
+        <HomeLiveRow />
 
         {/* Latest Wins */}
         <div className="pt-4">

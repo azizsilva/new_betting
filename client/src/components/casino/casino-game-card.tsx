@@ -75,18 +75,16 @@ export function CasinoGameCard({ game, large }: { game: Game; large?: boolean })
         </span>
       </div>
 
-      {/* Fallback label — only when we have NO artwork (so the card isn't blank). */}
-      {!hasImage && (
-        <>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 p-2.5">
-            <div className={cn("truncate font-bold leading-tight", large ? "text-lg" : "text-sm")}>
-              {game.name}
-            </div>
-            <div className="truncate text-[11px] text-fg/70">{game.provider}</div>
-          </div>
-        </>
-      )}
+      {/* Name + provider label over a bottom gradient (kingsbet365 style). */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 p-2.5">
+        <div className={cn("truncate font-bold leading-tight", large ? "text-lg" : "text-sm")}>
+          {game.name}
+        </div>
+        {game.provider && (
+          <div className="truncate text-[11px] text-fg/70">{game.provider}</div>
+        )}
+      </div>
     </button>
   );
 }

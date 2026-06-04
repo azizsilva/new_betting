@@ -181,3 +181,56 @@ export function mapCatalog(games: CatalogGame[]): Game[] {
   }
   return out;
 }
+
+// ─── Curated homepage rows ────────────────────────────────────────────────────
+// The homepage shows a fixed, hand-picked set per row (kingsbet365 style) using
+// our local art — NOT the raw provider order. Each entry is matched to the live
+// catalog by title slug so the real gameId (and launch) still works.
+const HOME_CASINO = [
+  "munchymilo",
+  "bookofdeadgocollect",
+  "jellyexpress",
+  "powerofthormegaways",
+  "bigbassholdspinnermegaways",
+  "bigbasskeepingitreel",
+];
+
+const HOME_LIVE = [
+  "crazytime",
+  "monopoly",
+  "baccarat",
+  "blackjack",
+  "crazycoinflip",
+  "funkytime",
+];
+
+// Build a curated row: for each wanted slug, find the matching live game (to get
+// its real id/gameId), then force our local image + clean name. Falls back to a
+// stub (still launchable by slug) if the catalog doesn't contain it.
+function curatedRow(all: Game[], wanted: string[]): Game[] {
+  return wanted
+    .map((want, i) => {
+      const match = all.find((g) => slug(g.name).includes(want) || want.includes(slug(g.name)));
+      const img = LOCAL_IMAGES[want];
+      if (!match && !img) return null;
+      return {
+        id: match?.id ?? want,
+        gameId: match?.gameId ?? match?.id ?? want,
+        name: match?.name ?? want,
+        provider: match?.provider ?? "",
+        tab: match?.tab ?? "casino",
+        tags: [],
+        featured: false,
+        hue: hue(i),
+        imageUrl: img ?? match?.imageUrl,
+      } as Game;
+    })
+    .filter((g): g is Game => g !== null);
+}
+
+export function homeCasinoRow(all: Game[]): Game[] {
+  return curatedRow(all, HOME_CASINO);
+}
+export function homeLiveRow(all: Game[]): Game[] {
+  return curatedRow(all, HOME_LIVE);
+}
