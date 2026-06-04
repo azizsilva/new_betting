@@ -76,11 +76,16 @@ async function login(): Promise<string> {
   });
   if (!res.ok) {
     const text = await res.text();
+    logger.error(
+      { status: res.status, url: officeUrl("/auth/login"), body: text.slice(0, 300) },
+      "GambleHub login failed",
+    );
     throw new AppError(502, `Gamble Hub login failed (${res.status})`, "GAMBLEHUB_LOGIN", text.slice(0, 200));
   }
   const data = (await res.json()) as LoginResponse;
   tokenCache = { accessToken: data.accessToken, expiresAt: Date.now() + TOKEN_TTL_MS };
   if (data.user?.id) resolvedUserId = data.user.id; // capture for catalog + openGame
+  logger.info({ userId: resolvedUserId, hasToken: !!data.accessToken }, "GambleHub login ok");
   return data.accessToken;
 }
 
@@ -108,6 +113,10 @@ export async function getUserGames(currency: string): Promise<GambleHubGame[]> {
     }
     if (!res.ok) {
       const text = await res.text();
+      logger.error(
+        { status: res.status, url: officeUrl(path), body: text.slice(0, 300) },
+        "GambleHub catalog failed",
+      );
       throw new AppError(502, `Gamble Hub catalog failed (${res.status})`, "GAMBLEHUB_CATALOG", text.slice(0, 200));
     }
     return (await res.json()) as GambleHubGame[];
