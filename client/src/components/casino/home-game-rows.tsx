@@ -17,7 +17,8 @@ function RowSkeleton() {
     <div className="flex gap-3 overflow-hidden">
       {Array.from({ length: 7 }).map((_, i) => (
         <div key={i} className={`${SLIDE} shrink-0`}>
-          <div className="aspect-[3/4] w-full animate-pulse rounded-xl bg-surface" />
+          {/* matches the card aspect ([4/5]) so there's no layout shift */}
+          <div className="aspect-[4/5] w-full animate-pulse rounded-2xl bg-surface" />
         </div>
       ))}
     </div>
@@ -27,11 +28,13 @@ function RowSkeleton() {
 function GameRow({
   icon,
   title,
+  actionLabel,
   tab,
   href,
 }: {
   icon: React.ReactNode;
   title: string;
+  actionLabel: string;
   tab: GameTab;
   href: string;
 }) {
@@ -43,7 +46,7 @@ function GameRow({
 
   return (
     <Section>
-      <SectionHeader icon={icon} title={title} actionLabel="All games" actionHref={href} />
+      <SectionHeader icon={icon} title={title} actionLabel={actionLabel} actionHref={href} />
       {isLoading ? (
         <RowSkeleton />
       ) : (
@@ -63,19 +66,22 @@ export function HomeGameRows() {
     <>
       <GameRow
         icon={<Cherry className="size-5 text-gold" />}
-        title="Casino Games"
+        title="Jeux de casino"
+        actionLabel="Tous les jeux"
         tab="casino"
         href="/casino?tab=casino"
       />
       <GameRow
         icon={<Club className="size-5 text-gold" />}
-        title="Live Games"
+        title="Jeux en direct"
+        actionLabel="Tous les jeux"
         tab="live-casino"
         href="/casino?tab=live-casino"
       />
       <GameRow
         icon={<Zap className="size-5 text-gold" />}
-        title="Instant Games"
+        title="Jeux instantanés"
+        actionLabel="Tous les jeux"
         tab="instant"
         href="/casino?tab=instant"
       />
