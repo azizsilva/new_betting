@@ -1,16 +1,16 @@
-import { PrismaNeon } from "@prisma/adapter-neon";
+import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@prisma/client";
 import { env, isProd } from "../config/env.js";
 
-// `env` is validated in config/env.ts (which loads .env by absolute path), so
-// DATABASE_URL is guaranteed present here. Read from the validated env, not
-// process.env, to avoid empty-connection-string adapter errors.
+// Use the standard node-postgres (pg) adapter — connects to Neon over normal
+// TCP/TLS. The serverless (@neondatabase/serverless) driver needs WebSockets,
+// which a plain Node VPS can't open ("All attempts to open a WebSocket failed").
 const connectionString = env.DATABASE_URL;
 if (!connectionString) {
   throw new Error("DATABASE_URL is empty — check the server .env file");
 }
 
-const adapter = new PrismaNeon({ connectionString });
+const adapter = new PrismaPg({ connectionString });
 
 const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
 
