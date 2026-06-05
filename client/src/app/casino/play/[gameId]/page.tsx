@@ -49,7 +49,15 @@ export default function PlayGamePage({
           router.replace("/casino");
           return;
         }
-        setError(e?.response?.data?.message || e?.message || "Could not open the game.");
+        // Provider rejects games for disabled providers with a 400. Show a clean,
+        // friendly message instead of the raw "Request failed with status code 400".
+        const status = e?.response?.status;
+        const providerMsg = e?.response?.data?.message as string | undefined;
+        const friendly =
+          status === 400
+            ? "Ce jeu n'est pas disponible pour le moment. Essayez un autre jeu."
+            : providerMsg || e?.message || "Impossible d'ouvrir le jeu.";
+        setError(friendly);
       });
     return () => {
       cancelled = true;
