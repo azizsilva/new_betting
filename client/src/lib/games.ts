@@ -251,6 +251,7 @@ interface CuratedPick {
   slug: string;
   name: string;
   provider: string;
+  match?: string[]; // candidate catalog name slugs to find the real game id
 }
 
 const HOME_CASINO: CuratedPick[] = [
@@ -266,25 +267,31 @@ const HOME_CASINO: CuratedPick[] = [
   { slug: "parthenonquestforimmortality", name: "Parthenon: Quest for Immortality", provider: "NetEnt" },
 ];
 
-// Live games — local Evolution art, real gameId attached when the catalog has it.
+// Live games — local Evolution art, launched via Gamblly. `match` lists the
+// Gamblly catalog name(s) to find the real game_uid. Crazy Time A / Funky Time /
+// Monopoly Live etc. are Evolution Live Row games in the Gamblly export.
 const HOME_LIVE: CuratedPick[] = [
-  { slug: "crazytime", name: "Crazy Time", provider: "Evolution" },
-  { slug: "monopoly", name: "Monopoly Live", provider: "Evolution" },
-  { slug: "funkytime", name: "Funky Time", provider: "Evolution" },
-  { slug: "crazycoinflip", name: "Crazy Coin Flip", provider: "Evolution" },
-  { slug: "lightningstorm", name: "Lightning Storm", provider: "Evolution" },
-  { slug: "baccarat", name: "Baccarat", provider: "Evolution" },
-  { slug: "blackjack", name: "Blackjack", provider: "Evolution" },
+  { slug: "crazytime", name: "Crazy Time", provider: "Evolution", match: ["crazytimea", "crazytime"] },
+  { slug: "monopoly", name: "Monopoly Live", provider: "Evolution", match: ["monopolylive", "monopoly"] },
+  { slug: "funkytime", name: "Funky Time", provider: "Evolution", match: ["funkytime"] },
+  { slug: "crazycoinflip", name: "Crazy Coin Flip", provider: "Evolution", match: ["crazycoinflip"] },
+  { slug: "lightningstorm", name: "Lightning Storm", provider: "Evolution", match: ["lightningstorm"] },
+  { slug: "baccarat", name: "Baccarat", provider: "Evolution", match: ["baccarat", "speedbaccarat"] },
+  { slug: "blackjack", name: "Blackjack", provider: "Evolution", match: ["blackjack", "lightningblackjack"] },
 ];
 
 // Build a curated row from the picks: always render a card with the local image.
-// Look up the catalog to attach the REAL gameId (so launch works); if not found,
-// keep the card (guest tap → login modal, which is what the user wants).
+// PREFER a Gamblly (account="gambly") match so the card launches via Gamblly;
+// fall back to any catalog match, then to the slug. match[] lists candidate
+// catalog name slugs to find the real game_uid.
 function curatedRow(all: Game[], picks: CuratedPick[], defaultAccount?: "slots" | "live"): Game[] {
   return picks.map((pick, i) => {
+    const wants = pick.match ?? [pick.slug];
+    const find = (pred: (g: Game) => boolean) =>
+      all.find((g) => pred(g) && (g.account === "gambly")) ?? all.find(pred);
     const match =
-      all.find((g) => slug(g.name) === pick.slug) ??
-      all.find((g) => slug(g.name).startsWith(pick.slug));
+      find((g) => wants.includes(slug(g.name))) ??
+      find((g) => wants.some((w) => slug(g.name).startsWith(w)));
     return {
       id: match?.id ?? pick.slug,
       gameId: match?.gameId ?? match?.id, // undefined → launch shows login/toast
