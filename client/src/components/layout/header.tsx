@@ -1,7 +1,8 @@
 "use client";
 
+import { Suspense } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { Globe, LayoutDashboard, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SearchBox } from "@/components/search-box";
@@ -12,19 +13,59 @@ import { useUiStore } from "@/store/ui";
 import { isStaffRole } from "@/lib/auth-api";
 import { cn } from "@/lib/utils";
 
+// Casino sub-sections are tabs on /casino (kingsbet365 style): the header link
+// carries the ?tab= so clicking it both navigates AND highlights correctly.
 const NAV = [
   { label: "Sport", href: "/sports" },
   { label: "Live Sports", href: "/live-sports" },
-  { label: "Casino", href: "/casino" },
-  { label: "Live Casino", href: "/live-casino", live: true },
-  { label: "Instant", href: "/instant" },
+  { label: "Casino", href: "/casino?tab=casino", tab: "casino" },
+  { label: "Live Casino", href: "/casino?tab=live-casino", tab: "live-casino", live: true },
+  { label: "Instant", href: "/casino?tab=instant", tab: "instant" },
   { label: "Promotions", href: "/promotions" },
 ];
 
-// Active when the pathname matches the link (or a sub-route of it).
-function isActive(pathname: string, href: string) {
-  if (href === "/") return pathname === "/";
-  return pathname === href || pathname.startsWith(href + "/");
+// Active when the path matches — and, for the /casino tabs, when the ?tab also
+// matches (so Casino / Live Casino / Instant highlight independently).
+function isActive(pathname: string, currentTab: string, item: (typeof NAV)[number]) {
+  const path = item.href.split("?")[0]!;
+  if (path === "/casino") {
+    if (pathname !== "/casino") return false;
+    // /casino with no tab defaults to "casino".
+    return (currentTab || "casino") === item.tab;
+  }
+  if (path === "/") return pathname === "/";
+  return pathname === path || pathname.startsWith(path + "/");
+}
+
+function HeaderNav({ pathname }: { pathname: string }) {
+  const searchParams = useSearchParams();
+  const currentTab = searchParams.get("tab") ?? "";
+  return (
+    <nav className="mx-auto hidden items-center gap-1.5 lg:flex">
+      {NAV.map((item) => {
+        const active = isActive(pathname, currentTab, item);
+        return (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={cn(
+              "relative whitespace-nowrap rounded-lg px-3.5 py-2 text-sm font-bold transition-colors xl:px-4",
+              active
+                ? "bg-gold-gradient text-brand-foreground gold-glow"
+                : "text-fg/80 hover:text-fg",
+            )}
+          >
+            <span className="inline-flex items-center gap-1.5">
+              {item.label}
+              {item.live && !active && (
+                <span className="h-1.5 w-1.5 rounded-full bg-danger live-pulse" />
+              )}
+            </span>
+          </Link>
+        );
+      })}
+    </nav>
+  );
 }
 
 export function Header() {
@@ -37,31 +78,10 @@ export function Header() {
         {/* Logo (mobile menu lives in the bottom nav, not here) */}
         <Logo size={80} className="h-16 sm:h-20 w-auto py-1" />
 
-        {/* Primary nav (centered, kingsbet-style) */}
-        <nav className="mx-auto hidden items-center gap-1.5 lg:flex">
-          {NAV.map((item) => {
-            const active = isActive(pathname, item.href);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "relative whitespace-nowrap rounded-lg px-3.5 py-2 text-sm font-bold transition-colors xl:px-4",
-                  active
-                    ? "bg-gold-gradient text-brand-foreground gold-glow"
-                    : "text-fg/80 hover:text-fg",
-                )}
-              >
-                <span className="inline-flex items-center gap-1.5">
-                  {item.label}
-                  {item.live && !active && (
-                    <span className="h-1.5 w-1.5 rounded-full bg-danger live-pulse" />
-                  )}
-                </span>
-              </Link>
-            );
-          })}
-        </nav>
+        {/* Primary nav (centered, kingsbet-style) — tab-aware highlight. */}
+        <Suspense fallback={<nav className="mx-auto hidden lg:flex" />}>
+          <HeaderNav pathname={pathname} />
+        </Suspense>
 
         {/* Search (URL-backed) */}
         <div className="hidden w-48 md:block xl:w-56">

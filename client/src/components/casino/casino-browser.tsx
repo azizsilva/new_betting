@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useQueryState } from "nuqs";
 import { Heart, Crown, Tag, Rocket, ChevronDown, Search, X } from "lucide-react";
-import { QUICK_FILTERS, type Game, type GameTab } from "@/lib/games";
+import { QUICK_FILTERS, homeCasinoRow, homeLiveRow, type Game, type GameTab } from "@/lib/games";
 import { useGames } from "@/lib/use-games";
 import { CasinoGameCard } from "./casino-game-card";
 import { Button } from "@/components/ui/button";
@@ -60,7 +60,7 @@ export function CasinoBrowser() {
 
   const filtered = useMemo(() => {
     const term = q.trim().toLowerCase();
-    return games.filter((g) => {
+    const inTab = games.filter((g) => {
       if (g.tab !== tab) return false;
       if (quick !== "all" && !g.tags.includes(quick as never)) return false;
       if (provider && g.provider !== provider) return false;
@@ -68,6 +68,21 @@ export function CasinoBrowser() {
         return false;
       return true;
     });
+
+    // Default view (no search / quick-filter / provider): pin our curated,
+    // local-art picks to the top — exactly like kingsbet365's first rows — then
+    // append the rest of the catalog. Skipped while filtering/searching so those
+    // still scan the full catalog.
+    const isDefault = !term && quick === "all" && !provider;
+    if (!isDefault) return inTab;
+
+    const curated =
+      tab === "live-casino" ? homeLiveRow(games) : tab === "casino" ? homeCasinoRow(games) : [];
+    if (curated.length === 0) return inTab;
+
+    const curatedIds = new Set(curated.map((g) => g.id));
+    const rest = inTab.filter((g) => !curatedIds.has(g.id));
+    return [...curated, ...rest];
   }, [games, tab, q, quick, provider]);
 
   const shown = filtered.slice(0, visible);

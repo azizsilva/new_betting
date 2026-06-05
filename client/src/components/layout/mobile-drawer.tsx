@@ -13,8 +13,6 @@ import {
   Home,
   Dices,
   Disc3,
-  Gem,
-  Trophy,
   Rocket,
 } from "lucide-react";
 import { useUiStore } from "@/store/ui";
@@ -24,11 +22,9 @@ import { Logo } from "@/components/logo";
 
 const NAV = [
   { label: "Home", href: "/", icon: Home },
-  { label: "Casino", href: "/casino", icon: Dices },
-  { label: "Live Casino", href: "/live-casino", icon: Disc3 },
-  { label: "Slots", href: "/casino?cat=slots", icon: Gem },
-  { label: "Jackpots", href: "/casino?cat=jackpot", icon: Trophy },
-  { label: "Instant", href: "/instant", icon: Rocket },
+  { label: "Casino", href: "/casino?tab=casino", icon: Dices },
+  { label: "Live Casino", href: "/casino?tab=live-casino", icon: Disc3 },
+  { label: "Instant", href: "/casino?tab=instant", icon: Rocket },
 ];
 
 const COMMUNITY = ["Security", "Cookies", "About Us", "Affiliate"];
