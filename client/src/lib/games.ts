@@ -206,25 +206,23 @@ const HOME_LIVE = [
   "funkytime",
 ];
 
-// Build a curated row: for each wanted slug, find the matching live game (to get
-// its real id/gameId), then force our local image + clean name. Falls back to a
-// stub (still launchable by slug) if the catalog doesn't contain it.
+// Build a curated row: for each wanted slug, find the matching live game in the
+// real catalog to get its REAL gameId (required to launch). We only include games
+// that actually exist in the catalog — never a fake slug-as-gameId (that 400s).
+// The local image + the catalog's real name/id are used.
 function curatedRow(all: Game[], wanted: string[]): Game[] {
   return wanted
     .map((want, i) => {
-      const match = all.find((g) => slug(g.name).includes(want) || want.includes(slug(g.name)));
-      const img = LOCAL_IMAGES[want];
-      if (!match && !img) return null;
+      // Prefer an exact slug match; fall back to a strict prefix match.
+      const match =
+        all.find((g) => slug(g.name) === want) ??
+        all.find((g) => slug(g.name).startsWith(want));
+      if (!match) return null; // no real gameId → don't show a broken card
       return {
-        id: match?.id ?? want,
-        gameId: match?.gameId ?? match?.id ?? want,
-        name: match?.name ?? want,
-        provider: match?.provider ?? "",
-        tab: match?.tab ?? "casino",
-        tags: [],
+        ...match,
         featured: false,
         hue: hue(i),
-        imageUrl: img ?? match?.imageUrl,
+        imageUrl: LOCAL_IMAGES[want] ?? match.imageUrl,
       } as Game;
     })
     .filter((g): g is Game => g !== null);

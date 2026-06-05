@@ -66,6 +66,8 @@ casinoRouter.post(
     });
     if (!user) throw NotFound("User not found");
 
+    logger.info({ gameId: body.gameId, userId: user.id }, "casino open requested");
+
     // Opening a game is always allowed — even at 0 balance. Betting is enforced
     // later in the seamless wallet callback, not here.
     const result = await openGame({
