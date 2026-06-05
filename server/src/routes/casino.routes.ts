@@ -38,12 +38,20 @@ casinoRouter.get(
   "/games",
   asyncHandler(async (req, res) => {
     const currency = (req.query.currency as string)?.toUpperCase() || DEFAULT_CURRENCY;
-    const games = await getUserGames(currency);
+
+    // Fetch both operator catalogs (slots + live) in parallel and merge. Tag each
+    // game with its source account so /open knows which credentials to sign with.
+    const [slotsGames, liveGames] = await Promise.all([
+      getUserGames(currency, "slots").catch(() => []),
+      getUserGames(currency, "live").catch(() => []),
+    ]);
+
+    const tag = (g: (typeof slotsGames)[number], kind: "slots" | "live") => ({ ...g, account: kind });
+    const all = [...slotsGames.map((g) => tag(g, "slots")), ...liveGames.map((g) => tag(g, "live"))];
+
     res.setHeader("Cache-Control", "no-store");
-    // Only return games that are enabled AND have a real thumbnail image.
-    // GambleHub returns "" for many IGT/Amatic games — skip those so every
-    // card in the lobby has a proper image.
-    res.json(games.filter((g) => g.isEnabled && g.imageUrl));
+    // Only enabled games with a real thumbnail (skip the imageless IGT/Amatic ones).
+    res.json(all.filter((g) => g.isEnabled && g.imageUrl));
   }),
 );
 
@@ -53,6 +61,7 @@ const openSchema = z.object({
   demo: z.boolean().optional(),
   language: z.string().min(2).max(5).optional(),
   exitUrl: z.string().url().optional(),
+  account: z.enum(["slots", "live"]).optional(),
 });
 
 casinoRouter.post(
@@ -77,6 +86,7 @@ casinoRouter.post(
       language: body.language ?? user.language,
       demo: body.demo,
       exitUrl: body.exitUrl ?? env.CLIENT_ORIGIN.split(",")[0]!.trim(),
+      kind: body.account ?? "slots",
     });
 
     // Track recently played (best-effort). Never let a logging write — or a
@@ -154,8 +164,10 @@ casinoRouter.post(
     const cmd = (req.body as { cmd?: string })?.cmd;
     const sessionid = (req.body as { sessionid?: string })?.sessionid ?? "";
 
-    // 1) Verify HMAC over the exact received bytes.
-    const sigOk = Boolean(env.GAMBLEHUB_SECRET) && verifyHmac(raw, signature, env.GAMBLEHUB_SECRET);
+    // 1) Verify HMAC over the exact received bytes. Callbacks may come from either
+    // operator account (slots or live), so accept a signature from either secret.
+    const secrets = [env.GAMBLEHUB_SECRET, env.GAMBLEHUB_LIVE_SECRET].filter(Boolean);
+    const sigOk = secrets.some((s) => verifyHmac(raw, signature, s));
     if (!sigOk) {
       logger.warn(
         { ip: req.ip, cmd, hasRaw: Boolean(req.rawBody), sigPrefix: signature.slice(0, 12) },

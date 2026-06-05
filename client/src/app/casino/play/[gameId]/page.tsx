@@ -1,7 +1,7 @@
 "use client";
 
 import { use, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { Loader2, X, AlertTriangle } from "lucide-react";
 import { openGame } from "@/lib/casino-api";
@@ -18,6 +18,8 @@ export default function PlayGamePage({
 }) {
   const { gameId } = use(params);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const account = searchParams.get("account") === "live" ? "live" : "slots";
   const accessToken = useAuthStore((s) => s.accessToken);
   const openLoginModal = useUiStore((s) => s.openLoginModal);
   const [url, setUrl] = useState<string | null>(null);
@@ -33,7 +35,7 @@ export default function PlayGamePage({
     }
 
     let cancelled = false;
-    openGame(decodeURIComponent(gameId))
+    openGame(decodeURIComponent(gameId), { account })
       .then((res) => {
         if (!cancelled) setUrl(res.url);
       })
@@ -50,7 +52,7 @@ export default function PlayGamePage({
     return () => {
       cancelled = true;
     };
-  }, [gameId, accessToken, openLoginModal, router]);
+  }, [gameId, account, accessToken, openLoginModal, router]);
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-black">

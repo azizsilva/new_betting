@@ -15,6 +15,7 @@ export interface Game {
   hue: string; // gradient placeholder / fallback when no thumbnail
   imageUrl?: string; // real thumbnail from the provider catalog
   gameId?: string; // provider game id passed to openGame (falls back to id)
+  account?: "slots" | "live"; // operator account that owns/launches this game
 }
 
 // gradient helpers for the placeholder art
@@ -104,6 +105,7 @@ export interface CatalogGame {
   imageUrl: string;
   provider: string;
   isEnabled?: boolean;
+  account?: "slots" | "live"; // which operator account this game belongs to
 }
 
 const LIVE_PROVIDERS = /(evolution|ezugi|pragmatic.?play.?live|live)/i;
@@ -127,6 +129,12 @@ const LOCAL_IMAGES: Record<string, string> = {
   bigbassholdspin: "/images/PPC-bigbassholdspinnermegaways.png",
   bigbasskeepingitreel: "/images/PPC-bigbasskeepingitreel.png",
   bigbasskeepingit: "/images/PPC-bigbasskeepingitreel.png",
+  aztecgemsmegaways: "/images/PPC-aztecgemsmegaways.png",
+  aztecgems: "/images/PPC-aztecgemsmegaways.png",
+  madamedestinymegaways: "/images/PPC-madamedestinymegaways.png",
+  madamedestiny: "/images/PPC-madamedestinymegaways.png",
+  sweetbonanza1000: "/images/PPC-sweetbonanza1000.png",
+  sweetbonanza: "/images/PPC-sweetbonanza1000.png",
   // Live casino (Evolution)
   baccarat: "/images/EVO-baccarat.png",
   blackjack: "/images/EVO-blackjack.png",
@@ -185,7 +193,8 @@ export function mapCatalog(games: CatalogGame[]): Game[] {
       gameId: g.id,
       name: g.title,
       provider: g.provider || "Unknown",
-      tab: tabFor(g),
+      tab: g.account === "live" ? "live-casino" : tabFor(g),
+      account: g.account,
       tags,
       // Every 9th game becomes a large featured card (same rhythm as kingsbet365).
       featured: i % 9 === 0,
@@ -229,59 +238,71 @@ function pinCurated(all: Game[]): Game[] {
 }
 
 // ─── Curated homepage rows ────────────────────────────────────────────────────
-// The homepage shows a fixed, hand-picked set per row (kingsbet365 style) using
-// our local art — NOT the raw provider order. Each entry is matched to the live
-// catalog by title slug so the real gameId (and launch) still works.
-// NOTE: every slug here is matched against the live TND catalog by curatedRow;
-// games not present in the catalog are simply skipped (no broken cards).
-const HOME_CASINO = [
-  "bookofdead",
-  "jellyexpress",
-  "bigbassholdspinnermegaways",
-  "bigbasskeepingitreel",
-  "sweetbonanza",
-  "gatesofolympus",
-  "sugarrush",
-  "wolfgold",
+// The homepage shows a FIXED, hand-picked set per row (kingsbet365 style) built
+// from the local art we actually have in /public/images. These cards ALWAYS
+// render (exactly like kingsbet365) — they never disappear because of a catalog
+// miss. When the live catalog has a matching game we attach its REAL gameId so a
+// logged-in player launches it; otherwise the card still shows and a guest tap
+// surfaces the login modal (card-level gate in CasinoGameCard).
+//
+// Each entry: slug (matches a LOCAL_IMAGES key + used to find the catalog game),
+// the display name, and the provider label shown under the title.
+interface CuratedPick {
+  slug: string;
+  name: string;
+  provider: string;
+}
+
+const HOME_CASINO: CuratedPick[] = [
+  { slug: "munchymilo", name: "Munchy Milo", provider: "Hacksaw" },
+  { slug: "bookofdeadgocollect", name: "Book of Dead Go Collect", provider: "Play'n GO" },
+  { slug: "jellyexpress", name: "Jelly Express", provider: "Pragmatic Play" },
+  { slug: "powerofthormegaways", name: "Power of Thor Megaways", provider: "Pragmatic Play" },
+  { slug: "bigbassholdspinnermegaways", name: "Big Bass Hold & Spinner Megaways", provider: "Pragmatic Play" },
+  { slug: "bigbasskeepingitreel", name: "Big Bass Keeping It Reel", provider: "Pragmatic Play" },
+  { slug: "sweetbonanza1000", name: "Sweet Bonanza 1000", provider: "Pragmatic Play" },
+  { slug: "madamedestinymegaways", name: "Madame Destiny Megaways", provider: "Pragmatic Play" },
+  { slug: "aztecgemsmegaways", name: "Aztec Gems Megaways", provider: "Pragmatic Play" },
+  { slug: "parthenonquestforimmortality", name: "Parthenon: Quest for Immortality", provider: "NetEnt" },
 ];
 
-// Live games confirmed present in the TND catalog (Evolution).
-const HOME_LIVE = [
-  "crazytime",
-  "lightningroulette",
-  "dreamcatcher",
-  "lightningdice",
-  "crazytimea",
-  "supersicbo",
-  "goldenwealthbaccarat",
-  "autoroulette",
+// Live games — local Evolution art, real gameId attached when the catalog has it.
+const HOME_LIVE: CuratedPick[] = [
+  { slug: "crazytime", name: "Crazy Time", provider: "Evolution" },
+  { slug: "monopoly", name: "Monopoly Live", provider: "Evolution" },
+  { slug: "funkytime", name: "Funky Time", provider: "Evolution" },
+  { slug: "crazycoinflip", name: "Crazy Coin Flip", provider: "Evolution" },
+  { slug: "lightningstorm", name: "Lightning Storm", provider: "Evolution" },
+  { slug: "baccarat", name: "Baccarat", provider: "Evolution" },
+  { slug: "blackjack", name: "Blackjack", provider: "Evolution" },
 ];
 
-// Build a curated row: for each wanted slug, find the matching live game in the
-// real catalog to get its REAL gameId (required to launch). We only include games
-// that actually exist in the catalog — never a fake slug-as-gameId (that 400s).
-// The local image + the catalog's real name/id are used.
-function curatedRow(all: Game[], wanted: string[]): Game[] {
-  return wanted
-    .map((want, i) => {
-      // Prefer an exact slug match; fall back to a strict prefix match.
-      const match =
-        all.find((g) => slug(g.name) === want) ??
-        all.find((g) => slug(g.name).startsWith(want));
-      if (!match) return null; // no real gameId → don't show a broken card
-      return {
-        ...match,
-        featured: false,
-        hue: hue(i),
-        imageUrl: LOCAL_IMAGES[want] ?? match.imageUrl,
-      } as Game;
-    })
-    .filter((g): g is Game => g !== null);
+// Build a curated row from the picks: always render a card with the local image.
+// Look up the catalog to attach the REAL gameId (so launch works); if not found,
+// keep the card (guest tap → login modal, which is what the user wants).
+function curatedRow(all: Game[], picks: CuratedPick[], defaultAccount?: "slots" | "live"): Game[] {
+  return picks.map((pick, i) => {
+    const match =
+      all.find((g) => slug(g.name) === pick.slug) ??
+      all.find((g) => slug(g.name).startsWith(pick.slug));
+    return {
+      id: match?.id ?? pick.slug,
+      gameId: match?.gameId ?? match?.id, // undefined → launch shows login/toast
+      name: pick.name,
+      provider: pick.provider,
+      tab: defaultAccount === "live" ? "live-casino" : "casino",
+      account: match?.account ?? defaultAccount,
+      tags: match?.tags ?? [],
+      featured: false,
+      hue: hue(i),
+      imageUrl: LOCAL_IMAGES[pick.slug] ?? match?.imageUrl,
+    } satisfies Game;
+  });
 }
 
 export function homeCasinoRow(all: Game[]): Game[] {
   return curatedRow(all, HOME_CASINO);
 }
 export function homeLiveRow(all: Game[]): Game[] {
-  return curatedRow(all, HOME_LIVE);
+  return curatedRow(all, HOME_LIVE, "live");
 }

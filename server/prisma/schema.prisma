@@ -376,7 +376,8 @@ model GameSession {
 
   user User @relation(fields: [userId], references: [id])
 
-  @@index([login])
+  // Callback login-fallback resolves the most recent session for a login.
+  @@index([login, createdAt(sort: Desc)])
   @@index([userId])
   @@map("game_sessions")
 }

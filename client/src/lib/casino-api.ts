@@ -18,7 +18,7 @@ export async function fetchGames(currency?: string): Promise<CatalogGame[]> {
 // Open a game session → returns the iframe url + session id.
 export async function openGame(
   gameId: string,
-  opts: { demo?: boolean; language?: string } = {},
+  opts: { demo?: boolean; language?: string; account?: "slots" | "live" } = {},
 ): Promise<OpenGameResult> {
   const { data } = await api.post<OpenGameResult>("/casino/open", { gameId, ...opts });
   return data;

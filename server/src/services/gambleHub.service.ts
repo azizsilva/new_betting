@@ -32,11 +32,51 @@ interface OpenGameResponse {
   };
 }
 
-// ─── Token cache (in-memory, single process) ──────────────────────────────────
+// ─── Accounts ─────────────────────────────────────────────────────────────────
+// Gamble Hub splits slots and live casino across two operator accounts. Each has
+// its own credentials, signing secret, access-token cache, and resolved user_id.
 
-let tokenCache: { accessToken: string; expiresAt: number } | null = null;
-let resolvedUserId: string | null = null; // captured from the login response
-const TOKEN_TTL_MS = 10 * 60 * 1000; // access token is short-lived; re-login defensively
+export type AccountKind = "slots" | "live";
+
+interface Account {
+  kind: AccountKind;
+  login: string;
+  password: string;
+  secret: string;
+  envUserId: string;
+  token: { accessToken: string; expiresAt: number } | null;
+  resolvedUserId: string | null;
+  loginInFlight: Promise<string> | null; // de-dupe concurrent logins
+}
+
+const TOKEN_TTL_MS = 10 * 60 * 1000;
+
+const slots: Account = {
+  kind: "slots",
+  login: env.GAMBLEHUB_LOGIN,
+  password: env.GAMBLEHUB_PASSWORD,
+  secret: env.GAMBLEHUB_SECRET,
+  envUserId: env.GAMBLEHUB_USER_ID,
+  token: null,
+  resolvedUserId: null,
+  loginInFlight: null,
+};
+
+// Live account falls back to the slots account if its own creds aren't set.
+const live: Account = {
+  kind: "live",
+  login: env.GAMBLEHUB_LIVE_LOGIN || env.GAMBLEHUB_LOGIN,
+  password: env.GAMBLEHUB_LIVE_PASSWORD || env.GAMBLEHUB_PASSWORD,
+  secret: env.GAMBLEHUB_LIVE_SECRET || env.GAMBLEHUB_SECRET,
+  envUserId: env.GAMBLEHUB_LIVE_USER_ID || env.GAMBLEHUB_USER_ID,
+  token: null,
+  resolvedUserId: null,
+  loginInFlight: null,
+};
+
+function accountFor(kind: AccountKind): Account {
+  return kind === "live" ? live : slots;
+}
 
 function officeUrl(path: string) {
   return `${env.GAMBLEHUB_OFFICE_URL.replace(/\/$/, "")}${path}`;
@@ -57,78 +97,67 @@ async function fetchT(url: string, init: RequestInit, timeoutMs = 12_000): Promi
   }
 }
 
-function assertConfigured() {
-  // user_id comes back from the login response, so only login+password are required.
-  if (!env.GAMBLEHUB_LOGIN || !env.GAMBLEHUB_PASSWORD) {
-    throw new AppError(503, "Gamble Hub is not configured", "GAMBLEHUB_DISABLED");
+function assertConfigured(acc: Account) {
+  if (!acc.login || !acc.password) {
+    throw new AppError(503, `Gamble Hub (${acc.kind}) is not configured`, "GAMBLEHUB_DISABLED");
   }
 }
 
-/** The API user id: env override if set, otherwise captured from login. */
-function userId(): string {
-  const id = env.GAMBLEHUB_USER_ID || resolvedUserId;
+function userId(acc: Account): string {
+  const id = acc.envUserId || acc.resolvedUserId;
   if (!id) throw new AppError(502, "Gamble Hub user id unavailable (login first)", "GAMBLEHUB_USER_ID");
   return id;
 }
 
-/** POST /auth/login (form-encoded). Caches the access token + user id in memory. */
-async function login(): Promise<string> {
-  assertConfigured();
-  const body = new URLSearchParams({
-    login: env.GAMBLEHUB_LOGIN,
-    password: env.GAMBLEHUB_PASSWORD,
-  });
+/** POST /auth/login (form-encoded). Caches the access token + user id per account. */
+async function login(acc: Account): Promise<string> {
+  assertConfigured(acc);
+  const body = new URLSearchParams({ login: acc.login, password: acc.password });
   const res = await fetchT(officeUrl("/auth/login"), {
     method: "POST",
-    headers: {
-      accept: "application/json",
-      "content-type": "application/x-www-form-urlencoded",
-    },
+    headers: { accept: "application/json", "content-type": "application/x-www-form-urlencoded" },
     body,
   });
   if (!res.ok) {
     const text = await res.text();
-    logger.error(
-      { status: res.status, url: officeUrl("/auth/login"), body: text.slice(0, 300) },
-      "GambleHub login failed",
-    );
+    logger.error({ account: acc.kind, status: res.status, body: text.slice(0, 300) }, "GambleHub login failed");
     throw new AppError(502, `Gamble Hub login failed (${res.status})`, "GAMBLEHUB_LOGIN", text.slice(0, 200));
   }
   const data = (await res.json()) as LoginResponse;
-  tokenCache = { accessToken: data.accessToken, expiresAt: Date.now() + TOKEN_TTL_MS };
-  if (data.user?.id) resolvedUserId = data.user.id; // capture for catalog + openGame
-  logger.info({ userId: resolvedUserId, hasToken: !!data.accessToken }, "GambleHub login ok");
+  acc.token = { accessToken: data.accessToken, expiresAt: Date.now() + TOKEN_TTL_MS };
+  if (data.user?.id) acc.resolvedUserId = data.user.id;
+  logger.info({ account: acc.kind, userId: acc.resolvedUserId }, "GambleHub login ok");
   return data.accessToken;
 }
 
-async function getToken(forceRefresh = false): Promise<string> {
-  if (!forceRefresh && tokenCache && tokenCache.expiresAt > Date.now()) {
-    return tokenCache.accessToken;
-  }
-  return login();
+// Concurrency-safe token getter: collapses simultaneous logins into one request.
+async function getToken(acc: Account, forceRefresh = false): Promise<string> {
+  if (!forceRefresh && acc.token && acc.token.expiresAt > Date.now()) return acc.token.accessToken;
+  if (acc.loginInFlight) return acc.loginInFlight;
+  acc.loginInFlight = login(acc).finally(() => {
+    acc.loginInFlight = null;
+  });
+  return acc.loginInFlight;
 }
 
-/** GET the player game catalog for a currency. Retries once on 401. */
-export async function getUserGames(currency: string): Promise<GambleHubGame[]> {
-  assertConfigured();
+/** GET the player game catalog for a currency on a given account. Retries once on 401. */
+export async function getUserGames(currency: string, kind: AccountKind = "slots"): Promise<GambleHubGame[]> {
+  const acc = accountFor(kind);
+  assertConfigured(acc);
 
   for (let attempt = 0; attempt < 2; attempt++) {
-    const token = await getToken(attempt > 0);
-    // userId() resolves only after login has populated it (or via env override).
-    const path = `/users/${userId()}/getUserGames/${currency}`;
+    const token = await getToken(acc, attempt > 0);
+    const path = `/users/${userId(acc)}/getUserGames/${currency}`;
     const res = await fetchT(officeUrl(path), {
       headers: { accept: "application/json", authorization: `Bearer ${token}` },
     });
     if (res.status === 401 && attempt === 0) {
-      tokenCache = null;
+      acc.token = null;
       continue;
     }
     if (!res.ok) {
       const text = await res.text();
-      logger.error(
-        { status: res.status, url: officeUrl(path), body: text.slice(0, 300) },
-        "GambleHub catalog failed",
-      );
+      logger.error({ account: acc.kind, status: res.status, body: text.slice(0, 300) }, "GambleHub catalog failed");
       throw new AppError(502, `Gamble Hub catalog failed (${res.status})`, "GAMBLEHUB_CATALOG", text.slice(0, 200));
     }
     return (await res.json()) as GambleHubGame[];
@@ -143,6 +172,7 @@ export interface OpenGameParams {
   language?: string;
   demo?: boolean;
   exitUrl: string;
+  kind?: AccountKind; // which operator account signs/opens this game
 }
 
 export interface OpenGameResult {
@@ -151,21 +181,20 @@ export interface OpenGameResult {
 }
 
 /**
- * Open a real (or demo) game session. Signs the request body with HMAC-SHA256,
- * then persists a GameSession so seamless wallet callbacks can resolve the player.
- * openGame requires NO Authorization header (doc §5.1) — only the X-Signature.
+ * Open a real (or demo) game session on the given account. Signs the request body
+ * with that account's HMAC secret, then persists a GameSession so seamless wallet
+ * callbacks can resolve the player. openGame needs NO Authorization header (§5.1).
  */
 export async function openGame(params: OpenGameParams): Promise<OpenGameResult> {
-  assertConfigured();
-  if (!env.GAMBLEHUB_SECRET) {
-    throw new AppError(503, "Gamble Hub signing secret is not configured", "GAMBLEHUB_DISABLED");
+  const acc = accountFor(params.kind ?? "slots");
+  assertConfigured(acc);
+  if (!acc.secret) {
+    throw new AppError(503, `Gamble Hub (${acc.kind}) signing secret is not configured`, "GAMBLEHUB_DISABLED");
   }
 
-  // Ensure we have the API user_id. openGame itself needs no auth, but the id is
-  // captured from login — so log in if we don't have it yet (no env override).
-  if (!env.GAMBLEHUB_USER_ID && !resolvedUserId) await getToken();
+  // Ensure we have the API user_id (captured from login) before signing.
+  if (!acc.envUserId && !acc.resolvedUserId) await getToken(acc);
 
-  // login the provider expects is the per-player identifier we'll match in callbacks.
   const playerLogin = params.user.username;
 
   const payload: Record<string, string> = {
@@ -175,29 +204,25 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
     gameId: params.gameId,
     language: params.language ?? "en",
     player_login: playerLogin,
-    user_id: userId(),
+    user_id: userId(acc),
   };
   if (env.GAMBLEHUB_CALLBACK_URL) payload.callbackUrl = env.GAMBLEHUB_CALLBACK_URL;
 
-  // Sign the EXACT bytes we send (doc §7: byte-for-byte).
+  // Sign the EXACT bytes we send (doc §7: byte-for-byte) with this account's secret.
   const rawBody = JSON.stringify(payload);
-  const signature = signHmacSha256Hex(rawBody, env.GAMBLEHUB_SECRET);
+  const signature = signHmacSha256Hex(rawBody, acc.secret);
 
   let res: Response;
   let rawText: string;
   try {
     res = await fetchT(clientUrl("/games/openGame"), {
       method: "POST",
-      headers: {
-        accept: "application/json",
-        "content-type": "application/json",
-        "x-signature": signature,
-      },
+      headers: { accept: "application/json", "content-type": "application/json", "x-signature": signature },
       body: rawBody,
     });
     rawText = await res.text();
   } catch (err) {
-    logger.error({ gameId: params.gameId, err: (err as Error).message }, "openGame network error");
+    logger.error({ account: acc.kind, gameId: params.gameId, err: (err as Error).message }, "openGame network error");
     throw BadRequest("Could not reach the game provider. Please try again.");
   }
 
@@ -205,28 +230,25 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
   try {
     data = JSON.parse(rawText) as OpenGameResponse;
   } catch {
-    logger.error(
-      { gameId: params.gameId, status: res.status, body: rawText.slice(0, 200) },
-      "openGame non-JSON response",
-    );
+    logger.error({ account: acc.kind, gameId: params.gameId, status: res.status, body: rawText.slice(0, 200) }, "openGame non-JSON response");
     throw BadRequest("Game provider returned an unexpected response.");
   }
 
   if (!res.ok || data.status !== "success") {
     const msg = data.message || data.error || `Game could not be opened (${res.status})`;
-    logger.warn({ gameId: params.gameId, status: res.status, error: data.error, msg }, "openGame failed");
+    logger.warn({ account: acc.kind, gameId: params.gameId, status: res.status, error: data.error, msg }, "openGame failed");
     throw BadRequest(msg);
   }
 
   const url = data.content?.game?.url;
   const sessionId = data.content?.gameRes?.sessionId;
   if (!url || !sessionId) {
-    logger.warn({ gameId: params.gameId, data }, "openGame missing url/sessionId");
+    logger.warn({ account: acc.kind, gameId: params.gameId, data }, "openGame missing url/sessionId");
     throw BadRequest("Game session could not be created.");
   }
 
   // Persist the session → maps provider sessionId/login back to our user + currency.
-  // Don't let a logging-table write failure break the launch — wrap it.
+  // Never let a logging-table write failure break the launch.
   try {
     await prisma.gameSession.upsert({
       where: { sessionId },
@@ -241,7 +263,6 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
     });
   } catch (err) {
     logger.error({ sessionId, err: (err as Error).message }, "gameSession upsert failed");
-    // Still return the URL — callbacks will create the mapping lazily if needed.
   }
 
   return { url, sessionId };

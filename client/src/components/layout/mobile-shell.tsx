@@ -12,7 +12,8 @@ import { MobileDrawer } from "./mobile-drawer";
  */
 export function MobileShell() {
   const pathname = usePathname();
-  if (pathname.startsWith("/panel")) return null;
+  // Hidden in the back-office panel and in the full-screen game launcher.
+  if (pathname.startsWith("/panel") || pathname.startsWith("/casino/play")) return null;
 
   return (
     <>

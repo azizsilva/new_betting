@@ -41,6 +41,13 @@ const schema = z.object({
   GAMBLEHUB_CALLBACK_URL: z.string().optional().default(""), // override admin default; empty = use panel default
   GAMBLEHUB_CURRENCY: z.string().optional().default("TND"), // catalog + session currency
 
+  // Separate LIVE-casino account (Evolution live games are under a different
+  // operator account than slots). Falls back to the main account if unset.
+  GAMBLEHUB_LIVE_LOGIN: z.string().optional().default(""),
+  GAMBLEHUB_LIVE_PASSWORD: z.string().optional().default(""),
+  GAMBLEHUB_LIVE_USER_ID: z.string().optional().default(""),
+  GAMBLEHUB_LIVE_SECRET: z.string().optional().default(""),
+
   PSP_API_BASE_URL: z.string().optional().default(""),
   PSP_API_KEY: z.string().optional().default(""),
   PSP_WEBHOOK_SECRET: z.string().optional().default(""),

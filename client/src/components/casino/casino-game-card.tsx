@@ -29,7 +29,8 @@ export function CasinoGameCard({ game, large }: { game: Game; large?: boolean })
       return;
     }
     setLaunching(true);
-    router.push(`/casino/play/${encodeURIComponent(game.gameId ?? game.id)}`);
+    const acc = game.account ? `?account=${game.account}` : "";
+    router.push(`/casino/play/${encodeURIComponent(game.gameId ?? game.id)}${acc}`);
   }
 
   return (
