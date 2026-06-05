@@ -1,6 +1,5 @@
 "use client";
 
-import { Crown } from "lucide-react";
 import type { User } from "@/lib/types";
 
 function Field({ label, value }: { label: string; value: string }) {
@@ -24,26 +23,6 @@ export function ProfileContent({ user, active }: { user: User; active: string })
           <Field label="Currency" value="TND" />
           <Field label="Status" value={user.status} />
         </div>
-      </Panel>
-    );
-  }
-
-  if (active === "operations") {
-    return (
-      <Panel title="Operations">
-        <p className="text-sm text-muted">
-          Your deposits, withdrawals and transfers will appear here.
-        </p>
-      </Panel>
-    );
-  }
-
-  if (active === "kyc") {
-    return (
-      <Panel title="Identity Verification">
-        <p className="text-sm text-muted">
-          Upload your documents to verify your account. Contact your agent for assistance.
-        </p>
       </Panel>
     );
   }
@@ -76,10 +55,12 @@ export function ProfileContent({ user, active }: { user: User; active: string })
   return (
     <div className="grid min-h-[420px] place-items-center rounded-2xl border border-line bg-surface p-8 text-center">
       <div>
-        <Crown className="mx-auto size-12 text-gold" fill="currentColor" />
-        <span className="mt-2 block text-xl font-black text-gold-gradient">
-          KINGSBET<span className="align-super text-xs">365</span>
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/logo_2_afroo-removebg-preview.png"
+          alt="AfroBet216"
+          className="mx-auto h-16 w-auto object-contain"
+        />
         <h2 className="mt-4 text-2xl font-bold">Welcome to your personal space</h2>
         <p className="mt-2 text-sm text-muted">Use the menu on the left to navigate.</p>
       </div>

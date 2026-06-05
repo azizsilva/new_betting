@@ -6,9 +6,7 @@ import {
   Copy,
   Check,
   UserCog,
-  ShieldCheck,
   Bell,
-  ArrowLeftRight,
   Star,
   Gift,
   LogOut,
@@ -20,12 +18,10 @@ import { Button } from "@/components/ui/button";
 import { formatMoney, cn } from "@/lib/utils";
 import type { User } from "@/lib/types";
 
-// Dashboard menu — "Mes paris" (My bets) intentionally omitted (no sportsbook).
+// Dashboard menu — KYC and Operations removed (no manual verification / ops).
 const MENU = [
   { id: "personal", label: "Personal Information", icon: UserCog },
-  { id: "kyc", label: "Identity Verification", icon: ShieldCheck },
   { id: "notifications", label: "Notifications", icon: Bell },
-  { id: "operations", label: "Operations", icon: ArrowLeftRight },
   { id: "cashback", label: "Cashback", icon: Star },
   { id: "benefits", label: "Benefits", icon: Gift },
 ];
@@ -93,10 +89,6 @@ export function ProfileSidebar({
           </div>
         </div>
 
-        <div className="mt-5 grid grid-cols-2 gap-3">
-          <Button variant="outline" size="lg">Withdraw</Button>
-          <Button variant="brand" size="lg">Deposit</Button>
-        </div>
       </div>
 
       {/* Menu */}

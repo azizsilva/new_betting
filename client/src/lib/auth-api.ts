@@ -11,12 +11,12 @@ export async function fetchMe(): Promise<User> {
   return data;
 }
 
-// Where each role lands after login. Players go to their personal dashboard;
-// staff roles go to the back-office panel (built later).
+// Where each role lands after login. Players go to the HOME page (the dashboard
+// stays reachable via the account menu); staff roles go to the back-office panel.
 export function landingForRole(role: UserRole | null): string {
   switch (role) {
     case "player":
-      return "/profile";
+      return "/";
     case "admin_provider":
     case "owner":
     case "partner":
