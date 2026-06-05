@@ -55,7 +55,7 @@ export function LatestWins() {
             className="flex items-center justify-between rounded-xl bg-surface-2/60 px-4 py-3 hover:bg-surface-2 transition-colors"
           >
             <div className="flex items-center gap-3">
-              <div className="relative size-10 overflow-hidden rounded-lg bg-surface">
+              <div className="relative size-11 shrink-0 overflow-hidden rounded-full bg-surface ring-1 ring-white/10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={win.image}
