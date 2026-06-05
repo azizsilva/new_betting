@@ -3,12 +3,10 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import * as Dialog from "@radix-ui/react-dialog";
-import { Drawer } from "vaul";
 import { Crown, Eye, EyeOff, Lock, User, X, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useUiStore } from "@/store/ui";
 import { useAuthStore } from "@/store/auth";
-import { useIsDesktop } from "@/lib/use-media-query";
 import { Button } from "@/components/ui/button";
 import { api } from "@/lib/api";
 import { landingForRole } from "@/lib/auth-api";
@@ -119,45 +117,21 @@ function LoginForm({ onDone }: { onDone: () => void }) {
 
 export function LoginModal() {
   const { loginModalOpen, closeLoginModal } = useUiStore();
-  const isDesktop = useIsDesktop();
 
-  // Desktop → centered dialog. Mobile → bottom sheet (slides up).
-  if (isDesktop) {
-    return (
-      <Dialog.Root open={loginModalOpen} onOpenChange={(o) => !o && closeLoginModal()}>
-        <Dialog.Portal>
-          <Dialog.Overlay className="fixed inset-0 z-[80] bg-black/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=open]:fade-in-0" />
-          <Dialog.Content className="fixed left-1/2 top-1/2 z-[80] w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-line bg-bg-elevated p-6 shadow-xl data-[state=open]:animate-in data-[state=open]:zoom-in-95">
-            <Dialog.Title className="sr-only">Se connecter</Dialog.Title>
-            <Dialog.Description className="sr-only">Connectez-vous à votre compte</Dialog.Description>
-            <Dialog.Close className="absolute right-4 top-4 text-muted hover:text-fg">
-              <X className="size-5" />
-            </Dialog.Close>
-            <LoginForm onDone={closeLoginModal} />
-          </Dialog.Content>
-        </Dialog.Portal>
-      </Dialog.Root>
-    );
-  }
-
+  // Centered popup on every viewport (mobile + desktop) — no bottom sheet.
   return (
-    <Drawer.Root
-      open={loginModalOpen}
-      onOpenChange={(o) => !o && closeLoginModal()}
-      shouldScaleBackground={false}
-    >
-      <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 z-[90] bg-black/80 backdrop-blur-sm" />
-        <Drawer.Content className="fixed inset-x-0 bottom-0 z-[90] flex max-h-[90vh] flex-col rounded-t-2xl border-t border-line bg-bg-elevated px-5 pt-3 pb-[max(20px,env(safe-area-inset-bottom))]">
-          <Drawer.Title className="sr-only">Se connecter</Drawer.Title>
-          <Drawer.Description className="sr-only">Connectez-vous à votre compte</Drawer.Description>
-          {/* grab handle */}
-          <div className="mx-auto mb-4 h-1.5 w-12 shrink-0 rounded-full bg-line" />
-          <div className="overflow-y-auto">
-            <LoginForm onDone={closeLoginModal} />
-          </div>
-        </Drawer.Content>
-      </Drawer.Portal>
-    </Drawer.Root>
+    <Dialog.Root open={loginModalOpen} onOpenChange={(o) => !o && closeLoginModal()}>
+      <Dialog.Portal>
+        <Dialog.Overlay className="fixed inset-0 z-90 bg-black/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=open]:fade-in-0" />
+        <Dialog.Content className="fixed left-1/2 top-1/2 z-90 flex max-h-[90vh] w-[calc(100%-2rem)] max-w-md -translate-x-1/2 -translate-y-1/2 flex-col overflow-y-auto rounded-2xl border border-line bg-bg-elevated p-6 shadow-xl data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95">
+          <Dialog.Title className="sr-only">Se connecter</Dialog.Title>
+          <Dialog.Description className="sr-only">Connectez-vous à votre compte</Dialog.Description>
+          <Dialog.Close className="absolute right-4 top-4 text-muted hover:text-fg">
+            <X className="size-5" />
+          </Dialog.Close>
+          <LoginForm onDone={closeLoginModal} />
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
   );
 }
