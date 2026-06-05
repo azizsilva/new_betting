@@ -153,6 +153,17 @@ function tabFor(g: CatalogGame): GameTab {
   return "casino";
 }
 
+// Derive quick-filter tags from the game title/provider so the New/Megaways/
+// Bonus Buy/Crash filters actually match something.
+const CRASH_NAMES = /(aviator|balloon|\bdice\b|\bgoal\b|\bhilo\b|\bmines\b|plinko|crash|spaceman|jetx|rocket)/i;
+function tagsFor(g: CatalogGame): GameTag[] {
+  const t: GameTag[] = [];
+  if (/megaways/i.test(g.title)) t.push("megaways");
+  if (/(bonus buy|buy bonus|buy feature|achat bonus)/i.test(g.title)) t.push("bonus-buy");
+  if (CRASH_NAMES.test(g.title) || /spribe/i.test(g.provider)) t.push("crash");
+  return t;
+}
+
 // Convert the provider catalog into the UI's Game shape, dropping duplicates.
 // The catalog can repeat the same game (same id, or same title+provider); we keep
 // the first occurrence so the lobby doesn't show 4× "Madame Destiny".
@@ -166,13 +177,16 @@ export function mapCatalog(games: CatalogGame[]): Game[] {
     if (seen.has(dedupeKey) || seen.has(titleKey)) continue;
     seen.add(dedupeKey);
     seen.add(titleKey);
+    const tags = tagsFor(g);
+    // First 40 catalog entries flagged "new" (the catalog is roughly newest-first).
+    if (i < 40) tags.push("new");
     out.push({
       id: g.id,
       gameId: g.id,
       name: g.title,
       provider: g.provider || "Unknown",
       tab: tabFor(g),
-      tags: [],
+      tags,
       // Every 9th game becomes a large featured card (same rhythm as kingsbet365).
       featured: i % 9 === 0,
       hue: hue(i),
@@ -181,7 +195,37 @@ export function mapCatalog(games: CatalogGame[]): Game[] {
     });
     i++;
   }
-  return out;
+  return pinCurated(out);
+}
+
+// Pin a hand-picked set to the front of the casino grid (kingsbet365 order), the
+// first as a large featured tile. Only games present in the catalog are pinned.
+const CASINO_PINNED = [
+  "bookofdead",
+  "jellyexpress",
+  "bigbassholdspinnermegaways",
+  "bigbasskeepingitreel",
+  "sweetbonanza",
+  "madamedestiny",
+  "gatesofolympus",
+  "sugarrush",
+  "wolfgold",
+  "aztecgems",
+];
+function pinCurated(all: Game[]): Game[] {
+  const pinned: Game[] = [];
+  const rest: Game[] = [];
+  const used = new Set<string>();
+  for (const want of CASINO_PINNED) {
+    const g = all.find((x) => slug(x.name) === want && !used.has(x.id));
+    if (g) {
+      used.add(g.id);
+      pinned.push(g);
+    }
+  }
+  for (const g of all) if (!used.has(g.id)) rest.push(g);
+  // Re-flag featured: only the very first pinned card is the big 2×2 tile.
+  return [...pinned, ...rest].map((g, i) => ({ ...g, featured: i === 0 }));
 }
 
 // ─── Curated homepage rows ────────────────────────────────────────────────────
