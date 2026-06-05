@@ -188,22 +188,29 @@ export function mapCatalog(games: CatalogGame[]): Game[] {
 // The homepage shows a fixed, hand-picked set per row (kingsbet365 style) using
 // our local art — NOT the raw provider order. Each entry is matched to the live
 // catalog by title slug so the real gameId (and launch) still works.
+// NOTE: every slug here is matched against the live TND catalog by curatedRow;
+// games not present in the catalog are simply skipped (no broken cards).
 const HOME_CASINO = [
-  "munchymilo",
-  "bookofdeadgocollect",
+  "bookofdead",
   "jellyexpress",
-  "powerofthormegaways",
   "bigbassholdspinnermegaways",
   "bigbasskeepingitreel",
+  "sweetbonanza",
+  "gatesofolympus",
+  "sugarrush",
+  "wolfgold",
 ];
 
+// Live games confirmed present in the TND catalog (Evolution).
 const HOME_LIVE = [
   "crazytime",
-  "monopoly",
-  "baccarat",
-  "blackjack",
-  "crazycoinflip",
-  "funkytime",
+  "lightningroulette",
+  "dreamcatcher",
+  "lightningdice",
+  "crazytimea",
+  "supersicbo",
+  "goldenwealthbaccarat",
+  "autoroulette",
 ];
 
 // Build a curated row: for each wanted slug, find the matching live game in the
