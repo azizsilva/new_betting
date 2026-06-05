@@ -149,16 +149,20 @@ casinoRouter.post(
     const raw = req.rawBody ?? Buffer.from(JSON.stringify(req.body ?? {}));
     const signature = (req.headers["x-signature"] as string) || "";
 
+    const cmd = (req.body as { cmd?: string })?.cmd;
+    const sessionid = (req.body as { sessionid?: string })?.sessionid ?? "";
+
     // 1) Verify HMAC over the exact received bytes.
-    if (!env.GAMBLEHUB_SECRET || !verifyHmac(raw, signature, env.GAMBLEHUB_SECRET)) {
-      logger.warn({ ip: req.ip }, "casino callback: bad signature");
+    const sigOk = Boolean(env.GAMBLEHUB_SECRET) && verifyHmac(raw, signature, env.GAMBLEHUB_SECRET);
+    if (!sigOk) {
+      logger.warn(
+        { ip: req.ip, cmd, hasRaw: Boolean(req.rawBody), sigPrefix: signature.slice(0, 12) },
+        "casino callback: bad signature",
+      );
       return fail(res, DEFAULT_CURRENCY, "", "invalid signature");
     }
 
-    const cmd = (req.body as { cmd?: string })?.cmd;
-
     // Resolve the session → our user + currency.
-    const sessionid = (req.body as { sessionid?: string })?.sessionid ?? "";
     const session = sessionid
       ? await prisma.gameSession.findUnique({ where: { sessionId: sessionid } })
       : null;
@@ -166,8 +170,10 @@ casinoRouter.post(
     const login = (req.body as { login?: string })?.login ?? session?.login ?? "";
 
     if (!session) {
+      logger.warn({ cmd, sessionidPrefix: sessionid.slice(0, 20), login }, "casino callback: unknown session");
       return fail(res, currency, login, "unknown session");
     }
+    logger.info({ cmd, login, userId: session.userId }, "casino callback ok");
 
     try {
       switch (cmd) {
