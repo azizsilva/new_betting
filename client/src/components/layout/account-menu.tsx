@@ -7,6 +7,7 @@ import { Wallet, ChevronDown, UserCog, ArrowLeftRight, LogOut, Plus, LayoutDashb
 import { toast } from "sonner";
 import { useAuthStore } from "@/store/auth";
 import { api } from "@/lib/api";
+import { useCashback, useCountdown } from "@/lib/cashback";
 import { formatMoney, cn } from "@/lib/utils";
 import { isStaffRole } from "@/lib/auth-api";
 import type { User } from "@/lib/types";
@@ -17,6 +18,8 @@ export function AccountMenu({ user }: { user: User }) {
   const logout = useAuthStore((s) => s.logout);
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const { data: cashback } = useCashback();
+  const countdown = useCountdown(cashback?.nextPayoutAt);
 
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
@@ -63,6 +66,21 @@ export function AccountMenu({ user }: { user: User }) {
               <span className="text-xs text-muted">Bonus</span>
               <span className="font-bold tabular-nums">
                 0.00 <span className="text-xs text-muted">TND</span>
+              </span>
+            </div>
+            {/* Weekly 5% cashback on net losses — auto-credited at week reset. */}
+            <div className="mt-1 flex items-center justify-between">
+              <span className="text-xs text-muted">
+                Remise en argent <span className="text-[10px] text-gold">{cashback?.rate ?? 5}%</span>
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="font-bold tabular-nums">
+                  {formatMoney(cashback?.pendingCashback ?? 0, "")}{" "}
+                  <span className="text-xs text-muted">TND</span>
+                </span>
+                <span className="rounded bg-surface px-1.5 py-0.5 text-[10px] tabular-nums text-muted">
+                  {countdown}
+                </span>
               </span>
             </div>
             <Link

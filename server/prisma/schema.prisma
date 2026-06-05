@@ -119,6 +119,7 @@ model User {
   recentGames        RecentGame[]
   userDepositMethods UserDepositMethod[]
   userWithdrawBanks  UserWithdrawBank[]
+  cashbackPayouts    CashbackPayout[]
 
   @@index([parentId])
   @@index([role])
@@ -361,6 +362,25 @@ model GameRoundExposure {
   @@unique([userId, gameRound])
   @@index([userId])
   @@map("game_round_exposures")
+}
+
+// Weekly 5% cashback on net losses. One row per (user, week). Idempotent so a
+// week is never paid twice; lossAmount is the net loss (bets − wins) that week.
+model CashbackPayout {
+  id             BigInt   @id @default(autoincrement())
+  userId         Int      @map("user_id")
+  weekStart      DateTime @map("week_start") // Monday 00:00 UTC of the paid week
+  lossAmount     Decimal  @default(0) @map("loss_amount") @db.Decimal(15, 2)
+  rate           Decimal  @default(5) @db.Decimal(5, 2) // percent
+  cashbackAmount Decimal  @default(0) @map("cashback_amount") @db.Decimal(15, 2)
+  balanceAfter   Decimal  @default(0) @map("balance_after") @db.Decimal(15, 2)
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([userId, weekStart])
+  @@index([weekStart])
+  @@map("cashback_payouts")
 }
 
 // Maps a Gamble Hub game session (sessionId + player login) back to our local
