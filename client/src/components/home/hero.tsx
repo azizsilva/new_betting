@@ -37,7 +37,7 @@ export function Hero() {
         <div className="flex">
           {SLIDES.map((s) => (
             <div key={s.image} className="relative min-w-0 flex-[0_0_100%]">
-              <div className="relative aspect-1600/800 w-full">
+              <div className="relative aspect-1920/448 min-h-30 w-full">
                 <Image
                   src={s.image}
                   alt={s.alt}
