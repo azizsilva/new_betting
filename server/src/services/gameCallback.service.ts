@@ -45,7 +45,7 @@ export async function processGameCallback(
       balance: existing.balanceAfter.toString(),
       duplicate: true,
     };
-  }
+  } // end method
 
   const bet = D(input.betAmount ?? 0);
   const win = D(input.winAmount ?? 0);

@@ -16,10 +16,23 @@ export async function fetchGames(currency?: string): Promise<CatalogGame[]> {
 }
 
 // Open a game session → returns the iframe url + session id.
+// account "gambly" routes to the Gamblly V1 launcher; otherwise Gamble Hub.
 export async function openGame(
   gameId: string,
-  opts: { demo?: boolean; language?: string; account?: "slots" | "live" } = {},
+  opts: { demo?: boolean; language?: string; account?: "slots" | "live" | "gambly" } = {},
 ): Promise<OpenGameResult> {
-  const { data } = await api.post<OpenGameResult>("/casino/open", { gameId, ...opts });
+  if (opts.account === "gambly") {
+    const { data } = await api.post<OpenGameResult>("/gambly/launch", {
+      gameUid: gameId,
+      language: opts.language,
+    });
+    return data;
+  }
+  const { data } = await api.post<OpenGameResult>("/casino/open", {
+    gameId,
+    demo: opts.demo,
+    language: opts.language,
+    account: opts.account,
+  });
   return data;
 }
