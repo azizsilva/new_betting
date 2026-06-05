@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import * as Dialog from "@radix-ui/react-dialog";
-import { Crown, Eye, EyeOff, Lock, User, X, Loader2 } from "lucide-react";
+import { Eye, EyeOff, Lock, User, X, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useUiStore } from "@/store/ui";
 import { useAuthStore } from "@/store/auth";
@@ -50,9 +50,12 @@ function LoginForm({ onDone }: { onDone: () => void }) {
   return (
     <>
       <div className="mb-2 flex flex-col items-center gap-2">
-        <div className="grid size-12 place-items-center rounded-full bg-surface">
-          <Crown className="size-6 text-gold" fill="currentColor" />
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/map-Photoroom.png"
+          alt="AfroBet216"
+          className="size-16 object-contain"
+        />
         <h2 className="text-xl font-bold text-fg">Se connecter</h2>
       </div>
 

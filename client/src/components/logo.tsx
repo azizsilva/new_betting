@@ -13,8 +13,8 @@ export function Logo({
 }) {
   const logo = (
     <img
-      src="/images/logo.png"
-      alt="Logo"
+      src="/images/logo_2_afroo-removebg-preview.png"
+      alt="AfroBet216"
       style={{ height: size }}
       className={cn("w-auto object-contain", className)}
     />
