@@ -1,0 +1,16 @@
+[
+    {
+        "gameid": "1201",
+        "gamename": "5 Fortune Stars",
+        "providerName": "NextSpin",
+        "category": "flash",
+        "image": "https://igamingapis.com/img/1201.png"
+    },
+    {
+        "gameid": "1211",
+        "gamename": "7 Dragons",
+        "providerName": "NextSpin",
+        "category": "flash",
+        "image": "https://igamingapis.com/img/1211.png"
+    }
+]

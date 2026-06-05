@@ -1,0 +1,14 @@
+[
+    {
+        "gameid": "7005",
+        "gamename": "wcc",
+        "providerName": "Aog",
+        "image": "https://providers.gambllyapi.com/assets/providers/aog/wcc.jpg"
+    },
+    {
+        "gameid": "7006",
+        "gamename": "wgc",
+        "providerName": "Aog",
+        "image": "https://providers.gambllyapi.com/assets/providers/aog/wgc.jpg"
+    }
+]

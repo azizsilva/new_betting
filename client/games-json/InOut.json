@@ -1,0 +1,194 @@
+[
+    {
+        "gameid": "3407",
+        "gamename": "Penalty Unlimited",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/penalty-unlimited.webp"
+    },
+    {
+        "gameid": "139",
+        "gamename": "Chicken Road 2.0",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/chicken-road-2-0.webp"
+    },
+    {
+        "gameid": "2258",
+        "gamename": "Forest Arrow",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/forest-arrow.webp"
+    },
+    {
+        "gameid": "2562",
+        "gamename": "Hamster Run",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/hamster-run.webp"
+    },
+    {
+        "gameid": "3460",
+        "gamename": "Plinko Aztec",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/plinko-aztec.webp"
+    },
+    {
+        "gameid": "3939",
+        "gamename": "SugarDaddy",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/sugardaddy.webp"
+    },
+    {
+        "gameid": "139",
+        "gamename": "Chicken Road",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/chicken-road.webp"
+    },
+    {
+        "gameid": "7364",
+        "gamename": "Joker Poker",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/joker-poker.webp"
+    },
+    {
+        "gameid": "3898",
+        "gamename": "Stairs",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/stairs.webp"
+    },
+    {
+        "gameid": "10046",
+        "gamename": "Triple",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/triple.webp"
+    },
+    {
+        "gameid": "10047",
+        "gamename": "Jogo Do Bicho",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/jogo-do-bicho.webp"
+    },
+    {
+        "gameid": "11458",
+        "gamename": "Limbo",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/limbo.webp"
+    },
+    {
+        "gameid": "1373",
+        "gamename": "AviaFly",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/aviafly.webp"
+    },
+    {
+        "gameid": "3016",
+        "gamename": "Lucky mines",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/lucky-mines.webp"
+    },
+    {
+        "gameid": "4445",
+        "gamename": "Сoinflip",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/oinflip.webp"
+    },
+    {
+        "gameid": "10049",
+        "gamename": "Roulette",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/roulette.webp"
+    },
+    {
+        "gameid": "10050",
+        "gamename": "Bubbles",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/bubbles.webp"
+    },
+    {
+        "gameid": "11456",
+        "gamename": "Mines",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/mines.webp"
+    },
+    {
+        "gameid": "3976",
+        "gamename": "Sweet Keno",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/sweet-keno.webp"
+    },
+    {
+        "gameid": "2657",
+        "gamename": "Hot-mines",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/hot-mines.webp"
+    },
+    {
+        "gameid": "3461",
+        "gamename": "Plinko 1000",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/plinko-1000.webp"
+    },
+    {
+        "gameid": "2432",
+        "gamename": "Goblin-tower",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/goblin-tower.webp"
+    },
+    {
+        "gameid": "3636",
+        "gamename": "Robo dice",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/robo-dice.webp"
+    },
+    {
+        "gameid": "3320",
+        "gamename": "New Hilo",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/new-hilo.webp"
+    },
+    {
+        "gameid": "8788",
+        "gamename": "Double",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/double.webp"
+    },
+    {
+        "gameid": "1928",
+        "gamename": "Diver",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/diver.webp"
+    },
+    {
+        "gameid": "1832",
+        "gamename": "Cryptos",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/cryptos.webp"
+    },
+    {
+        "gameid": "10053",
+        "gamename": "Tower",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/tower.webp"
+    },
+    {
+        "gameid": "7397",
+        "gamename": "Wheel",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/wheel.webp"
+    },
+    {
+        "gameid": "8787",
+        "gamename": "Crash",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/crash.webp"
+    },
+    {
+        "gameid": "3895",
+        "gamename": "Squid Gamebler",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/squid-gamebler.webp"
+    },
+    {
+        "gameid": "1407",
+        "gamename": "BalloniX",
+        "providerName": "InOut",
+        "image": "https://providers.gambllyapi.com/assets/providers/inout/ballonix.webp"
+    }
+]

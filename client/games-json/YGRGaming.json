@@ -1,0 +1,30 @@
+[
+    {
+        "gameid": "1168",
+        "gamename": "100x Diamond 7",
+        "providerName": "YGRGaming",
+        "category": "flash",
+        "image": "https://igamingapis.com/img/1168.png"
+    },
+    {
+        "gameid": "1169",
+        "gamename": "100x Lions 7",
+        "providerName": "YGRGaming",
+        "category": "flash",
+        "image": "https://igamingapis.com/img/1169.png"
+    },
+    {
+        "gameid": "1172",
+        "gamename": "10x Diamond 7",
+        "providerName": "YGRGaming",
+        "category": "flash",
+        "image": "https://igamingapis.com/img/1172.png"
+    },
+    {
+        "gameid": "1173",
+        "gamename": "10x Lions 7",
+        "providerName": "YGRGaming",
+        "category": "flash",
+        "image": "https://igamingapis.com/img/1173.png"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "gameid": "6782",
+        "gamename": "32 Cards",
+        "providerName": "King Midas",
+        "category": "Casino",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/6782/public"
+    },
+    {
+        "gameid": "6791",
+        "gamename": "5 Card Poker",
+        "providerName": "King Midas",
+        "category": "Casino",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/6791/public"
+    },
+    {
+        "gameid": "6771",
+        "gamename": "7 Up 7 Down",
+        "providerName": "King Midas",
+        "category": "Casino",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/6771/public"
+    },
+    {
+        "gameid": "6843",
+        "gamename": "7 Up 7 Down Rush",
+        "providerName": "King Midas",
+        "category": "Casino",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/6843/public"
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "gameid": "200",
+        "gamename": "10000 Wishes",
+        "providerName": "Microgaming",
+        "category": "Slots",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/200/public"
+    },
+    {
+        "gameid": "1170",
+        "gamename": "108 Heroes",
+        "providerName": "Microgaming",
+        "category": "flash",
+        "image": "https://igamingapis.com/img/1170.png"
+    },
+    {
+        "gameid": "1171",
+        "gamename": "108 Heroes Water Margin",
+        "providerName": "Microgaming",
+        "category": "flash",
+        "image": "https://igamingapis.com/img/1171.png"
+    },
+    {
+        "gameid": "10269",
+        "gamename": "12 Skulls of the Dead",
+        "providerName": "Microgaming",
+        "category": "Slot",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/10269/public"
+    },
+    {
+        "gameid": "147",
+        "gamename": "15 Tridents",
+        "providerName": "Microgaming",
+        "category": "Slots",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/147/public"
+    }
+]

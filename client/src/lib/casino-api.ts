@@ -7,12 +7,33 @@ export interface OpenGameResult {
 }
 
 // Fetch the live game catalog. Currency is optional — when omitted the server
-// uses its configured default (GAMBLEHUB_CURRENCY, e.g. TND).
+// uses its configured default (GAMBLEHUB_CURRENCY, e.g. TND). Merges the Gamblly
+// live-casino games (separate provider) so the Live Casino tab shows them.
 export async function fetchGames(currency?: string): Promise<CatalogGame[]> {
-  const { data } = await api.get<CatalogGame[]>("/casino/games", {
-    params: currency ? { currency } : undefined,
-  });
-  return data;
+  const [casino, gambly] = await Promise.all([
+    api
+      .get<CatalogGame[]>("/casino/games", { params: currency ? { currency } : undefined })
+      .then((r) => r.data)
+      .catch(() => [] as CatalogGame[]),
+    fetchGamblyLiveGames().catch(() => [] as CatalogGame[]),
+  ]);
+  return [...casino, ...gambly];
+}
+
+// Gamblly live-casino games (Evolution / Ezugi / Pragmatic Live). Tagged with
+// account "gambly" so launch routes to /gambly/launch.
+export async function fetchGamblyLiveGames(): Promise<CatalogGame[]> {
+  const { data } = await api.get<
+    Array<{ id: string; title: string; provider: string; imageUrl: string; isEnabled: boolean }>
+  >("/gambly/games");
+  return data.map((g) => ({
+    id: g.id,
+    title: g.title,
+    provider: g.provider,
+    imageUrl: g.imageUrl,
+    isEnabled: g.isEnabled,
+    account: "gambly" as const,
+  }));
 }
 
 // Open a game session → returns the iframe url + session id.

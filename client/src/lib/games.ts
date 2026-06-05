@@ -15,7 +15,7 @@ export interface Game {
   hue: string; // gradient placeholder / fallback when no thumbnail
   imageUrl?: string; // real thumbnail from the provider catalog
   gameId?: string; // provider game id passed to openGame (falls back to id)
-  account?: "slots" | "live"; // operator account that owns/launches this game
+  account?: "slots" | "live" | "gambly"; // operator account that owns/launches this game
 }
 
 // gradient helpers for the placeholder art
@@ -105,7 +105,7 @@ export interface CatalogGame {
   imageUrl: string;
   provider: string;
   isEnabled?: boolean;
-  account?: "slots" | "live"; // which operator account this game belongs to
+  account?: "slots" | "live" | "gambly"; // which operator account this game belongs to
 }
 
 const LIVE_PROVIDERS = /(evolution|ezugi|pragmatic.?play.?live|live)/i;
@@ -193,7 +193,7 @@ export function mapCatalog(games: CatalogGame[]): Game[] {
       gameId: g.id,
       name: g.title,
       provider: g.provider || "Unknown",
-      tab: g.account === "live" ? "live-casino" : tabFor(g),
+      tab: g.account === "live" || g.account === "gambly" ? "live-casino" : tabFor(g),
       account: g.account,
       tags,
       // Every 9th game becomes a large featured card (same rhythm as kingsbet365).

@@ -1,0 +1,163 @@
+[
+    {
+        "gameid": "8771",
+        "gamename": "Air Jet",
+        "providerName": "100HP",
+        "category": "Crash",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8771/public"
+    },
+    {
+        "gameid": "8786",
+        "gamename": "Astronaut",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8786/public"
+    },
+    {
+        "gameid": "8793",
+        "gamename": "Astronaut Rivals",
+        "providerName": "100HP",
+        "category": "Crash",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8793/public"
+    },
+    {
+        "gameid": "9320",
+        "gamename": "Blackjack",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8784/public"
+    },
+    {
+        "gameid": "8789",
+        "gamename": "Chicken Pirate",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8789/public"
+    },
+    {
+        "gameid": "8791",
+        "gamename": "Chicken Train",
+        "providerName": "100HP",
+        "category": "Arcade",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8791/public"
+    },
+    {
+        "gameid": "11443",
+        "gamename": "Coin Flip",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8782/public"
+    },
+    {
+        "gameid": "8787",
+        "gamename": "Crash",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8787/public"
+    },
+    {
+        "gameid": "8776",
+        "gamename": "Crime Empire",
+        "providerName": "100HP",
+        "category": "Crash",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8776/public"
+    },
+    {
+        "gameid": "11457",
+        "gamename": "Dice",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8778/public"
+    },
+    {
+        "gameid": "8788",
+        "gamename": "Double",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8788/public"
+    },
+    {
+        "gameid": "8773",
+        "gamename": "Fortune Crash",
+        "providerName": "100HP",
+        "category": "Crash",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8773/public"
+    },
+    {
+        "gameid": "8792",
+        "gamename": "Gods of Plinko",
+        "providerName": "100HP",
+        "category": "Plinko",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8792/public"
+    },
+    {
+        "gameid": "11447",
+        "gamename": "Hilo",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8780/public"
+    },
+    {
+        "gameid": "8781",
+        "gamename": "Keno",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://igamingapis.com/img/8781.png"
+    },
+    {
+        "gameid": "8774",
+        "gamename": "Meta Crash",
+        "providerName": "100HP",
+        "category": "Crash",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8774/public"
+    },
+    {
+        "gameid": "11456",
+        "gamename": "Mines",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8777/public"
+    },
+    {
+        "gameid": "8783",
+        "gamename": "Penalty",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8783/public"
+    },
+    {
+        "gameid": "11454",
+        "gamename": "Plinko",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8779/public"
+    },
+    {
+        "gameid": "8785",
+        "gamename": "Poker",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8785/public"
+    },
+    {
+        "gameid": "8790",
+        "gamename": "Pump It",
+        "providerName": "100HP",
+        "category": "Instant",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8790/public"
+    },
+    {
+        "gameid": "8772",
+        "gamename": "StarX",
+        "providerName": "100HP",
+        "category": "Crash",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8772/public"
+    },
+    {
+        "gameid": "8775",
+        "gamename": "Tropicana",
+        "providerName": "100HP",
+        "category": "Crash",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8775/public"
+    }
+]

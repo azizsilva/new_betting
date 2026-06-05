@@ -1,0 +1,884 @@
+[
+    {
+        "gameid": "870",
+        "gamename": "Candy Bonanza",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/pgsoft/candy-bonanza.png"
+    },
+    {
+        "gameid": "701",
+        "gamename": "Alchemy Gold",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/alchemy-gold-d2a8ddd6.png"
+    },
+    {
+        "gameid": "10100",
+        "gamename": "Anubis Wrath",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/anubis-wrath-5d481438.png"
+    },
+    {
+        "gameid": "40",
+        "gamename": "Asgardian Rising",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/asgardian-rising-bea9cb0f.jpg"
+    },
+    {
+        "gameid": "953",
+        "gamename": "Bakery Bonanza",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/bakery-bonanza-43c1afa1.jpg"
+    },
+    {
+        "gameid": "909",
+        "gamename": "Bali Vacation",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/bali-vacation-f01761cb.jpg"
+    },
+    {
+        "gameid": "1068",
+        "gamename": "Battleground Royale",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/battleground-royale-1131958e.jpg"
+    },
+    {
+        "gameid": "102",
+        "gamename": "Bikini Paradise",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/bikini-paradise-cbfb4bae.jpg"
+    },
+    {
+        "gameid": "175",
+        "gamename": "Buffalo Win",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/buffalo-win-6ca422ef.jpg"
+    },
+    {
+        "gameid": "73",
+        "gamename": "Butterfly Blossom",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/butterfly-blossom-39cb157f.jpg"
+    },
+    {
+        "gameid": "10078",
+        "gamename": "Caishen Wins",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/caishen-wins-9f677f16.png"
+    },
+    {
+        "gameid": "1025",
+        "gamename": "Candy Burst",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/candy-burst-c6f37649.jpg"
+    },
+    {
+        "gameid": "937",
+        "gamename": "Captain's Bounty",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/captain-s-bounty-8b9cc543.jpg"
+    },
+    {
+        "gameid": "10096",
+        "gamename": "Cash Mania",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/cash-mania-2609833b.png"
+    },
+    {
+        "gameid": "10101",
+        "gamename": "Chicky Run",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/chicky-run-8eb0c1d7.png"
+    },
+    {
+        "gameid": "10115",
+        "gamename": "Chocolate Deluxe",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/chocolate-deluxe-427f0745.png"
+    },
+    {
+        "gameid": "410",
+        "gamename": "Circus Delight",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/circus-delight-477f6f7d.jpg"
+    },
+    {
+        "gameid": "420",
+        "gamename": "Cocktail Nights",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/cocktail-nights-e7311bed.png"
+    },
+    {
+        "gameid": "10086",
+        "gamename": "Cruise Royale",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/cruise-royale-a23a54b7.jpg"
+    },
+    {
+        "gameid": "821",
+        "gamename": "Crypto Gold",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/crypto-gold-5ecda9d0.jpg"
+    },
+    {
+        "gameid": "20107ddd668c254f68b3a77219051801",
+        "gamename": "Dead Man's Riches",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/dead-man-s-riches-3d5bbe55.png"
+    },
+    {
+        "gameid": "442",
+        "gamename": "Destiny of Sun & Moon",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/pgsoft/destiny-of-sun-moon.png"
+    },
+    {
+        "gameid": "568",
+        "gamename": "Diner Delights",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/diner-delights-f58c3add.jpg"
+    },
+    {
+        "gameid": "10117",
+        "gamename": "Diner Frenzy Spins",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/pgsoft/diner-frenzy-spins.png"
+    },
+    {
+        "gameid": "10112",
+        "gamename": "Doomsday Rampage",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/doomsday-rampage-0e290651.png"
+    },
+    {
+        "gameid": "1980",
+        "gamename": "Double Fortune",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/double-fortune-4d2c8ece.jpg"
+    },
+    {
+        "gameid": "339",
+        "gamename": "Dragon Hatch",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/dragon-hatch-28e5a1ec.png"
+    },
+    {
+        "gameid": "10094",
+        "gamename": "Dragon Hatch 2",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/dragon-hatch-2-f2c2e12e.png"
+    },
+    {
+        "gameid": "852",
+        "gamename": "Dragon Legend",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/dragon-legend-2a6163e1.jpg"
+    },
+    {
+        "gameid": "272",
+        "gamename": "Dragon Tiger Luck",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/dragon-tiger-luck-dcb8568c.jpg"
+    },
+    {
+        "gameid": "484",
+        "gamename": "Dragon's Treasure Quest",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/dragon-s-treasure-quest-fbd277f8.png"
+    },
+    {
+        "gameid": "61",
+        "gamename": "Dreams of Macau",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/dreams-of-macau-ffca3bfb.jpg"
+    },
+    {
+        "gameid": "114",
+        "gamename": "Egypt's Book of Mystery",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/egypt-s-book-of-mystery-9e724369.jpg"
+    },
+    {
+        "gameid": "67",
+        "gamename": "Emoji Riches",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/emoji-riches-657b0670.jpg"
+    },
+    {
+        "gameid": "79",
+        "gamename": "Emperor's Favour",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/emperor-s-favour-26016ad1.jpg"
+    },
+    {
+        "gameid": "51",
+        "gamename": "Flirting Scholar",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/flirting-scholar-89b4ccba.jpg"
+    },
+    {
+        "gameid": "1126",
+        "gamename": "Forge of Wealth",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/forge-of-wealth-b4f95bbb.jpg"
+    },
+    {
+        "gameid": "6845",
+        "gamename": "Fortune Dragon",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/fortune-dragon-20ba590b.png"
+    },
+    {
+        "gameid": "965",
+        "gamename": "Fortune Gods",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/fortune-gods-78f1121a.jpg"
+    },
+    {
+        "gameid": "654",
+        "gamename": "Fortune Mouse",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/fortune-mouse-b21cffe6.png"
+    },
+    {
+        "gameid": "649",
+        "gamename": "Fortune Ox",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/fortune-ox-1c569cae.png"
+    },
+    {
+        "gameid": "1031",
+        "gamename": "Fortune Rabbit",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/fortune-rabbit-d131d856.png"
+    },
+    {
+        "gameid": "10108",
+        "gamename": "Fortune Snake",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/fortune-snake-67c106b0.png"
+    },
+    {
+        "gameid": "710",
+        "gamename": "Fortune Tiger",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/fortune-tiger-6ef4daf6.png"
+    },
+    {
+        "gameid": "730",
+        "gamename": "Fruity Candy",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/fruity-candy-bf88efe5.jpg"
+    },
+    {
+        "gameid": "10103",
+        "gamename": "Futebol Fever",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/futebol-fever-8363d025.png"
+    },
+    {
+        "gameid": "432",
+        "gamename": "Galactic Gems",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/galactic-gems-436ff6dd.png"
+    },
+    {
+        "gameid": "10119",
+        "gamename": "Galaxy Miner",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/pgsoft/galaxy-miner.png"
+    },
+    {
+        "gameid": "9413",
+        "gamename": "Ganesha Fortune",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/ganesha-fortune-945bb094.png"
+    },
+    {
+        "gameid": "651",
+        "gamename": "Ganesha Gold",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/ganesha-gold-329521ad.jpg"
+    },
+    {
+        "gameid": "798",
+        "gamename": "Garuda Gems",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/garuda-gems-617a0e35.jpg"
+    },
+    {
+        "gameid": "721",
+        "gamename": "Geisha's Revenge",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/geisha-s-revenge-a5f970a2.png"
+    },
+    {
+        "gameid": "725",
+        "gamename": "Gem Saviour",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/gem-saviour-22f9a032.jpg"
+    },
+    {
+        "gameid": "34",
+        "gamename": "Gem Saviour Conquest",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/gem-saviour-conquest-f4057a52.jpg"
+    },
+    {
+        "gameid": "344",
+        "gamename": "Gem Saviour Sword",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/gem-saviour-sword-80352d72.jpg"
+    },
+    {
+        "gameid": "10095",
+        "gamename": "Gemstones Gold",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/gemstones-gold-0141bf58.jpg"
+    },
+    {
+        "gameid": "95",
+        "gamename": "Genie's 3 Wishes",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/genie-s-3-wishes-54986633.jpg"
+    },
+    {
+        "gameid": "2454dc7cfdc651b7318950453bc3f617",
+        "gamename": "Gladiator's Glory",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/gladiator-s-glory-743d90aa.jpg"
+    },
+    {
+        "gameid": "10111",
+        "gamename": "Graffiti Rush",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/graffiti-rush-d5f03d64.png"
+    },
+    {
+        "gameid": "4e2f6b7602035730e0e8ee89675a417c",
+        "gamename": "Guardians of Ice and Fire",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/pgsoft/guardians-of-ice-and-fire.png"
+    },
+    {
+        "gameid": "240",
+        "gamename": "Hawaiian Tiki",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/hawaiian-tiki-58ef63ac.jpg"
+    },
+    {
+        "gameid": "10084",
+        "gamename": "Heist Stakes",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/heist-stakes-420d43f9.jpg"
+    },
+    {
+        "gameid": "437",
+        "gamename": "Hip Hop Panda",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/hip-hop-panda-eb65517b.jpg"
+    },
+    {
+        "gameid": "935",
+        "gamename": "Honey Trap of Diao Chan",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/honey-trap-of-diao-chan-03b21a26.jpg"
+    },
+    {
+        "gameid": "144",
+        "gamename": "Hood vs Wolf",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/hood-vs-wolf-0d0cf327.jpg"
+    },
+    {
+        "gameid": "217",
+        "gamename": "Hotpot",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/pgsoft/hotpot.png"
+    },
+    {
+        "gameid": "10109",
+        "gamename": "Incan Wonders",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/pgsoft/incan-wonders.png"
+    },
+    {
+        "gameid": "46",
+        "gamename": "Jack Frost's Winter",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/jack-frost-s-winter-7585cf93.jpg"
+    },
+    {
+        "gameid": "10116",
+        "gamename": "Jack the Giant Hunter",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/jack-the-giant-hunter-0f9ab58d.png"
+    },
+    {
+        "gameid": "1111",
+        "gamename": "Jewels of Prosperity",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/jewels-of-prosperity-15f76df3.jpg"
+    },
+    {
+        "gameid": "87",
+        "gamename": "Journey to the Wealth",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/journey-to-the-wealth-543330ef.jpg"
+    },
+    {
+        "gameid": "149",
+        "gamename": "Jungle Delight",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/jungle-delight-cfddc7f3.jpg"
+    },
+    {
+        "gameid": "360",
+        "gamename": "Jurassic Kingdom",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/jurassic-kingdom-2ce84215.jpg"
+    },
+    {
+        "gameid": "10113",
+        "gamename": "Knockout Riches",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/knockout-riches-73dc337a.png"
+    },
+    {
+        "gameid": "127",
+        "gamename": "Legend of Hou Yi",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/legend-of-hou-yi-a5fad33f.jpg"
+    },
+    {
+        "gameid": "499",
+        "gamename": "Legend of Perseus",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/legend-of-perseus-0f407ba7.jpg"
+    },
+    {
+        "gameid": "430",
+        "gamename": "Legendary Monkey King",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/legendary-monkey-king-beac834f.jpg"
+    },
+    {
+        "gameid": "9390",
+        "gamename": "Leprechaun Riches",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/leprechaun-riches-64bc399e.png"
+    },
+    {
+        "gameid": "10085",
+        "gamename": "Lucky Clover Riches",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/lucky-clover-riches-6c7fd46f.jpg"
+    },
+    {
+        "gameid": "1033",
+        "gamename": "Lucky Neko",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/lucky-neko-dffdf161.png"
+    },
+    {
+        "gameid": "461",
+        "gamename": "Lucky Piggy",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/lucky-piggy-8815dc45.png"
+    },
+    {
+        "gameid": "10090",
+        "gamename": "Mafia Mayhem",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/mafia-mayhem-380bede8.png"
+    },
+    {
+        "gameid": "74",
+        "gamename": "Mahjong Ways",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/mahjong-ways-27627ba8.png"
+    },
+    {
+        "gameid": "858",
+        "gamename": "Mahjong Ways 2",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/mahjong-ways-2-df2b2c8e.png"
+    },
+    {
+        "gameid": "629",
+        "gamename": "Majestic Treasures",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/majestic-treasures-29205c41.jpg"
+    },
+    {
+        "gameid": "809",
+        "gamename": "Mask Carnival",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/mask-carnival-23716eb0.jpg"
+    },
+    {
+        "gameid": "893",
+        "gamename": "Medusa",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/pgsoft/medusa.png"
+    },
+    {
+        "gameid": "893",
+        "gamename": "Medusa II",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/pgsoft/medusa-ii.png"
+    },
+    {
+        "gameid": "794",
+        "gamename": "Mermaid Riches",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/mermaid-riches-38844381.jpg"
+    },
+    {
+        "gameid": "753",
+        "gamename": "Midas Fortune",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/midas-fortune-732fbf51.png"
+    },
+    {
+        "gameid": "12e94577c713a431ef7765394bb9be2f",
+        "gamename": "Mr. Hallow-Win",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/mr-hallow-win-2dd0e683.jpg"
+    },
+    {
+        "gameid": "10110",
+        "gamename": "Mr. Treasure’s Fortune",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/mr-treasure-s-fortune-109d4e0f.png"
+    },
+    {
+        "gameid": "587",
+        "gamename": "Muay Thai Champion",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/muay-thai-champion-99e0128a.jpg"
+    },
+    {
+        "gameid": "926",
+        "gamename": "Museum Wonders",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/museum-wonders-5358b669.png"
+    },
+    {
+        "gameid": "10099",
+        "gamename": "Mystic Potion",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/pgsoft/mystic-potion.png"
+    },
+    {
+        "gameid": "266",
+        "gamename": "Mystical Spirits",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/mystical-spirits-44638539.jpg"
+    },
+    {
+        "gameid": "10089",
+        "gamename": "Ninja Raccoon Frenzy",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/ninja-raccoon-frenzy-28d4006f.jpg"
+    },
+    {
+        "gameid": "210",
+        "gamename": "Ninja vs Samurai",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/ninja-vs-samurai-5250f6f9.jpg"
+    },
+    {
+        "gameid": "414",
+        "gamename": "Oishi Delights",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/oishi-delights-57e8f066.png"
+    },
+    {
+        "gameid": "918",
+        "gamename": "Opera Dynasty",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/opera-dynasty-90cee5cc.jpg"
+    },
+    {
+        "gameid": "150",
+        "gamename": "Oriental Prosperity",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/oriental-prosperity-87c51d52.jpg"
+    },
+    {
+        "gameid": "140",
+        "gamename": "Phoenix Rises",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/phoenix-rises-a1784693.jpg"
+    },
+    {
+        "gameid": "795",
+        "gamename": "Piggy Gold",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/piggy-gold-8ee1f93b.jpg"
+    },
+    {
+        "gameid": "10098",
+        "gamename": "Pinata Wins",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/pinata-wins-85036398.png"
+    },
+    {
+        "gameid": "827",
+        "gamename": "Plushie Frenzy",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/plushie-frenzy-a7df064f.jpg"
+    },
+    {
+        "gameid": "54",
+        "gamename": "Prosperity Fortune Tree",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/prosperity-fortune-tree-7b6efd69.jpg"
+    },
+    {
+        "gameid": "133",
+        "gamename": "Prosperity Lion",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/prosperity-lion-2bd33941.jpg"
+    },
+    {
+        "gameid": "597",
+        "gamename": "Queen of Bounty",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/queen-of-bounty-ead0e6e0.jpg"
+    },
+    {
+        "gameid": "157",
+        "gamename": "Raider Jane's Crypt of Fortune",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/raider-jane-s-crypt-of-fortune-640d521e.jpg"
+    },
+    {
+        "gameid": "662",
+        "gamename": "Rave Party Fever",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/rave-party-fever-a96b5924.jpg"
+    },
+    {
+        "gameid": "584",
+        "gamename": "Reel Love",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/reel-love-6a593360.jpg"
+    },
+    {
+        "gameid": "1011",
+        "gamename": "Rio Fantasia",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/rio-fantasia-efbc6a91.png"
+    },
+    {
+        "gameid": "275",
+        "gamename": "Rise of Apollo",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/rise-of-apollo-89b1f2ec.jpg"
+    },
+    {
+        "gameid": "425",
+        "gamename": "Rooster Rumble",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/rooster-rumble-7ae29fc6.jpg"
+    },
+    {
+        "gameid": "10087",
+        "gamename": "Safari Wilds",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/safari-wilds-3a105878.jpg"
+    },
+    {
+        "gameid": "610",
+        "gamename": "Santa's Gift Rush",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/santa-s-gift-rush-177c0cca.jpg"
+    },
+    {
+        "gameid": "510",
+        "gamename": "Secrets of Cleopatra",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/secrets-of-cleopatra-94c3de62.jpg"
+    },
+    {
+        "gameid": "999",
+        "gamename": "Shaolin Soccer",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/shaolin-soccer-fa8b947b.jpg"
+    },
+    {
+        "gameid": "10104",
+        "gamename": "Shark Bounty",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/shark-bounty-d56d4068.png"
+    },
+    {
+        "gameid": "630",
+        "gamename": "Songkran Splash",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/songkran-splash-0e08988a.jpg"
+    },
+    {
+        "gameid": "251",
+        "gamename": "Speed Winner",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/speed-winner-0de3e075.png"
+    },
+    {
+        "gameid": "624",
+        "gamename": "Spirited Wonders",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/spirited-wonders-b8733d04.jpg"
+    },
+    {
+        "gameid": "964",
+        "gamename": "Super Golf Drive",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/super-golf-drive-75edda99.jpg"
+    },
+    {
+        "gameid": "575",
+        "gamename": "Supermarket Spree",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/supermarket-spree-2a2d220e.png"
+    },
+    {
+        "gameid": "10082",
+        "gamename": "Symbols of Egypt",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/symbols-of-egypt-7f7d4d0e.jpg"
+    },
+    {
+        "gameid": "1143",
+        "gamename": "Thai River Wonders",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/thai-river-wonders-30d1beb9.jpg"
+    },
+    {
+        "gameid": "706",
+        "gamename": "The Great Icescape",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/the-great-icescape-558988ca.png"
+    },
+    {
+        "gameid": "112",
+        "gamename": "The Queen's Banquet",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/the-queen-s-banquet-8c930683.jpg"
+    },
+    {
+        "gameid": "10107",
+        "gamename": "Three Crazy Piggies",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/three-crazy-piggies-577b2f9b.png"
+    },
+    {
+        "gameid": "736",
+        "gamename": "Totem Wonders",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/totem-wonders-ea50b0a0.jpg"
+    },
+    {
+        "gameid": "215",
+        "gamename": "Treasures of Aztec",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/treasures-of-aztec-f9576c39.png"
+    },
+    {
+        "gameid": "1062",
+        "gamename": "Tree of Fortune",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/tree-of-fortune-948cc60c.jpg"
+    },
+    {
+        "gameid": "10092",
+        "gamename": "Tsar Treasures",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/tsar-treasures-5c934950.jpg"
+    },
+    {
+        "gameid": "297",
+        "gamename": "Ultimate Striker",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/ultimate-striker-8162bec6.jpg"
+    },
+    {
+        "gameid": "626",
+        "gamename": "Vampire's Charm",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/vampire-s-charm-4d12f7b0.jpg"
+    },
+    {
+        "gameid": "9410",
+        "gamename": "Ways of the Qilin",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/ways-of-the-qilin-032d09c1.png"
+    },
+    {
+        "gameid": "10097",
+        "gamename": "Wild Ape #3258",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/wild-ape-3258-9884f44b.png"
+    },
+    {
+        "gameid": "9409",
+        "gamename": "Wild Bandito",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/wild-bandito-6d0d29d9.png"
+    },
+    {
+        "gameid": "916",
+        "gamename": "Wild Bounty Showdown",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/wild-bounty-showdown-6b74939c.png"
+    },
+    {
+        "gameid": "738",
+        "gamename": "Wild Coaster",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/wild-coaster-d5c28089.jpg"
+    },
+    {
+        "gameid": "1138",
+        "gamename": "Wild Fireworks",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/wild-fireworks-3c1c0dfa.jpg"
+    },
+    {
+        "gameid": "11",
+        "gamename": "Wild Heist Cashout",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/wild-heist-cashout-574deb0a.jpg"
+    },
+    {
+        "gameid": "711",
+        "gamename": "Win Win Fish Prawn Crab",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/win-win-fish-prawn-crab-0781630c.jpg"
+    },
+    {
+        "gameid": "294",
+        "gamename": "Win Win Won",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/win-win-won-9929cad6.jpg"
+    },
+    {
+        "gameid": "10106",
+        "gamename": "Wings of Iguazu",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/wings-of-iguazu-0c6490b1.png"
+    },
+    {
+        "gameid": "10105",
+        "gamename": "Yakuza Honor",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/yakuza-honor-ad061c33.png"
+    },
+    {
+        "gameid": "10102",
+        "gamename": "Zombie Outbreak",
+        "providerName": "PGSoft",
+        "image": "https://providers.gambllyapi.com/assets/providers/PG/zombie-outbreak-e86e684f.png"
+    }
+]

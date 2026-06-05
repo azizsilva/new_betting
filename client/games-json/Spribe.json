@@ -1,0 +1,62 @@
+[
+    {
+        "gameid": "737",
+        "gamename": "Aviator",
+        "providerName": "Spribe",
+        "image": "https://providers.gambllyapi.com/assets/providers/spribe/aviator.png"
+    },
+    {
+        "gameid": "11457",
+        "gamename": "Dice",
+        "providerName": "Spribe",
+        "image": "https://providers.gambllyapi.com/assets/providers/spribe/dice.png"
+    },
+    {
+        "gameid": "904",
+        "gamename": "Goal",
+        "providerName": "Spribe",
+        "image": "https://providers.gambllyapi.com/assets/providers/spribe/goal.png"
+    },
+    {
+        "gameid": "11447",
+        "gamename": "Hi Lo",
+        "providerName": "Spribe",
+        "image": "https://providers.gambllyapi.com/assets/providers/spribe/hi-lo.png"
+    },
+    {
+        "gameid": "6604",
+        "gamename": "Hotline",
+        "providerName": "Spribe",
+        "image": "https://providers.gambllyapi.com/assets/providers/spribe/hotline.png"
+    },
+    {
+        "gameid": "8781",
+        "gamename": "Keno",
+        "providerName": "Spribe",
+        "image": "https://providers.gambllyapi.com/assets/providers/spribe/keno.png"
+    },
+    {
+        "gameid": "11456",
+        "gamename": "Mines",
+        "providerName": "Spribe",
+        "image": "https://providers.gambllyapi.com/assets/providers/spribe/mines.png"
+    },
+    {
+        "gameid": "7370",
+        "gamename": "Mini Roulette",
+        "providerName": "Spribe",
+        "image": "https://providers.gambllyapi.com/assets/providers/spribe/mini-roulette.png"
+    },
+    {
+        "gameid": "11454",
+        "gamename": "Plinko",
+        "providerName": "Spribe",
+        "image": "https://providers.gambllyapi.com/assets/providers/spribe/plinko.png"
+    },
+    {
+        "gameid": "1019",
+        "gamename": "Balloon",
+        "providerName": "Spribe",
+        "image": "https://providers.gambllyapi.com/assets/providers/spribe/balloon.png"
+    }
+]

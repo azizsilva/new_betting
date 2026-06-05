@@ -1,0 +1,596 @@
+[
+    {
+        "gameid": "6898",
+        "gamename": "AgGaming",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/aggaming.png"
+    },
+    {
+        "gameid": "6900",
+        "gamename": "Wild Koi",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/wild-koi.webp"
+    },
+    {
+        "gameid": "6901",
+        "gamename": "Royal Gems",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/royal-gems.webp"
+    },
+    {
+        "gameid": "6902",
+        "gamename": "Pirates Ahoy!",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/pirates-ahoy.webp"
+    },
+    {
+        "gameid": "6903",
+        "gamename": "Animal Fun Park",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/animal-fun-park.webp"
+    },
+    {
+        "gameid": "6904",
+        "gamename": "Treasure Party",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/treasure-party.webp"
+    },
+    {
+        "gameid": "6905",
+        "gamename": "Lucky Express",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/lucky-express.webp"
+    },
+    {
+        "gameid": "6906",
+        "gamename": "Kong Invasion",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/kong-invasion.webp"
+    },
+    {
+        "gameid": "4298",
+        "gamename": "Wild Gods",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/wild-gods.webp"
+    },
+    {
+        "gameid": "6908",
+        "gamename": "Gold Class Deluxe",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/gold-class-deluxe.webp"
+    },
+    {
+        "gameid": "6909",
+        "gamename": "Lucky Riches",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/lucky-riches.webp"
+    },
+    {
+        "gameid": "6910",
+        "gamename": "Mermaid Treasure",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/mermaid-treasure.webp"
+    },
+    {
+        "gameid": "6911",
+        "gamename": "Beast Party",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/beast-party.webp"
+    },
+    {
+        "gameid": "6912",
+        "gamename": "Bingo Slot",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/bingo-slot.webp"
+    },
+    {
+        "gameid": "6913",
+        "gamename": "Kung Fu All Stars",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/kung-fu-all-stars.webp"
+    },
+    {
+        "gameid": "6914",
+        "gamename": "Bao Zu Po",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/bao-zu-po.webp"
+    },
+    {
+        "gameid": "6915",
+        "gamename": "Sex and Zen",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/sex-and-zen.webp"
+    },
+    {
+        "gameid": "6916",
+        "gamename": "Ace Heist",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/ace-heist.webp"
+    },
+    {
+        "gameid": "8801",
+        "gamename": "Golden Dragon",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/golden-dragon.webp"
+    },
+    {
+        "gameid": "6918",
+        "gamename": "Lucha Heroes",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/lucha-heroes.webp"
+    },
+    {
+        "gameid": "6919",
+        "gamename": "The Nutcracker",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/the-nutcracker.webp"
+    },
+    {
+        "gameid": "6920",
+        "gamename": "Temple Raider",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/temple-raider.webp"
+    },
+    {
+        "gameid": "6921",
+        "gamename": "Vegas Vegas",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/vegas-vegas.webp"
+    },
+    {
+        "gameid": "6922",
+        "gamename": "Ultra Shift",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/ultra-shift.webp"
+    },
+    {
+        "gameid": "6923",
+        "gamename": "Sushi Nights",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/sushi-nights.webp"
+    },
+    {
+        "gameid": "6924",
+        "gamename": "Peking Opera",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/peking-opera.webp"
+    },
+    {
+        "gameid": "6925",
+        "gamename": "Steampunk War",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/steampunk-war.webp"
+    },
+    {
+        "gameid": "9374",
+        "gamename": "Sexy Succubus",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/sexy-succubus.webp"
+    },
+    {
+        "gameid": "6927",
+        "gamename": "One Percenter",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/one-percenter.webp"
+    },
+    {
+        "gameid": "6929",
+        "gamename": "Money Monster",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/money-monster.webp"
+    },
+    {
+        "gameid": "6931",
+        "gamename": "Treasure Tarot",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/treasure-tarot.webp"
+    },
+    {
+        "gameid": "6932",
+        "gamename": "Egyptian Treasure",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/egyptian-treasure.webp"
+    },
+    {
+        "gameid": "6933",
+        "gamename": "Kabuki Gold",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/kabuki-gold.webp"
+    },
+    {
+        "gameid": "6934",
+        "gamename": "Fortune Alchemy",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/fortune-alchemy.webp"
+    },
+    {
+        "gameid": "6935",
+        "gamename": "Fengshen Yanyi",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/fengshen-yanyi.webp"
+    },
+    {
+        "gameid": "6937",
+        "gamename": "Joan of Arc",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/joan-of-arc.webp"
+    },
+    {
+        "gameid": "6939",
+        "gamename": "Koi Treasure",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/koi-treasure.webp"
+    },
+    {
+        "gameid": "6940",
+        "gamename": "Chinese Zodiac",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/chinese-zodiac.webp"
+    },
+    {
+        "gameid": "6941",
+        "gamename": "Huluwa",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/huluwa.webp"
+    },
+    {
+        "gameid": "6942",
+        "gamename": "TanWanLanYue",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/tanwanlanyue.webp"
+    },
+    {
+        "gameid": "6943",
+        "gamename": "Touchdown Hottie",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/touchdown-hottie.webp"
+    },
+    {
+        "gameid": "6944",
+        "gamename": "Snow White",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/snow-white.webp"
+    },
+    {
+        "gameid": "6945",
+        "gamename": "Lucky Combo",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/lucky-combo.webp"
+    },
+    {
+        "gameid": "6946",
+        "gamename": "Happy Jump",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/happy-jump.webp"
+    },
+    {
+        "gameid": "6947",
+        "gamename": "The Living Dead",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/the-living-dead.webp"
+    },
+    {
+        "gameid": "6948",
+        "gamename": "Bloody Kisses",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/bloody-kisses.webp"
+    },
+    {
+        "gameid": "6949",
+        "gamename": "Witch's Quest",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/witch-s-quest.webp"
+    },
+    {
+        "gameid": "6950",
+        "gamename": "Dark Joker",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/dark-joker.webp"
+    },
+    {
+        "gameid": "6951",
+        "gamename": "Wild 777",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/wild-777.webp"
+    },
+    {
+        "gameid": "6952",
+        "gamename": "Diamond Queen",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/diamond-queen.webp"
+    },
+    {
+        "gameid": "6953",
+        "gamename": "The Moon Lady",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/the-moon-lady.webp"
+    },
+    {
+        "gameid": "6954",
+        "gamename": "Alice's Adventures",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/alice-s-adventures.webp"
+    },
+    {
+        "gameid": "6955",
+        "gamename": "The Storm",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/the-storm.webp"
+    },
+    {
+        "gameid": "2847",
+        "gamename": "King Arthur",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/king-arthur.webp"
+    },
+    {
+        "gameid": "6957",
+        "gamename": "Mucha Goddesses",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/mucha-goddesses.webp"
+    },
+    {
+        "gameid": "6958",
+        "gamename": "Real Champions",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/real-champions.webp"
+    },
+    {
+        "gameid": "6959",
+        "gamename": "King of Glory",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/king-of-glory.webp"
+    },
+    {
+        "gameid": "6960",
+        "gamename": "Alibaba",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/alibaba.webp"
+    },
+    {
+        "gameid": "6961",
+        "gamename": "Mystic Gems",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/mystic-gems.webp"
+    },
+    {
+        "gameid": "6962",
+        "gamename": "Mr XIN",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/mr-xin.webp"
+    },
+    {
+        "gameid": "6963",
+        "gamename": "The Dragon Pearl Gold",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/the-dragon-pearl-gold.webp"
+    },
+    {
+        "gameid": "6964",
+        "gamename": "Legend of the Dragon",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/legend-of-the-dragon.webp"
+    },
+    {
+        "gameid": "6965",
+        "gamename": "Gold Class",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/gold-class.webp"
+    },
+    {
+        "gameid": "6966",
+        "gamename": "Street Battle",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/street-battle.webp"
+    },
+    {
+        "gameid": "6967",
+        "gamename": "Fantasies",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/fantasies.webp"
+    },
+    {
+        "gameid": "6968",
+        "gamename": "Moon Festival",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/moon-festival.webp"
+    },
+    {
+        "gameid": "6969",
+        "gamename": "K-Pop",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/k-pop.webp"
+    },
+    {
+        "gameid": "6970",
+        "gamename": "Kick Off",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/kick-off.webp"
+    },
+    {
+        "gameid": "6971",
+        "gamename": "Dragon Boat Festival",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/dragon-boat-festival.webp"
+    },
+    {
+        "gameid": "6972",
+        "gamename": "Ice Crush",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/ice-crush.webp"
+    },
+    {
+        "gameid": "6973",
+        "gamename": "Candy Quest",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/candy-quest.webp"
+    },
+    {
+        "gameid": "6974",
+        "gamename": "Fruit Slot 2",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/fruit-slot-2.webp"
+    },
+    {
+        "gameid": "6975",
+        "gamename": "Shanghai Bund",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/shanghai-bund.webp"
+    },
+    {
+        "gameid": "7386",
+        "gamename": "Deuces Wild",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/deuces-wild.webp"
+    },
+    {
+        "gameid": "6977",
+        "gamename": "Bonus Deuces Wild",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/bonus-deuces-wild.webp"
+    },
+    {
+        "gameid": "6978",
+        "gamename": "Dragons Pearl",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/dragons-pearl.webp"
+    },
+    {
+        "gameid": "6979",
+        "gamename": "Lucky 8",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/lucky-8.webp"
+    },
+    {
+        "gameid": "6980",
+        "gamename": "Bling Bling",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/bling-bling.webp"
+    },
+    {
+        "gameid": "6981",
+        "gamename": "Goldfish",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/goldfish.webp"
+    },
+    {
+        "gameid": "6982",
+        "gamename": "Chinese New Year",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/chinese-new-year.webp"
+    },
+    {
+        "gameid": "6983",
+        "gamename": "Pirates",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/pirates.webp"
+    },
+    {
+        "gameid": "6984",
+        "gamename": "Fruitmania",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/fruitmania.webp"
+    },
+    {
+        "gameid": "6985",
+        "gamename": "Red Panda",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/red-panda.webp"
+    },
+    {
+        "gameid": "6986",
+        "gamename": "High Roller",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/high-roller.webp"
+    },
+    {
+        "gameid": "6987",
+        "gamename": "Year of the Monkey",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/year-of-the-monkey.webp"
+    },
+    {
+        "gameid": "6988",
+        "gamename": "God of Wu Fortune",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/god-of-wu-fortune.webp"
+    },
+    {
+        "gameid": "6989",
+        "gamename": "Chinese Chess Slot",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/chinese-chess-slot.webp"
+    },
+    {
+        "gameid": "6990",
+        "gamename": "Chess Slot",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/chess-slot.webp"
+    },
+    {
+        "gameid": "6991",
+        "gamename": "Happy Farm",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/happy-farm.webp"
+    },
+    {
+        "gameid": "6992",
+        "gamename": "Mahjong Slot",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/mahjong-slot.webp"
+    },
+    {
+        "gameid": "6993",
+        "gamename": "Summer Campsite",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/summer-campsite.webp"
+    },
+    {
+        "gameid": "6994",
+        "gamename": "Space Odyssey",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/space-odyssey.webp"
+    },
+    {
+        "gameid": "6995",
+        "gamename": "Samurai",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/samurai.webp"
+    },
+    {
+        "gameid": "6996",
+        "gamename": "Garden Vintage",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/garden-vintage.webp"
+    },
+    {
+        "gameid": "6997",
+        "gamename": "Video poker2(jacks or better)",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/video-poker2-jacks-or-better.webp"
+    },
+    {
+        "gameid": "6998",
+        "gamename": "Fruit Slot",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/fruit-slot.png"
+    },
+    {
+        "gameid": "6999",
+        "gamename": "Mahjong Maniac Deluxe",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/mahjong-maniac-deluxe.webp"
+    },
+    {
+        "gameid": "7000",
+        "gamename": "Dim Sum Master",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/dim-sum-master.webp"
+    },
+    {
+        "gameid": "d90711e24319967358e0a0ead2b8c377",
+        "gamename": "Autumn Moonlight",
+        "providerName": "Ace (AgGaming)",
+        "image": "https://providers.gambllyapi.com/assets/providers/ace/autumn-moonlight.webp"
+    }
+]

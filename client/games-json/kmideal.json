@@ -1,0 +1,302 @@
+[
+    {
+        "gameid": "6782",
+        "gamename": "32 Cards",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/32-cards-e22b2924.png"
+    },
+    {
+        "gameid": "6819",
+        "gamename": "Almighty Greek",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/almighty-greek-28474584.png"
+    },
+    {
+        "gameid": "10988",
+        "gamename": "Andar Bahar",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/andar-bahar-fe42d44f.png"
+    },
+    {
+        "gameid": "5e9e2e93efb8d94a972aac2e12437366",
+        "gamename": "Aztec Fortune",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/aztec-fortune-79383ed1.png"
+    },
+    {
+        "gameid": "9343",
+        "gamename": "Baccarat",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/baccarat-e3e43edf.png"
+    },
+    {
+        "gameid": "6756",
+        "gamename": "Belangkai 2",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/belangkai-2-15d5534d.png"
+    },
+    {
+        "gameid": "6835",
+        "gamename": "Bicho",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/bicho-021a9691.png"
+    },
+    {
+        "gameid": "9320",
+        "gamename": "Blackjack",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/blackjack-255c802a.png"
+    },
+    {
+        "gameid": "6785",
+        "gamename": "Bonus Dice",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/bonus-dice-880f0757.png"
+    },
+    {
+        "gameid": "6807",
+        "gamename": "Coin Pusher",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/coin-pusher-cbd5628d.png"
+    },
+    {
+        "gameid": "6833",
+        "gamename": "Cupid Archery",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/cupid-archery-6e4f71d7.png"
+    },
+    {
+        "gameid": "6787",
+        "gamename": "Dota Hi-Lo",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/dota-hi-lo-2457fc62.png"
+    },
+    {
+        "gameid": "6757",
+        "gamename": "Dragon Tiger 2",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/dragon-tiger-2-9f5d4ee8.png"
+    },
+    {
+        "gameid": "6824",
+        "gamename": "Egyptian Mines",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/egyptian-mines-6bd98c9c.png"
+    },
+    {
+        "gameid": "6800",
+        "gamename": "Elite Aviator Club",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/elite-aviator-club-c703db7c.png"
+    },
+    {
+        "gameid": "11310",
+        "gamename": "European Roulette",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/european-roulette-4b97f726.png"
+    },
+    {
+        "gameid": "6765",
+        "gamename": "Fan Tan Classic",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/fan-tan-classic-b3734824.png"
+    },
+    {
+        "gameid": "6755",
+        "gamename": "Fish Prawn Crab 2",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/fish-prawn-crab-2-5c8a4b1d.png"
+    },
+    {
+        "gameid": "6767",
+        "gamename": "Fruit Roulette",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/fruit-roulette-a3e7bc97.png"
+    },
+    {
+        "gameid": "6816",
+        "gamename": "Gold Mine",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/gold-mine-f6812b9e.png"
+    },
+    {
+        "gameid": "6822",
+        "gamename": "Gold Rush Bonanza",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/gold-rush-bonanza-7f37ce9e.png"
+    },
+    {
+        "gameid": "6790",
+        "gamename": "Heist",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/heist-b65ee90f.png"
+    },
+    {
+        "gameid": "6826",
+        "gamename": "Hippo Splash",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/hippo-splash-300bac9d.png"
+    },
+    {
+        "gameid": "6831",
+        "gamename": "Horus Glory",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/horus-glory-b60c94d0.png"
+    },
+    {
+        "gameid": "6801",
+        "gamename": "Interstellar Run",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/interstellar-run-331b765f.png"
+    },
+    {
+        "gameid": "11431",
+        "gamename": "Jhandi Munda",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/jhandi-munda-88fa5a0d.png"
+    },
+    {
+        "gameid": "6825",
+        "gamename": "Jogo De Bozo",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/jogo-de-bozo-6f5b037b.png"
+    },
+    {
+        "gameid": "6792",
+        "gamename": "KM Virtual Horse Racing",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/km-virtual-horse-racing-f0c7ed8f.png"
+    },
+    {
+        "gameid": "6823",
+        "gamename": "Leppy's Loot",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/leppy-s-loot-e5aa0233.png"
+    },
+    {
+        "gameid": "6830",
+        "gamename": "London Mystery",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/london-mystery-a736b174.png"
+    },
+    {
+        "gameid": "6829",
+        "gamename": "Merlin's Saga",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/merlin-s-saga-602f4486.png"
+    },
+    {
+        "gameid": "6786",
+        "gamename": "Minesweeper",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/minesweeper-4d547254.png"
+    },
+    {
+        "gameid": "6802",
+        "gamename": "Olympus Glory",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/olympus-glory-85c1efa5.png"
+    },
+    {
+        "gameid": "6778",
+        "gamename": "Pai Kang",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/pai-kang-a7005ff8.png"
+    },
+    {
+        "gameid": "6828",
+        "gamename": "Piggy Heist",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/piggy-heist-90e3c014.png"
+    },
+    {
+        "gameid": "11454",
+        "gamename": "Plinko",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/plinko-99a98cca.png"
+    },
+    {
+        "gameid": "6762",
+        "gamename": "Poker Roulette",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/poker-roulette-f7ed9d5d.png"
+    },
+    {
+        "gameid": "6834",
+        "gamename": "Rome Gladiator",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/rome-gladiator-524bb7c9.png"
+    },
+    {
+        "gameid": "6803",
+        "gamename": "Rooster Blitz",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/rooster-blitz-2c290717.png"
+    },
+    {
+        "gameid": "1002",
+        "gamename": "Samba Rhapsody",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/samba-rhapsody-42c222f5.png"
+    },
+    {
+        "gameid": "9352",
+        "gamename": "Sic Bo",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/sic-bo-46642d26.png"
+    },
+    {
+        "gameid": "6798",
+        "gamename": "Sugar Blast",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/sugar-blast-8038ed3c.png"
+    },
+    {
+        "gameid": "870",
+        "gamename": "Sugar Candy Bonanza",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/sugar-candy-bonanza-6cb9d5ac.png"
+    },
+    {
+        "gameid": "9360",
+        "gamename": "Thai Fish Prawn Crab",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/thai-fish-prawn-crab-b08223fa.png"
+    },
+    {
+        "gameid": "6754",
+        "gamename": "Thai Hi Lo 2",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/thai-hi-lo-2-29f13bfd.png"
+    },
+    {
+        "gameid": "6810",
+        "gamename": "Tongits",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/tongits-11833388.png"
+    },
+    {
+        "gameid": "6817",
+        "gamename": "Toon Crash",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/toon-crash-196c57f6.png"
+    },
+    {
+        "gameid": "68282a3dd4b80614b2985389011fed47",
+        "gamename": "Treasures of Olympus 1000",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/treasures-of-olympus-1000-a486903a.png"
+    },
+    {
+        "gameid": "6766",
+        "gamename": "Triple Chance",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/triple-chance-4c03076c.png"
+    },
+    {
+        "gameid": "6820",
+        "gamename": "Warriors Temple",
+        "providerName": "KM",
+        "image": "https://providers.gambllyapi.com/assets/providers/KM/warriors-temple-646e20cf.png"
+    }
+]

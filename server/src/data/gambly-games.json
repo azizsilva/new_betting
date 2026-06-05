@@ -1,0 +1,2675 @@
+[
+  {
+    "id": "814aa56348ac4165588f2a3e251f8732",
+    "title": "Crazy Time A",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/crazy-time-a-f4d46a57.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8405541014f364b7dc59657aa6892446",
+    "title": "Funky Time",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/funky-time-f34dd51a.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "d496ac5fd91702331133e44b6bd12b26",
+    "title": "MONOPOLY Live",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/monopoly-live-40dded6d.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "3955853fc6a0b53f7f9b9cff0be19cb8",
+    "title": "Mega Ball",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/mega-ball-57c38736.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "97dcc429fe7142159aab82b918780f14",
+    "title": "2 Hand Casino Hold'em",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/2-hand-casino-hold-em-730a5291.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "08f7ef59810b52bd7b75716737dc01aa",
+    "title": "Always 9 Baccarat",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/always-9-baccarat-755f73eb.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "0afb35f8abd269ca0c0c65a49d5145db",
+    "title": "American Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/american-roulette-34a79758.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "ed9e15ea8a2cbb9e7ad2604819764d43",
+    "title": "Auto-Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/auto-roulette-c8a39ec0.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "367c395a50d4ef9edda332e17094670b",
+    "title": "Auto-Roulette VIP",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/auto-roulette-vip-97ceed84.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "9b25f8d744859c6840d16ff6103dc5a6",
+    "title": "Bac Bo",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/bac-bo-fe691da6.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "1d955d48d50aef2e9546466d9d859be1",
+    "title": "Baccarat A",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/baccarat-a-6412727b.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "0ea8519b837ebd62f5a8978acca33e1d",
+    "title": "Baccarat B",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/baccarat-b-0f4227a7.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "21cf3fdf28915845ff76f963695bb8e3",
+    "title": "Baccarat C",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/baccarat-c-89c5c20e.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "e7df9c2fdf7c680ddee3739f5b703c88",
+    "title": "Blackjack A",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-a-5ebb25e2.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5344ba3dbbd1b3c4b0082fe6212d502c",
+    "title": "Blackjack B",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-b-10ed60fe.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "135c1d0063a5a18532314e7f669da0a2",
+    "title": "Blackjack C",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-c-a4c5f0bd.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7d4e80750fdbd046e210dc8e1d1a0c21",
+    "title": "Blackjack Diamond VIP",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-diamond-vip-aeadae23.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "06e7ecf8debac2b86e8b38342de30a7a",
+    "title": "Blackjack Fortune VIP",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-fortune-vip-25b74c26.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "79efa086e10bbd8543b6e03e7a491351",
+    "title": "Blackjack Grand VIP",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-grand-vip-d2020db8.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "d609730e8da3693bd8ac428926747390",
+    "title": "Blackjack Party",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-party-ff786711.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "c2bd2aafaa4dbaff9df0cd0b53fc6056",
+    "title": "Blackjack Platinum VIP",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-platinum-vip-68695d61.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "faa0c98465e5fe48aefaca3fc885977e",
+    "title": "Blackjack Silver A",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-silver-a-cd92255a.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8de1993b371ce298b85584d21e5d2106",
+    "title": "Blackjack Silver B",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-silver-b-67607c74.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "422b5f8f63f54841a0045584237c4eee",
+    "title": "Blackjack Silver C",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-silver-c-e27b72d1.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "91cbad4d3ac237e40d477539e5c767fa",
+    "title": "Blackjack Silver D",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-silver-d-44420874.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "0fcd90352f378191e02359a0ab9df5a8",
+    "title": "Blackjack Silver E",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-silver-e-5dae8105.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "cd2394d2d8ef2160c8b4826233f7b2fb",
+    "title": "Blackjack Silver F",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-silver-f-2be81ae3.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "fdc106b08bfc4c4d324cac4fa347bf19",
+    "title": "Blackjack Silver G",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-silver-g-c7e5f259.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "9f509cdc3cdce669368977eda1588011",
+    "title": "Blackjack VIP 1",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-1-12564acc.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "323f4086833fda7bb471f10e18a28364",
+    "title": "Blackjack VIP 10",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-10-72248a72.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "1329b0405db81b9964d6dd6eb0a514c9",
+    "title": "Blackjack VIP 11",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-11-a90070af.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "87a7f4550407f5ed73c3353a54a11187",
+    "title": "Blackjack VIP 12",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-12-1a3d1fe1.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "ad6b96a22d790052e3f899b3ece69c03",
+    "title": "Blackjack VIP 13",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-13-7b700a17.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "1d5d1c1c3d9c76bd7f4c58b9239c373a",
+    "title": "Blackjack VIP 14",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-14-5cdfff96.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "e200f3434cd89322594336ee0f90afd0",
+    "title": "Blackjack VIP 15",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-15-6975e982.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "295743c7d72fd2eb61ca06749bb25a44",
+    "title": "Blackjack VIP 16",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-16-1f224627.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "994a2681526c98fec2b9a2d63a642faa",
+    "title": "Blackjack VIP 17",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-17-30025b67.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "31915e590bc4f5904681c9ed3fec7e91",
+    "title": "Blackjack VIP 19",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-19-e1271fe2.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7530ac3d1140882df7e883641237bb42",
+    "title": "Blackjack VIP 2",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-2-b61886d8.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "a9d74415dfdde9ca16087d260c63fd68",
+    "title": "Blackjack VIP 20",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-20-66da1295.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "ba4f73d5e19cb97db65f0766cd785434",
+    "title": "Blackjack VIP 22",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-22-7006c343.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "cc61ff297d5beef775880c9ffcccf63e",
+    "title": "Blackjack VIP 25",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-25-21a526f9.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "84c4ac47b33cb83dbdfbd56af4e658ad",
+    "title": "Blackjack VIP 26",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-26-463137e3.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "74f9dadea990e593f531953b1feaac7b",
+    "title": "Blackjack VIP 27",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-27-b0bbea85.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "e2124ac641282f02462d0b6e0245f3f9",
+    "title": "Blackjack VIP 28",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-28-87eb63e1.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "f8e17bc0ad780b65f684558001ee2e64",
+    "title": "Blackjack VIP 3",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-3-6d26f730.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "530ed3caad9e07621982956b571f6794",
+    "title": "Blackjack VIP 30",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-30-4c40cfee.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "d8ab16519a21608d1fed93cc83690593",
+    "title": "Blackjack VIP 31",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-31-eeb19ff5.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "97e1e4e23f9fd02ea58a8415a515d1e5",
+    "title": "Blackjack VIP 32",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-32-519da727.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "401d3a40b06fa9b0ee299e31823796d9",
+    "title": "Blackjack VIP 33",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-33-16b9efdc.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8b6200a6ef1f7df8c91c51dfe4444866",
+    "title": "Blackjack VIP 34",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-34-089ff3b4.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "64fee17522e56dd16ad4a0548c5b842c",
+    "title": "Blackjack VIP 35",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-35-f5bde119.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "c6361dfd83d86cc5c98e2b41c28791eb",
+    "title": "Blackjack VIP 36",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-36-807f979d.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "3acbe78079e7e8841ab34ebe03a1f4d7",
+    "title": "Blackjack VIP 37",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-37-b9fef755.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "abdae315508ec2b531c87cadf4b790ae",
+    "title": "Blackjack VIP 38",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-38-1c9122e2.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "aed251dded03e8a1e665e52cdc4b6e80",
+    "title": "Blackjack VIP 4",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-4-b306cfbd.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "e02f15bb0df96c186555c62264bd4379",
+    "title": "Blackjack VIP 41",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-41-31bb22b6.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "bb5d9a68f06045695ba133a6f4bba082",
+    "title": "Blackjack VIP 44",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-44-00ae7129.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "f3d684a1b2fb22ac35c67e296df4db31",
+    "title": "Blackjack VIP 5",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-5-f54dd936.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "4a33673ccc580aea8ae80ffa03c12ba7",
+    "title": "Blackjack VIP 6",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-6-418aac41.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "3d3f89247b5ec9e98e76ef2b22da2532",
+    "title": "Blackjack VIP 7",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-7-b2e017d1.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "ecffee81bd446ea53e4836e497f9e803",
+    "title": "Blackjack VIP 8",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-8-a3c038c1.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "54806d16c3eac96d4bea63ccfc0c674c",
+    "title": "Blackjack VIP 9",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-9-dfa31258.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "555681ca33cd74847afbab62a9c446a3",
+    "title": "Blackjack VIP A",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-a-a36fe18b.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "446551dd9ae32002824b065e57686463",
+    "title": "Blackjack VIP B",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-b-381e4345.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "3a3bb51ef96c4795ac20c935ca68443b",
+    "title": "Blackjack VIP Beta",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-beta-1e7c281c.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "68c5eb853ecdfee94cd5a22f3210aacf",
+    "title": "Blackjack VIP C",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-c-e070853d.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "d3cc53709c12b63755a2e40bba47f448",
+    "title": "Blackjack VIP D",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-d-a1fe4bc1.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "2c2f06025f65fe745cabd81a3aae8aba",
+    "title": "Blackjack VIP E",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-e-2361e31b.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "201a27d2b833951f5d982dc5c313fe74",
+    "title": "Blackjack VIP F",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-f-6f7948d9.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "40273c03c2a48786cb6111e35f012e6b",
+    "title": "Blackjack VIP G",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-g-3236cc91.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "9f71de77938927179599cd645a5688c5",
+    "title": "Blackjack VIP Gamma",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-gamma-3ee9e216.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "fe2e28180d600b1dfc7784324d3df640",
+    "title": "Blackjack VIP H",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-h-310b6728.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "2703c1a1340451d9f9d35904c721f7d6",
+    "title": "Blackjack VIP I",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-i-6b831b23.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "bd5be8139f01f6719bdd15b92e005523",
+    "title": "Blackjack VIP J",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-j-6a72ab35.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "ce84d2072af4db522109e3e349bec9c9",
+    "title": "Blackjack VIP K",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-k-1ec779e6.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "2d2e7afef9695e9cf82be87a08f28d23",
+    "title": "Blackjack VIP L",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-l-0c2b9919.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "bee49a234fcb2ed9547b9e1562953f35",
+    "title": "Blackjack VIP M",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-m-262091c7.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8cadf51f3bab6ca1d1351e39920f0cd0",
+    "title": "Blackjack VIP N",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-n-5758c6f0.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "4134e22ef51602a341306df756ee8f2c",
+    "title": "Blackjack VIP O",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-o-10c5fc0d.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5a04abf1c8f61ff36beaa840b38fd720",
+    "title": "Blackjack VIP P",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-p-dc1f70f2.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "694ea4e8c2bc49bb69c0c113a29e5c18",
+    "title": "Blackjack VIP Q",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-q-bb8ec123.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "20e34228a5086c5a4198a3c967f99301",
+    "title": "Blackjack VIP R",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-r-0a9061e7.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "78beceac05fb03bb597646ee2a85cb1e",
+    "title": "Blackjack VIP T",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-t-166cdfde.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "921477a239b298fdd623e29c8f982274",
+    "title": "Blackjack VIP U",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-u-bab78eca.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "195f9f3cb289ab0c8e281317692590ba",
+    "title": "Blackjack VIP X",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-x-71f9f783.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "54b14b8af2eab62dad3053c09ff7508d",
+    "title": "Blackjack VIP Z",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/blackjack-vip-z-a42be4b7.webp",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "724eebd5cbe7555b01ed60279cb59e5a",
+    "title": "Caribbean Stud Poker",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/caribbean-stud-poker-0995c260.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8cb4d1c55915742a45f59f2adbb97e24",
+    "title": "Casino Hold'em",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/casino-hold-em-5f7083fc.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "689dd8e8f17dae910dba9fdd4990d41e",
+    "title": "Craps",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/craps-8bb412ec.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "c177ce05258ed2dcbdece64434eaf817",
+    "title": "Crazy Coin Flip",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/crazy-coin-flip-cfb0edb9.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "911a32ad38d77f86baf29a2cdb95da05",
+    "title": "Crazy Pachinko",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/crazy-pachinko-23db03d7.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "eda1a2c5edb8370f8df58dcf8e1381b9",
+    "title": "Dead or Alive: Saloon",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/dead-or-alive-saloon-f05dc4ae.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "fae08e8e222f162b27a2d5c4329d1044",
+    "title": "Double Ball Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/double-ball-roulette-6511c0f5.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "1fd20a344c9f147cdef85bbaa7447dcd",
+    "title": "Dragon Tiger",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/dragon-tiger-40f529cd.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7f50a6fbfcd9257299303b5757d43525",
+    "title": "Dream Catcher",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/dream-catcher-939d0294.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "0cca3db8b5cbf76b1ac52f9e9f149aa1",
+    "title": "Emperor Bac Bo",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/emperor-bac-bo-9a6cf1ed.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "1eaa16200ee75bddd50ab54b01fbefa9",
+    "title": "Emperor Dragon Tiger",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/emperor-dragon-tiger-814fdca1.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "53b7cbb34adc1279d0df4c0942af9393",
+    "title": "Emperor Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/emperor-roulette-2c5cdf91.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "6a1e55dc7a14f038d9b0207fdb3ecbc0",
+    "title": "Emperor Sic Bo",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/emperor-sic-bo-00c10ef9.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "758772f63feb61b6ab997d8d37385a65",
+    "title": "Emperor Sic Bo A",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/emperor-sic-bo-a-5071ac39.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "ed0d26758183cfc88c8c791233d86de9",
+    "title": "Extra Chilli Epic Spins",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/extra-chilli-epic-spins-5278788e.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5cb6aa4e2ce1c775c568561401ffdfca",
+    "title": "Fan Tan",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/fan-tan-b814c82b.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "88b2d98462fbc45d6d31e95083e183df",
+    "title": "First Person American Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/first-person-american-roulette-b7b937b6.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "4ac0e874a4d5fc55bcdba5302b43bc96",
+    "title": "First Person Blackjack",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/first-person-blackjack-3965951b.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "823245918aa2afd108a5912e363c083c",
+    "title": "First Person Craps",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/first-person-craps-1491dd86.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "4b4c45709dfd8188d7d6d12fae15bd42",
+    "title": "First Person Dragon Tiger",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/first-person-dragon-tiger-15b85545.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7ee0da50996278d7fe5136f86f368fa5",
+    "title": "First Person Dream Catcher",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/first-person-dream-catcher-c376be97.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7b5d05fc48390b74980d63ac1ea78ed5",
+    "title": "First Person HiLo",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/first-person-hilo-c52e7857.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "fde4cf03eb3504e9f3898e528231f564",
+    "title": "First Person Prosperity Tree Baccarat",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/first-person-prosperity-tree-baccarat-74f2a691.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "797aa3e732352d1348b5c876597f5cb4",
+    "title": "First Person Super Sic Bo",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/first-person-super-sic-bo-94d439c5.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "24e52b094b2dfadb0c641ed4f4935077",
+    "title": "First Person Video Poker",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/first-person-video-poker-e4d4ecc0.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "318291bd00fb6542cf6b6d35e2a9b41a",
+    "title": "First Person XXXtreme Lightning Baccarat",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/first-person-xxxtreme-lightning-baccarat-22dbac91.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7f59ab12793402d5d5c499798460c3a1",
+    "title": "First Person XXXtreme Lightning Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/first-person-xxxtreme-lightning-roulette-566a0079.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "392e13e38b3cec5ad259254a206d343a",
+    "title": "Football Studio",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/football-studio-2f0cad3c.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "1909b4e3380dc37654f8e3997e63ec1b",
+    "title": "Football Studio Dice",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/football-studio-dice-5dd3627e.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "a8d52f6fa06dafce786d70d190c25cbe",
+    "title": "Gold Vault Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/gold-vault-roulette-72ae6b7b.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "3b43390eebe1f1a84b15f1251a253b24",
+    "title": "Immersive Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/immersive-roulette-45627008.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "58d7089aa20bce7f70e0e2ce81e888f4",
+    "title": "Infinite Blackjack",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/infinite-blackjack-8a28919a.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "e722b180875038d8a9b5df84ff340577",
+    "title": "Infinite Fun Fun 21 Blackjack",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/infinite-fun-fun-21-blackjack-64bb5a20.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "ec65c22981a707736871eecfca8e5e25",
+    "title": "Instant Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/instant-roulette-2bea2b99.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "0f78172e62af19dcc9c75077ea0d0cd0",
+    "title": "Lightning Baccarat",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/lightning-baccarat-317559be.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "96050ea4ce01c7c295c15cf910aa7bc4",
+    "title": "Lightning Ball",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/lightning-ball-ef920883.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "d8da3c5c99a593a44c97325e7ba83838",
+    "title": "Lightning Dragon Tiger",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/lightning-dragon-tiger-52b36204.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "4a858d6b74c05260d3ea2762838798c7",
+    "title": "Lightning Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/lightning-roulette-b0c36c3a.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7df14b65a14ab249155c76bc888f4f59",
+    "title": "Lightning Sic Bo",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/lightning-sic-bo-62e451ae.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "2fa292e4b9852e4f2d79360bab5ccbbc",
+    "title": "Lightning Storm",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/lightning-storm-0391600a.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "067806e82742ca16bfffe70f76215647",
+    "title": "MONOPOLY Big Baller",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/monopoly-big-baller-5c488acf.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "c367b8269a44719f19d7264b37d4582b",
+    "title": "Peek Baccarat",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/peek-baccarat-f10dab54.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "1d1c0d3ec98deb128bdd5acdef0f157e",
+    "title": "Power Blackjack",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/power-blackjack-f9fc2d4a.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "418f38d98be47c4f77c052347e56b481",
+    "title": "Prosperity Tree Baccarat",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/prosperity-tree-baccarat-fa3dfab0.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "6ddd73419e9a49b6b942e29088219d64",
+    "title": "Red Door Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/red-door-roulette-f8363e3b.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "c9020da3ac9119910b7146416d5a9850",
+    "title": "Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/roulette-59eb9a66.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "1ffeecc77f75d0485e83036269fd9401",
+    "title": "Speed Auto Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-auto-roulette-48721371.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "ca432917c1beafa247d346bdc7c178a7",
+    "title": "Speed Baccarat A",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-a-5e4db2bb.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "d3c71b0de6799ca7419d1e7834a05a47",
+    "title": "Speed Baccarat B",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-b-b8dfbe79.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "78a8f259b57a85b7c01f9a1c5c667898",
+    "title": "Speed Baccarat C",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-c-2d370546.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "441f7d75f645a3ba8c6ca6ac97766e27",
+    "title": "Speed Baccarat D",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-d-2391a56b.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "b565bd61b2dd5216d910bd07feb5994e",
+    "title": "Speed Baccarat E",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-e-48f805b3.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "b332c47c868946659d7de97f4157bdb3",
+    "title": "Speed Baccarat F",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-f-95d508df.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "0f318059268a7522710dfa4b867005e9",
+    "title": "Speed Baccarat G",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-g-03822bf4.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "08e3fac9968542e243e1b320c033b8d7",
+    "title": "Speed Baccarat H",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-h-5b39b1e0.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "306416e24dc7aa7400ae46d151c3526e",
+    "title": "Speed Baccarat I",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-i-25e87cd8.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "fbd7f3f9692774963341d7758aa0f439",
+    "title": "Speed Baccarat J",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-j-3618651a.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "04bbac98e29afadca20019f21b2c21d2",
+    "title": "Speed Baccarat K",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-k-9c1e9cd3.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5c58dcfb54df086d00b8725a10761e03",
+    "title": "Speed Baccarat L",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-l-cc37cb48.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "47a936ba7665516ecf132a2b8898b2eb",
+    "title": "Speed Baccarat M",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-m-f7b85e1e.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "374b0298147823425fb0d41a6fae25ba",
+    "title": "Speed Baccarat N",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-n-ee6601e3.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "cb6e4ad80df2c456cc69d7d43400ef2a",
+    "title": "Speed Baccarat P",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-p-1fc06190.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "85e9ebaaec03ab8d1e579cf2d28a898e",
+    "title": "Speed Baccarat Q",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-q-034ef5f8.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "44eca39b0a839bf2af75db7a5ecb3450",
+    "title": "Speed Baccarat R",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-r-73782d87.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "3c4df047efd6126b12f351ad40123e40",
+    "title": "Speed Baccarat S",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-s-23e60353.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "60c61989f6a8ff1a33b14c98abe83e62",
+    "title": "Speed Baccarat T",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-t-1759b5c5.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "e0e8f76fa25eb2fcebf96e7b5f45e120",
+    "title": "Speed Baccarat U",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-u-4058a2ba.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "ce7558886d46f01a02aade95a5127b43",
+    "title": "Speed Baccarat V",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-v-09e40b42.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "239ca8da8e291b7d9e377adfcf4745dc",
+    "title": "Speed Baccarat W",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-w-14316881.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "128268adb0c5c9cd62746a0a8105dc21",
+    "title": "Speed Baccarat X",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-x-e049e00a.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "52a7b9d8c127b8b33f5c8d682ed40371",
+    "title": "Speed Baccarat Z",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/speed-baccarat-z-18472714.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "699fff17c56ac4af07db510e86cdf6bb",
+    "title": "Stock Market",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/stock-market-e3560b5c.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "699fff17c56ac4af07db510e86cdf6bb-error",
+    "title": "Stock Market",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/stock-market-6a5073a0.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "f7b98e899461bdd49f92afc36b4c0db5",
+    "title": "Super Andar Bahar",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/super-andar-bahar-65799e48.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "e39fe089ced4676b1d61bd4c4442a9f2",
+    "title": "Super Color Game",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/super-color-game-bc1eead8.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "e3951a5bf624e822a22cba1cbe619df5",
+    "title": "Super Sic Bo",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/super-sic-bo-c3bb7217.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "0617a82334f4f1766cf282ce906e1df7",
+    "title": "Teen Patti",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/teen-patti-64ff72e6.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "0d743830cca897a7c4c9187bc7f9b812",
+    "title": "Texas Hold'em Bonus Poker",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/texas-hold-em-bonus-poker-afca7f97.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "b7c3b022f1c2b768524523d855a58d89",
+    "title": "Triple Card Poker",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/triple-card-poker-f6aa9b04.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "e8f217c3d554285933cb67072c897fac",
+    "title": "VIP Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/vip-roulette-ecedc7cf.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "bbf570734d54910e75ee4bfc788e00df",
+    "title": "XXXtreme Lightning Baccarat",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/xxxtreme-lightning-baccarat-9bf6279c.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "394fe6a2cde24bc487767236cc6eccd6",
+    "title": "XXXtreme Lightning Roulette",
+    "provider": "Evolution Live Row",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/EVOLIVEROW/xxxtreme-lightning-roulette-9e99e335.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7605",
+    "title": "American Roulette",
+    "provider": "Evolution Live (Asia)",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/7605/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8190",
+    "title": "Auto Lightning Roulette",
+    "provider": "Evolution Live (Asia)",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8190/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7607",
+    "title": "Bac Bo",
+    "provider": "Evolution Live (Asia)",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/7607/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7845",
+    "title": "Balloon Race",
+    "provider": "Evolution Live (Asia)",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/7845/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7834",
+    "title": "Blackjack A",
+    "provider": "Evolution Live (Asia)",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/7834/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8030",
+    "title": "Blackjack Classic 73",
+    "provider": "Evolution Live (Asia)",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8030/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8031",
+    "title": "Blackjack Classic 74",
+    "provider": "Evolution Live (Asia)",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8031/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8032",
+    "title": "Blackjack Classic 75",
+    "provider": "Evolution Live (Asia)",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8032/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8033",
+    "title": "Blackjack Classic 76",
+    "provider": "Evolution Live (Asia)",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8033/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "6782",
+    "title": "32 Cards",
+    "provider": "Ezugi",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/474/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5665",
+    "title": "American Roulette",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5665/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5758",
+    "title": "Andar Bahar",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5758/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5739",
+    "title": "Auto Mega Roulette",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5739/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5768",
+    "title": "Auto Roulette",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5768/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5799",
+    "title": "Baccarat 1",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5799/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5798",
+    "title": "Baccarat 2",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5798/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5797",
+    "title": "Baccarat 3",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5797/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5668",
+    "title": "Baccarat 3",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5668/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5796",
+    "title": "Baccarat 5",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5796/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5795",
+    "title": "Baccarat 6",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5795/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5794",
+    "title": "Baccarat 7",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5794/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5793",
+    "title": "Baccarat 8",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5793/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5669",
+    "title": "Baccarat 8",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5669/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5792",
+    "title": "Baccarat 9",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5792/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5692",
+    "title": "Bet Behind Pro Blackjack",
+    "provider": "PragmaticPlayLive-EU",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/5692/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8185",
+    "title": "Squeeze Baccarat",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/5c3a65d5-b40b-4f49-a649-79b76d5348de_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5662",
+    "title": "Thai Roulette",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/c444a4be-72d4-46db-a34d-a290bc0e965f_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5663",
+    "title": "Korean PrivÃ© Lounge Baccarat 1",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/7bee3d77-9e0e-4b71-ad27-ff889caece38_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5664",
+    "title": "Korean Turbo Baccarat 1",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/c33d6fda-2f16-423d-bc5a-6d450223001f_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5666",
+    "title": "Immersive Roulette Deluxe",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/1ca24b50-52e8-4ac4-9bbf-8a461d35aeb0_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5667",
+    "title": "Fortune Roulette",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/68b77a52-dd35-41f1-948d-701dc17bfae1_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "11425",
+    "title": "Sic Bo",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/ed24a40a-5724-437b-9ae9-a2995b347d1f_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8063",
+    "title": "Speed Baccarat 15",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/de8ed1ae-a408-4eab-82ca-c7fef2740332_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5676",
+    "title": "Lucky 6 Roulette",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/24ad60b8-497c-43dc-a564-43f6dc89eaf2_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5677",
+    "title": "Chinese Speed Baccarat 1",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/10c385ff-3641-4859-ae7f-10c4dc18ce79_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5678",
+    "title": "Chinese Speed Baccarat 2",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/c17bfe24-0342-4b6d-a265-f38ce21d02d3_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5679",
+    "title": "Chinese Speed Baccarat 3",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/6bb7bc7a-5118-4c73-b77a-22bc1cc580e8_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5680",
+    "title": "Thai Speed Baccarat 1",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/ebc44d9c-fd0f-4ece-8dcc-8ea3884c723c_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5681",
+    "title": "Vietnamese Roulette",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/7a617428-bbae-49ce-9982-a553a5d1c1f6_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5682",
+    "title": "Vietnamese Speed Baccarat 1",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/9ce2905e-d027-4d8c-b290-72f9e7257532_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5689",
+    "title": "Treasure Island",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/pragmaticplaylive-asia/treasure-island.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5691",
+    "title": "Brazilian ONE Blackjack",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/e4b041e7-9433-4e7c-971e-a20f8a86c1a8_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5693",
+    "title": "VIP Auto Roulette",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/08fa1212-0ecd-4194-9ed4-e3e319f97286_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5764",
+    "title": "Mega Roulette - Brazilian",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/de1ea5a8-509e-4ee9-863b-86095cbeb3f3_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8152838110b3d0b988236c9b94db8f78",
+    "title": "Mega Sic Bac",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/pragmaticplaylive-asia/mega-sic-bac.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "950e9141d10bb5528012e84f1d8bbff8",
+    "title": "Super Trunfo",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/pragmaticplaylive-asia/super-trunfo.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5723",
+    "title": "Japanese Speed Baccarat 3",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/cc080a91-9145-4efe-828f-b6169472e01f_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5724",
+    "title": "Japanese Speed Baccarat 2",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/feb9d775-36cd-4ed9-8187-7ed0f1df2287_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5725",
+    "title": "Japanese Speed Baccarat 1",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/1bdee368-40a6-4e2c-afb4-aa30daf95193_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5727",
+    "title": "PrivÃ© Lounge Baccarat 8",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/6ea52755-c96e-4208-aeeb-80f7c1ce65ae_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5728",
+    "title": "PrivÃ© Lounge Baccarat 7",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/2acfd837-1752-40e0-9278-5bfc1e916f64_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5729",
+    "title": "PrivÃ© Lounge Baccarat 6",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/e8887627-f47b-44d3-8e29-fc754bc37763_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5730",
+    "title": "PrivÃ© Lounge Baccarat 5",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/fb26445b-fe3b-4b8e-8b73-a81bdc1d5b16_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5731",
+    "title": "PrivÃ© Lounge Baccarat 3",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/eaa6fa22-f588-4715-8733-e1eb943da1ed_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5732",
+    "title": "PrivÃ© Lounge Baccarat 2",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/2d480f7f-4dbd-4b45-97fe-65e29bfbed1b_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5733",
+    "title": "PrivÃ© Lounge Baccarat 1",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/3b5a3912-81d0-4fe7-9a31-aa4dc23e5417_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5734",
+    "title": "Indonesian Speed Baccarat 1",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/ad9f5d27-5166-415e-8ffa-fa1aaf8d2e98_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5735",
+    "title": "Brazilian Roulette",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/09db3849-b1db-4e07-9d24-ff84edd2a5b3_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5736",
+    "title": "Korean Roulette",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/fc161223-f695-4ecd-9af9-96063f8c715d_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5738",
+    "title": "Vegas Ball Bonanza",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/pragmaticplaylive-asia/vegas-ball-bonanza.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5741",
+    "title": "Mega Baccarat",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/897a570a-6e84-4e27-a71c-12fd33b9db1d_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "11410",
+    "title": "Speed Auto Roulette",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/fdc2169c-e99c-4ed5-95a3-a6dd0b8205c9_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5743",
+    "title": "Korean Speed Baccarat 6",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/18001f15-3092-43d6-a091-e8f33658515b_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5744",
+    "title": "Korean Speed Baccarat 5",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/95063cfa-54dc-4a1c-a259-3e0446e7bd88_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5745",
+    "title": "Korean Speed Baccarat 4",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/2e4c5d59-7866-4b28-bb18-1219547f393b_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5746",
+    "title": "Korean Speed Baccarat 3",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/31f58feb-fac2-47d3-944b-c0aa6dcfe6a7_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5747",
+    "title": "Korean Speed Baccarat 2",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/57a4f3e7-5092-4931-a001-26ba62fedf50_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5748",
+    "title": "Korean Speed Baccarat 1",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/49c2a0ab-3c7e-41ab-8b17-370ae194aabb_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5749",
+    "title": "Vietnamese Speed Baccarat 3",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/24df5cab-ae4f-425e-95c0-198a9d320678_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5750",
+    "title": "Vietnamese Speed Baccarat 2",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/356b74a2-dd37-4c3a-961f-aaf7941b1715_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5751",
+    "title": "PowerUP Roulette",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/c8906cde-8a93-4d51-84f1-6ddaf6f82377_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5755",
+    "title": "Fortune 6 Baccarat",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/b0001a38-5e3b-4b56-93e1-f6db5462a751_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5756",
+    "title": "Super 8 Baccarat",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/eb854a09-8015-4ecf-8821-8e5a2262936b_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5757",
+    "title": "Sweet Bonanza CandyLand",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/32278547-3d12-4261-b70b-9dc185f22495_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "11421",
+    "title": "Andar Bahar",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/289844ac-efb4-4129-977c-87e695c0991c_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "11427",
+    "title": "Dragon Tiger",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/0bd24696-6c30-4ed6-92c9-ab1ebbd6ea4e_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5760",
+    "title": "ONE Blackjack",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/90a50298-afe8-44df-97d8-648af88fcc23_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5761",
+    "title": "ONE Blackjack 2",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/20096df1-fb43-409e-93d6-b4055c7d2ee1_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5765",
+    "title": "Mega Wheel",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/v/ff557f9a-9385-4073-a8b6-a300d494d126_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5766",
+    "title": "Mega Sic Bo",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/e40de8b6-d233-40d0-9b0f-79ef765a6301_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10209",
+    "title": "Auto Roulette",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/a454d454-6103-48a7-a457-51fac57d61d0_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5769",
+    "title": "Speed Baccarat 17",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/84f19ab3-22f3-430d-908e-cd1003458faa_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5770",
+    "title": "Speed Baccarat 16",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/d16fe2a7-652c-4f13-8569-ed19d92e29e4_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8062",
+    "title": "Speed Baccarat 14",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/8e3b2b31-14e1-4945-b706-e5b4b32d07da_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8059",
+    "title": "Speed Baccarat 10",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/6c8ed47e-bdd6-43c9-9f34-e1309824d9bf_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8058",
+    "title": "Speed Baccarat 9",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/829cd5f9-188a-49ba-b81f-f3759b073fda_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8057",
+    "title": "Speed Baccarat 8",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/e36c4dc6-1f5b-4678-8004-75aa3f4048e9_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8056",
+    "title": "Speed Baccarat 7",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/db172630-fae4-4c42-97f9-b820eb0c9644_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "8055",
+    "title": "Speed Baccarat 6",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/3a555b2c-e2aa-4de3-ae7f-791c38a8fc7d_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7779",
+    "title": "Speed Baccarat 5",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/c0dbba5a-a887-40a4-ab27-9ffa4b583b5b_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10212",
+    "title": "Speed Baccarat 3",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/5bad0c96-d788-4c5e-a2ac-ca938ba6f875_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10211",
+    "title": "Speed Baccarat 2",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/ab14aeb3-704b-49e7-b357-129c0e6bfa61_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10210",
+    "title": "Speed Baccarat 1",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/4965c2d5-8e0d-417b-abd0-b9943f2375de_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5782",
+    "title": "Roulette Italia Tricolore",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/8d77d664-bfb8-4e91-8a31-62b05ff5d9ba_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5783",
+    "title": "German Roulette",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/ccf63dfd-9b98-49df-a70e-9625679e04f4_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5786",
+    "title": "Speed Roulette 1",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/673706f6-f9ed-45d8-9c8d-a5e87d7f0147_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5787",
+    "title": "Speed Roulette 2",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/561296be-076b-42e6-9a3e-2cafa92da2cc_vertical.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5788",
+    "title": "Roulette 2",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/8ffc7784-3cb5-4fd9-a2cc-5a8bae58d4d9_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5789",
+    "title": "Roulette 1",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/a1b7738d-7a08-4d43-86c6-b1dcc8ba8ec4_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "5790",
+    "title": "Roulette Macao",
+    "provider": "PragmaticPlay Live - Asia",
+    "imageUrl": "https://v1.bundlecdn.com/casino-images/pragmatic/a9333794-deb3-488f-b67f-37ee791aaa9c_vertical.jpg",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "617",
+    "title": "DreamGaming",
+    "provider": "DreamGaming",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/dreamgaming/dreamgaming.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7107",
+    "title": "SaGaming",
+    "provider": "SaGaming",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/sagaming/sagaming.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "1181",
+    "title": "2020 Teen Patti",
+    "provider": "Sexy",
+    "imageUrl": "https://igamingapis.com/img/1181.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10d4993cda9b61540f5898e17a15f4b2",
+    "title": "wm真人",
+    "provider": "WM",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/wm/wm.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "3ade1805c90ac5796bff28c33a5e1b2c",
+    "title": "Mr First Live",
+    "provider": "CreedRoomz",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/CreedRoomz/mr-first-live.gif",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10049",
+    "title": "Kickoff Roulette",
+    "provider": "CreedRoomz",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/CreedRoomz/kickoff-roulette.gif",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7397",
+    "title": "Richie Wheel",
+    "provider": "CreedRoomz",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/CreedRoomz/richie-wheel.gif",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "9320",
+    "title": "BlackJack VISION D",
+    "provider": "CreedRoomz",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/CreedRoomz/blackjack-vision-d.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "6788",
+    "title": "Teen Patti",
+    "provider": "CreedRoomz",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/CreedRoomz/teen-patti.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "9343",
+    "title": "Baccarat A",
+    "provider": "CreedRoomz",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/CreedRoomz/baccarat-a.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "1125",
+    "title": "Turkish Roulette",
+    "provider": "CreedRoomz",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/CreedRoomz/turkish-roulette.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10988",
+    "title": "Andar Bahar",
+    "provider": "CreedRoomz",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/CreedRoomz/andar-bahar.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "714",
+    "title": "Auto Roulette",
+    "provider": "CreedRoomz",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/CreedRoomz/auto-roulette.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "997",
+    "title": "BlackJack A",
+    "provider": "CreedRoomz",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/CreedRoomz/blackjack-a.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10205",
+    "title": "Airwave Roulette",
+    "provider": "Microgaming",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/10205/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10207",
+    "title": "Amstel Roulette",
+    "provider": "Microgaming",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/10207/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10229",
+    "title": "Baccarat 4",
+    "provider": "Microgaming",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/10229/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10230",
+    "title": "Baccarat 5",
+    "provider": "Microgaming",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/10230/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10231",
+    "title": "Baccarat 6",
+    "provider": "Microgaming",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/10231/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10232",
+    "title": "Baccarat 7",
+    "provider": "Microgaming",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/10232/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10197",
+    "title": "Blackjack Amsterdam",
+    "provider": "Microgaming",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/10197/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10203",
+    "title": "Blackjack Berlin",
+    "provider": "Microgaming",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/10203/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "10236",
+    "title": "Blackjack Calgary",
+    "provider": "Microgaming",
+    "imageUrl": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/10236/public",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "11426",
+    "title": "Baccarat",
+    "provider": "GAMINGSOFT-AI LIVE CASINO",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/baccarat.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "11424",
+    "title": "Table/Board game Roulette",
+    "provider": "GAMINGSOFT-AI LIVE CASINO",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/table-board-game-roulette.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "7614",
+    "title": "Table/Board game Craps",
+    "provider": "GAMINGSOFT-AI LIVE CASINO",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/table-board-game-craps.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "a525ca1b0b00fab6d3df4493c7d20251",
+    "title": "Table/Board game Speed Frenzy",
+    "provider": "GAMINGSOFT-AI LIVE CASINO",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/table-board-game-speed-frenzy.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  },
+  {
+    "id": "11430",
+    "title": "Table/Board game Color Game",
+    "provider": "GAMINGSOFT-AI LIVE CASINO",
+    "imageUrl": "https://providers.gambllyapi.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/table-board-game-color-game.png",
+    "isEnabled": true,
+    "account": "gambly",
+    "live": true
+  }
+]

@@ -1,0 +1,326 @@
+[
+    {
+        "gameid": "7347",
+        "gamename": "Candy’s Bonanza",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/candy-s-bonanza.png"
+    },
+    {
+        "gameid": "7348",
+        "gamename": "Wild White Whale",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/wild-white-whale.png"
+    },
+    {
+        "gameid": "7349",
+        "gamename": "Wild West Spirit",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/wild-west-spirit.png"
+    },
+    {
+        "gameid": "7350",
+        "gamename": "Beach Penalties",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/beach-penalties.png"
+    },
+    {
+        "gameid": "7351",
+        "gamename": "Shaolin Crew",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/shaolin-crew.png"
+    },
+    {
+        "gameid": "7352",
+        "gamename": "Leprechaun Wish",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/leprechaun-wish.png"
+    },
+    {
+        "gameid": "7353",
+        "gamename": "Swipe",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/swipe.png"
+    },
+    {
+        "gameid": "7354",
+        "gamename": "PINATA LOCA",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/pinata-loca.png"
+    },
+    {
+        "gameid": "7355",
+        "gamename": "Pia",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/pia.png"
+    },
+    {
+        "gameid": "7356",
+        "gamename": "Veni Vidi Vici",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/veni-vidi-vici.png"
+    },
+    {
+        "gameid": "7357",
+        "gamename": "Zombie Apocalypse",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/zombie-apocalypse.png"
+    },
+    {
+        "gameid": "11475",
+        "gamename": "Win & Go",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/win-go.png"
+    },
+    {
+        "gameid": "7359",
+        "gamename": "God of Coins",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/god-of-coins.png"
+    },
+    {
+        "gameid": "7360",
+        "gamename": "Digits",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/digits.png"
+    },
+    {
+        "gameid": "9352",
+        "gamename": "Sic Bo",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/sic-bo.png"
+    },
+    {
+        "gameid": "7362",
+        "gamename": "Titan Roulette Deluxe",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/titan-roulette-deluxe.png"
+    },
+    {
+        "gameid": "7363",
+        "gamename": "Titan Roulette",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/titan-roulette.png"
+    },
+    {
+        "gameid": "7364",
+        "gamename": "Joker Poker",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/joker-poker.png"
+    },
+    {
+        "gameid": "7365",
+        "gamename": "Planets Power",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/planets-power.png"
+    },
+    {
+        "gameid": "7366",
+        "gamename": "Pixel Poker",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/pixel-poker.png"
+    },
+    {
+        "gameid": "7367",
+        "gamename": "Pirates Power",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/pirates-power.png"
+    },
+    {
+        "gameid": "7368",
+        "gamename": "Piggy Party",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/piggy-party.png"
+    },
+    {
+        "gameid": "7369",
+        "gamename": "Odd One Out",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/odd-one-out.png"
+    },
+    {
+        "gameid": "7370",
+        "gamename": "Mini Roulette",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/mini-roulette.png"
+    },
+    {
+        "gameid": "7371",
+        "gamename": "Gem Miner",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/gem-miner.png"
+    },
+    {
+        "gameid": "7372",
+        "gamename": "Maya‘s Treasure",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/maya-s-treasure.png"
+    },
+    {
+        "gameid": "7373",
+        "gamename": "Magic Wheel",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/magic-wheel.png"
+    },
+    {
+        "gameid": "7374",
+        "gamename": "Lucky‘s Betting Shop",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/lucky-s-betting-shop.png"
+    },
+    {
+        "gameid": "8781",
+        "gamename": "Keno",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/keno.png"
+    },
+    {
+        "gameid": "7376",
+        "gamename": "HiLo Mini",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/hilo-mini.png"
+    },
+    {
+        "gameid": "11447",
+        "gamename": "HiLo",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/hilo.png"
+    },
+    {
+        "gameid": "7378",
+        "gamename": "Fortune Farm",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/fortune-farm.png"
+    },
+    {
+        "gameid": "7379",
+        "gamename": "Forest Rock",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/forest-rock.png"
+    },
+    {
+        "gameid": "7380",
+        "gamename": "Fairy in Wonderland",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/fairy-in-wonderland.png"
+    },
+    {
+        "gameid": "7381",
+        "gamename": "Evoji",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/evoji.png"
+    },
+    {
+        "gameid": "7382",
+        "gamename": "Circus Fever",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/circus-fever.png"
+    },
+    {
+        "gameid": "7383",
+        "gamename": "Dots Racing",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/dots-racing.png"
+    },
+    {
+        "gameid": "7384",
+        "gamename": "Dice Mini",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/dice-mini.png"
+    },
+    {
+        "gameid": "7385",
+        "gamename": "Titan Dice",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/titan-dice.png"
+    },
+    {
+        "gameid": "7386",
+        "gamename": "Deuces Wild",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/deuces-wild.png"
+    },
+    {
+        "gameid": "7387",
+        "gamename": "Crazy Horses",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/crazy-horses.png"
+    },
+    {
+        "gameid": "7388",
+        "gamename": "Circus Fever Deluxe",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/circus-fever-deluxe.png"
+    },
+    {
+        "gameid": "7389",
+        "gamename": "Diamond Blackjack",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/diamond-blackjack.png"
+    },
+    {
+        "gameid": "7390",
+        "gamename": "Casino Heist",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/casino-heist.png"
+    },
+    {
+        "gameid": "7391",
+        "gamename": "Capital City Derby",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/capital-city-derby.png"
+    },
+    {
+        "gameid": "7392",
+        "gamename": "Bounty Hunters",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/bounty-hunters.png"
+    },
+    {
+        "gameid": "7393",
+        "gamename": "Book of Egypt",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/book-of-egypt.png"
+    },
+    {
+        "gameid": "7394",
+        "gamename": "Spinning Buddha",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/spinning-buddha.png"
+    },
+    {
+        "gameid": "7395",
+        "gamename": "Sticky777",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/sticky777.png"
+    },
+    {
+        "gameid": "7396",
+        "gamename": "The Book of Eskimo",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/the-book-of-eskimo.png"
+    },
+    {
+        "gameid": "7397",
+        "gamename": "Wheel",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/wheel.png"
+    },
+    {
+        "gameid": "7398",
+        "gamename": "Wild Corrida",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/wild-corrida.png"
+    },
+    {
+        "gameid": "7399",
+        "gamename": "Wild Icy Fruits",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/wild-icy-fruits.png"
+    },
+    {
+        "gameid": "7400",
+        "gamename": "Battle For The Throne",
+        "providerName": "Expanse",
+        "image": "https://providers.gambllyapi.com/assets/providers/expanse/battle-for-the-throne.png"
+    }
+]

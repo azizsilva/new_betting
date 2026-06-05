@@ -1,0 +1,50 @@
+[
+    {
+        "gameid": "11426",
+        "gamename": "Baccarat",
+        "providerName": "GAMINGSOFT-AI LIVE CASINO",
+        "image": "https://providers.gamblly-api.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/baccarat.png"
+    },
+    {
+        "gameid": "11424",
+        "gamename": "Table/Board game Roulette",
+        "providerName": "GAMINGSOFT-AI LIVE CASINO",
+        "image": "https://providers.gamblly-api.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/table-board-game-roulette.png"
+    },
+    {
+        "gameid": "11425",
+        "gamename": "Table/Board game Sicbo",
+        "providerName": "GAMINGSOFT-AI LIVE CASINO",
+        "image": "https://providers.gamblly-api.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/table-board-game-sicbo.png"
+    },
+    {
+        "gameid": "7614",
+        "gamename": "Table/Board game Craps",
+        "providerName": "GAMINGSOFT-AI LIVE CASINO",
+        "image": "https://providers.gamblly-api.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/table-board-game-craps.png"
+    },
+    {
+        "gameid": "a525ca1b0b00fab6d3df4493c7d20251",
+        "gamename": "Table/Board game Speed Frenzy",
+        "providerName": "GAMINGSOFT-AI LIVE CASINO",
+        "image": "https://providers.gamblly-api.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/table-board-game-speed-frenzy.png"
+    },
+    {
+        "gameid": "11421",
+        "gamename": "Table/Board game Andar Bahar",
+        "providerName": "GAMINGSOFT-AI LIVE CASINO",
+        "image": "https://providers.gamblly-api.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/table-board-game-andar-bahar.jpg"
+    },
+    {
+        "gameid": "11430",
+        "gamename": "Table/Board game Color Game",
+        "providerName": "GAMINGSOFT-AI LIVE CASINO",
+        "image": "https://providers.gamblly-api.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/table-board-game-color-game.png"
+    },
+    {
+        "gameid": "9320",
+        "gamename": "Table/Board game Black Jack",
+        "providerName": "GAMINGSOFT-AI LIVE CASINO",
+        "image": "https://providers.gamblly-api.com/assets/providers/GAMINGSOFT-AI_LIVE_CASINO/table-board-game-black-jack.png"
+    }
+]

@@ -19,7 +19,9 @@ export default function PlayGamePage({
   const { gameId } = use(params);
   const router = useRouter();
   const searchParams = useSearchParams();
-  const account = searchParams.get("account") === "live" ? "live" : "slots";
+  const accParam = searchParams.get("account");
+  const account: "slots" | "live" | "gambly" =
+    accParam === "live" ? "live" : accParam === "gambly" ? "gambly" : "slots";
   const accessToken = useAuthStore((s) => s.accessToken);
   const openLoginModal = useUiStore((s) => s.openLoginModal);
   const [url, setUrl] = useState<string | null>(null);

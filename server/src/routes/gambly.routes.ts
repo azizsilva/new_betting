@@ -1,3 +1,6 @@
+import { readFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { Router } from "express";
 import { z } from "zod";
 import { asyncHandler } from "../middleware/error.js";
@@ -12,6 +15,54 @@ import { NotFound } from "../lib/errors.js";
 export const gamblyRouter = Router();
 
 const CURRENCY = (env.GAMBLY_CURRENCY || "TND").toUpperCase();
+
+// ─── Live-casino catalog (Gamblly has no list API; imported via gambly-import) ──
+// Served from src/data/gambly-games.json. We only expose LIVE games (Evolution /
+// Ezugi / Pragmatic Live) for the Live Casino tab.
+interface GamblyGameFile {
+  id: string;
+  title: string;
+  provider: string;
+  imageUrl: string;
+  isEnabled: boolean;
+  account: "gambly";
+  live: boolean;
+}
+
+let liveGamesCache: GamblyGameFile[] | null = null;
+function loadLiveGames(): GamblyGameFile[] {
+  if (liveGamesCache) return liveGamesCache;
+  try {
+    const __dirname = dirname(fileURLToPath(import.meta.url));
+    // dist/routes → ../../src/data ; src/routes → ../data. Try both.
+    const candidates = [
+      resolve(__dirname, "../data/gambly-games.json"),
+      resolve(__dirname, "../../src/data/gambly-games.json"),
+    ];
+    for (const p of candidates) {
+      try {
+        const all = JSON.parse(readFileSync(p, "utf8")) as GamblyGameFile[];
+        liveGamesCache = all.filter((g) => g.live && g.isEnabled && g.imageUrl);
+        return liveGamesCache;
+      } catch {
+        /* try next */
+      }
+    }
+  } catch (err) {
+    logger.warn({ err: (err as Error).message }, "gambly games file not loaded");
+  }
+  liveGamesCache = [];
+  return liveGamesCache;
+}
+
+// Public — guests can browse. Returns only the live games for the lobby.
+gamblyRouter.get(
+  "/games",
+  asyncHandler(async (_req, res) => {
+    res.setHeader("Cache-Control", "public, max-age=300");
+    res.json(loadLiveGames());
+  }),
+);
 
 // ─── Launch (auth) ─────────────────────────────────────────────────────────────
 // Opening a game is always allowed (even at 0 balance). Betting is enforced in

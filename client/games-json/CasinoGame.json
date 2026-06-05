@@ -1,0 +1,44 @@
+[
+    {
+        "gameid": "1403",
+        "gamename": "Baccarat Classic",
+        "providerName": "Casino Game",
+        "image": "https://providers.gambllyapi.com/assets/providers/Casino_Game/baccarat-classic.png"
+    },
+    {
+        "gameid": "11034",
+        "gamename": "Dragon Tiger",
+        "providerName": "Casino Game",
+        "image": "https://providers.gambllyapi.com/assets/providers/Casino_Game/dragon-tiger.png"
+    },
+    {
+        "gameid": "10049",
+        "gamename": "Roulette",
+        "providerName": "Casino Game",
+        "image": "https://providers.gambllyapi.com/assets/providers/Casino_Game/roulette.png"
+    },
+    {
+        "gameid": "9352",
+        "gamename": "Sicbo",
+        "providerName": "Casino Game",
+        "image": "https://providers.gambllyapi.com/assets/providers/Casino_Game/sicbo.jpg"
+    },
+    {
+        "gameid": "1428",
+        "gamename": "Hoo Hey How",
+        "providerName": "Casino Game",
+        "image": "https://providers.gambllyapi.com/assets/providers/Casino_Game/hoo-hey-how.png"
+    },
+    {
+        "gameid": "11447",
+        "gamename": "HiLo",
+        "providerName": "Casino Game",
+        "image": "https://providers.gambllyapi.com/assets/providers/Casino_Game/hilo.png"
+    },
+    {
+        "gameid": "10972",
+        "gamename": "Pokdeng",
+        "providerName": "Casino Game",
+        "image": "https://providers.gambllyapi.com/assets/providers/Casino_Game/pokdeng.png"
+    }
+]

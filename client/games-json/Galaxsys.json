@@ -1,0 +1,200 @@
+[
+    {
+        "gameid": "1689",
+        "gamename": "Cash Show",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/cash-show.png"
+    },
+    {
+        "gameid": "3650",
+        "gamename": "Rocketon",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/rocketon.png"
+    },
+    {
+        "gameid": "2831",
+        "gamename": "Keno 10 (1 Minute)",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/keno-10-1-minute.png"
+    },
+    {
+        "gameid": "2832",
+        "gamename": "Keno 10 (2 Minute)",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/keno-10-2-minute.png"
+    },
+    {
+        "gameid": "2834",
+        "gamename": "Keno 8 (1 Minute)",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/keno-8-1-minute.png"
+    },
+    {
+        "gameid": "2833",
+        "gamename": "Keno 8 (2 Minute)",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/keno-8-2-minute.png"
+    },
+    {
+        "gameid": "2835",
+        "gamename": "Keno Express",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/keno-express.png"
+    },
+    {
+        "gameid": "8783",
+        "gamename": "Penalty",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/penalty.png"
+    },
+    {
+        "gameid": "9352",
+        "gamename": "SicBo",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/sicbo.png"
+    },
+    {
+        "gameid": "11447",
+        "gamename": "Hilo",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/hilo.png"
+    },
+    {
+        "gameid": "9320",
+        "gamename": "BlackJack",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/blackjack.jpg"
+    },
+    {
+        "gameid": "2512",
+        "gamename": "GoldenRA",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/goldenra.png"
+    },
+    {
+        "gameid": "3266",
+        "gamename": "Mr.Thimble",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/mr-thimble.jpg"
+    },
+    {
+        "gameid": "1809",
+        "gamename": "Crasher",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/crasher.jpg"
+    },
+    {
+        "gameid": "3342",
+        "gamename": "NinjaCrash",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/ninjacrash.png"
+    },
+    {
+        "gameid": "3464",
+        "gamename": "Plinkoman",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/plinkoman.jpg"
+    },
+    {
+        "gameid": "2816",
+        "gamename": "Jungle Wheel",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/jungle-wheel.png"
+    },
+    {
+        "gameid": "3675",
+        "gamename": "Roulette X",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/roulette-x.png"
+    },
+    {
+        "gameid": "11443",
+        "gamename": "Coin Flip",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/coin-flip.png"
+    },
+    {
+        "gameid": "3743",
+        "gamename": "Scratch Map",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/scratch-map.gif"
+    },
+    {
+        "gameid": "3049",
+        "gamename": "Magic Dice",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/magic-dice.gif"
+    },
+    {
+        "gameid": "4137",
+        "gamename": "Totem",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/totem.gif"
+    },
+    {
+        "gameid": "2136",
+        "gamename": "F Mines",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/f-mines.png"
+    },
+    {
+        "gameid": "4199",
+        "gamename": "Turbo Mines",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/turbo-mines.jpg"
+    },
+    {
+        "gameid": "1481",
+        "gamename": "Bingo Star",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/bingo-star.png"
+    },
+    {
+        "gameid": "3045",
+        "gamename": "Maestro",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/maestro.jpg"
+    },
+    {
+        "gameid": "1363",
+        "gamename": "Atlantis",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/atlantis.png"
+    },
+    {
+        "gameid": "2939",
+        "gamename": "Limbo Crash",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/limbo-crash.png"
+    },
+    {
+        "gameid": "4145",
+        "gamename": "Tower Rush",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/tower-rush.jpg"
+    },
+    {
+        "gameid": "2638",
+        "gamename": "Hot Gear",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/hot-gear.png"
+    },
+    {
+        "gameid": "2971",
+        "gamename": "Lotto Boom",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/lotto-boom.png"
+    },
+    {
+        "gameid": "2168",
+        "gamename": "Figoal",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/figoal.jpg"
+    },
+    {
+        "gameid": "3456",
+        "gamename": "Play me",
+        "providerName": "Galaxsys",
+        "image": "https://providers.gambllyapi.com/assets/providers/galaxsys/play-me.png"
+    }
+]

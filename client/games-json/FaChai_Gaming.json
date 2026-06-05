@@ -1,0 +1,398 @@
+[
+    {
+        "gameid": "2443",
+        "gamename": "GODS GRANT FORTUNE",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/gods-grant-fortune.png"
+    },
+    {
+        "gameid": "2059",
+        "gamename": "EGYPT BONANZA",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/egypt-bonanza.png"
+    },
+    {
+        "gameid": "2427",
+        "gamename": "GO GO RISE",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/GO-GO-RISE.png"
+    },
+    {
+        "gameid": "2906",
+        "gamename": "LEGEND OF INCA",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/legend-of-inca.png"
+    },
+    {
+        "gameid": "3330",
+        "gamename": "NIGHT MARKET 2",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/night-market-2.png"
+    },
+    {
+        "gameid": "3902",
+        "gamename": "STAR HUNTER",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/STAR-HUNTER.png"
+    },
+    {
+        "gameid": "6982",
+        "gamename": "CHINESE NEW YEAR",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/chinese-new-year.png"
+    },
+    {
+        "gameid": "1737",
+        "gamename": "CHINESE NEW YEAR 2",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/chinese-new-year-2.png"
+    },
+    {
+        "gameid": "3328",
+        "gamename": "NIGHT MARKET",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/night-market.png"
+    },
+    {
+        "gameid": "7101",
+        "gamename": "LUCKY FORTUNES",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/lucky-fortunes.png"
+    },
+    {
+        "gameid": "2489",
+        "gamename": "GOLDEN GENIE",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/golden-genie.png"
+    },
+    {
+        "gameid": "3935",
+        "gamename": "SUGAR BANG BANG",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/sugar-bang-bang.png"
+    },
+    {
+        "gameid": "3224",
+        "gamename": "MONKEY KING FISHING",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/MONKEY-KING-FISHING.png"
+    },
+    {
+        "gameid": "1803",
+        "gamename": "COWBOYS",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/cowboys.png"
+    },
+    {
+        "gameid": "64",
+        "gamename": "ZEUS",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/zeus.png"
+    },
+    {
+        "gameid": "2522",
+        "gamename": "GRAND BLUE",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/grand-blue.png"
+    },
+    {
+        "gameid": "3593",
+        "gamename": "RICH MAN",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/rich-man.png"
+    },
+    {
+        "gameid": "2499",
+        "gamename": "GOLDEN PANTHER",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/golden-panther.png"
+    },
+    {
+        "gameid": "2165",
+        "gamename": "FIERCE FISHING",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/FIERCE-FISHING.png"
+    },
+    {
+        "gameid": "3216",
+        "gamename": "MONEY TREE DOZER",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/MONEY-TREE-DOZER.png"
+    },
+    {
+        "gameid": "3047",
+        "gamename": "MAGIC BEANS",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/magic-beans.png"
+    },
+    {
+        "gameid": "3155",
+        "gamename": "MERGE MAGIC",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/merge-magic.png"
+    },
+    {
+        "gameid": "4164",
+        "gamename": "TREASURE RAIDERS",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/treasure-raiders.png"
+    },
+    {
+        "gameid": "1413",
+        "gamename": "BAO CHUAN FISHING",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/BAO-CHUAN-FISHING.png"
+    },
+    {
+        "gameid": "3949",
+        "gamename": "SUPER ELEMENTS",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/super-elements.png"
+    },
+    {
+        "gameid": "10374",
+        "gamename": "ROBIN HOOD",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/robin-hood.png"
+    },
+    {
+        "gameid": "1814",
+        "gamename": "CRAZY BUFFALO",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/crazy-buffalo.png"
+    },
+    {
+        "gameid": "7049",
+        "gamename": "FORTUNE KOI",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/fortune-koi.png"
+    },
+    {
+        "gameid": "4155",
+        "gamename": "TREASURE CRUISE",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/treasure-cruise.png"
+    },
+    {
+        "gameid": "4366",
+        "gamename": "WIN WIN NEKO",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/win-win-neko.png"
+    },
+    {
+        "gameid": "3039",
+        "gamename": "LUXURY GOLDEN PANTHER",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/luxury-golden-panther.png"
+    },
+    {
+        "gameid": "3470",
+        "gamename": "PONG PONG HU",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/pong-pong-hu.png"
+    },
+    {
+        "gameid": "8711",
+        "gamename": "GOLD RUSH",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/gold-rush.png"
+    },
+    {
+        "gameid": "2277",
+        "gamename": "FORTUNE EGG",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/fortune-egg.png"
+    },
+    {
+        "gameid": "9372",
+        "gamename": "THREE LITTLE PIGS",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/three-little-pigs.png"
+    },
+    {
+        "gameid": "2932",
+        "gamename": "LIGHTNING BOMB",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/LIGHTNING-BOMB.png"
+    },
+    {
+        "gameid": "1342",
+        "gamename": "ANIMAL RACING",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/animal-racing.png"
+    },
+    {
+        "gameid": "3948",
+        "gamename": "SUPER COLOR GAME",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/SUPER-COLOR-GAME.png"
+    },
+    {
+        "gameid": "2649",
+        "gamename": "HOT POT PARTY",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/hot-pot-party.png"
+    },
+    {
+        "gameid": "2425",
+        "gamename": "GLORY OF ROME",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/glory-of-rome.png"
+    },
+    {
+        "gameid": "3386",
+        "gamename": "PANDA DRAGON BOAT",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/panda-dragon-boat.png"
+    },
+    {
+        "gameid": "1857",
+        "gamename": "DA LE MEN",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/da-le-men.png"
+    },
+    {
+        "gameid": "1757",
+        "gamename": "CIRCUS DOZER",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/CIRCUS-DOZER.png"
+    },
+    {
+        "gameid": "4257",
+        "gamename": "WAR OF THE UNIVERSE",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/war-of-the-universe.png"
+    },
+    {
+        "gameid": "2139",
+        "gamename": "FA CHAI DOZER",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/FA-CHAI-DOZER.png"
+    },
+    {
+        "gameid": "2568",
+        "gamename": "HAPPY DUO BAO",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/happy-duo-bao.png"
+    },
+    {
+        "gameid": "2982",
+        "gamename": "LUCKY 9",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/LUCKY-9.png"
+    },
+    {
+        "gameid": "2140",
+        "gamename": "FA CHAI FISHING",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/FA-CHAI-FISHING.png"
+    },
+    {
+        "gameid": "1730",
+        "gamename": "CHILIHUAHUA",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/chilihuahua.png"
+    },
+    {
+        "gameid": "f7ea01c4cc69ad2990c2a1f69394f08b",
+        "gamename": "BOXING RICHES",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/boxing-riches.png"
+    },
+    {
+        "gameid": "8785",
+        "gamename": "POKER WIN",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/poker-win.png"
+    },
+    {
+        "gameid": "224",
+        "gamename": "CHINESE NEW YEAR MOREWAYS",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/chinese-new-year-moreways.png"
+    },
+    {
+        "gameid": "0816f874c3158d7015a94be92179df71",
+        "gamename": "ROMA GLADIATRIX",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/roma-gladiatrix.png"
+    },
+    {
+        "gameid": "1180fe0cde1d83f307d3db95883123d8",
+        "gamename": "FORTUNE GODDESS",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/fortune-goddess.png"
+    },
+    {
+        "gameid": "b2e0b41e9e4892e3133e8109830a8bfa",
+        "gamename": "QUEEN OF INCA",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/queen-of-inca.png"
+    },
+    {
+        "gameid": "a7969767da0317b91b1d79c9645beefd",
+        "gamename": "FORTUNE MONEY BOOM",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/fortune-money-boom.png"
+    },
+    {
+        "gameid": "2978",
+        "gamename": "LUCKY FORTUNES 3X3",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/lucky-fortunes-3x3.png"
+    },
+    {
+        "gameid": "8700",
+        "gamename": "FORTUNE SHEEP",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/fortune-sheep.png"
+    },
+    {
+        "gameid": "11456",
+        "gamename": "MINES",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/MINES.png"
+    },
+    {
+        "gameid": "3935",
+        "gamename": "SUGAR BANG BANG 2",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/SUGAR-BANG-BANG-2.png"
+    },
+    {
+        "gameid": "8521",
+        "gamename": "PHOENIX FEVER",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/PHOENIX-FEVER.png"
+    },
+    {
+        "gameid": "11209",
+        "gamename": "JUNGLE BANG BANG",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/jungle-bang-bang.png"
+    },
+    {
+        "gameid": "db0c45f4fc7a2a106b886e89e6ba8945",
+        "gamename": "TREASURES OF ODIN",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com/assets/providers/fachaigaming/treasures-of-odin.png"
+    },
+    {
+        "gameid": "8521",
+        "gamename": "PHOENIX FEVER JACKPOT",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/PHOENIX-FEVER-JACKPOT.png"
+    },
+    {
+        "gameid": "7093",
+        "gamename": "BUFFALO WAYS",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/BUFFALO-WAYS.png"
+    },
+    {
+        "gameid": "f543a0a6fa08d8468239adea2ed9f134",
+        "gamename": "SWORD OF KING",
+        "providerName": "FaChai Gaming",
+        "image": "https://providers.gambllyapi.com//assets/image/game_image/img.j189eb.com/upload/game/AWCV2_FC/INR/SWORD-OF-KING.png"
+    }
+]

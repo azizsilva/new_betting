@@ -1,0 +1,3316 @@
+[
+    {
+        "gameid": "5262",
+        "gamename": "3 Buzzing Wilds",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1554d668-e482-44c1-8d79-b925b57fc1e8_vertical.jpg"
+    },
+    {
+        "gameid": "5292",
+        "gamename": "3 Dancing Monkeys",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/13a1fc09-2de5-42c8-a4d0-0d9ba003b473_vertical.jpg"
+    },
+    {
+        "gameid": "5602",
+        "gamename": "3 Genie Wishes",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a3ded8d2-863a-4c09-833a-6298054323ca_vertical.jpg"
+    },
+    {
+        "gameid": "5593",
+        "gamename": "3 Kingdoms - Battle of Red Cliffs",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/9b5ca496-6078-4175-bd6e-1c7efad61b2a_vertical.jpg"
+    },
+    {
+        "gameid": "f034e949cdd794c93db07636af5adce2",
+        "gamename": "3 Magic Eggs",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/244a1641-75e6-4b63-baaf-bb6eef1d882a_vertical.png"
+    },
+    {
+        "gameid": "5218",
+        "gamename": "5 Frozen Charms Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8fe7da5f-c43a-4fb2-aebb-be4d773d6c87_vertical.jpg"
+    },
+    {
+        "gameid": "5568",
+        "gamename": "5 Lions",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/54be7cfe-729c-4049-9f54-6535785d1c42_vertical.jpg"
+    },
+    {
+        "gameid": "5492",
+        "gamename": "5 Lions Dance",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/85ffc390-f0bd-441d-83d3-6efe86eea0c3_vertical.jpg"
+    },
+    {
+        "gameid": "5542",
+        "gamename": "5 Lions Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/5f663e23-5eea-41bb-89fb-6c1dd2c2562e_vertical.jpg"
+    },
+    {
+        "gameid": "5071",
+        "gamename": "5 Lions Megaways 2",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ba0f9692-d751-47a1-a51d-66cdbbb40536_vertical.png"
+    },
+    {
+        "gameid": "5057",
+        "gamename": "5 Lions Reborn",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a6559260-aee1-4705-9e88-5bd6e30cbfca_vertical.png"
+    },
+    {
+        "gameid": "5141",
+        "gamename": "6 Jokers",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/646cb08a-b8fb-4e44-b388-192a03effa2f_vertical.png"
+    },
+    {
+        "gameid": "5108",
+        "gamename": "7 Clovers of Fortune",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/7bb26e6b-d600-4783-92ae-a0bb22ce8b87_vertical.png"
+    },
+    {
+        "gameid": "5583",
+        "gamename": "7 Piggies",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/2e2b8644-c7c6-4474-8ee4-2375fb3f85ff_vertical.jpg"
+    },
+    {
+        "gameid": "5639",
+        "gamename": "777 Rush",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/77fb18e5-cb6b-4347-8b57-ffb196afd8fd_vertical.png"
+    },
+    {
+        "gameid": "5590",
+        "gamename": "8 Dragons",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/951f3121-623a-444a-806f-185984a49756_vertical.jpg"
+    },
+    {
+        "gameid": "5245",
+        "gamename": "8 Golden Dragon Challenge",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/14330428-10cf-44a6-9c4d-a980658c30fe_vertical.png"
+    },
+    {
+        "gameid": "5584",
+        "gamename": "888 Dragons",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8c1cce46-5657-40ac-9fa1-dd3d20fd3200_vertical.jpg"
+    },
+    {
+        "gameid": "5118",
+        "gamename": "888 Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/16853ea5-dd92-499b-9678-f4209405a788_vertical.jpg"
+    },
+    {
+        "gameid": "5293",
+        "gamename": "African Elephant",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ed8b90b3-0443-4df3-ad48-919ed78ee934_vertical.jpg"
+    },
+    {
+        "gameid": "5527",
+        "gamename": "Aladdin and the Sorcerer",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/36b9bccf-e1e6-4202-a0d3-65838d34b115_vertical.jpg"
+    },
+    {
+        "gameid": "5638",
+        "gamename": "Alien Invaders",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/373468d8-eeb5-4384-8475-f89b95c91b5e_vertical.png"
+    },
+    {
+        "gameid": "5456",
+        "gamename": "Amazing Money Machine",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/37d11c1f-f73c-4dfb-887e-28c98e308759_vertical.jpg"
+    },
+    {
+        "gameid": "5570",
+        "gamename": "American Blackjack",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/american-blackjack-80a05ee8.webp"
+    },
+    {
+        "gameid": "ca5caf33bdba23d92641ea946cfd5a85",
+        "gamename": "Anaconda Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/982267ad-ffc3-4337-b04a-97ff5efe42b5_vertical.png"
+    },
+    {
+        "gameid": "5578",
+        "gamename": "Ancient Egypt",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f18e3efe-37d7-4154-874f-4a666df951d4_vertical.jpg"
+    },
+    {
+        "gameid": "5559",
+        "gamename": "Ancient Egypt Classic",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d6d54cd2-ef59-45f7-b9b0-fd434ef6c383_vertical.jpg"
+    },
+    {
+        "gameid": "5077",
+        "gamename": "Ancient Island Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/90e80b5e-9a62-41c5-9742-302379b88dba_vertical.png"
+    },
+    {
+        "gameid": "5126",
+        "gamename": "Angel vs Sinner",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/5de7f40e-fd4d-4743-9d30-e1ccc0a90dcc_vertical.png"
+    },
+    {
+        "gameid": "5649",
+        "gamename": "Argonauts",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/73363716-d746-490f-b22f-f893ec36a709_vertical.png"
+    },
+    {
+        "gameid": "5567",
+        "gamename": "Asgard",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ac59d36b-174f-4e08-a8d7-cd367c87b2bb_vertical.jpg"
+    },
+    {
+        "gameid": "5334",
+        "gamename": "Aztec Blaze",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/95d28535-c33c-4013-bdc3-b249aa1e7dae_vertical.jpg"
+    },
+    {
+        "gameid": "5519",
+        "gamename": "Aztec Bonanza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/053d9082-2b30-48f0-a569-6a42bee6e959_vertical.jpg"
+    },
+    {
+        "gameid": "5575",
+        "gamename": "Aztec Gems",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/390df806-e35c-45f8-a500-03eb6ab75f71_vertical.jpg"
+    },
+    {
+        "gameid": "5499",
+        "gamename": "Aztec Gems Deluxe",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/71cb621f-2a0a-4239-bc1c-e7d5a8fef691_vertical.jpg"
+    },
+    {
+        "gameid": "5082",
+        "gamename": "Aztec Gems Megaways™",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/cf8ad979-bcce-4613-a0e3-c645d8939220_vertical.png"
+    },
+    {
+        "gameid": "5172",
+        "gamename": "Aztec Powernudge",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/900efe69-7f23-4bd6-88f8-83685773af30_vertical.jpg"
+    },
+    {
+        "gameid": "5087",
+        "gamename": "Aztec Smash",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b2c0f04a-ffba-4e85-aba9-27c842087c53_vertical.png"
+    },
+    {
+        "gameid": "5129",
+        "gamename": "Aztec Treasure Hunt",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/43db11ee-af7a-455b-bafa-920abeab8f60_vertical.png"
+    },
+    {
+        "gameid": "5119",
+        "gamename": "Badge Blitz",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/551b0da6-a32c-444e-9ba5-ab0b168a42a2_vertical.png"
+    },
+    {
+        "gameid": "5060",
+        "gamename": "Bandit Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/22686e75-81c7-4c93-bf2c-15207d89cc20_vertical.png"
+    },
+    {
+        "gameid": "5390",
+        "gamename": "Barn Festival",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/76954d4f-7189-4a92-bbfd-0db15fc4aba8_vertical.jpg"
+    },
+    {
+        "gameid": "5167",
+        "gamename": "Barnyard Megahays Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f011dc97-d5a5-4f2d-ba8b-a378fdeb3007_vertical.jpg"
+    },
+    {
+        "gameid": "5180",
+        "gamename": "Beware The Deep Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e46f3eee-384f-4806-9a60-e6908af8a24b_vertical.jpg"
+    },
+    {
+        "gameid": "5169",
+        "gamename": "Big Bass - Secrets of the Golden Lake",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/623c8b12-b38b-41d9-a78d-41160dcc9532_vertical.png"
+    },
+    {
+        "gameid": "5269",
+        "gamename": "Big Bass Amazon Xtreme",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/4318edd8-39f5-40d1-af27-ccfd4cc25378_vertical.png"
+    },
+    {
+        "gameid": "5478",
+        "gamename": "Big Bass Bonanza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/dabe9503-e625-4bee-8e1e-bf4415cbdd5a_vertical.jpg"
+    },
+    {
+        "gameid": "5152",
+        "gamename": "Big Bass Bonanza - Reel Action",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e26913f7-107a-4185-948e-253b96460bcd_vertical.jpg"
+    },
+    {
+        "gameid": "5056",
+        "gamename": "Big Bass Bonanza 1000",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/86cc52e6-3ace-48a6-9e39-c173d67eb7c0_vertical.png"
+    },
+    {
+        "gameid": "5090",
+        "gamename": "Big Bass Bonanza 3 Reeler",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/54599013-bb9f-4e2d-a6ee-b4c7a24ca171_vertical.png"
+    },
+    {
+        "gameid": "5417",
+        "gamename": "Big Bass Bonanza Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/2d780b06-4022-4f37-a73d-89b408bcc422_vertical.jpg"
+    },
+    {
+        "gameid": "5041",
+        "gamename": "Big Bass Boxing Bonus Round",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/09e5cf68-842b-4496-b0d4-0e55e3007ca6_vertical.png"
+    },
+    {
+        "gameid": "5221",
+        "gamename": "Big Bass Christmas Bash",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1b8d272e-cddc-4e95-b96a-55b3e5b8f4b8_vertical.jpg"
+    },
+    {
+        "gameid": "b3441ece8fc94ddaafe01be3f3483273",
+        "gamename": "Big Bass Christmas Frozen Lake",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/a477996d-76b0-4b6d-bf30-a8054c79c636_vertical.png"
+    },
+    {
+        "gameid": "5181",
+        "gamename": "Big Bass Day at the Races",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/2ceba115-dde3-4b64-972e-cecf5d08832e_vertical.jpg"
+    },
+    {
+        "gameid": "4518",
+        "gamename": "Big Bass Dice",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/9715bcd2-8e94-40ba-8f86-ace4725795d1_vertical.png"
+    },
+    {
+        "gameid": "5193",
+        "gamename": "Big Bass Floats My Boat",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/534e1add-1d6d-4f60-808b-7ce239c254c6_vertical.jpg"
+    },
+    {
+        "gameid": "5235",
+        "gamename": "Big Bass Halloween",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/52dc6639-23ee-4728-96a6-3dffc7374d54_vertical.jpg"
+    },
+    {
+        "gameid": "5111",
+        "gamename": "Big Bass Halloween 2",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1214101c-0ffb-4550-ab53-d43324e09278_vertical.png"
+    },
+    {
+        "gameid": "5251",
+        "gamename": "Big Bass Hold & Spinner Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/big-bass-hold-spinner-megaways-d5547341.webp"
+    },
+    {
+        "gameid": "5149",
+        "gamename": "Big Bass Mission Fishin'",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e249a2a1-6c6a-4fe7-8c2e-50b847d22ed0_vertical.png"
+    },
+    {
+        "gameid": "484738db6afa7e068cfe3828bee77d4b",
+        "gamename": "Big Bass Raceday Repeat",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/40a39705-442d-4e03-9ce0-58c15a323915_vertical.png"
+    },
+    {
+        "gameid": "5648",
+        "gamename": "Big Bass Reel Repeat",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/e777bda9-9db3-4b87-b4a9-ee1a6d3a1b19_vertical.png"
+    },
+    {
+        "gameid": "5073",
+        "gamename": "Big Bass Return to the Races",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/93afd117-0396-43d3-9687-610034731fcd_vertical.png"
+    },
+    {
+        "gameid": "5370",
+        "gamename": "Big Bass Splash",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/5303b5b4-3677-4582-aeb7-7f7128a43785_vertical.png"
+    },
+    {
+        "gameid": "c843b4951bd9821873e4bab374b67452",
+        "gamename": "Big Bass Trophy Catch",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/big-bass-trophy-catch-f2969e3f.webp"
+    },
+    {
+        "gameid": "5101",
+        "gamename": "Big Bass Xmas Xtreme",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/574bcdf4-4974-4db3-97cd-c5f148878a27_vertical.png"
+    },
+    {
+        "gameid": "5173",
+        "gamename": "Big Burger Load it up with Xtra cheese",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/841513bf-efad-4b19-aaae-2b44f0d9553a_vertical.png"
+    },
+    {
+        "gameid": "5424",
+        "gamename": "Big Juan",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a69aede0-2f38-4684-b65b-45c49393bb51_vertical.jpg"
+    },
+    {
+        "gameid": "5872",
+        "gamename": "Bigger Barn House Bonanza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/27eb19d1-4a50-4848-b4a2-3070a5263bc8_vertical.png"
+    },
+    {
+        "gameid": "5336",
+        "gamename": "Bigger Bass Blizzard - Christmas Catch",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f8cca0a2-3da9-401a-9f24-2c5e26c04624_vertical.jpg"
+    },
+    {
+        "gameid": "5434",
+        "gamename": "Bigger Bass Bonanza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1111f8c1-f812-4c1f-b0dd-a9805116e100_vertical.jpg"
+    },
+    {
+        "gameid": "5074",
+        "gamename": "Bigger Bass Splash",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/141ed616-63e1-4492-a896-1e6a6ebd5480_vertical.png"
+    },
+    {
+        "gameid": "1478",
+        "gamename": "Bingo Mania",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/aee1175a-da26-4506-95b7-9769d4ab17d0_vertical.png"
+    },
+    {
+        "gameid": "5349",
+        "gamename": "Black Bull",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/fa3f7395-987d-445d-9fcb-9952e61265a4_vertical.jpg"
+    },
+    {
+        "gameid": "5199",
+        "gamename": "Blade & Fangs",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/blade-fangs-3d60ba1b.webp"
+    },
+    {
+        "gameid": "5198",
+        "gamename": "Blazing Wilds Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ef1bd531-8949-4d6a-ab33-24caebcf13b2_vertical.png"
+    },
+    {
+        "gameid": "5062",
+        "gamename": "Blitz Super Wheel",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/blitz-super-wheel-5a8f03dd.webp"
+    },
+    {
+        "gameid": "5fbf5c08a4c79c5b95e29b663c7a4dc0",
+        "gamename": "Bloody Dawn",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/96523986-6756-498f-a6ad-6f9550ee80ad_vertical.png"
+    },
+    {
+        "gameid": "5371",
+        "gamename": "Bomb Bonanza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f48043a8-b9f5-44ef-a446-0d27b7fe4886_vertical.jpg"
+    },
+    {
+        "gameid": "5342",
+        "gamename": "Book of Golden Sands",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d35b44d4-f901-499a-b6e9-c4e593d9f5b6_vertical.jpg"
+    },
+    {
+        "gameid": "5487",
+        "gamename": "Book of Kingdoms",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/09f60f14-7b22-4a48-a988-cbc9eb7ce077_vertical.jpg"
+    },
+    {
+        "gameid": "5063",
+        "gamename": "Book of Monsters",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/13995f50-7ddc-43da-8951-3d8f6ddd91f3_vertical.png"
+    },
+    {
+        "gameid": "4673",
+        "gamename": "Book of Tut Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b1550790-40d4-45b4-b211-81d04cc4f1ec_vertical.jpg"
+    },
+    {
+        "gameid": "4834",
+        "gamename": "Book of Vikings",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/028847a6-ab5b-4c53-a920-cd57ec255cd4_vertical.jpg"
+    },
+    {
+        "gameid": "5419",
+        "gamename": "Bounty Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/67693c39-5a01-46a0-ab53-4999ad2710ff_vertical.jpg"
+    },
+    {
+        "gameid": "5137",
+        "gamename": "Bow of Artemis",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/942ca7e4-10d8-4d10-b7d2-2094ebf6216e_vertical.png"
+    },
+    {
+        "gameid": "5084",
+        "gamename": "Brick House Bonanza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/3a415a56-0c67-4594-bcc2-79f5156f1846_vertical.png"
+    },
+    {
+        "gameid": "5524",
+        "gamename": "Buffalo King",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/cf0c24c6-5656-4b9f-a61d-07517eb9ee90_vertical.jpg"
+    },
+    {
+        "gameid": "5148",
+        "gamename": "Buffalo King Untamed Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e38bc1f3-1e52-4ccd-9ce7-41b796945873_vertical.png"
+    },
+    {
+        "gameid": "5545",
+        "gamename": "Caishen's Cash",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0ddc785d-d8be-4b69-baf5-26e27f322a32_vertical.jpg"
+    },
+    {
+        "gameid": "5599",
+        "gamename": "Caishen's Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e22bb2d2-ed4c-428d-970e-80c13f5166b4_vertical.jpg"
+    },
+    {
+        "gameid": "5243",
+        "gamename": "Candy Blitz",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/18b9875e-e807-4705-b160-7a43520a6077_vertical.jpg"
+    },
+    {
+        "gameid": "5166",
+        "gamename": "Candy Blitz Bombs",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/fa1ac873-65dc-4c22-b082-a09df1991f19_vertical.jpg"
+    },
+    {
+        "gameid": "5106",
+        "gamename": "Candy Corner",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b233d620-5ed6-4885-b558-92ef1f7c0c6c_vertical.png"
+    },
+    {
+        "gameid": "4649",
+        "gamename": "Candy Jar Clusters",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8bdf4544-d73b-4a0c-9639-3a93791e58ae_vertical.jpg"
+    },
+    {
+        "gameid": "5348",
+        "gamename": "Candy Stars",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8d791c73-d63d-45f0-a681-711afac7a6d9_vertical.jpg"
+    },
+    {
+        "gameid": "5653",
+        "gamename": "Captain Kraken Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/a6cc806a-6ceb-45a3-9035-9067957e51f6_vertical.png"
+    },
+    {
+        "gameid": "5432",
+        "gamename": "Cash Bonanza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c11dff81-1f8f-4855-9fae-4cb3dcda8d2d_vertical.jpg"
+    },
+    {
+        "gameid": "5265",
+        "gamename": "Cash Box",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c26657d6-b4c1-4805-a420-6ed15619fcf0_vertical.jpg"
+    },
+    {
+        "gameid": "5239",
+        "gamename": "Cash Chips",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/477f9935-aa15-40b4-af94-62fd8b5ca334_vertical.jpg"
+    },
+    {
+        "gameid": "5452",
+        "gamename": "Cash Elevator",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a16faec4-ca96-4c3e-a2bb-88c85a0417ea_vertical.png"
+    },
+    {
+        "gameid": "5403",
+        "gamename": "Cash Patrol",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/08808254-b5b4-4560-9460-766499db1998_vertical.jpg"
+    },
+    {
+        "gameid": "5054",
+        "gamename": "Cash Surge",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0e66bd00-3bff-42b0-bc2b-7460f4dc24c7_vertical.png"
+    },
+    {
+        "gameid": "5205",
+        "gamename": "Castle of Fire",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c5b92135-0a5f-4676-8e8d-d1b05a47c8dd_vertical.jpg"
+    },
+    {
+        "gameid": "5224",
+        "gamename": "Chase for Glory",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/38f386d4-b436-4b13-8a8e-9e8a0103932f_vertical.jpg"
+    },
+    {
+        "gameid": "5113",
+        "gamename": "Chests of Cai Shen",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ceedae34-815c-4da5-a96a-66952ab6224c_vertical.png"
+    },
+    {
+        "gameid": "5443",
+        "gamename": "Chicken Drop",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/62c64703-4104-4d68-8087-7d70133a18fe_vertical.jpg"
+    },
+    {
+        "gameid": "10037",
+        "gamename": "Chicken+",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/chicken-61ba57dd.webp"
+    },
+    {
+        "gameid": "5574",
+        "gamename": "Chilli Heat",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0c19991a-1944-42f8-afd1-3205873170b8_vertical.jpg"
+    },
+    {
+        "gameid": "5440",
+        "gamename": "Chilli Heat Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/503a9a3b-16e6-4b3e-87da-541582a05b53_vertical.jpg"
+    },
+    {
+        "gameid": "5636",
+        "gamename": "Chilli Heat Spicy Spins",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d9621c25-7cb7-4497-b42b-38ccee980a46_vertical.png"
+    },
+    {
+        "gameid": "5422",
+        "gamename": "Christmas Big Bass Bonanza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/5d70303e-a54d-4c01-b415-e6fb8f0a611f_vertical.png"
+    },
+    {
+        "gameid": "5482",
+        "gamename": "Christmas Carol Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/228c7d77-965d-45cf-ad88-bce0dce440c2_vertical.jpg"
+    },
+    {
+        "gameid": "5376",
+        "gamename": "Cleocatra",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/789212a3-7f47-442a-ad19-d7bb52760c24_vertical.jpg"
+    },
+    {
+        "gameid": "5387",
+        "gamename": "Clover Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/de35a93a-5098-4b10-9410-2d5b478da18c_vertical.jpg"
+    },
+    {
+        "gameid": "5305",
+        "gamename": "Club Tropicana",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d111a0f5-72aa-4060-b074-25a1163ab894_vertical.jpg"
+    },
+    {
+        "gameid": "5629",
+        "gamename": "Club Tropicana - Happy Hour",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/10679926-4c53-42ee-beef-1175dab6e86b_vertical.png"
+    },
+    {
+        "gameid": "5651",
+        "gamename": "Code of Cairo",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/19091244-5e10-43fd-9bd2-6f29ec6f2b14_vertical.png"
+    },
+    {
+        "gameid": "5402",
+        "gamename": "Colossal Cash Zone",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/abe05c48-bba6-4d0b-9ecf-67ac3b881e17_vertical.jpg"
+    },
+    {
+        "gameid": "5473",
+        "gamename": "Congo Cash",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e92e8d29-0d47-4e17-868f-1c77df1b76c3_vertical.jpg"
+    },
+    {
+        "gameid": "5123",
+        "gamename": "Congo Cash XL",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8c241fc2-d165-4171-995e-0406e97be393_vertical.png"
+    },
+    {
+        "gameid": "5373",
+        "gamename": "Cosmic Cash",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/765a05df-7b93-42c5-88cb-5658cc53e653_vertical.jpg"
+    },
+    {
+        "gameid": "4695",
+        "gamename": "Country Farming",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b74ab08c-0c27-474c-8163-eb0198ee7469_vertical.jpg"
+    },
+    {
+        "gameid": "5289",
+        "gamename": "Cowboy Coins",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e548bae1-b37a-434e-a792-a74f52bbd6f2_vertical.jpg"
+    },
+    {
+        "gameid": "5483",
+        "gamename": "Cowboys Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/3d1c44b3-b49d-4959-9447-64196dc9fbb0_vertical.jpg"
+    },
+    {
+        "gameid": "5144",
+        "gamename": "Crank It Up",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/05731952-e60f-478d-a305-7ecca70c10f3_vertical.jpg"
+    },
+    {
+        "gameid": "5347",
+        "gamename": "Crown of Fire",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/033d4483-07a6-4d34-adb2-9b22ee3a1eda_vertical.jpg"
+    },
+    {
+        "gameid": "5411",
+        "gamename": "Crystal Caverns Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/35c765f0-a8f3-4d0e-b2fd-d6bcc1f2c7d7_vertical.jpg"
+    },
+    {
+        "gameid": "9297664682018d584f5a7650362e2420",
+        "gamename": "CULT.",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/7d7ea57f-f222-49f2-b775-52a3211f863d_vertical.png"
+    },
+    {
+        "gameid": "5497",
+        "gamename": "Curse of the Werewolf Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/336333ea-fba6-4a3f-a234-d782103352e0_vertical.jpg"
+    },
+    {
+        "gameid": "5175",
+        "gamename": "Cyberheist City",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/19b81c17-4b38-4f01-a121-49ce2a2e9abe_vertical.png"
+    },
+    {
+        "gameid": "5250",
+        "gamename": "Cyclops Smash",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8db73ae7-efc9-4d28-bb7c-600422752df9_vertical.jpg"
+    },
+    {
+        "gameid": "5514",
+        "gamename": "Dance Party",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c47e72f2-4e89-4d39-9606-9c4b0613d468_vertical.jpg"
+    },
+    {
+        "gameid": "5429",
+        "gamename": "Day of Dead",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c0a6e434-dbd1-4a17-9cea-dbe9de93a080_vertical.jpg"
+    },
+    {
+        "gameid": "5233",
+        "gamename": "Demon Pots",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/239f919c-6499-412a-9ee9-8e229a2f0735_vertical.jpg"
+    },
+    {
+        "gameid": "5151",
+        "gamename": "Devilicious",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c2ba597f-df90-492b-bcf9-359f9f0ae675_vertical.jpg"
+    },
+    {
+        "gameid": "5260",
+        "gamename": "Diamond Cascade",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/42eeac03-7819-423f-aa31-03d71a247780_vertical.jpg"
+    },
+    {
+        "gameid": "5587",
+        "gamename": "Diamond Strike",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f94d415e-e26e-454a-8358-336b4b72aabf_vertical.jpg"
+    },
+    {
+        "gameid": "5580",
+        "gamename": "Diamonds are Forever 3 Lines",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/4fb798ef-9b2a-4cd2-a260-4df6997d6ff1_vertical.jpg"
+    },
+    {
+        "gameid": "5285",
+        "gamename": "Diamonds of Egypt",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/40cb7e46-7689-4a60-a4c3-e48cefcfda6f_vertical.jpg"
+    },
+    {
+        "gameid": "5217",
+        "gamename": "Ding Dong Christmas Bells",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e0a45266-abad-46ed-a3aa-cfea19a13354_vertical.jpg"
+    },
+    {
+        "gameid": "5652",
+        "gamename": "Dino Drop",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/2be35971-53e6-477f-8714-7ac707772f19_vertical.png"
+    },
+    {
+        "gameid": "6ee88cd8d45a5abc5797f14ec19137be",
+        "gamename": "DJ Neko",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/8ef0711e-a0f1-473a-ba45-6c3b76c208cb_vertical.png"
+    },
+    {
+        "gameid": "5353",
+        "gamename": "Down the Rails",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/34b0b973-a0aa-4294-aed8-5655a3b7b0b5_vertical.jpg"
+    },
+    {
+        "gameid": "5504",
+        "gamename": "Drago - Jewels of Fortune",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/10c8c4c6-8957-4b3c-87c7-833e7f064f1a_vertical.jpg"
+    },
+    {
+        "gameid": "5128",
+        "gamename": "Dragon Gold 88",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/6c7bc27e-4105-4041-9e3f-d9423d6eb766_vertical.png"
+    },
+    {
+        "gameid": "5322",
+        "gamename": "Dragon Hero",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/cd280bfd-a878-41fc-83ec-cd6bba33fb03_vertical.jpg"
+    },
+    {
+        "gameid": "5449",
+        "gamename": "Dragon Hot Hold and Spin",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d0fb5217-8e53-4a0e-a72b-83c40e0dee3e_vertical.jpg"
+    },
+    {
+        "gameid": "5093",
+        "gamename": "Dragon King Hot Pots",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/09e86e8f-9349-4575-89b3-0194ed53afc6_vertical.png"
+    },
+    {
+        "gameid": "5592",
+        "gamename": "Dragon Kingdom",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/691fd048-448d-45d6-aac0-90a52abb33f0_vertical.jpg"
+    },
+    {
+        "gameid": "5471",
+        "gamename": "Dragon Kingdom - Eyes of Fire",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ee47f21d-b661-4de6-9323-f4fc43412ca8_vertical.jpg"
+    },
+    {
+        "gameid": "9402",
+        "gamename": "Dragon Pots Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/dragon-pots-megaways-582a660a.webp"
+    },
+    {
+        "gameid": "11034",
+        "gamename": "Dragon Tiger Fortunes",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/dragon-tiger-fortunes-d005d0e3.webp"
+    },
+    {
+        "gameid": "5386",
+        "gamename": "Drill that Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e0e24b3a-fb41-4ccc-81ee-d97a7d122f2e_vertical.jpg"
+    },
+    {
+        "gameid": "cec529661c565cef5ac0c9b199467445",
+        "gamename": "Duel of Night & Day",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/duel-of-night-day-20295af1.webp"
+    },
+    {
+        "gameid": "5159",
+        "gamename": "Dwarf & Dragon",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/dwarf-dragon-56f07141.webp"
+    },
+    {
+        "gameid": "5605",
+        "gamename": "Dwarven Gold Deluxe",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/51be50cf-2ff4-44e3-b396-6969e9297d58_vertical.jpg"
+    },
+    {
+        "gameid": "5140",
+        "gamename": "Dynamite Diggin Doug",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0535eda4-8803-40d5-a98e-6e582452e37f_vertical.png"
+    },
+    {
+        "gameid": "5548",
+        "gamename": "Egyptian Fortunes",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a981fce9-9686-4b27-9e8c-59b7c8443992_vertical.jpg"
+    },
+    {
+        "gameid": "5405",
+        "gamename": "Elemental Gems Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/040ef91f-561f-47f9-8de6-654ef2305db2_vertical.jpg"
+    },
+    {
+        "gameid": "5485",
+        "gamename": "Emerald King",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f2ae6584-a9bd-4721-ad60-d0cb2921229e_vertical.jpg"
+    },
+    {
+        "gameid": "7397",
+        "gamename": "Emerald King - Wheel of Wealth",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/emerald-king-wheel-of-wealth-bce19843.webp"
+    },
+    {
+        "gameid": "5474",
+        "gamename": "Emerald King Rainbow Road",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/29894b52-6711-4bd4-97a5-f2c9ede9a1d6_vertical.jpg"
+    },
+    {
+        "gameid": "5626",
+        "gamename": "Emotiwins",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f5b69c70-d6d9-4daf-961d-0930a5d78e07_vertical.png"
+    },
+    {
+        "gameid": "5446",
+        "gamename": "Empty the Bank",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e2554d31-6cda-4daf-bf73-a20493c90802_vertical.jpg"
+    },
+    {
+        "gameid": "5078",
+        "gamename": "Escape the Pyramid Fire & Ice",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/escape-the-pyramid-fire-ice-e93bf0a8.webp"
+    },
+    {
+        "gameid": "5102",
+        "gamename": "Eternal Empress – Freeze Time",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/29b97473-278e-40be-87ff-345486ec641b_vertical.png"
+    },
+    {
+        "gameid": "5283",
+        "gamename": "Excalibur Unleashed",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/865982c1-710c-438f-9c5b-6c0f9a8e5cb3_vertical.jpg"
+    },
+    {
+        "gameid": "5549",
+        "gamename": "Extra Juicy",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1652f3e4-f695-4cf0-a125-da5301a7d9b2_vertical.jpg"
+    },
+    {
+        "gameid": "5408",
+        "gamename": "Extra Juicy Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e338add2-a841-48c0-bd99-9578e14e1cff_vertical.jpg"
+    },
+    {
+        "gameid": "5383",
+        "gamename": "Eye of Cleopatra",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/2db1569f-44a8-4d61-bb7a-1a1e722d017e_vertical.jpg"
+    },
+    {
+        "gameid": "5470",
+        "gamename": "Eye of the Storm",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/83345f05-6158-46bf-9f1b-9ddf7db58bdd_vertical.jpg"
+    },
+    {
+        "gameid": "5572",
+        "gamename": "Fairytale Fortune",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ff5015b4-9c47-43bd-b4eb-731d6fcb4283_vertical.jpg"
+    },
+    {
+        "gameid": "5109",
+        "gamename": "Fangtastic Freespins",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/12ac0372-bcc3-4b2c-bb6e-bcaf4996ab2e_vertical.png"
+    },
+    {
+        "gameid": "5272",
+        "gamename": "Fat Panda",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a5ad51ce-2fe9-4f0f-a926-8bc83a1edc33_vertical.jpg"
+    },
+    {
+        "gameid": "5051",
+        "gamename": "Fiesta Fortune",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/44daaf21-4a12-4596-89ca-c385b7d21d45_vertical.png"
+    },
+    {
+        "gameid": "5038",
+        "gamename": "Finger Lick’n Free Spins",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/64a169aa-0f75-4dc9-9aac-7e76efb387be_vertical.png"
+    },
+    {
+        "gameid": "5573",
+        "gamename": "Fire 88",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e92838c9-b475-4c86-b53e-259bcd10c312_vertical.jpg"
+    },
+    {
+        "gameid": "5306",
+        "gamename": "Fire Archer",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/893a0898-21f1-4dee-9e90-c85ad92a5216_vertical.png"
+    },
+    {
+        "gameid": "5355",
+        "gamename": "Fire Hot 100",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1f75cc07-70c8-4ddd-a5e3-69f006b39e96_vertical.jpg"
+    },
+    {
+        "gameid": "5357",
+        "gamename": "Fire Hot 20",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c09ebbc3-39c7-42e0-bd44-3145a8afcb0c_vertical.jpg"
+    },
+    {
+        "gameid": "5356",
+        "gamename": "Fire Hot 40",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/13394785-0cd0-4431-aea4-006fb1b2f57d_vertical.jpg"
+    },
+    {
+        "gameid": "5358",
+        "gamename": "Fire Hot 5",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/cc343b92-4195-4508-8d55-39b586af37a5_vertical.jpg"
+    },
+    {
+        "gameid": "5177",
+        "gamename": "Fire Portals",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/3fad66dd-2c73-438e-a717-0b83a9d509c3_vertical.jpg"
+    },
+    {
+        "gameid": "5213",
+        "gamename": "Fire Stampede",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/c1d2467e-d334-4a22-9997-4260c166dad9_vertical.png"
+    },
+    {
+        "gameid": "5642",
+        "gamename": "Fire Stampede 2",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/5d577c8e-7009-4017-8e81-ad20c238ac87_vertical.png"
+    },
+    {
+        "gameid": "5531",
+        "gamename": "Fire Strike",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/dcbaeb0a-d3ec-478c-b449-ad21507b70be_vertical.jpg"
+    },
+    {
+        "gameid": "5384",
+        "gamename": "Fire Strike 2",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/5f19a42a-17b1-4b7b-bef5-836dba6d5c9f_vertical.jpg"
+    },
+    {
+        "gameid": "5329",
+        "gamename": "Firebird Spirit",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/209a552e-c315-40c9-964a-db7eba89549d_vertical.jpg"
+    },
+    {
+        "gameid": "5310",
+        "gamename": "Fish Eye",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/cb2be411-3f3c-4583-a6f5-9b78a8ad2dbb_vertical.jpg"
+    },
+    {
+        "gameid": "5465",
+        "gamename": "Fishin Reels",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/aca4f79e-68fc-4eeb-ac9a-2aae55222431_vertical.jpg"
+    },
+    {
+        "gameid": "5458",
+        "gamename": "Floating Dragon",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/dd1fb44b-7f76-4f97-9a9a-582f3a88d32a_vertical.jpg"
+    },
+    {
+        "gameid": "5278",
+        "gamename": "Floating Dragon - Dragon Boat Festival",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/bb960e90-0954-4830-ae87-593fe8eed86b_vertical.jpg"
+    },
+    {
+        "gameid": "5085",
+        "gamename": "Floating Dragon – Year of the Snake",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/32452f7e-a3aa-429c-932a-4aa1bf9f550d_vertical.png"
+    },
+    {
+        "gameid": "4647",
+        "gamename": "Floating Dragon New Year Festival Ultra Megaways Hold & Spin",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/floating-dragon-new-year-festival-ultra-megaways-hold-spin-a3595490.webp"
+    },
+    {
+        "gameid": "5086",
+        "gamename": "Fonzo’s Feline Fortunes",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/3115d2da-5365-4f7f-99d1-ef7e7d7126f9_vertical.png"
+    },
+    {
+        "gameid": "5253",
+        "gamename": "Forge of Olympus",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/bf5b212a-5c16-4e19-9e56-c3ba65c9b50d_vertical.jpg"
+    },
+    {
+        "gameid": "5131",
+        "gamename": "Forging Wilds",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a77d452e-d728-428a-a2eb-17625b527105_vertical.png"
+    },
+    {
+        "gameid": "5114",
+        "gamename": "Fortune Hit’n Roll",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/9c5be321-4467-40ac-a6a4-9743c036dd9d_vertical.png"
+    },
+    {
+        "gameid": "5614",
+        "gamename": "Fortune of Aztec",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/aaa7f7d4-9e04-4eae-b957-ccaa7b093061_vertical.png"
+    },
+    {
+        "gameid": "5415",
+        "gamename": "Fortune of Giza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/494c3c4b-7b7d-42b3-beae-16428528c6d0_vertical.jpg"
+    },
+    {
+        "gameid": "c2d07f40a0f6315629e88b3d644773d0",
+        "gamename": "Fortune of Olympus",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/7e212e41-ad2c-4e6b-b725-007ce5fb1efc_vertical.png"
+    },
+    {
+        "gameid": "5244",
+        "gamename": "Fortunes of Aztec",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f944cb3a-97ce-406c-aa34-cd503869fc7d_vertical.jpg"
+    },
+    {
+        "gameid": "561eedfc4980bcac887eba24f5a6c3fe",
+        "gamename": "Frightening Frankie",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/0eb56a53-d8c4-47a6-a6ca-84eb724d5270_vertical.png"
+    },
+    {
+        "gameid": "5247",
+        "gamename": "Frozen Tropics",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/6374a2d5-861a-48d1-b741-c9d35f026566_vertical.jpg"
+    },
+    {
+        "gameid": "5509",
+        "gamename": "Fruit Party",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/39033a6e-b573-4232-a8a5-8e530a8964ed_vertical.png"
+    },
+    {
+        "gameid": "5445",
+        "gamename": "Fruit Party 2",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/248332f3-4696-4567-9aec-d379ce850832_vertical.jpg"
+    },
+    {
+        "gameid": "5517",
+        "gamename": "Fruit Rainbow",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/5e58a8bf-aafc-4d08-886f-96adc8785024_vertical.png"
+    },
+    {
+        "gameid": "5157",
+        "gamename": "Fruity Treats",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/dffee5f5-676e-49ee-9f84-7c081a5d5bc0_vertical.jpg"
+    },
+    {
+        "gameid": "5316",
+        "gamename": "Fury of Odin Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/4dce390c-ba5c-4217-bf84-dda976823ae2_vertical.jpg"
+    },
+    {
+        "gameid": "5466",
+        "gamename": "Gates of Olympus",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/569cd919-bec7-4677-9077-69a8a6b797ff_vertical.png"
+    },
+    {
+        "gameid": "5210",
+        "gamename": "Gates of Olympus 1000",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/774793c7-a7c8-414a-8946-95e018cb7aed_vertical.png"
+    },
+    {
+        "gameid": "5097",
+        "gamename": "Gates of Olympus Xmas 1000",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/d9706c15-718d-44e2-a84d-70ad6bbb1836_vertical.png"
+    },
+    {
+        "gameid": "5406",
+        "gamename": "Gates of Valhalla",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f9e42675-84a9-4501-b765-8ebfe2b605be_vertical.jpg"
+    },
+    {
+        "gameid": "5183",
+        "gamename": "Gears of Horus",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ad3f6859-f387-43fe-a6d6-da8c7616ff55_vertical.jpg"
+    },
+    {
+        "gameid": "5127",
+        "gamename": "Gem Elevator",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d0d84b50-0c92-41a3-9056-3d563ba5d0c1_vertical.png"
+    },
+    {
+        "gameid": "5036",
+        "gamename": "Gem Fire Fortune",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/73a141eb-73d3-4692-88d5-37b0be5bc5eb_vertical.png"
+    },
+    {
+        "gameid": "5635",
+        "gamename": "Gem Trio",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/6946fba5-70e2-4850-af33-6768465f0c8c_vertical.png"
+    },
+    {
+        "gameid": "8722",
+        "gamename": "Gems Bonanza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/83112161-dcfc-4373-a70c-cdb32869fbf3_vertical.jpg"
+    },
+    {
+        "gameid": "5328",
+        "gamename": "Gems of Serengeti",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1ab407af-2c64-4f17-be7d-98a37aa742db_vertical.jpg"
+    },
+    {
+        "gameid": "5382",
+        "gamename": "Goblin Heist Powernudge",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1dc22738-4806-4445-abb4-5937e2b3a343_vertical.jpg"
+    },
+    {
+        "gameid": "5290",
+        "gamename": "Gods of Giza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d019404e-f30c-4bc9-9d85-8745ee9a557e_vertical.jpg"
+    },
+    {
+        "gameid": "5248",
+        "gamename": "Gold Oasis",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/7dd0b654-14a0-4ca6-a953-2ed4e1606ea7_vertical.jpg"
+    },
+    {
+        "gameid": "5407",
+        "gamename": "Gold Party",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/96e6c053-93a4-4918-816f-0e7de739e089_vertical.png"
+    },
+    {
+        "gameid": "5039",
+        "gamename": "Gold Party 2 – After Hours",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/a6d82818-60e7-4d26-ae43-2781aa08989c_vertical.png"
+    },
+    {
+        "gameid": "8711",
+        "gamename": "Gold Rush",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/df5cac78-a178-43ec-a6a6-5bc8a495b7c6_vertical.jpg"
+    },
+    {
+        "gameid": "5594",
+        "gamename": "Gold Train",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/7b37bced-0a86-45b9-a5de-46c3a2d51f7d_vertical.jpg"
+    },
+    {
+        "gameid": "5204",
+        "gamename": "Good Luck & Good Fortune",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/good-luck-good-fortune-ea1cb38f.webp"
+    },
+    {
+        "gameid": "5359",
+        "gamename": "Gorilla Mayhem",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b86438d3-cf50-45fc-8220-b8f3057ca7f8_vertical.jpg"
+    },
+    {
+        "gameid": "5241",
+        "gamename": "Gravity Bonanza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8c4d777d-5a32-43aa-b958-c807f8ad07ab_vertical.jpg"
+    },
+    {
+        "gameid": "a5e9012bc9821e0a7f061adbb4e8d527",
+        "gamename": "Great Ghosts!",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/great-ghosts-aab398f3.webp"
+    },
+    {
+        "gameid": "5601",
+        "gamename": "Great Reef",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/175f3b9b-8b1a-4f92-8547-311bef189138_vertical.png"
+    },
+    {
+        "gameid": "5569",
+        "gamename": "Great Rhino",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/7045637d-a898-4e4b-95c0-46bf855e702c_vertical.jpg"
+    },
+    {
+        "gameid": "5494",
+        "gamename": "Great Rhino Deluxe",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/bf5702c3-1c0a-47b7-9145-aca3ddc303ad_vertical.jpg"
+    },
+    {
+        "gameid": "5512",
+        "gamename": "Great Rhino Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/44be57d7-9fec-46ae-af8b-11c0546cc754_vertical.jpg"
+    },
+    {
+        "gameid": "5070",
+        "gamename": "Greedy Fortune Pig",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ad5a255a-90c9-4c55-b6bd-25c2e63f43c2_vertical.png"
+    },
+    {
+        "gameid": "5354",
+        "gamename": "Greedy Wolf",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/7f589e02-046b-48c5-b3ba-aed5cff47db0_vertical.jpg"
+    },
+    {
+        "gameid": "5528",
+        "gamename": "Greek Gods",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/5cdc33ae-f789-4b77-8486-aef4e9f32c05_vertical.jpg"
+    },
+    {
+        "gameid": "982f8ac34ca69e49fa5c470fbd53eb03",
+        "gamename": "Hammerstorm",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/b7b87c7e-7e42-4550-9563-c200964319ae_vertical.png"
+    },
+    {
+        "gameid": "5146",
+        "gamename": "Hand of Midas 2",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/99e5864a-16bb-4bf3-b145-69ecd0ff884e_vertical.jpg"
+    },
+    {
+        "gameid": "4759",
+        "gamename": "Happy Hooves",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1c2f356c-7368-474d-b7d8-4d5193ae5bbf_vertical.jpg"
+    },
+    {
+        "gameid": "9438170762baae7b28aa15975d28acee",
+        "gamename": "Happy Nets",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/451c8542-d3e8-4f4f-aa88-33bb58e125a1_vertical.png"
+    },
+    {
+        "gameid": "e863f19c6f997f1edc598d87400c5593",
+        "gamename": "Haunted Crypt",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/51963aff-72db-47fe-9fd9-3655463bb9f5_vertical.png"
+    },
+    {
+        "gameid": "5161",
+        "gamename": "Heart of Cleopatra",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/daa40e44-a8f9-4f3f-aab0-cebd701d930b_vertical.jpg"
+    },
+    {
+        "gameid": "5448",
+        "gamename": "Heart of Rio",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d82a5de9-12fa-4d02-aeac-fd73649b0a4b_vertical.jpg"
+    },
+    {
+        "gameid": "5270",
+        "gamename": "Heist for the Golden Nuggets",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/dab2798d-ffad-42bc-9e8d-d49e464225cd_vertical.jpg"
+    },
+    {
+        "gameid": "5268",
+        "gamename": "Hellvis Wild",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0982a7c6-4190-40b7-b1d0-0442177e66a3_vertical.jpg"
+    },
+    {
+        "gameid": "5530",
+        "gamename": "Hercules and Pegasus",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/242cd847-19a5-4aa5-a29d-cf65a17caf75_vertical.jpg"
+    },
+    {
+        "gameid": "5595",
+        "gamename": "Hercules Son Of Zeus",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/98b0a50d-cc98-4597-8beb-9a88a77e2b00_vertical.jpg"
+    },
+    {
+        "gameid": "4604",
+        "gamename": "Heroic Spins",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/bc91a10e-f7ad-4a9b-85ba-ad31a51cd098_vertical.jpg"
+    },
+    {
+        "gameid": "5103",
+        "gamename": "Himalayan Wild",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/45e6c847-63be-4c98-9319-19f65398896d_vertical.png"
+    },
+    {
+        "gameid": "5532",
+        "gamename": "Honey Honey Honey",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c8730a04-30e8-4517-a947-3b03bd665152_vertical.jpg"
+    },
+    {
+        "gameid": "5538",
+        "gamename": "Hot Chilli",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1cc0e592-ac22-4206-bcca-f85e73f9af4b_vertical.jpg"
+    },
+    {
+        "gameid": "5460",
+        "gamename": "Hot Fiesta",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/e6e59aff-7dea-447c-bc9b-c0c1d4c9fd47_vertical.png"
+    },
+    {
+        "gameid": "5318",
+        "gamename": "Hot Pepper",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/db7d9a8d-ea91-4a0d-991b-a331085f8a75_vertical.jpg"
+    },
+    {
+        "gameid": "5609",
+        "gamename": "Hot Safari",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/9c826187-f6f0-443c-849b-789b4e2083dd_vertical.jpg"
+    },
+    {
+        "gameid": "5513",
+        "gamename": "Hot to Burn",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f0dcc0d0-254a-49e5-9cb0-ddee48214a1d_vertical.jpg"
+    },
+    {
+        "gameid": "5130",
+        "gamename": "Hot to Burn – 7 Deadly Free Spins",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/6b48d3a9-9592-4183-94ac-94cab0456f8d_vertical.png"
+    },
+    {
+        "gameid": "5361",
+        "gamename": "Hot to Burn Extreme",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a201010d-adc7-41c0-bb4d-2add35b988bc_vertical.jpg"
+    },
+    {
+        "gameid": "5467",
+        "gamename": "Hot to Burn Hold and Spin",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8f99fc8a-2c9c-4892-8dd5-46a0b7341212_vertical.jpg"
+    },
+    {
+        "gameid": "5142",
+        "gamename": "Hot to Burn Multiplier",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d48bdf6a-ccaa-40cd-8626-6e84697b4540_vertical.png"
+    },
+    {
+        "gameid": "8ad6278cee6507810be85c68357784e9",
+        "gamename": "Hot Tuna",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/2edac32a-2365-4f8d-b47f-b1c903d53f91_vertical.png"
+    },
+    {
+        "gameid": "5168",
+        "gamename": "Ice Lobster",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/057c307f-6a64-4e05-8288-1b74425c87ac_vertical.jpg"
+    },
+    {
+        "gameid": "5647",
+        "gamename": "Ice Mints",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/c75fc053-28af-4143-8e0b-d9eecf38a8a0_vertical.png"
+    },
+    {
+        "gameid": "c49c72cf79fdd6a416f714141e38043e",
+        "gamename": "Idol Pop Fever",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/idol-pop-fever-4ee1b255.webp"
+    },
+    {
+        "gameid": "590ba53eb376995a2cf897f38ed3b378",
+        "gamename": "Inca Queen",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/inca-queen-12c1404d.webp"
+    },
+    {
+        "gameid": "5240",
+        "gamename": "Infective Wild",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/6ec636f3-144f-4613-ab92-34c3ee05197d_vertical.jpg"
+    },
+    {
+        "gameid": "5603",
+        "gamename": "Irish Charms",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c15ecaa8-c42f-47b7-8ff5-83bcb963f9f4_vertical.jpg"
+    },
+    {
+        "gameid": "5080",
+        "gamename": "Irish Crown",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/2e9436a7-633c-4b49-9003-247be4bd411b_vertical.png"
+    },
+    {
+        "gameid": "5641",
+        "gamename": "Jackpot Blaze",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/00f6f8cf-4516-4ef3-9769-5809e7376ac6_vertical.png"
+    },
+    {
+        "gameid": "5132",
+        "gamename": "Jackpot Hunter",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/63f0bc3f-5710-4dcf-b277-d2bca88b3535_vertical.png"
+    },
+    {
+        "gameid": "5565",
+        "gamename": "Jade Butterfly",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/7efad2c6-ad97-4d25-a90e-a3102f7d356c_vertical.jpg"
+    },
+    {
+        "gameid": "5288",
+        "gamename": "Jane Hunter and the Mask of Montezuma",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e8ef1866-60b5-463e-a831-e15ba1f342f1_vertical.jpg"
+    },
+    {
+        "gameid": "5287",
+        "gamename": "Jasmine Dreams",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/fe3a006d-81e2-4bb3-8241-9ec4667cc070_vertical.jpg"
+    },
+    {
+        "gameid": "5619",
+        "gamename": "Jelly Candy",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c2077f86-f6d5-4f66-aff2-373dd8e4c5d3_vertical.png"
+    },
+    {
+        "gameid": "1265cf0a758c2cfa36b0fbe6db314588",
+        "gamename": "Jelly Express",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/jelly-express-07c01a43.webp"
+    },
+    {
+        "gameid": "5274",
+        "gamename": "Jewel Rush",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1689a32d-20c9-4925-8264-d710facfd0ad_vertical.jpg"
+    },
+    {
+        "gameid": "5076",
+        "gamename": "John Hunter and Galileo’s Secrets",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/34ddc056-e7ce-4995-858e-1651be1d7881_vertical.png"
+    },
+    {
+        "gameid": "5539",
+        "gamename": "John Hunter and the Aztec Treasure",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f7d4fe95-9c5e-46e8-821b-9523d704c622_vertical.png"
+    },
+    {
+        "gameid": "5510",
+        "gamename": "John Hunter and the Book of Tut",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/9cc304da-8662-41fa-9418-5d177007ae0e_vertical.jpg"
+    },
+    {
+        "gameid": "5480",
+        "gamename": "John Hunter and the Mayan Gods",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/404480fc-103f-4160-9816-68f2ff1c966e_vertical.jpg"
+    },
+    {
+        "gameid": "5425",
+        "gamename": "John Hunter and the Quest for Bermuda Riches",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8fbe0d71-e0ff-4767-9f57-3065874cebb2_vertical.png"
+    },
+    {
+        "gameid": "5534",
+        "gamename": "John Hunter and the Tomb of the Scarab Queen",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d75a8341-de44-4bc5-8d81-af90f4d7139c_vertical.jpg"
+    },
+    {
+        "gameid": "5468",
+        "gamename": "Joker King",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f5aed11d-3644-4275-8e16-890ae3287a9b_vertical.jpg"
+    },
+    {
+        "gameid": "5571",
+        "gamename": "Joker's Jewels",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/ac845127-b0fc-4692-ad91-0b9e73b52048_vertical.png"
+    },
+    {
+        "gameid": "5139",
+        "gamename": "Joker's Jewels Hot",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/9aac0aea-a384-4f7c-9768-b0ad571d5927_vertical.png"
+    },
+    {
+        "gameid": "5164",
+        "gamename": "Joker's Jewels Wild",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/8ec8a033-1a2e-4a73-bb9c-ed9bff05bf31_vertical.png"
+    },
+    {
+        "gameid": "5059",
+        "gamename": "Joker’s Jewels Cash",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/41168b40-bfd6-4940-bde7-99bf4678d140_vertical.png"
+    },
+    {
+        "gameid": "9349",
+        "gamename": "Journey to the West",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/81d7859f-d922-47bd-8895-877d8075740c_vertical.jpg"
+    },
+    {
+        "gameid": "5463",
+        "gamename": "Juicy Fruits",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ab0b30bb-95a8-47c2-b0b4-6327bd4a1433_vertical.jpg"
+    },
+    {
+        "gameid": "5209",
+        "gamename": "Juicy Fruits Multihold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0fd38f62-8cba-483a-aba3-8af4d416479a_vertical.jpg"
+    },
+    {
+        "gameid": "5049",
+        "gamename": "Jumbo Safari",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/2fb32c78-548e-4c86-97aa-65a259d97713_vertical.png"
+    },
+    {
+        "gameid": "5498",
+        "gamename": "Jungle Gorilla",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/be502022-04cc-4455-a054-1efae05fe5a9_vertical.jpg"
+    },
+    {
+        "gameid": "5286",
+        "gamename": "Kingdom of The Dead",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/2e2e6b47-149d-41b8-9f26-8087ad9d6182_vertical.jpg"
+    },
+    {
+        "gameid": "5280",
+        "gamename": "Knight Hot Spotz",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/165f5a92-dff0-4313-adf1-5f4f99b06f92_vertical.jpg"
+    },
+    {
+        "gameid": "549186988b8645615ab222c7170e866b",
+        "gamename": "Knights vs Barbarians",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/723c45cc-bf7b-406c-a883-6100475e9c2f_vertical.png"
+    },
+    {
+        "gameid": "5610",
+        "gamename": "Lady Godiva",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/7762579f-88b8-4fa6-9e81-fe5b29a2ef04_vertical.jpg"
+    },
+    {
+        "gameid": "5277",
+        "gamename": "Lamp Of Infinity",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/538acd66-3eae-4bbf-9beb-db729a158758_vertical.jpg"
+    },
+    {
+        "gameid": "0887ca4815a3fd960d89fdebe5e30f34",
+        "gamename": "Lava Balls",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/2221719b-e4f1-4601-b868-66e5a4d83a7b_vertical.png"
+    },
+    {
+        "gameid": "5555",
+        "gamename": "Leprechaun Carol",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f5b93378-7e13-440d-ab61-81ef9fa4c309_vertical.jpg"
+    },
+    {
+        "gameid": "5564",
+        "gamename": "Leprechaun Song",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/380f7534-7358-4ec0-b565-d93b9e446535_vertical.jpg"
+    },
+    {
+        "gameid": "11458",
+        "gamename": "Limbo+",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/limbo-b6f29378.webp"
+    },
+    {
+        "gameid": "5374",
+        "gamename": "Little Gem",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/93159570-e99b-43c7-811e-4aea8131e134_vertical.jpg"
+    },
+    {
+        "gameid": "5259",
+        "gamename": "Lobster Bob's Crazy Crab Shack",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b10d79bb-0739-4faa-bf73-50660be0d7bc_vertical.jpg"
+    },
+    {
+        "gameid": "5163",
+        "gamename": "Lobster Bob's Sea Food and Win It",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d3f3dedc-71a4-4728-915c-92657b613f9b_vertical.jpg"
+    },
+    {
+        "gameid": "5201",
+        "gamename": "Loki's Riches",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/add993ac-5071-4610-98bf-49e5f2ccd7e4_vertical.jpg"
+    },
+    {
+        "gameid": "5656",
+        "gamename": "Lucky Dice",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/7c0417b3-e3e2-4b5e-a321-e315bf23d7ea_vertical.png"
+    },
+    {
+        "gameid": "5624",
+        "gamename": "Lucky Dog",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b10a18f2-f196-4f27-80ba-0e594cdf8e38_vertical.png"
+    },
+    {
+        "gameid": "5598",
+        "gamename": "Lucky Dragons",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/6cf23d61-a096-4045-ad0c-5434e48b9777_vertical.jpg"
+    },
+    {
+        "gameid": "2304",
+        "gamename": "Lucky Fortune Tree",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/961b5a85-dbfd-4d6a-ac4d-abe053c51143_vertical.png"
+    },
+    {
+        "gameid": "5447",
+        "gamename": "Lucky Lightning",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/ce6f9f71-6f42-4c66-a0e7-1ad06956043c_vertical.png"
+    },
+    {
+        "gameid": "5625",
+        "gamename": "Lucky Monkey",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/5ce9de47-27fe-4ff6-b24d-f7438fa11dc7_vertical.png"
+    },
+    {
+        "gameid": "5622",
+        "gamename": "Lucky Mouse",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/514d7fde-fd62-4324-b7f7-7f2f250dc6c9_vertical.png"
+    },
+    {
+        "gameid": "5577",
+        "gamename": "Lucky New Year",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/eb5670b3-9725-4c61-bb6f-df5dcf6f2f39_vertical.jpg"
+    },
+    {
+        "gameid": "5623",
+        "gamename": "Lucky Ox",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/0e093cd8-2817-4f37-8a7a-e10ac36c7429_vertical.png"
+    },
+    {
+        "gameid": "2978",
+        "gamename": "Lucky Panda",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/bc6f90e0-cd8c-437f-b7e2-65a496181610_vertical.png"
+    },
+    {
+        "gameid": "5617",
+        "gamename": "Lucky Phoenix",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/05011e77-a47a-4382-ba62-9ddc8a7c1e90_vertical.png"
+    },
+    {
+        "gameid": "3024",
+        "gamename": "Lucky Tiger",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/3e20d1d1-d64b-4188-a5cf-c9af810cac05_vertical.png"
+    },
+    {
+        "gameid": "5618",
+        "gamename": "Lucky Tiger 1000",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/18d7c449-4d21-448b-86a9-94b7543ae0a5_vertical.png"
+    },
+    {
+        "gameid": "4835",
+        "gamename": "Lucky, Grace And Charm",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/dbcd14bf-351e-4470-bf66-72be613e9fc5_vertical.png"
+    },
+    {
+        "gameid": "5067",
+        "gamename": "Lucky’s Wild Pub",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e91aea2c-01e0-4e72-b85c-9334ca2e0ecf_vertical.png"
+    },
+    {
+        "gameid": "5566",
+        "gamename": "Madame Destiny",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/389c58ab-e1b0-421e-a00b-4990cf886558_vertical.png"
+    },
+    {
+        "gameid": "5472",
+        "gamename": "Madame Destiny Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/a6e354bf-b4a7-4d37-8a0a-20413e1371d6_vertical.png"
+    },
+    {
+        "gameid": "5525",
+        "gamename": "Magic Journey",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/918fcbe1-d8d2-4b9e-afd7-6b3568a6ec28_vertical.jpg"
+    },
+    {
+        "gameid": "5352",
+        "gamename": "Magic Money Maze",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0a2d3f8f-b907-4739-bc19-64e9a4770839_vertical.png"
+    },
+    {
+        "gameid": "5410",
+        "gamename": "Magician's Secrets",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/82096bc0-9a8b-4a25-b759-546cccdb311b_vertical.jpg"
+    },
+    {
+        "gameid": "5046",
+        "gamename": "Mahjong Wins Super Scatter",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/bdb4e59f-4d38-4954-b9f8-461b9fbd87c8_vertical.png"
+    },
+    {
+        "gameid": "5047",
+        "gamename": "Majestic Express – Gold Run",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/89c672bc-bef1-4845-b7eb-cb73e5efa992_vertical.png"
+    },
+    {
+        "gameid": "5313",
+        "gamename": "Mammoth Gold Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/17d001bf-0ee1-4a5b-b197-b9355306064e_vertical.jpg"
+    },
+    {
+        "gameid": "5561",
+        "gamename": "Master Chen's Fortune",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/01c51e83-384b-47f7-b8ed-11fec5c24bb9_vertical.jpg"
+    },
+    {
+        "gameid": "5612",
+        "gamename": "Master Gems",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/d0c3f774-38d6-4965-a43d-66fb96fcb90d_vertical.png"
+    },
+    {
+        "gameid": "5521",
+        "gamename": "Master Joker",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/957cb33f-63e0-4c8d-89dd-1036265a768e_vertical.jpg"
+    },
+    {
+        "gameid": "5150",
+        "gamename": "Medusa's Stone",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/4311b6d7-50c5-494f-87ed-0a92a19dc560_vertical.jpg"
+    },
+    {
+        "gameid": "5100",
+        "gamename": "Might of Freya Megaways™",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d191d6ec-edc8-43aa-bed6-f450dbda001c_vertical.png"
+    },
+    {
+        "gameid": "5397",
+        "gamename": "Might of Ra",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/92d5b709-3263-4cda-83db-eaec7f3d455b_vertical.jpg"
+    },
+    {
+        "gameid": "5606",
+        "gamename": "Mighty Kong",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d2572ea5-e604-43d7-b3a0-cc587212b9da_vertical.jpg"
+    },
+    {
+        "gameid": "5188",
+        "gamename": "Mighty Munching Melons",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/69b8c90b-4775-49ba-8065-22c1d375ff05_vertical.jpg"
+    },
+    {
+        "gameid": "11456",
+        "gamename": "Mines+",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/a668cd21-8d7d-431f-8c37-246154e9cbe9_vertical.png"
+    },
+    {
+        "gameid": "5088",
+        "gamename": "Mining Rush",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d0bd877a-d2b8-4e85-9475-4c6c3dead418_vertical.png"
+    },
+    {
+        "gameid": "5308",
+        "gamename": "Mochimon",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/7ca6ff12-7025-43ff-b058-19fcc6bf38ec_vertical.jpg"
+    },
+    {
+        "gameid": "5105",
+        "gamename": "Moleionaire",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/3a50651f-0969-458f-a7e3-5dd4a4e61fe1_vertical.png"
+    },
+    {
+        "gameid": "5526",
+        "gamename": "Money Mouse",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/6b7a060f-a794-4779-8251-14f094ba13a3_vertical.jpg"
+    },
+    {
+        "gameid": "5099",
+        "gamename": "Money Stacks Dice",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/24662785-10f6-4959-b167-05a998a42a99_vertical.png"
+    },
+    {
+        "gameid": "5092",
+        "gamename": "Money Stacks Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/6646ee2b-c1bd-4457-8458-dd7f6a18da36_vertical.png"
+    },
+    {
+        "gameid": "5581",
+        "gamename": "Monkey Madness",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c7ff70c1-441f-4d61-bce8-4590295f89b2_vertical.jpg"
+    },
+    {
+        "gameid": "5540",
+        "gamename": "Monkey Warrior",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/27374e5e-bc8d-485d-8488-4dfa1a8d698b_vertical.jpg"
+    },
+    {
+        "gameid": "5309",
+        "gamename": "Monster Superlanche",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0d0efec5-af27-4a11-b0c4-3a6181a527d8_vertical.jpg"
+    },
+    {
+        "gameid": "5346",
+        "gamename": "Muertos Multiplier Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d70eeb98-dcea-45ed-9f3e-cff0f3d3e15c_vertical.jpg"
+    },
+    {
+        "gameid": "10298",
+        "gamename": "Multihand Blackjack",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/multihand-blackjack-79e85c1b.webp"
+    },
+    {
+        "gameid": "5042",
+        "gamename": "Mummy’s Jewels",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/4284ef91-c03f-4c2c-8c12-eac063bfc3f5_vertical.png"
+    },
+    {
+        "gameid": "5556",
+        "gamename": "Mustang Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f846a199-9984-4c8e-814c-615fb0510d5f_vertical.jpg"
+    },
+    {
+        "gameid": "5125",
+        "gamename": "Mustang Gold Megaways™",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e9880344-bf50-43b4-86ab-617645a5a206_vertical.png"
+    },
+    {
+        "gameid": "5256",
+        "gamename": "Mustang Trail",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/2746fef4-1bc5-4803-a39b-e592f8124654_vertical.jpg"
+    },
+    {
+        "gameid": "5520",
+        "gamename": "Mysterious",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/18d9dcbc-a206-4e07-9d7e-87b713e06709_vertical.jpg"
+    },
+    {
+        "gameid": "5475",
+        "gamename": "Mysterious Egypt",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/bbdbc5dc-caf2-4845-811b-717a4598269d_vertical.jpg"
+    },
+    {
+        "gameid": "5121",
+        "gamename": "Mystery Mice",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/15b00f50-beba-422b-baae-46027e128595_vertical.png"
+    },
+    {
+        "gameid": "5302",
+        "gamename": "Mystery Of The Orient",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/3d94c077-afb3-424d-89ca-b024ab72b12c_vertical.jpg"
+    },
+    {
+        "gameid": "5428",
+        "gamename": "Mystic Chief",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/bab871fd-4178-43fa-9dcb-5726b0bd6484_vertical.jpg"
+    },
+    {
+        "gameid": "5650",
+        "gamename": "Mystic Wishes",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/d665300e-80dc-4213-a3ef-c5e2534fb206_vertical.png"
+    },
+    {
+        "gameid": "4655",
+        "gamename": "Nile Fortune",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1b55edbb-2d4a-4bd4-963a-1e4803f6d38d_vertical.jpg"
+    },
+    {
+        "gameid": "5379",
+        "gamename": "North Guardians",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1d561d1c-c74a-42fe-9182-22f27c6dca36_vertical.jpg"
+    },
+    {
+        "gameid": "5360",
+        "gamename": "Octobeer Fortunes",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0c267300-1a3e-4f09-98aa-13a98940078e_vertical.jpg"
+    },
+    {
+        "gameid": "5613",
+        "gamename": "Olympus Wins",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/9fe68c54-51a0-44d3-82c9-f07957d1fa87_vertical.png"
+    },
+    {
+        "gameid": "5122",
+        "gamename": "Oodles of Noodles",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/95b4fef4-92a9-42dc-9f54-18a40028ad0c_vertical.png"
+    },
+    {
+        "gameid": "752b270e6a7c2fe69fe7ffd1ba8278d3",
+        "gamename": "Oracle of Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/4874cacc-26fa-4918-91b9-73891aed3872_vertical.png"
+    },
+    {
+        "gameid": "5588",
+        "gamename": "Panda's Fortune",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/892d62ef-7ad3-45ff-924d-1ed237fc6ed9_vertical.jpg"
+    },
+    {
+        "gameid": "dc15dfa9b05d50075a763f9867b38f32",
+        "gamename": "Pandemic Rising",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/0179e68c-ee89-44da-af4e-000b11b3c214_vertical.png"
+    },
+    {
+        "gameid": "5304",
+        "gamename": "Peak Power",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/a5b1c0f0-af84-436c-8746-650dc2cde334_vertical.jpg"
+    },
+    {
+        "gameid": "5563",
+        "gamename": "Peking Luck",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/a189b7b8-1afa-4e03-8af3-fc4037c5969b_vertical.jpg"
+    },
+    {
+        "gameid": "5098",
+        "gamename": "Penguins Christmas Party Time",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/b572d016-4e3a-4d4c-a2f4-65d974f2dac8_vertical.png"
+    },
+    {
+        "gameid": "5072",
+        "gamename": "Peppe’s Pepperoni Pizza Plaza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/521eec1d-7c79-489f-87f0-8781272bbe05_vertical.png"
+    },
+    {
+        "gameid": "5444",
+        "gamename": "Phoenix Forge",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/45203b51-6a8d-4260-855c-58a2aca46059_vertical.jpg"
+    },
+    {
+        "gameid": "5615",
+        "gamename": "Pig Farm",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/2a17a55f-30da-4048-9d2b-037a32cef363_vertical.jpg"
+    },
+    {
+        "gameid": "5431",
+        "gamename": "Piggy Bank Bills",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/44950eba-1784-4644-b365-25b97716cefa_vertical.jpg"
+    },
+    {
+        "gameid": "5254",
+        "gamename": "Piggy Bankers",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ca715e7a-57f8-46fd-9d3c-9acbb22ba8ea_vertical.jpg"
+    },
+    {
+        "gameid": "5312",
+        "gamename": "Pinup Girls",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ef92605d-29a2-43e4-ba31-417942c412ec_vertical.jpg"
+    },
+    {
+        "gameid": "5546",
+        "gamename": "Pirate Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c51f855f-c0eb-43db-b848-2f16ac54cc37_vertical.jpg"
+    },
+    {
+        "gameid": "5484",
+        "gamename": "Pirate Gold Deluxe",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/53204394-635e-43ba-ac03-42982e6a85a0_vertical.png"
+    },
+    {
+        "gameid": "5327",
+        "gamename": "Pirate Golden Age",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/282859c6-8d7a-4d0f-bb28-54e18d6a519e_vertical.jpg"
+    },
+    {
+        "gameid": "5273",
+        "gamename": "Pirates Pub",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b0ea4212-1b48-481e-9529-d77a74a4ef38_vertical.jpg"
+    },
+    {
+        "gameid": "5600",
+        "gamename": "Pixie Wings",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/5c922ef6-0aa0-411f-980f-2698b3e27c50_vertical.jpg"
+    },
+    {
+        "gameid": "5319",
+        "gamename": "PIZZA! PIZZA? PIZZA!",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/9eef5d3e-1202-49ba-8a4e-e1548a8dc5d9_vertical.jpg"
+    },
+    {
+        "gameid": "11454",
+        "gamename": "Plinko+",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/becc5704-18cb-47bb-9bb6-a00ee74ac623_vertical.png"
+    },
+    {
+        "gameid": "5620",
+        "gamename": "Plushie Wins",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/5a7098a6-1d2b-4287-a30f-1366d677d2ad_vertical.png"
+    },
+    {
+        "gameid": "5192",
+        "gamename": "Pompeii Megareels Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/723c1ea8-a015-4b8e-85a7-262d7f4e9af8_vertical.jpg"
+    },
+    {
+        "gameid": "5179",
+        "gamename": "Pot of Fortune",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f9f0d37d-7f82-411e-ae3d-588288d2cea9_vertical.jpg"
+    },
+    {
+        "gameid": "5263",
+        "gamename": "Power of Merlin Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/4615c05b-bc82-4a51-aa3d-4d4ed601f4f9_vertical.jpg"
+    },
+    {
+        "gameid": "5461",
+        "gamename": "Power of Thor Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/74e5217b-059c-4f45-a3df-b716f119502e_vertical.jpg"
+    },
+    {
+        "gameid": "5255",
+        "gamename": "Pub Kings",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/40f42dec-6655-44aa-ad84-d82df2a6aee3_vertical.jpg"
+    },
+    {
+        "gameid": "5505",
+        "gamename": "Pyramid King",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/1da90a6d-ef61-4c96-8094-c91adb39d463_vertical.jpg"
+    },
+    {
+        "gameid": "5375",
+        "gamename": "Queen of Gods",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b80f0839-db2c-478f-a274-1afdb654cc49_vertical.jpg"
+    },
+    {
+        "gameid": "5391",
+        "gamename": "Queenie",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/6350203d-ac7e-4eb8-8fe6-61cb00ef32d4_vertical.jpg"
+    },
+    {
+        "gameid": "5300",
+        "gamename": "Rabbit Garden",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/def02784-1358-46b6-be08-4502601ee959_vertical.jpg"
+    },
+    {
+        "gameid": "5069",
+        "gamename": "Raging Waterfall Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/aafc1bae-a8dc-4010-8806-e6013358fc3a_vertical.png"
+    },
+    {
+        "gameid": "5394",
+        "gamename": "Rainbow Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/740980fb-a166-45b9-a67a-e1f09014ec1f_vertical.jpg"
+    },
+    {
+        "gameid": "5236",
+        "gamename": "Rainbow Reels",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/3bd7ca19-4ed4-48f5-84b5-4b5352bbf732_vertical.jpg"
+    },
+    {
+        "gameid": "4634",
+        "gamename": "Red Hot Luck",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ceacd7ef-980d-4af0-be4f-7ab7ccd4fc3a_vertical.jpg"
+    },
+    {
+        "gameid": "5320",
+        "gamename": "Reel Banks",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/058b4d7a-af77-4b02-9830-cb2ed50c0a92_vertical.jpg"
+    },
+    {
+        "gameid": "5171",
+        "gamename": "Release the Bison",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8ed40952-2baa-46a7-b73d-e47b03cc7388_vertical.jpg"
+    },
+    {
+        "gameid": "5523",
+        "gamename": "Release the Kraken",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c2e81645-24d3-42a4-bb3f-1ddf8924593d_vertical.jpg"
+    },
+    {
+        "gameid": "5332",
+        "gamename": "Release the Kraken 2",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/bc88a168-6311-4fa7-b381-7e7995566463_vertical.jpg"
+    },
+    {
+        "gameid": "5112",
+        "gamename": "Release the Kraken Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/72b8b4b3-842d-4bae-bc6f-d963d9809433_vertical.png"
+    },
+    {
+        "gameid": "5048",
+        "gamename": "Resurrecting Riches",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/2429fffb-fd52-4e86-9719-e2c02154eb34_vertical.png"
+    },
+    {
+        "gameid": "5488",
+        "gamename": "Return of the Dead",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/98a336a5-022f-4cc7-bd0d-307240f9e001_vertical.jpg"
+    },
+    {
+        "gameid": "5155",
+        "gamename": "Revenge of Loki Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/aed50170-a9f6-4300-9055-bfce1ffb4a3c_vertical.jpg"
+    },
+    {
+        "gameid": "5170",
+        "gamename": "Ripe Rewards",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/73782429-e7ee-4e74-acdd-94b56fed6284_vertical.jpg"
+    },
+    {
+        "gameid": "5438",
+        "gamename": "Rise of Giza PowerNudge",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a56da665-a894-4192-a760-c7f9720ab84e_vertical.jpg"
+    },
+    {
+        "gameid": "5158",
+        "gamename": "Rise of Pyramids",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/20319836-7603-470c-b8e3-9609110364c3_vertical.jpg"
+    },
+    {
+        "gameid": "5257",
+        "gamename": "Rocket Blast Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/117247e7-7267-4399-a392-38bc24fd48e9_vertical.jpg"
+    },
+    {
+        "gameid": "e51e58fc2b070ed7a801e2ed8a97cb77",
+        "gamename": "Rolling in Treasures",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/29ff43aa-4591-47c5-a3bb-c1c51dbab735_vertical.png"
+    },
+    {
+        "gameid": "10049",
+        "gamename": "Roulette",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/roulette-9b2dd2fd.webp"
+    },
+    {
+        "gameid": "5134",
+        "gamename": "Running Sushi",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/cd4fc47a-f04a-4ef8-afe1-7451827855d0_vertical.png"
+    },
+    {
+        "gameid": "5554",
+        "gamename": "Safari King",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/10f8b5fd-0cbe-4801-ac17-9795d0000c89_vertical.jpg"
+    },
+    {
+        "gameid": "5143",
+        "gamename": "Samurai Code",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/01141b2d-128c-4f9f-aac9-253e35299603_vertical.png"
+    },
+    {
+        "gameid": "5582",
+        "gamename": "Santa",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/64114857-35ee-4fe9-8da7-bcea31e62eda_vertical.jpg"
+    },
+    {
+        "gameid": "5333",
+        "gamename": "Santa's Great Gifts",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/607cb8a8-7407-4896-9fe6-b7172ca6306b_vertical.jpg"
+    },
+    {
+        "gameid": "5423",
+        "gamename": "Santa's Wonderland",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/acce7a81-79d4-49bb-98ce-dee91a25d8ce_vertical.png"
+    },
+    {
+        "gameid": "5096",
+        "gamename": "Santa's Xmas Rush",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/daa9eaf9-a8e1-415a-bb51-b424440dec0b_vertical.png"
+    },
+    {
+        "gameid": "5075",
+        "gamename": "Savannah Legend",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/fc437bc8-04d1-4985-8f37-1615eb4e33af_vertical.png"
+    },
+    {
+        "gameid": "5311",
+        "gamename": "Secret City Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a2126e15-1ad4-4537-b9c8-f3705c349381_vertical.png"
+    },
+    {
+        "gameid": "5325",
+        "gamename": "Shield of Sparta",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/6beb88a2-22fd-4349-b3e5-7de66bccad0d_vertical.png"
+    },
+    {
+        "gameid": "5366",
+        "gamename": "Shining Hot 100",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a1d3b0c3-61ab-4441-910f-a0ef10618d6a_vertical.png"
+    },
+    {
+        "gameid": "5368",
+        "gamename": "Shining Hot 20",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/14b72bf8-66af-47fc-90a4-3c6f00bcebd2_vertical.png"
+    },
+    {
+        "gameid": "5367",
+        "gamename": "Shining Hot 40",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/25e95feb-4c97-44d2-85b4-509b6eb2b801_vertical.png"
+    },
+    {
+        "gameid": "5369",
+        "gamename": "Shining Hot 5",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0d1a7273-c0f0-476c-baf0-8563696bc8ac_vertical.png"
+    },
+    {
+        "gameid": "5050",
+        "gamename": "Sleeping Dragon",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/41ea792c-74b6-417a-ba4e-d283b72b3dfe_vertical.png"
+    },
+    {
+        "gameid": "5412",
+        "gamename": "Smugglers Cove",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/dbd4884a-d7e7-4e47-b600-64d10afd724d_vertical.png"
+    },
+    {
+        "gameid": "9e8d8ceea596eeaeba008dd9615e4ee8",
+        "gamename": "Snow Party",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/snow-party-166fe4f8.webp"
+    },
+    {
+        "gameid": "5481",
+        "gamename": "Spartan King",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ec208da3-004d-4b0c-b32f-e41f7b7c8b47_vertical.jpg"
+    },
+    {
+        "gameid": "5264",
+        "gamename": "Spellbinding Mystery",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/40d5dc3c-d0ce-4512-8add-f506ad0b7dcb_vertical.png"
+    },
+    {
+        "gameid": "5337",
+        "gamename": "Spin & Score Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/spin-score-megaways-f9ab5282.webp"
+    },
+    {
+        "gameid": "5640",
+        "gamename": "Spire+",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/0e84fe94-12fd-45de-a3b1-9b7661b95b3c_vertical.png"
+    },
+    {
+        "gameid": "5385",
+        "gamename": "Spirit of Adventure",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ea06b381-eb64-46fe-a46b-75f8d73fbbe8_vertical.jpg"
+    },
+    {
+        "gameid": "5493",
+        "gamename": "Star Bounty",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/29fc76b3-1c74-4dcf-a022-ce925e38f5c8_vertical.jpg"
+    },
+    {
+        "gameid": "5426",
+        "gamename": "Star Pirates Code",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/90f47780-0283-4add-8eee-4637032b9558_vertical.jpg"
+    },
+    {
+        "gameid": "5331",
+        "gamename": "Starlight Christmas",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c901fd47-9842-427f-a90c-94fab3a1c999_vertical.jpg"
+    },
+    {
+        "gameid": "5435",
+        "gamename": "Starlight Princess",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/514d8a5a-b546-4dc5-9c4b-b8240fccb000_vertical.jpg"
+    },
+    {
+        "gameid": "5261",
+        "gamename": "Starlight Princess 1000",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/98b3187f-b472-4129-ad8e-69ab163dbaf5_vertical.png"
+    },
+    {
+        "gameid": "5156",
+        "gamename": "Starlight Princess Pachi",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/62d3eace-71c9-4b78-8860-e4816c90b302_vertical.jpg"
+    },
+    {
+        "gameid": "5616",
+        "gamename": "Starlight Wins",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/ba2ee1e5-ed0b-4dbb-9d5b-4380c9f27cec_vertical.png"
+    },
+    {
+        "gameid": "5508",
+        "gamename": "Starz Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0be5a90e-f139-40a8-b8dd-c7a83c988ab5_vertical.jpg"
+    },
+    {
+        "gameid": "ed711bdbf63b2256648de689594363df",
+        "gamename": "Steamin’ Reels",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/34a4fa86-d9c4-42e9-99fa-672c4ba9131f_vertical.png"
+    },
+    {
+        "gameid": "5279",
+        "gamename": "Sticky Bees",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/add2991b-7629-489f-af48-4b6b367c4019_vertical.jpg"
+    },
+    {
+        "gameid": "5189",
+        "gamename": "Strawberry Cocktail",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/76967eeb-c7da-48f2-a464-1aee30413870_vertical.jpg"
+    },
+    {
+        "gameid": "5502",
+        "gamename": "Street Racer",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/20df440e-c982-40a4-b488-0b11ad53b4da_vertical.jpg"
+    },
+    {
+        "gameid": "5344",
+        "gamename": "Striking Hot 5",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/4e33bf2c-35c6-4708-92b2-dfaa41b39800_vertical.jpg"
+    },
+    {
+        "gameid": "5363",
+        "gamename": "Sugar Rush",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/e60209de-46cd-4957-b2b8-37d8b529546a_vertical.png"
+    },
+    {
+        "gameid": "5176",
+        "gamename": "Sugar Rush 1000",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/a28612c0-eb73-4fdd-bcfa-ea8015e034db_vertical.png"
+    },
+    {
+        "gameid": "5219",
+        "gamename": "Sugar Rush Xmas",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/f83d926e-49c8-4971-b7d8-4d11b0561a73_vertical.jpg"
+    },
+    {
+        "gameid": "5226",
+        "gamename": "Sugar Supreme Powernudge",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0812caa0-536f-4efd-8100-b40c0cf2ac24_vertical.jpg"
+    },
+    {
+        "gameid": "5138",
+        "gamename": "Sumo Supreme Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/460061dd-139c-4902-82c9-5bd7837fecf6_vertical.png"
+    },
+    {
+        "gameid": "5522",
+        "gamename": "Super 7s ",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/77d993a2-6810-457b-bd9e-79b5a47f40dc_vertical.jpg"
+    },
+    {
+        "gameid": "dcb62f6846307158bcabb1664f2f30ed",
+        "gamename": "Super Gummy Strike",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/1f44170f-04c9-4eeb-88b7-ca8d2a28c3c2_vertical.png"
+    },
+    {
+        "gameid": "5533",
+        "gamename": "Super Joker",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/5b4197e5-3628-45da-bbfc-c9d963d7552f_vertical.jpg"
+    },
+    {
+        "gameid": "0a10c0f42d84880d19d1c2c542dac038",
+        "gamename": "Super Tiki Strike",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/c1c211ca-2645-4557-abe3-492de4e8b4b8_vertical.png"
+    },
+    {
+        "gameid": "5416",
+        "gamename": "Super X",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/633bec1e-1e7b-4679-868d-afd2e90eb28b_vertical.jpg"
+    },
+    {
+        "gameid": "5544",
+        "gamename": "Sweet Bonanza",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/55208683-f0b2-4ee5-9c6b-64adf11b3ba4_vertical.png"
+    },
+    {
+        "gameid": "5154",
+        "gamename": "Sweet Bonanza 1000",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/e9795052-6574-4522-a86c-bcc0bfd9979e_vertical.png"
+    },
+    {
+        "gameid": "5234",
+        "gamename": "Sweet Bonanza Dice",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/93af8259-039b-4f09-ba02-73c29c43098a_vertical.jpg"
+    },
+    {
+        "gameid": "5630",
+        "gamename": "Sweet Bonanza Super Scatter",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/3f9303b9-a378-40a3-9879-4089847e2459_vertical.png"
+    },
+    {
+        "gameid": "5529",
+        "gamename": "Sweet Bonanza Xmas",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/4283a2f9-10fa-4b27-a0df-67403711fb31_vertical.jpg"
+    },
+    {
+        "gameid": "daf9c5f59921bd25b0812989b82b402f",
+        "gamename": "Sweet Burst",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/434b8965-e3e8-4578-930c-600b0386607b_vertical.png"
+    },
+    {
+        "gameid": "7353af1836a0e8dd61aac0e94745d97b",
+        "gamename": "Sweet Craze",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/09754435-b672-4ee1-909c-ddd031e15177_vertical.png"
+    },
+    {
+        "gameid": "5145",
+        "gamename": "Sweet Kingdom",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/2e1a0183-f173-433b-8132-eed6d08e75d0_vertical.png"
+    },
+    {
+        "gameid": "5317",
+        "gamename": "Sweet Powernudge",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/efb3d9b5-a903-4638-b981-668635ae1402_vertical.jpg"
+    },
+    {
+        "gameid": "5340",
+        "gamename": "Sword of Ares",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a0521d08-bce4-4285-af88-1ea66e10c2da_vertical.png"
+    },
+    {
+        "gameid": "5040",
+        "gamename": "Temple Guardians",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/10946e1e-fd1f-4238-81ee-ae66379a7f09_vertical.png"
+    },
+    {
+        "gameid": "5464",
+        "gamename": "Temujin Treasures",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/75fd7e22-761d-4580-85aa-49342a4ceb85_vertical.jpg"
+    },
+    {
+        "gameid": "5195",
+        "gamename": "The Alter Ego",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/004928f3-d6ff-4f4e-8733-ef9753e37925_vertical.jpg"
+    },
+    {
+        "gameid": "5203",
+        "gamename": "The Big Dawgs",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/9aa3f564-596b-4935-8a90-0258965b4822_vertical.jpg"
+    },
+    {
+        "gameid": "5547",
+        "gamename": "The Dog House",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/d59e2379-ca51-4167-803d-e8688c1edf13_vertical.png"
+    },
+    {
+        "gameid": "5174",
+        "gamename": "The Dog House - Dog or Alive",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/the-dog-house-dog-or-alive-d1faf8f7.webp"
+    },
+    {
+        "gameid": "5115",
+        "gamename": "The Dog House – Muttley Crew",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/20424a70-d0e0-4ff2-8c9f-ac7f05b7b405_vertical.png"
+    },
+    {
+        "gameid": "5065",
+        "gamename": "The Dog House – Royal Hunt",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/45f4fbae-fe0f-4682-b3ef-218063b46a7e_vertical.png"
+    },
+    {
+        "gameid": "5215",
+        "gamename": "The Dog House Dice Show",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/48daeaf3-8481-4fbb-82ba-14db3925d621_vertical.jpg"
+    },
+    {
+        "gameid": "5500",
+        "gamename": "The Dog House Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/be8ba11b-ded6-4a3b-8b3e-378c5ee7fe41_vertical.png"
+    },
+    {
+        "gameid": "5299",
+        "gamename": "The Dog House Multihold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/329361f6-0d2d-4367-a701-b1dccbfc0c8e_vertical.jpg"
+    },
+    {
+        "gameid": "5486",
+        "gamename": "The Dragon Tiger",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/the-dragon-tiger-087464d1.webp"
+    },
+    {
+        "gameid": "5536",
+        "gamename": "The Great Chicken Escape",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/5e272896-34f2-4335-8215-fece661024ef_vertical.jpg"
+    },
+    {
+        "gameid": "5380",
+        "gamename": "The Great Stick-Up",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/204cf526-db69-4b75-a4b1-87a8cfa89485_vertical.jpg"
+    },
+    {
+        "gameid": "5469",
+        "gamename": "The Hand of Midas",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/997293e8-d042-402a-b2dc-c5c5a0cab1c5_vertical.jpg"
+    },
+    {
+        "gameid": "5298",
+        "gamename": "The Knight King",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b8ae7761-2265-4626-b5e1-d05bf6c7b081_vertical.jpg"
+    },
+    {
+        "gameid": "5232",
+        "gamename": "The Money Men Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/be6bb734-d3a4-4873-bbd3-78056eeb249c_vertical.jpg"
+    },
+    {
+        "gameid": "5295",
+        "gamename": "The Red Queen",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f1296ff6-56ce-405a-a40c-2ead90d8c720_vertical.jpg"
+    },
+    {
+        "gameid": "5401",
+        "gamename": "The Ultimate 5",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/2aa7324d-88fb-43f1-8f68-6259e9b73c0b_vertical.jpg"
+    },
+    {
+        "gameid": "5211",
+        "gamename": "The Wild Gang",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/304b1472-1a64-4d73-bb85-e1d51fad8f98_vertical.png"
+    },
+    {
+        "gameid": "5518",
+        "gamename": "The Wild Machine",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/802b4d74-8b1d-40fc-b166-9f1e07c5eac0_vertical.jpg"
+    },
+    {
+        "gameid": "5511",
+        "gamename": "Three Star Fortune",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/392e1f4b-eff4-4858-88bc-0cf5bf8cd8be_vertical.jpg"
+    },
+    {
+        "gameid": "5393",
+        "gamename": "Tic Tac Take",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/5288c287-45fc-433b-8cb5-f1366a2f1155_vertical.jpg"
+    },
+    {
+        "gameid": "5225",
+        "gamename": "Timber Stacks",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/a37566e3-2f0f-4828-85c5-e8d0315e643e_vertical.jpg"
+    },
+    {
+        "gameid": "5095",
+        "gamename": "Tiny Toads",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b3f8be18-5795-4d9d-9756-c54c853517a7_vertical.png"
+    },
+    {
+        "gameid": "5330",
+        "gamename": "Towering Fortunes",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0ac9fd77-09f1-4952-a2bb-406525733583_vertical.jpg"
+    },
+    {
+        "gameid": "5553",
+        "gamename": "Treasure Horse",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/33b2c835-1380-4fc2-828f-6ab0ae368f2a_vertical.jpg"
+    },
+    {
+        "gameid": "5433",
+        "gamename": "Treasure Wild",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d4c3b084-ea0c-4a19-a385-1b81c9d03606_vertical.jpg"
+    },
+    {
+        "gameid": "25af131fa95bfd1b9bf14aade403493a",
+        "gamename": "Treasures of Osiris",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/cdcfc228-e67f-4cf5-b76a-c88dbdf3ea31_vertical.png"
+    },
+    {
+        "gameid": "5535",
+        "gamename": "Tree of Riches",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b0ba3972-0627-4068-b6a7-8dcbe5bad090_vertical.jpg"
+    },
+    {
+        "gameid": "5196",
+        "gamename": "Trees of Treasure",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d8814c43-d99e-40d7-b579-94712900993b_vertical.jpg"
+    },
+    {
+        "gameid": "5557",
+        "gamename": "Triple Dragons",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/19a4f771-6e15-4f33-a635-1b22d8c0db20_vertical.jpg"
+    },
+    {
+        "gameid": "10046",
+        "gamename": "Triple Pot Diamond",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/triple-pot-diamond-f0c40d7d.webp"
+    },
+    {
+        "gameid": "5064",
+        "gamename": "Triple Pot Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8280db73-87a7-4a9a-ada0-791dae891918_vertical.png"
+    },
+    {
+        "gameid": "5579",
+        "gamename": "Triple Tigers",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/586724d6-9c26-4971-8fa6-79ba8c4f3ce4_vertical.jpg"
+    },
+    {
+        "gameid": "5238",
+        "gamename": "Tundra’s Fortune",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/793280d6-376d-4632-bbbc-410161a50540_vertical.jpg"
+    },
+    {
+        "gameid": "10053",
+        "gamename": "Tut’s Treasure Tower",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/f1d8da3b-41c4-4c8c-8181-c3372bb0cf08_vertical.png"
+    },
+    {
+        "gameid": "5230",
+        "gamename": "Twilight Princess",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0f7bd020-9f4f-458f-9612-2a88a74ae95b_vertical.jpg"
+    },
+    {
+        "gameid": "5506",
+        "gamename": "Ultra Burn",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c469d129-7c90-464a-836c-642811817bea_vertical.jpg"
+    },
+    {
+        "gameid": "5496",
+        "gamename": "Ultra Hold and Spin",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/f78bbe92-6a6b-4dd5-abd6-8fc321f118fe_vertical.jpg"
+    },
+    {
+        "gameid": "5537",
+        "gamename": "Vampires VS Wolves",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/b756cb5c-9298-4b41-955b-b58783b381cc_vertical.jpg"
+    },
+    {
+        "gameid": "5110",
+        "gamename": "Vampy Party",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8e9a8fa7-44d5-4e41-a061-46b54c5b4a54_vertical.png"
+    },
+    {
+        "gameid": "5560",
+        "gamename": "Vegas Magic",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/97b84126-0901-4b61-b371-b697f84500a5_vertical.jpg"
+    },
+    {
+        "gameid": "5227",
+        "gamename": "Viking Forge",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/4a330b60-7db8-47cc-8953-cb88ab90796a_vertical.jpg"
+    },
+    {
+        "gameid": "5066",
+        "gamename": "Volcano Goddess",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0a0b9aae-0c83-4743-a874-250ff8a1d4ab_vertical.png"
+    },
+    {
+        "gameid": "5477",
+        "gamename": "Voodoo Magic",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/91219839-12ef-44d6-b289-e0a3512b5d7e_vertical.jpg"
+    },
+    {
+        "gameid": "5628",
+        "gamename": "Waves of Poseidon",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/b1e45b66-be40-4c64-9d34-823b480cfa81_vertical.png"
+    },
+    {
+        "gameid": "5191",
+        "gamename": "Wheel O'Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/wheel-o-gold-1e9780c5.webp"
+    },
+    {
+        "gameid": "5399",
+        "gamename": "Wild Beach Party",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/be6115e7-f003-4db1-96d3-7e03009ef3c6_vertical.jpg"
+    },
+    {
+        "gameid": "5462",
+        "gamename": "Wild Booster",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/bad106ac-1567-4cfc-a7a7-e66c5fc0131b_vertical.jpg"
+    },
+    {
+        "gameid": "5291",
+        "gamename": "Wild Celebrity Bus Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d5b58b4d-5308-4e4d-825e-4dfe1bde60df_vertical.jpg"
+    },
+    {
+        "gameid": "5409",
+        "gamename": "Wild Depths",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/44e46468-6b6b-41fa-bae5-347a676a7b69_vertical.jpg"
+    },
+    {
+        "gameid": "5341",
+        "gamename": "Wild Hop & Drop",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/wild-hop-drop-6c05f044.webp"
+    },
+    {
+        "gameid": "5543",
+        "gamename": "Wild Pixies",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/d6b5de1b-eb64-4168-9a5d-58e08d5149d9_vertical.jpg"
+    },
+    {
+        "gameid": "aaaddb727da6ad990cdf8bbec376b961",
+        "gamename": "Wild Skullz",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/0d0b3313-7c01-4916-8ceb-70feb3b49165_vertical.png"
+    },
+    {
+        "gameid": "5586",
+        "gamename": "Wild Spells",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e7a5dd3b-2995-4cf7-8e54-aa820e8345d3_vertical.jpg"
+    },
+    {
+        "gameid": "5490",
+        "gamename": "Wild Walker",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/e06a8bcd-5e2a-44bd-8975-d19f122dbd83_vertical.jpg"
+    },
+    {
+        "gameid": "5301",
+        "gamename": "Wild West Duels",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/78664ed3-ccea-476f-822c-140dd0f90483_vertical.jpg"
+    },
+    {
+        "gameid": "5515",
+        "gamename": "Wild West Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/dd642871-8e58-42f5-83e8-70692144214f_vertical.png"
+    },
+    {
+        "gameid": "5037",
+        "gamename": "Wild West Gold Blazing Bounty",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/5ff85c3d-5308-499a-ad8c-f9c0835e1530_vertical.png"
+    },
+    {
+        "gameid": "5388",
+        "gamename": "Wild West Gold Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/a9516fe6-fb80-4540-bd48-f03fc4151542_vertical.png"
+    },
+    {
+        "gameid": "5314",
+        "gamename": "Wild Wild Bananas",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c9d49bff-bbf9-4819-9de8-ffd7f54a9eb1_vertical.jpg"
+    },
+    {
+        "gameid": "5068",
+        "gamename": "Wild Wild Joker",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/00d7510c-11da-4a9f-be7b-666f96472c7b_vertical.png"
+    },
+    {
+        "gameid": "5081",
+        "gamename": "Wild Wild Pearls",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/999b09cf-9419-46ec-9390-cc346e980346_vertical.png"
+    },
+    {
+        "gameid": "5495",
+        "gamename": "Wild Wild Riches",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c5d24835-3600-408a-a3b5-5db6966e3386_vertical.jpg"
+    },
+    {
+        "gameid": "5303",
+        "gamename": "Wild Wild Riches Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/27818076-2e29-4f0b-b6d0-8906064449a8_vertical.jpg"
+    },
+    {
+        "gameid": "5079",
+        "gamename": "Wild Wildebeest Wins",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/ee7c8e68-fad6-4590-bac4-674fd43c0260_vertical.png"
+    },
+    {
+        "gameid": "5153",
+        "gamename": "Wildies",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/301f5905-92b2-4710-9a93-19681f46483c_vertical.jpg"
+    },
+    {
+        "gameid": "5271",
+        "gamename": "Wisdom of Athena",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/8dd66952-cd82-4b3a-be0f-4f1c65be9890_vertical.jpg"
+    },
+    {
+        "gameid": "5116",
+        "gamename": "Wisdom of Athena 1000",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/70867c8d-5bd9-4b6d-8c30-77f4df1a9b5b_vertical.png"
+    },
+    {
+        "gameid": "5052",
+        "gamename": "Witch Heart Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c2f8fde0-58df-4cd3-8d6b-ffddab51d455_vertical.png"
+    },
+    {
+        "gameid": "5591",
+        "gamename": "Wolf Gold",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/0117c445-8eab-46ca-bd28-8960ce9f3200_vertical.jpg"
+    },
+    {
+        "gameid": "5633",
+        "gamename": "Wolf Gold 4 Pack",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/48473bcb-67be-4b85-821e-e87ed9f332ef_vertical.png"
+    },
+    {
+        "gameid": "5135",
+        "gamename": "Wolf Gold Dice",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/59a861c1-016d-4b61-a808-ad1e07b77b71_vertical.jpg"
+    },
+    {
+        "gameid": "5104",
+        "gamename": "Wolf Gold Ultimate",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/c377d599-5e4d-4eec-96b6-147496056f57_vertical.png"
+    },
+    {
+        "gameid": "5207",
+        "gamename": "Year of the Dragon King",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/year-of-the-dragon-king-4376ba55.webp"
+    },
+    {
+        "gameid": "5133",
+        "gamename": "Yeti Quest",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/yeti-quest-d532957d.webp"
+    },
+    {
+        "gameid": "5637",
+        "gamename": "You Can Piggy Bank On It",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/you-can-piggy-bank-on-it-fd2dd836.webp"
+    },
+    {
+        "gameid": "5439",
+        "gamename": "Yum Yum Powerways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/pragmatic/dd8b70a7-3975-4e4e-b1cc-4b5929ceff6d_vertical.jpg"
+    },
+    {
+        "gameid": "5281",
+        "gamename": "Zeus vs Hades - Gods of War",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://v1.bundlecdn.com/casino-images/v/80087192-ade9-4a54-a10d-42bd2653f2a0_vertical.png"
+    },
+    {
+        "gameid": "bc50831ebfc92032a26764da1bbecbc4",
+        "gamename": "Zeus vs Typhon",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/zeus-vs-typhon-17bd431e.webp"
+    },
+    {
+        "gameid": "5381",
+        "gamename": "Zombie Carnival",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/zombie-carnival-03f09b41.webp"
+    },
+    {
+        "gameid": "5643",
+        "gamename": "Zombie School Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "image": "https://providers.gambllyapi.com/assets/providers/PP/zombie-school-megaways-b0063878.webp"
+    },
+    {
+        "gameid": "5450",
+        "gamename": "5 Lions Megaways",
+        "providerName": "PragmaticPlay - EU",
+        "category": "HotSlots",
+        "image": "https://v1.bundlecdn.com/casino-images/v/5fc098d6-d694-45c7-b7a4-cc3bd4943908_vertical.png"
+    },
+    {
+        "gameid": "5611",
+        "gamename": "7 Monkeys",
+        "providerName": "PragmaticPlay - EU",
+        "category": "HotSlots",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/4987/public"
+    }
+]

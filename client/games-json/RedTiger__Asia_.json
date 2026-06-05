@@ -1,0 +1,58 @@
+[
+    {
+        "gameid": "8527",
+        "gamename": "10",
+        "providerName": "RedTiger（Asia）",
+        "category": "PVC",
+        "image": "https://igamingapis.com/img/8527.png"
+    },
+    {
+        "gameid": "8384",
+        "gamename": "10001 Nights",
+        "providerName": "RedTiger",
+        "category": "flash",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/1165/public"
+    },
+    {
+        "gameid": "8384",
+        "gamename": "10001 Nights",
+        "providerName": "RedTiger（Asia）",
+        "category": "Slots",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8384/public"
+    },
+    {
+        "gameid": "1166",
+        "gamename": "10001 Nights Megaways",
+        "providerName": "RedTiger",
+        "category": "flash",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/1166/public"
+    },
+    {
+        "gameid": "8518",
+        "gamename": "1942 Sky Warrior",
+        "providerName": "RedTiger（Asia）",
+        "category": "Slots",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8518/public"
+    },
+    {
+        "gameid": "8518",
+        "gamename": "1942: Sky Warrior",
+        "providerName": "RedTiger",
+        "category": "flash",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/1177/public"
+    },
+    {
+        "gameid": "8456",
+        "gamename": "24 Hour Grand Prix",
+        "providerName": "RedTiger（Asia）",
+        "category": "Slots",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA/8456/public"
+    },
+    {
+        "gameid": "8456",
+        "gamename": "24 Hour Grand Prix",
+        "providerName": "RedTiger",
+        "category": "flash",
+        "image": "https://imagedelivery.net/nVyft9zNw2I0pNVtr9560nC1zA/1182/public"
+    }
+]

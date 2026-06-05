@@ -1,0 +1,434 @@
+[
+    {
+        "gameid": "7108",
+        "gamename": "15 Dragon Pearls: Hold and Win",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/15-dragon-pearls-hold-and-win.webp"
+    },
+    {
+        "gameid": "7109",
+        "gamename": "3 African Drums",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/3-african-drums.webp"
+    },
+    {
+        "gameid": "7110",
+        "gamename": "3 Aztec Temples",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/3-aztec-temples.webp"
+    },
+    {
+        "gameid": "7112",
+        "gamename": "3 China Pots",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/3-china-pots.webp"
+    },
+    {
+        "gameid": "7113",
+        "gamename": "3 Clover Pots",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/3-clover-pots.webp"
+    },
+    {
+        "gameid": "7114",
+        "gamename": "3 Clover Pots Extra",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/3-clover-pots-extra.webp"
+    },
+    {
+        "gameid": "7115",
+        "gamename": "3 Coin Volcanoes",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/3-coin-volcanoes.webp"
+    },
+    {
+        "gameid": "7116",
+        "gamename": "3 Coins",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/3-coins.webp"
+    },
+    {
+        "gameid": "7117",
+        "gamename": "3 Coins: Egypt",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/3-coins-egypt.webp"
+    },
+    {
+        "gameid": "7118",
+        "gamename": "3 Egypt Chests",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/3-egypt-chests.webp"
+    },
+    {
+        "gameid": "7119",
+        "gamename": "3 Hot Chillies",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/3-hot-chillies.webp"
+    },
+    {
+        "gameid": "7124",
+        "gamename": "3 Pots of Egypt",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/3-pots-of-egypt.webp"
+    },
+    {
+        "gameid": "7125",
+        "gamename": "3 Super Hot Chillies",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/3-super-hot-chillies.webp"
+    },
+    {
+        "gameid": "7129",
+        "gamename": "777 Coins",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/777-coins.webp"
+    },
+    {
+        "gameid": "7133",
+        "gamename": "Aztec Fire",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/aztec-fire.webp"
+    },
+    {
+        "gameid": "7134",
+        "gamename": "Aztec Fire 2",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/aztec-fire-2.webp"
+    },
+    {
+        "gameid": "7135",
+        "gamename": "Aztec Sun: Hold and Win",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/aztec-sun-hold-and-win.webp"
+    },
+    {
+        "gameid": "7136",
+        "gamename": "Big Heist",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/big-heist.webp"
+    },
+    {
+        "gameid": "7138",
+        "gamename": "Black Wolf 2",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/black-wolf-2.webp"
+    },
+    {
+        "gameid": "7141",
+        "gamename": "Book of Sun Multichance",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/book-of-sun-multichance.webp"
+    },
+    {
+        "gameid": "7142",
+        "gamename": "Boom! Boom! Gold!",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/boom-boom-gold.webp"
+    },
+    {
+        "gameid": "7148",
+        "gamename": "China Festival",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/china-festival.webp"
+    },
+    {
+        "gameid": "7150",
+        "gamename": "Coin Lamp",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/coin-lamp.webp"
+    },
+    {
+        "gameid": "7151",
+        "gamename": "Coin Up: Lightning",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/coin-up-lightning.webp"
+    },
+    {
+        "gameid": "7151",
+        "gamename": "Coin Up",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/coin-up.webp"
+    },
+    {
+        "gameid": "7154",
+        "gamename": "Coin Volcano",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/coin-volcano.webp"
+    },
+    {
+        "gameid": "7156",
+        "gamename": "Crystal Scarabs",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/crystal-scarabs.webp"
+    },
+    {
+        "gameid": "7157",
+        "gamename": "Dancing Joker",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/dancing-joker.webp"
+    },
+    {
+        "gameid": "7162",
+        "gamename": "Dragon Pearls: Hold and Win",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/dragon-pearls-hold-and-win.webp"
+    },
+    {
+        "gameid": "7163",
+        "gamename": "Dragon Wealth",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/dragon-wealth.webp"
+    },
+    {
+        "gameid": "7165",
+        "gamename": "Egypt Fire",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/egypt-fire.webp"
+    },
+    {
+        "gameid": "7171",
+        "gamename": "Fishin Bear",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/fishin-bear.webp"
+    },
+    {
+        "gameid": "7173",
+        "gamename": "Fortune Globe",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/fortune-globe.webp"
+    },
+    {
+        "gameid": "7178",
+        "gamename": "Gold Express",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/gold-express.webp"
+    },
+    {
+        "gameid": "7179",
+        "gamename": "Gold Nuggets",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/gold-nuggets.webp"
+    },
+    {
+        "gameid": "7181",
+        "gamename": "Golden Teapot",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/golden-teapot.webp"
+    },
+    {
+        "gameid": "7182",
+        "gamename": "Grab more Gold",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/grab-more-gold.webp"
+    },
+    {
+        "gameid": "7183",
+        "gamename": "Grab the Gold",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/grab-the-gold.webp"
+    },
+    {
+        "gameid": "7185",
+        "gamename": "Green Chilli",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/green-chilli.webp"
+    },
+    {
+        "gameid": "7186",
+        "gamename": "Green Chilli 2",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/green-chilli-2.webp"
+    },
+    {
+        "gameid": "7189",
+        "gamename": "Hit more Gold!",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/hit-more-gold.webp"
+    },
+    {
+        "gameid": "7190",
+        "gamename": "Hit the Gold!",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/hit-the-gold.webp"
+    },
+    {
+        "gameid": "7194",
+        "gamename": "Lady Fortune",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/lady-fortune.webp"
+    },
+    {
+        "gameid": "7199",
+        "gamename": "Lion Coins",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/lion-coins.webp"
+    },
+    {
+        "gameid": "7201",
+        "gamename": "Little Farm",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/little-farm.webp"
+    },
+    {
+        "gameid": "7203",
+        "gamename": "Lucky Penny",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/lucky-penny.webp"
+    },
+    {
+        "gameid": "7205",
+        "gamename": "Magic Apple",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/magic-apple.webp"
+    },
+    {
+        "gameid": "7206",
+        "gamename": "Magic Apple 2",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/magic-apple-2.webp"
+    },
+    {
+        "gameid": "7209",
+        "gamename": "Maya Sun",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/maya-sun.webp"
+    },
+    {
+        "gameid": "7211",
+        "gamename": "Moon Sisters",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/moon-sisters.webp"
+    },
+    {
+        "gameid": "7212",
+        "gamename": "More Magic Apple",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/more-magic-apple.webp"
+    },
+    {
+        "gameid": "7214",
+        "gamename": "Olympian Gods",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/olympian-gods.webp"
+    },
+    {
+        "gameid": "1928",
+        "gamename": "Pearl Diver 2 Treasure Chest",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/pearl-diver-2-treasure-chest.webp"
+    },
+    {
+        "gameid": "7222",
+        "gamename": "Power Sun",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/power-sun.webp"
+    },
+    {
+        "gameid": "7223",
+        "gamename": "Queen of the Sun",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/queen-of-the-sun.webp"
+    },
+    {
+        "gameid": "7224",
+        "gamename": "Rio Gems",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/rio-gems.webp"
+    },
+    {
+        "gameid": "7225",
+        "gamename": "Rocket Wins",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/rocket-wins.webp"
+    },
+    {
+        "gameid": "7232",
+        "gamename": "Scarab Boost",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/scarab-boost.webp"
+    },
+    {
+        "gameid": "7233",
+        "gamename": "Scarab Riches",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/scarab-riches.webp"
+    },
+    {
+        "gameid": "7234",
+        "gamename": "Scarab Temple",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/scarab-temple.webp"
+    },
+    {
+        "gameid": "7238",
+        "gamename": "Sky Pearls",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/sky-pearls.webp"
+    },
+    {
+        "gameid": "7243",
+        "gamename": "Sun of Egypt",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/sun-of-egypt.webp"
+    },
+    {
+        "gameid": "7244",
+        "gamename": "Sun of Egypt 2",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/sun-of-egypt-2.webp"
+    },
+    {
+        "gameid": "7245",
+        "gamename": "Sun of Egypt 3",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/sun-of-egypt-3.webp"
+    },
+    {
+        "gameid": "7246",
+        "gamename": "Sun of Egypt 4",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/sun-of-egypt-4.webp"
+    },
+    {
+        "gameid": "7247",
+        "gamename": "Sunlight Princess",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/sunlight-princess.webp"
+    },
+    {
+        "gameid": "7249",
+        "gamename": "Super Hot Chilli",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/super-hot-chilli.webp"
+    },
+    {
+        "gameid": "7242",
+        "gamename": "Super Sticky Piggy",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/super-sticky-piggy.webp"
+    },
+    {
+        "gameid": "7254",
+        "gamename": "Tiger Gems",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/tiger-gems.webp"
+    },
+    {
+        "gameid": "7255",
+        "gamename": "Tiger Jungle",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/tiger-jungle.webp"
+    },
+    {
+        "gameid": "7260",
+        "gamename": "Wolf Night",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/wolf-night.webp"
+    },
+    {
+        "gameid": "7263",
+        "gamename": "Wolf Saga",
+        "providerName": "3oks - ROW",
+        "image": "https://providers.gambllyapi.com/assets/providers/3oks-row/wolf-saga.webp"
+    }
+]

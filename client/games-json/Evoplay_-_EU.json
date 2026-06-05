@@ -1,0 +1,1352 @@
+[
+    {
+        "gameid": "1242",
+        "gamename": "Ace Round",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/ace-round-3cf90ca5.jpg"
+    },
+    {
+        "gameid": "10423",
+        "gamename": "Adrenaline Rush",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/adrenaline-rush-a344a085.png"
+    },
+    {
+        "gameid": "10464",
+        "gamename": "Adrenaline Rush: Scratch",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/adrenaline-rush-scratch-eea85fe9.png"
+    },
+    {
+        "gameid": "10378",
+        "gamename": "Adrenaline Rush: Super Boost",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/adrenaline-rush-super-boost-d6401a29.png"
+    },
+    {
+        "gameid": "1322",
+        "gamename": "American Roulette 3D",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/american-roulette-3d-17990d24.jpg"
+    },
+    {
+        "gameid": "10472",
+        "gamename": "American Sevens",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/american-sevens-f568cbe2.png"
+    },
+    {
+        "gameid": "1340",
+        "gamename": "Animal Quest",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/animal-quest-d3f8de04.jpg"
+    },
+    {
+        "gameid": "10462",
+        "gamename": "Avia Rush",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/avia-rush-6c5d0144.jpg"
+    },
+    {
+        "gameid": "10425",
+        "gamename": "B-Ball Blitz",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/b-ball-blitz-2c08e04c.png"
+    },
+    {
+        "gameid": "1402",
+        "gamename": "Baccarat 777",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/baccarat-777-d6b62873.jpg"
+    },
+    {
+        "gameid": "10379",
+        "gamename": "Bandit Bust",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/bandit-bust-eb318da3.jpg"
+    },
+    {
+        "gameid": "10380",
+        "gamename": "Bandit Bust Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/bandit-bust-bonus-buy-6a38dc7c.jpg"
+    },
+    {
+        "gameid": "10440",
+        "gamename": "Basket Bounty",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/basket-bounty-b1e77b32.png"
+    },
+    {
+        "gameid": "10382",
+        "gamename": "Battle Roosters Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/battle-roosters-bonus-buy-6f501be8.jpg"
+    },
+    {
+        "gameid": "10383",
+        "gamename": "Belfry Bliss",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/belfry-bliss-211400f8.png"
+    },
+    {
+        "gameid": "10471",
+        "gamename": "Belfry Bliss Hold and Win",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/belfry-bliss-hold-and-win-cb32b891.png"
+    },
+    {
+        "gameid": "10437",
+        "gamename": "Big Catch Game",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/big-catch-game-13148ac3.jpg"
+    },
+    {
+        "gameid": "1492",
+        "gamename": "BlackJack Lucky Sevens",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/blackjack-lucky-sevens-d51a7f53.jpg"
+    },
+    {
+        "gameid": "1502",
+        "gamename": "Blessed Flame",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/blessed-flame-3b5466b2.jpg"
+    },
+    {
+        "gameid": "1554",
+        "gamename": "Book Of Keno",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/book-of-keno-5f9563f3.jpg"
+    },
+    {
+        "gameid": "1564",
+        "gamename": "Book of Rest",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/book-of-rest-eb145aef.jpg"
+    },
+    {
+        "gameid": "1568",
+        "gamename": "Book Of The Priestess",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/book-of-the-priestess-1f731dc4.jpg"
+    },
+    {
+        "gameid": "1570",
+        "gamename": "Book Of The Priestess Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/book-of-the-priestess-bonus-buy-7e62cdb0.jpg"
+    },
+    {
+        "gameid": "1593",
+        "gamename": "Brutal Santa",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/brutal-santa-1f7bc197.jpg"
+    },
+    {
+        "gameid": "1599",
+        "gamename": "Budai Reels",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/budai-reels-4402572b.jpg"
+    },
+    {
+        "gameid": "1600",
+        "gamename": "Budai Reels Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/budai-reels-bonus-buy-19a806fe.jpg"
+    },
+    {
+        "gameid": "e0f3a76725abaffce3b7d80d275aae2d",
+        "gamename": "Bull's Club",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/bull-s-club-1dd8e06d.png"
+    },
+    {
+        "gameid": "1640",
+        "gamename": "Camino de Chili",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/camino-de-chili-a02fb333.jpg"
+    },
+    {
+        "gameid": "1641",
+        "gamename": "Camino de Chili Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/camino-de-chili-bonus-buy-49ee0807.jpg"
+    },
+    {
+        "gameid": "8701",
+        "gamename": "Candy Craze",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/candy-craze-fd210fa3.jpg"
+    },
+    {
+        "gameid": "1645",
+        "gamename": "Candy Dreams: Sweet Planet",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/candy-dreams-sweet-planet-8b28fdaa.jpg"
+    },
+    {
+        "gameid": "1646",
+        "gamename": "Candy Dreams: Sweet Planet Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/candy-dreams-sweet-planet-bonus-buy-102f94c1.jpg"
+    },
+    {
+        "gameid": "a97b4a19cdd9b08c9634e460f0983ce9",
+        "gamename": "Cat's Blessing",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/cat-s-blessing-835f2944.png"
+    },
+    {
+        "gameid": "10388",
+        "gamename": "Catch the Wind Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/catch-the-wind-bonus-buy-0df2583b.jpg"
+    },
+    {
+        "gameid": "10389",
+        "gamename": "Chained Fighters",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/chained-fighters-2941ce6a.png"
+    },
+    {
+        "gameid": "6982",
+        "gamename": "Chinese New Year",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/chinese-new-year-3cd40775.jpg"
+    },
+    {
+        "gameid": "10441",
+        "gamename": "Chosen by the Gods",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/chosen-by-the-gods-ec85b1db.jpg"
+    },
+    {
+        "gameid": "10426",
+        "gamename": "Christmas Crash",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/christmas-crash-224db4b5.jpg"
+    },
+    {
+        "gameid": "1750",
+        "gamename": "Christmas Reach",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/christmas-reach-e86ff88f.jpg"
+    },
+    {
+        "gameid": "1753",
+        "gamename": "Christmas Reach Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/christmas-reach-bonus-buy-66c2a1af.jpg"
+    },
+    {
+        "gameid": "1761",
+        "gamename": "Clash of Pirates",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/clash-of-pirates-82e38a02.jpg"
+    },
+    {
+        "gameid": "1785",
+        "gamename": "Collapsed Castle",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/collapsed-castle-07b60e6b.jpg"
+    },
+    {
+        "gameid": "1786",
+        "gamename": "Collapsed Castle Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/collapsed-castle-bonus-buy-ecfe09b1.jpg"
+    },
+    {
+        "gameid": "1802",
+        "gamename": "Courier Sweeper",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/courier-sweeper-441f33b8.jpg"
+    },
+    {
+        "gameid": "1845",
+        "gamename": "Curse of the Pharaoh",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/curse-of-the-pharaoh-4ab60fde.jpg"
+    },
+    {
+        "gameid": "1846",
+        "gamename": "Curse of the Pharaoh Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/curse-of-the-pharaoh-bonus-buy-b8174d9f.jpg"
+    },
+    {
+        "gameid": "10391",
+        "gamename": "Cursed Can Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/cursed-can-bonus-buy-06c9e020.jpg"
+    },
+    {
+        "gameid": "10427",
+        "gamename": "Cursed Castle",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/cursed-castle-33ceea32.png"
+    },
+    {
+        "gameid": "1851",
+        "gamename": "Cycle of Luck",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/cycle-of-luck-1e8af611.jpg"
+    },
+    {
+        "gameid": "1852",
+        "gamename": "Cycle of Luck Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/cycle-of-luck-bonus-buy-df91a3f0.jpg"
+    },
+    {
+        "gameid": "10474",
+        "gamename": "Diamond Hustle",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/diamond-hustle-e1558d5f.png"
+    },
+    {
+        "gameid": "10392",
+        "gamename": "Dolce Dreams",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/dolce-dreams-66316354.png"
+    },
+    {
+        "gameid": "10442",
+        "gamename": "Don Juan Peppers",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/don-juan-peppers-edd96ca6.png"
+    },
+    {
+        "gameid": "2042",
+        "gamename": "Dungeon Immortal Evil",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/dungeon-immortal-evil-76f61634.jpg"
+    },
+    {
+        "gameid": "2061",
+        "gamename": "Egypt Gods",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/egypt-gods-90d0a90f.jpg"
+    },
+    {
+        "gameid": "2076",
+        "gamename": "Ellen's Fortune",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/ellen-s-fortune-6e9756f1.jpg"
+    },
+    {
+        "gameid": "2077",
+        "gamename": "Elven Princesses",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/elven-princesses-8fcb282d.png"
+    },
+    {
+        "gameid": "10428",
+        "gamename": "Elven Princesses: Crown Quest",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/elven-princesses-crown-quest-205d0095.jpg"
+    },
+    {
+        "gameid": "10443",
+        "gamename": "Emerald Brewer",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/emerald-brewer-dd5de11b.jpg"
+    },
+    {
+        "gameid": "2100",
+        "gamename": "Epic Gladiators",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/epic-gladiators-aaea51af.jpg"
+    },
+    {
+        "gameid": "2115",
+        "gamename": "Ethan Grand: Mayan Diaries",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/ethan-grand-mayan-diaries-175299c8.jpg"
+    },
+    {
+        "gameid": "2117",
+        "gamename": "Europe Transit",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/europe-transit-04a9e83e.jpg"
+    },
+    {
+        "gameid": "2118",
+        "gamename": "Europe Transit Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/europe-transit-bonus-buy-b4f6924f.jpg"
+    },
+    {
+        "gameid": "10416",
+        "gamename": "Europe Transit Snowdrift",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/europe-transit-snowdrift-39b6236c.jpg"
+    },
+    {
+        "gameid": "11310",
+        "gamename": "European Roulette",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/european-roulette-69d9d62b.jpg"
+    },
+    {
+        "gameid": "2124",
+        "gamename": "Expanding Master",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/expanding-master-e0def7ed.jpg"
+    },
+    {
+        "gameid": "2127",
+        "gamename": "Exploding Fruits",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/exploding-fruits-0d23ed4b.jpg"
+    },
+    {
+        "gameid": "2250",
+        "gamename": "Football Manager",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/football-manager-e5818234.jpg"
+    },
+    {
+        "gameid": "2253",
+        "gamename": "Football Scratch",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/football-scratch-3f8bd05e.jpg"
+    },
+    {
+        "gameid": "2259",
+        "gamename": "Forest Dreams",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/forest-dreams-aed97119.jpg"
+    },
+    {
+        "gameid": "10418",
+        "gamename": "French Roulette Classic",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/french-roulette-classic-b0b2d585.jpg"
+    },
+    {
+        "gameid": "2328",
+        "gamename": "Fruit Burst",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/fruit-burst-8c6ea5f9.jpg"
+    },
+    {
+        "gameid": "2334",
+        "gamename": "Fruit Nova",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/fruit-nova-2e3f25e0.png"
+    },
+    {
+        "gameid": "2340",
+        "gamename": "Fruit Super Nova",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/fruit-super-nova-1c60cc9a.jpg"
+    },
+    {
+        "gameid": "2341",
+        "gamename": "Fruit Super Nova 100",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/fruit-super-nova-100-0ffec90d.jpg"
+    },
+    {
+        "gameid": "2342",
+        "gamename": "Fruit Super Nova 30",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/fruit-super-nova-30-79ecfae5.jpg"
+    },
+    {
+        "gameid": "2343",
+        "gamename": "Fruit Super Nova 40",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/fruit-super-nova-40-e2748764.jpg"
+    },
+    {
+        "gameid": "2344",
+        "gamename": "Fruit Super Nova 60",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/fruit-super-nova-60-fdd7f03f.jpg"
+    },
+    {
+        "gameid": "2345",
+        "gamename": "Fruit Super Nova 80",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/fruit-super-nova-80-bd110fa4.jpg"
+    },
+    {
+        "gameid": "2433",
+        "gamename": "Goblin Run",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/goblin-run-426426ec.jpg"
+    },
+    {
+        "gameid": "2441",
+        "gamename": "Goddess of the Night",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/goddess-of-the-night-5d07e4c7.png"
+    },
+    {
+        "gameid": "2440",
+        "gamename": "Goddess Of The Night Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/goddess-of-the-night-bonus-buy-cb7bab10.png"
+    },
+    {
+        "gameid": "2460",
+        "gamename": "Gold of Sirens",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/gold-of-sirens-53c8698d.jpg"
+    },
+    {
+        "gameid": "2463",
+        "gamename": "Gold of Sirens Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/gold-of-sirens-bonus-buy-6d77803c.jpg"
+    },
+    {
+        "gameid": "10393",
+        "gamename": "Good Luck Spell",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/good-luck-spell-ce2730fe.png"
+    },
+    {
+        "gameid": "10429",
+        "gamename": "Hercules: Sports Legend",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/hercules-sports-legend-852d46b0.png"
+    },
+    {
+        "gameid": "2608",
+        "gamename": "High Striker",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/high-striker-c8674909.jpg"
+    },
+    {
+        "gameid": "10430",
+        "gamename": "Hockey Shootout",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/hockey-shootout-16325f4b.jpg"
+    },
+    {
+        "gameid": "10476",
+        "gamename": "Hocus Pocus Sorcery",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/hocus-pocus-sorcery-e88e1fba.png"
+    },
+    {
+        "gameid": "10394",
+        "gamename": "Hot Mania",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/hot-mania-05f64f93.jpg"
+    },
+    {
+        "gameid": "2650",
+        "gamename": "Hot Rio Nights",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/hot-rio-nights-19bcba1b.jpg"
+    },
+    {
+        "gameid": "2648",
+        "gamename": "Hot Rio Nights Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/hot-rio-nights-bonus-buy-d78de858.jpg"
+    },
+    {
+        "gameid": "10461",
+        "gamename": "Hot Slice",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/hot-slice-32dd49e3.jpg"
+    },
+    {
+        "gameid": "2653",
+        "gamename": "Hot Triple Sevens",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/hot-triple-sevens-20a1747c.jpg"
+    },
+    {
+        "gameid": "2654",
+        "gamename": "Hot Triple Sevens Special",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/hot-triple-sevens-special-33208e69.jpg"
+    },
+    {
+        "gameid": "2655",
+        "gamename": "Hot Volcano",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/hot-volcano-0f89d637.jpg"
+    },
+    {
+        "gameid": "2656",
+        "gamename": "Hot Volcano Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/hot-volcano-bonus-buy-0b5b9b04.jpg"
+    },
+    {
+        "gameid": "2673",
+        "gamename": "Hungry Night",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/hungry-night-8d49368e.jpg"
+    },
+    {
+        "gameid": "2680",
+        "gamename": "Ice Mania",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/ice-mania-1ce3d6ea.jpg"
+    },
+    {
+        "gameid": "10444",
+        "gamename": "Ignis Rex",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/ignis-rex-b40d0482.png"
+    },
+    {
+        "gameid": "10445",
+        "gamename": "Imperial Relics: Three Pots",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/imperial-relics-three-pots-ab5dc157.png"
+    },
+    {
+        "gameid": "2700",
+        "gamename": "Indiana's Quest",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/indiana-s-quest-11bdbf31.jpg"
+    },
+    {
+        "gameid": "2707",
+        "gamename": "Inner Fire",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/inner-fire-f3f772d0.jpg"
+    },
+    {
+        "gameid": "2709",
+        "gamename": "Inner Fire Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/inner-fire-bonus-buy-42d608eb.jpg"
+    },
+    {
+        "gameid": "10467",
+        "gamename": "Instant Soccer",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/instant-soccer-6bdb0150.png"
+    },
+    {
+        "gameid": "2711",
+        "gamename": "Irish Reels",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/irish-reels-d347f123.jpg"
+    },
+    {
+        "gameid": "2714",
+        "gamename": "Irish Weekend",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/irish-weekend-8bfa30a8.jpg"
+    },
+    {
+        "gameid": "2716",
+        "gamename": "Irish Weekend Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/irish-weekend-bonus-buy-4ccb8e81.jpg"
+    },
+    {
+        "gameid": "2744",
+        "gamename": "Jelly Boom",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/jelly-boom-8a4d679b.jpg"
+    },
+    {
+        "gameid": "10397",
+        "gamename": "Jhana of God Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/jhana-of-god-bonus-buy-7309a01b.jpg"
+    },
+    {
+        "gameid": "10431",
+        "gamename": "Jhana of God: Scratch",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/jhana-of-god-scratch-d9b029ed.jpg"
+    },
+    {
+        "gameid": "2805",
+        "gamename": "Juicy Gems",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/juicy-gems-7f94f015.jpg"
+    },
+    {
+        "gameid": "2806",
+        "gamename": "Juicy Gems Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/juicy-gems-bonus-buy-646461be.jpg"
+    },
+    {
+        "gameid": "10466",
+        "gamename": "Lava Burst",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/lava-burst-e07ce208.png"
+    },
+    {
+        "gameid": "10398",
+        "gamename": "Legacy of the Sages",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/legacy-of-the-sages-351373bc.jpg"
+    },
+    {
+        "gameid": "10399",
+        "gamename": "Legacy of the Sages Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/legacy-of-the-sages-bonus-buy-0608d07d.jpg"
+    },
+    {
+        "gameid": "2910",
+        "gamename": "Legend of Ra",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/legend-of-ra-3f2fe3ab.jpg"
+    },
+    {
+        "gameid": "2958",
+        "gamename": "Long Ball",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/long-ball-e05447a2.jpg"
+    },
+    {
+        "gameid": "10475",
+        "gamename": "Luck Reactor",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/luck-reactor-aafa42bc.png"
+    },
+    {
+        "gameid": "2984",
+        "gamename": "Lucky Card",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/lucky-card-fbecd8e9.jpg"
+    },
+    {
+        "gameid": "2990",
+        "gamename": "Lucky Crumbling",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/lucky-crumbling-0cd1e9ec.jpg"
+    },
+    {
+        "gameid": "3007",
+        "gamename": "Lucky Girls",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/lucky-girls-deaae906.jpg"
+    },
+    {
+        "gameid": "3020",
+        "gamename": "Lucky Porker",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/lucky-porker-28ed4829.jpg"
+    },
+    {
+        "gameid": "3021",
+        "gamename": "Lucky Porker Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/lucky-porker-bonus-buy-e3383550.jpg"
+    },
+    {
+        "gameid": "10446",
+        "gamename": "Lunar Wilds",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/lunar-wilds-acfd3551.png"
+    },
+    {
+        "gameid": "7373",
+        "gamename": "Magic Wheel",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/magic-wheel-e29f39ff.jpg"
+    },
+    {
+        "gameid": "3092",
+        "gamename": "Mary's Mining Mania",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/mary-s-mining-mania-c76634cc.jpg"
+    },
+    {
+        "gameid": "3095",
+        "gamename": "Massive Luck",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/massive-luck-dd7c385a.jpg"
+    },
+    {
+        "gameid": "3096",
+        "gamename": "Massive Luck Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/massive-luck-bonus-buy-11bc3672.jpg"
+    },
+    {
+        "gameid": "3141",
+        "gamename": "Mega Greatest Catch",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/mega-greatest-catch-1fb3ead5.jpg"
+    },
+    {
+        "gameid": "10478",
+        "gamename": "Mega Greatest Catch Blue Marlin",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/mega-greatest-catch-blue-marlin-26e2e4e0.png"
+    },
+    {
+        "gameid": "3145",
+        "gamename": "Mega Greatest Catch Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/mega-greatest-catch-bonus-buy-12bcb401.jpg"
+    },
+    {
+        "gameid": "10400",
+        "gamename": "Mega Merry Gifts",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/mega-merry-gifts-0c219662.png"
+    },
+    {
+        "gameid": "3186",
+        "gamename": "Mine Field",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/mine-field-e7fd120e.jpg"
+    },
+    {
+        "gameid": "3208",
+        "gamename": "Money Minter",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/money-minter-f96bf732.jpg"
+    },
+    {
+        "gameid": "3209",
+        "gamename": "Money Minter Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/money-minter-bonus-buy-fb127138.jpg"
+    },
+    {
+        "gameid": "3312",
+        "gamename": "Neon Capital Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/neon-capital-bonus-buy-a6f63bbb.jpg"
+    },
+    {
+        "gameid": "3347",
+        "gamename": "Northern Temple",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/northern-temple-57bedef3.jpg"
+    },
+    {
+        "gameid": "3348",
+        "gamename": "Northern Temple Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/northern-temple-bonus-buy-1db5d397.jpg"
+    },
+    {
+        "gameid": "3349",
+        "gamename": "Nuke World",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/nuke-world-28d6d4ec.jpg"
+    },
+    {
+        "gameid": "10419",
+        "gamename": "Oasis Poker Classic",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/oasis-poker-classic-885a09c6.jpg"
+    },
+    {
+        "gameid": "10401",
+        "gamename": "Ocean Catch Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/ocean-catch-bonus-buy-d36b597f.jpg"
+    },
+    {
+        "gameid": "10432",
+        "gamename": "October Pub",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/october-pub-f850df78.jpg"
+    },
+    {
+        "gameid": "3363",
+        "gamename": "Old West",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/old-west-ec4c9956.jpg"
+    },
+    {
+        "gameid": "3396",
+        "gamename": "Patrick's Magic Field",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/patrick-s-magic-field-d9563865.jpg"
+    },
+    {
+        "gameid": "3405",
+        "gamename": "Penalty Series",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/penalty-series-416a57e5.jpg"
+    },
+    {
+        "gameid": "3406",
+        "gamename": "Penalty Shoot Out",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/penalty-shoot-out-d76613ab.jpg"
+    },
+    {
+        "gameid": "10434",
+        "gamename": "Penalty Shoot-out: Super Cup",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/penalty-shoot-out-super-cup-8f5d3e32.png"
+    },
+    {
+        "gameid": "10447",
+        "gamename": "Piggy Bank: 3 Pots Bonanza",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/piggy-bank-3-pots-bonanza-87e2e319.png"
+    },
+    {
+        "gameid": "3459",
+        "gamename": "Plingoball",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/plingoball-151995c1.jpg"
+    },
+    {
+        "gameid": "10455",
+        "gamename": "Plinko Blast",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/plinko-blast-c2b94521.png"
+    },
+    {
+        "gameid": "10435",
+        "gamename": "Pumpkin Master",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/pumpkin-master-aab7fc11.jpg"
+    },
+    {
+        "gameid": "10402",
+        "gamename": "Pyro Joker",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/pyro-joker-f245d989.jpg"
+    },
+    {
+        "gameid": "10469",
+        "gamename": "Queen of Sirens",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/queen-of-sirens-143f2db9.png"
+    },
+    {
+        "gameid": "3574",
+        "gamename": "Reign Of Dragons",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/reign-of-dragons-1712d767.jpg"
+    },
+    {
+        "gameid": "3597",
+        "gamename": "Rich Reels",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/rich-reels-349c0292.jpg"
+    },
+    {
+        "gameid": "3620",
+        "gamename": "Rise of Horus",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/rise-of-horus-208c25d2.jpg"
+    },
+    {
+        "gameid": "10374",
+        "gamename": "Robin Hood",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/robin-hood-75380ef8.jpg"
+    },
+    {
+        "gameid": "3649",
+        "gamename": "Rocket Stars",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/rocket-stars-edbed081.jpg"
+    },
+    {
+        "gameid": "10403",
+        "gamename": "Roman Rule",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/roman-rule-70c6de46.png"
+    },
+    {
+        "gameid": "3691",
+        "gamename": "Rueda De Chile",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/rueda-de-chile-624d360c.jpg"
+    },
+    {
+        "gameid": "3692",
+        "gamename": "Rueda De Chile Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/rueda-de-chile-bonus-buy-2f45a185.jpg"
+    },
+    {
+        "gameid": "10463",
+        "gamename": "Rush Riches",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/rush-riches-7f8026b4.png"
+    },
+    {
+        "gameid": "3736",
+        "gamename": "Save the Hamster",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/save-the-hamster-d8fdf0da.jpg"
+    },
+    {
+        "gameid": "3748",
+        "gamename": "Scratch Match",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/scratch-match-2f761313.jpg"
+    },
+    {
+        "gameid": "10405",
+        "gamename": "Sea of Wealth",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/sea-of-wealth-17bab196.png"
+    },
+    {
+        "gameid": "3775",
+        "gamename": "Shadow Of Luxor",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/shadow-of-luxor-41c6f9eb.jpg"
+    },
+    {
+        "gameid": "10448",
+        "gamename": "Sky Sentinels",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/sky-sentinels-a46155ce.png"
+    },
+    {
+        "gameid": "3848",
+        "gamename": "Soccer Solo Striker",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/soccer-solo-striker-330263d4.jpg"
+    },
+    {
+        "gameid": "3857",
+        "gamename": "Sold it",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/sold-it-f8ccb638.jpg"
+    },
+    {
+        "gameid": "3859",
+        "gamename": "Sold it Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/sold-it-bonus-buy-81b7828a.jpg"
+    },
+    {
+        "gameid": "3981",
+        "gamename": "Sweet Sugar",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/sweet-sugar-807dd9c5.jpg"
+    },
+    {
+        "gameid": "3998",
+        "gamename": "Talismans of Fortune",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/talismans-of-fortune-76ff1267.jpg"
+    },
+    {
+        "gameid": "10436",
+        "gamename": "Tap Craze",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/tap-craze-74d243a8.png"
+    },
+    {
+        "gameid": "4007",
+        "gamename": "Temple of Dead",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/temple-of-dead-51b3eb9a.jpg"
+    },
+    {
+        "gameid": "4008",
+        "gamename": "Temple of Dead Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/temple-of-dead-bonus-buy-55db7f5d.jpg"
+    },
+    {
+        "gameid": "4010",
+        "gamename": "Temple of Thunder",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/temple-of-thunder-d50a060c.png"
+    },
+    {
+        "gameid": "10406",
+        "gamename": "Temple of Thunder II",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/temple-of-thunder-ii-1c87606c.jpg"
+    },
+    {
+        "gameid": "10407",
+        "gamename": "Temple of Thunder II Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/temple-of-thunder-ii-bonus-buy-ba9852d1.jpg"
+    },
+    {
+        "gameid": "10420",
+        "gamename": "Texas Holdem Bonus",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/texas-holdem-bonus-180a2858.jpg"
+    },
+    {
+        "gameid": "10408",
+        "gamename": "The Belt Of Champion",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/the-belt-of-champion-c87ed6c3.jpg"
+    },
+    {
+        "gameid": "10409",
+        "gamename": "The Belt Of Champion Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/the-belt-of-champion-bonus-buy-c7c79b28.jpg"
+    },
+    {
+        "gameid": "10465",
+        "gamename": "The Easter Catch",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/the-easter-catch-2a2c3a4c.jpg"
+    },
+    {
+        "gameid": "4045",
+        "gamename": "The Emperor's Tomb",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/the-emperor-s-tomb-5d5a0ba0.jpg"
+    },
+    {
+        "gameid": "4056",
+        "gamename": "The Greatest Catch",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/the-greatest-catch-d8223bd6.jpg"
+    },
+    {
+        "gameid": "4055",
+        "gamename": "The Greatest Catch Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/the-greatest-catch-bonus-buy-c773d731.jpg"
+    },
+    {
+        "gameid": "4076",
+        "gamename": "The Slavs",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/the-slavs-9a5e5baf.jpg"
+    },
+    {
+        "gameid": "10410",
+        "gamename": "Thunder Mega Sevens",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/thunder-mega-sevens-54da30c6.png"
+    },
+    {
+        "gameid": "10411",
+        "gamename": "Thunder Mega Sevens Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/thunder-mega-sevens-bonus-buy-df90296a.png"
+    },
+    {
+        "gameid": "4158",
+        "gamename": "Treasure Mania",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/treasure-mania-de912764.jpg"
+    },
+    {
+        "gameid": "4167",
+        "gamename": "Treasure-Snipes",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/treasure-snipes-795f1a62.jpg"
+    },
+    {
+        "gameid": "4169",
+        "gamename": "Treasure-snipes Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/treasure-snipes-bonus-buy-151d3c27.jpg"
+    },
+    {
+        "gameid": "4170",
+        "gamename": "Treasure-snipes: Christmas",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/treasure-snipes-christmas-6108c128.jpg"
+    },
+    {
+        "gameid": "4171",
+        "gamename": "Treasure-snipes: Christmas Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/treasure-snipes-christmas-bonus-buy-178d7c70.jpg"
+    },
+    {
+        "gameid": "4175",
+        "gamename": "Tree of Light",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/tree-of-light-76d75f00.jpg"
+    },
+    {
+        "gameid": "4177",
+        "gamename": "Tree Of Light Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/tree-of-light-bonus-buy-9ea4cd42.jpg"
+    },
+    {
+        "gameid": "10459",
+        "gamename": "Tree of Light: Fabled Fruits",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/tree-of-light-fabled-fruits-8a140d6a.jpg"
+    },
+    {
+        "gameid": "10477",
+        "gamename": "Trick or Treat Joker",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/trick-or-treat-joker-4ad497bf.jpg"
+    },
+    {
+        "gameid": "10007",
+        "gamename": "Triple Chili",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/triple-chili-1d1664b8.jpg"
+    },
+    {
+        "gameid": "10438",
+        "gamename": "Uncrossable Rush",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/uncrossable-rush-e554ee46.png"
+    },
+    {
+        "gameid": "10457",
+        "gamename": "Uncrossable Rush XMas",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/uncrossable-rush-xmas-19fa9ca3.png"
+    },
+    {
+        "gameid": "4215",
+        "gamename": "Unlimited Treasures",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/unlimited-treasures-bdd19c5e.jpg"
+    },
+    {
+        "gameid": "4217",
+        "gamename": "Unlimited Treasures Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/unlimited-treasures-bonus-buy-266bbeab.jpg"
+    },
+    {
+        "gameid": "4216",
+        "gamename": "Unlimited Wishes",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/unlimited-wishes-9fcc010c.jpg"
+    },
+    {
+        "gameid": "4225",
+        "gamename": "Valley of Dreams",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/valley-of-dreams-345bf0b3.jpg"
+    },
+    {
+        "gameid": "10373",
+        "gamename": "Vegas Nights",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/vegas-nights-d84636f7.jpg"
+    },
+    {
+        "gameid": "10412",
+        "gamename": "Venice Festival",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/venice-festival-667308f1.png"
+    },
+    {
+        "gameid": "6815",
+        "gamename": "Video Poker",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/video-poker-3b51cef2.jpg"
+    },
+    {
+        "gameid": "4304",
+        "gamename": "Wild Bullets",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/wild-bullets-a03c904b.jpg"
+    },
+    {
+        "gameid": "4336",
+        "gamename": "Wild Overlords",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/wild-overlords-6fd78f51.jpg"
+    },
+    {
+        "gameid": "4338",
+        "gamename": "Wild Overlords Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/wild-overlords-bonus-buy-52c820ba.jpg"
+    },
+    {
+        "gameid": "10468",
+        "gamename": "Wild Pounce",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/wild-pounce-5758c545.png"
+    },
+    {
+        "gameid": "10413",
+        "gamename": "Winter Star",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/winter-star-2c17d48e.jpg"
+    },
+    {
+        "gameid": "10414",
+        "gamename": "Winter Star Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/winter-star-bonus-buy-5a19b907.jpg"
+    },
+    {
+        "gameid": "4385",
+        "gamename": "Wolf Hiding",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/wolf-hiding-00f5d049.jpg"
+    },
+    {
+        "gameid": "4386",
+        "gamename": "Wolf Hiding Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/wolf-hiding-bonus-buy-15f30d23.jpg"
+    },
+    {
+        "gameid": "4391",
+        "gamename": "Wonder Farm",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/wonder-farm-55b3e71c.jpg"
+    },
+    {
+        "gameid": "4392",
+        "gamename": "Wonder Farm Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/wonder-farm-bonus-buy-0d2d2482.jpg"
+    },
+    {
+        "gameid": "4401",
+        "gamename": "X-Demon",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/x-demon-1b3c2e9f.jpg"
+    },
+    {
+        "gameid": "4402",
+        "gamename": "X-Demon Bonus Buy",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/x-demon-bonus-buy-2f090260.jpg"
+    },
+    {
+        "gameid": "10450",
+        "gamename": "Young Buffalo Coins",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/young-buffalo-coins-806e13fb.png"
+    },
+    {
+        "gameid": "10460",
+        "gamename": "Young Buffalo Song",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/young-buffalo-song-dd0e9d11.jpg"
+    },
+    {
+        "gameid": "10452",
+        "gamename": "Young Deer Song",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/young-deer-song-5ced4f54.png"
+    },
+    {
+        "gameid": "10451",
+        "gamename": "Young Eagle Song",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/young-eagle-song-b0043ae8.png"
+    },
+    {
+        "gameid": "10415",
+        "gamename": "Young Wolf Song",
+        "providerName": "EvoPlay Asia",
+        "image": "https://providers.gambllyapi.com/assets/providers/EVOPLAYASIA/young-wolf-song-508d7d31.png"
+    }
+]
