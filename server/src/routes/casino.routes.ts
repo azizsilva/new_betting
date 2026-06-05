@@ -164,12 +164,21 @@ casinoRouter.post(
       return fail(res, DEFAULT_CURRENCY, "", "invalid signature");
     }
 
-    // Resolve the session → our user + currency.
-    const session = sessionid
+    // Resolve the session → our user + currency. Look up by sessionId first;
+    // if the provider's sessionid differs from what openGame returned, fall back
+    // to the player login (most recent session for that login).
+    const bodyLogin = (req.body as { login?: string })?.login ?? "";
+    let session = sessionid
       ? await prisma.gameSession.findUnique({ where: { sessionId: sessionid } })
       : null;
+    if (!session && bodyLogin) {
+      session = await prisma.gameSession.findFirst({
+        where: { login: bodyLogin },
+        orderBy: { createdAt: "desc" },
+      });
+    }
     const currency = session?.currency ?? DEFAULT_CURRENCY;
-    const login = (req.body as { login?: string })?.login ?? session?.login ?? "";
+    const login = bodyLogin || session?.login || "";
 
     if (!session) {
       logger.warn({ cmd, sessionidPrefix: sessionid.slice(0, 20), login }, "casino callback: unknown session");
