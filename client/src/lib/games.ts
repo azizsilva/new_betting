@@ -135,6 +135,8 @@ const LOCAL_IMAGES: Record<string, string> = {
   funkytime: "/images/EVO-funkytime.png",
   monopoly: "/images/EVO-monopoly.png",
   monopolylive: "/images/EVO-monopoly.png",
+  lightningstorm: "/images/EVO-lightningstorm.png",
+  parthenonquestforimmortality: "/images/NE-parthenonquestforimmortality.png",
 };
 
 // Resolve a catalog game → local image path. Exact slug match only — a loose

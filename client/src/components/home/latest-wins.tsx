@@ -1,43 +1,41 @@
 import { History } from "lucide-react";
-import Image from "next/image";
-import { formatMoney } from "@/lib/utils";
 
 const LATEST_WINS = [
   {
     id: 1,
     game: "Parthenon: Quest for Immortality",
-    multiplier: 668.70,
+    multiplier: 668.7,
     gain: 267.48,
-    image: "https://www.kingsbet.cz/build/images/sport-headers/cs-live.jpg" // Placeholder for game image
+    image: "/images/NE-parthenonquestforimmortality.png",
   },
   {
     id: 2,
     game: "MONOPOLY Live",
-    multiplier: 36.60,
-    gain: 366.00,
-    image: "https://www.kingsbet.cz/build/images/sport-headers/cs-live.jpg"
+    multiplier: 36.6,
+    gain: 366.0,
+    image: "/images/EVO-monopoly.png",
   },
   {
     id: 3,
     game: "MONOPOLY Live",
-    multiplier: 5.50,
-    gain: 220.00,
-    image: "https://www.kingsbet.cz/build/images/sport-headers/cs-live.jpg"
+    multiplier: 5.5,
+    gain: 220.0,
+    image: "/images/EVO-monopoly.png",
   },
   {
     id: 4,
     game: "Lightning Storm",
     multiplier: 71.77,
-    gain: 300.00,
-    image: "https://www.kingsbet.cz/build/images/sport-headers/cs-live.jpg"
+    gain: 300.0,
+    image: "/images/EVO-lightningstorm.png",
   },
   {
     id: 5,
     game: "Mega Ball",
     multiplier: 5.17,
-    gain: 206.80,
-    image: "https://www.kingsbet.cz/build/images/sport-headers/cs-live.jpg"
-  }
+    gain: 206.8,
+    image: "/images/EVO-crazytime.png",
+  },
 ];
 
 export function LatestWins() {
@@ -57,12 +55,13 @@ export function LatestWins() {
             className="flex items-center justify-between rounded-xl bg-surface-2/60 px-4 py-3 hover:bg-surface-2 transition-colors"
           >
             <div className="flex items-center gap-3">
-              <div className="relative size-10 overflow-hidden rounded-lg">
-                <Image
+              <div className="relative size-10 overflow-hidden rounded-lg bg-surface">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={win.image}
                   alt={win.game}
-                  fill
-                  className="object-cover"
+                  loading="lazy"
+                  className="absolute inset-0 size-full object-cover"
                 />
               </div>
               <div className="flex flex-col">
