@@ -17,8 +17,11 @@ const CALLBACK = process.env.GAMBLEHUB_CALLBACK_URL || "";
 
 const gameId = process.argv[2];
 const kind = (process.argv[3] || "slots") as "slots" | "live";
+// Optional 3rd arg: real player_login to test (defaults to "diagtest"). Use a
+// username that has successfully opened a game before to rule out provisioning.
+const playerLogin = process.argv[4] || "diagtest";
 if (!gameId) {
-  console.error('Usage: npx tsx scripts/test-open.ts "<gameId>" [slots|live]');
+  console.error('Usage: npx tsx scripts/test-open.ts "<gameId>" [slots|live] [playerLogin]');
   process.exit(1);
 }
 
@@ -32,7 +35,7 @@ function sign(body: string) {
 }
 
 async function main() {
-  console.log(`\n=== account=${kind} login=${login} currency=${CURRENCY} ===`);
+  console.log(`\n=== account=${kind} login=${login} player_login=${playerLogin} currency=${CURRENCY} ===`);
 
   // 1) login
   const lr = await fetch(`${OFFICE}/auth/login`, {
@@ -64,7 +67,7 @@ async function main() {
     exitUrl: "https://afrobet216.com",
     gameId,
     language: "en",
-    player_login: "diagtest",
+    player_login: playerLogin,
     user_id: String(userId),
   };
   if (CALLBACK) payload.callbackUrl = CALLBACK;
