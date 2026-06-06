@@ -139,10 +139,10 @@ const LOCAL_IMAGES: Record<string, string> = {
   baccarat: "/images/EVO-baccarat.png",
   blackjack: "/images/EVO-blackjack.png",
   crazycoinflip: "/images/EVO-crazycoinflip.png",
-  crazytime: "/images/EVO-crazytime.png",
+  crazytime: "/images/crazy_time.jpeg",
   funkytime: "/images/EVO-funkytime.png",
-  monopoly: "/images/EVO-monopoly.png",
-  monopolylive: "/images/EVO-monopoly.png",
+  monopoly: "/images/monopoly.jpeg",
+  monopolylive: "/images/monopoly.jpeg",
   lightningstorm: "/images/EVO-lightningstorm.png",
   parthenonquestforimmortality: "/images/NE-parthenonquestforimmortality.png",
 };
