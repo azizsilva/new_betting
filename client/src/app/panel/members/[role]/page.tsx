@@ -1,12 +1,14 @@
 "use client";
 
 import { use, useMemo, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import { Loader2, Search, X } from "lucide-react";
-import { getDownline, ROLE_LABEL } from "@/lib/panel-api";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { Loader2, Search, X, CheckCircle2, XCircle, PauseCircle, Edit } from "lucide-react";
+import { toast } from "sonner";
+import { getMembersByRole, setUserStatus, ROLE_LABEL } from "@/lib/panel-api";
 import { useDebounce } from "@/lib/use-debounce";
 import { formatMoney, cn } from "@/lib/utils";
-import type { UserRole } from "@/lib/types";
+import { InlineBanking } from "@/components/panel/inline-banking";
+import { EditUserModal } from "@/components/panel/edit-user-modal";
 
 // Per-role member list (Owners / Partners / Super Admins / Admins / Shops / Players).
 // xbet columns: Username · Password · Commission % · Balance · Credit Limit · Downline · Status.
@@ -15,15 +17,32 @@ export default function MembersByRolePage({
 }: {
   params: Promise<{ role: string }>;
 }) {
+  const qc = useQueryClient();
   const { role } = use(params);
   const label = ROLE_LABEL[role] ?? role;
 
   const [q, setQ] = useState("");
   const term = useDebounce(q, 250).trim().toLowerCase();
+  
+  const [editingUser, setEditingUser] = useState<{ id: number; username: string } | null>(null);
 
-  const { data, isLoading } = useQuery({ queryKey: ["downline"], queryFn: getDownline });
+  const { data, isLoading } = useQuery({ 
+    queryKey: ["members", role], 
+    queryFn: () => getMembersByRole(role) 
+  });
+
+  const statusMut = useMutation({
+    mutationFn: ({ id, status }: { id: number; status: "active" | "locked" | "suspended" }) =>
+      setUserStatus(id, status),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["members", role] });
+      toast.success("Status updated");
+    },
+    onError: () => toast.error("Could not update status"),
+  });
+
   const rows = useMemo(() => {
-    const inRole = (data ?? []).filter((u) => u.role === (role as UserRole));
+    const inRole = data ?? [];
     if (!term) return inRole;
     return inRole.filter(
       (u) =>
@@ -31,7 +50,7 @@ export default function MembersByRolePage({
         String(u.id).includes(term) ||
         (u.passwordText ?? "").toLowerCase().includes(term),
     );
-  }, [data, role, term]);
+  }, [data, term]);
 
   return (
     <div className="rounded-2xl border border-line bg-surface">
@@ -71,7 +90,7 @@ export default function MembersByRolePage({
         </div>
       ) : (
         <div className="overflow-x-auto">
-          <table className="w-full min-w-190 text-sm">
+          <table className="w-full min-w-[900px] text-sm">
             <thead>
               <tr className="border-b border-line text-left text-xs uppercase text-muted">
                 <th className="p-3 font-semibold">{label}</th>
@@ -79,7 +98,9 @@ export default function MembersByRolePage({
                 <th className="p-3 text-right font-semibold">Commission %</th>
                 <th className="p-3 text-right font-semibold">Balance</th>
                 <th className="p-3 text-right font-semibold">Credit Limit</th>
+                <th className="p-3 font-semibold">Banking</th>
                 <th className="p-3 text-center font-semibold">Status</th>
+                <th className="p-3 text-center font-semibold">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -93,23 +114,73 @@ export default function MembersByRolePage({
                   <td className="p-3 text-right tabular-nums">{Number(u.rate).toFixed(2)}</td>
                   <td className="p-3 text-right font-semibold tabular-nums">{formatMoney(u.balance, "")}</td>
                   <td className="p-3 text-right tabular-nums text-muted">{formatMoney(u.creditRef, "")}</td>
+                  <td className="p-3">
+                    <InlineBanking userId={u.id} />
+                  </td>
                   <td className="p-3 text-center">
                     <span
                       className={cn(
                         "rounded-full px-2 py-0.5 text-[11px] font-semibold capitalize",
-                        u.status === "active"
-                          ? "bg-brand/15 text-brand"
-                          : "bg-danger/15 text-danger",
+                        u.status === "active" ? "bg-brand/15 text-brand" :
+                        u.status === "locked" ? "bg-danger/15 text-danger" :
+                        "bg-yellow-500/15 text-yellow-500"
                       )}
                     >
                       {u.status}
                     </span>
+                  </td>
+                  <td className="p-3">
+                    <div className="flex items-center justify-center gap-2">
+                      {/* Active Button */}
+                      <button
+                        onClick={() => statusMut.mutate({ id: u.id, status: "active" })}
+                        disabled={u.status === "active"}
+                        className={cn("p-1 rounded-md transition-colors", u.status === "active" ? "opacity-30 cursor-not-allowed" : "hover:bg-brand/20 text-brand")}
+                        title="Activate"
+                      >
+                        <CheckCircle2 className="size-4" />
+                      </button>
+                      
+                      {/* Suspend Button */}
+                      <button
+                        onClick={() => statusMut.mutate({ id: u.id, status: "suspended" })}
+                        disabled={u.status === "suspended"}
+                        className={cn("p-1 rounded-md transition-colors", u.status === "suspended" ? "opacity-30 cursor-not-allowed" : "hover:bg-yellow-500/20 text-yellow-500")}
+                        title="Suspend"
+                      >
+                        <PauseCircle className="size-4" />
+                      </button>
+
+                      {/* Lock Button */}
+                      <button
+                        onClick={() => statusMut.mutate({ id: u.id, status: "locked" })}
+                        disabled={u.status === "locked"}
+                        className={cn("p-1 rounded-md transition-colors", u.status === "locked" ? "opacity-30 cursor-not-allowed" : "hover:bg-danger/20 text-danger")}
+                        title="Lock"
+                      >
+                        <XCircle className="size-4" />
+                      </button>
+
+                      {/* Edit Button */}
+                      <button
+                        onClick={() => setEditingUser({ id: u.id, username: u.username })}
+                        className="p-1 rounded-md hover:bg-gold/20 text-gold transition-colors ml-2 border-l border-line pl-3"
+                        title="Edit Account"
+                      >
+                        <Edit className="size-4" />
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
+      )}
+
+      {/* Edit User Modal */}
+      {editingUser && (
+        <EditUserModal user={editingUser} onClose={() => setEditingUser(null)} />
       )}
     </div>
   );

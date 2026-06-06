@@ -3,12 +3,13 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { Search, Loader2, CheckCircle2, XCircle, Settings, RefreshCw } from "lucide-react";
+import { Search, Loader2, CheckCircle2, XCircle, PauseCircle, Settings, RefreshCw, Edit } from "lucide-react";
 import { toast } from "sonner";
 import { getDownline, setUserStatus, ROLE_LABEL } from "@/lib/panel-api";
 import { useDebounce } from "@/lib/use-debounce";
 import { StatsBar } from "@/components/panel/stats-bar";
 import { InlineBanking } from "@/components/panel/inline-banking";
+import { EditUserModal } from "@/components/panel/edit-user-modal";
 import { useAuthStore } from "@/store/auth";
 import { formatMoney, cn } from "@/lib/utils";
 
@@ -17,6 +18,7 @@ export default function DashboardPage() {
   const me = useAuthStore((s) => s.user);
   const [q, setQ] = useState("");
   const [statusFilter, setStatusFilter] = useState<"all" | "active" | "locked" | "suspended">("all");
+  const [editingUser, setEditingUser] = useState<{ id: number; username: string } | null>(null);
 
   const { data, isLoading, isFetching, refetch } = useQuery({
     queryKey: ["downline"],
@@ -153,19 +155,61 @@ export default function DashboardPage() {
                       <InlineBanking userId={u.id} />
                     </td>
                     <td className="p-3 text-center">
-                      {u.status === "active" ? (
-                        <button onClick={() => statusMut.mutate({ id: u.id, status: "locked" })} title="Active — click to lock">
-                          <CheckCircle2 className="size-5 text-brand" />
-                        </button>
-                      ) : (
-                        <button onClick={() => statusMut.mutate({ id: u.id, status: "active" })} title={`${u.status} — click to activate`}>
-                          <XCircle className="size-5 text-danger" />
-                        </button>
-                      )}
+                      <span
+                        className={cn(
+                          "rounded-full px-2 py-0.5 text-[11px] font-semibold capitalize",
+                          u.status === "active" ? "bg-brand/15 text-brand" :
+                          u.status === "locked" ? "bg-danger/15 text-danger" :
+                          "bg-yellow-500/15 text-yellow-500"
+                        )}
+                      >
+                        {u.status}
+                      </span>
                     </td>
                     <td className="p-3">
-                      <div className="flex items-center justify-center gap-2">
-                        <Link href={`/panel/transfer?user=${u.id}`} className="text-muted hover:text-gold" title="Banking">
+                      <div className="flex items-center justify-center gap-1.5">
+                        {/* Active Button */}
+                        <button
+                          onClick={() => statusMut.mutate({ id: u.id, status: "active" })}
+                          disabled={u.status === "active"}
+                          className={cn("p-1 rounded-md transition-colors", u.status === "active" ? "opacity-30 cursor-not-allowed" : "hover:bg-brand/20 text-brand")}
+                          title="Activate"
+                        >
+                          <CheckCircle2 className="size-4" />
+                        </button>
+                        
+                        {/* Suspend Button */}
+                        <button
+                          onClick={() => statusMut.mutate({ id: u.id, status: "suspended" })}
+                          disabled={u.status === "suspended"}
+                          className={cn("p-1 rounded-md transition-colors", u.status === "suspended" ? "opacity-30 cursor-not-allowed" : "hover:bg-yellow-500/20 text-yellow-500")}
+                          title="Suspend"
+                        >
+                          <PauseCircle className="size-4" />
+                        </button>
+
+                        {/* Lock Button */}
+                        <button
+                          onClick={() => statusMut.mutate({ id: u.id, status: "locked" })}
+                          disabled={u.status === "locked"}
+                          className={cn("p-1 rounded-md transition-colors", u.status === "locked" ? "opacity-30 cursor-not-allowed" : "hover:bg-danger/20 text-danger")}
+                          title="Lock"
+                        >
+                          <XCircle className="size-4" />
+                        </button>
+
+                        <div className="h-4 w-px bg-line mx-1" />
+
+                        {/* Edit Button */}
+                        <button
+                          onClick={() => setEditingUser({ id: u.id, username: u.username })}
+                          className="p-1 rounded-md hover:bg-gold/20 text-gold transition-colors"
+                          title="Edit Account"
+                        >
+                          <Edit className="size-4" />
+                        </button>
+
+                        <Link href={`/panel/transfer?user=${u.id}`} className="p-1 rounded-md text-muted hover:bg-surface-2 hover:text-fg transition-colors" title="Banking">
                           <Settings className="size-4" />
                         </Link>
                       </div>
@@ -177,6 +221,10 @@ export default function DashboardPage() {
           </div>
         )}
       </div>
+
+      {editingUser && (
+        <EditUserModal user={editingUser} onClose={() => setEditingUser(null)} />
+      )}
     </div>
   );
 }

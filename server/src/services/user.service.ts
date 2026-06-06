@@ -1,8 +1,10 @@
 import { Prisma } from "@prisma/client";
+import type { UserRole } from "@prisma/client";
 import { prisma } from "../lib/prisma.js";
 import { Forbidden, NotFound } from "../lib/errors.js";
 import { canManage } from "../domain/hierarchy.js";
 import { sanitize } from "./auth.service.js";
+import { hashPassword } from "../lib/password.js";
 
 const D = (v: Prisma.Decimal.Value) => new Prisma.Decimal(v);
 
@@ -90,6 +92,62 @@ export async function setStatus(
       entityType: "user",
       entityId: String(targetId),
       newJson: { status },
+    },
+  });
+  return sanitize(updated);
+}
+
+// All users of a given role anywhere in the actor's recursive subtree.
+export async function listMembersByRole(actorId: number, role: UserRole) {
+  const rows = await prisma.$queryRaw<Array<{ id: number }>>`
+    WITH RECURSIVE tree AS (
+      SELECT id FROM users WHERE parent_id = ${actorId}
+      UNION ALL
+      SELECT u.id FROM users u JOIN tree t ON u.parent_id = t.id
+    )
+    SELECT id FROM tree;
+  `;
+  const ids = rows.map((r) => r.id);
+  if (ids.length === 0) return [];
+  const users = await prisma.user.findMany({
+    where: { id: { in: ids }, role },
+    orderBy: { createdAt: "desc" },
+    include: { _count: { select: { children: true } } },
+  });
+  return users.map((r) => {
+    const { _count, ...u } = r;
+    const availBalance = D(u.balance).add(u.creditRef).sub(u.exposure);
+    return {
+      ...sanitize(u),
+      passwordText: u.passwordText ?? "",
+      childrenCount: _count.children,
+      availBalance: availBalance.toString(),
+    };
+  });
+}
+
+// Edit username and/or password — hierarchy-gated.
+export async function updateUser(
+  actorId: number,
+  targetId: number,
+  data: { username?: string; password?: string },
+) {
+  await getManagedUser(actorId, targetId); // authorization
+  const updateData: Prisma.UserUpdateInput = {};
+  if (data.username) updateData.username = data.username;
+  if (data.password) {
+    updateData.passwordText = data.password;
+    updateData.password = await hashPassword(data.password);
+  }
+  const updated = await prisma.user.update({ where: { id: targetId }, data: updateData });
+  await prisma.auditLog.create({
+    data: {
+      actorId,
+      actorRole: "staff",
+      action: "user.update",
+      entityType: "user",
+      entityId: String(targetId),
+      newJson: { username: data.username },
     },
   });
   return sanitize(updated);

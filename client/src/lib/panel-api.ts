@@ -61,6 +61,21 @@ export async function setUserStatus(
   return data;
 }
 
+export async function getMembersByRole(role: string): Promise<DownlineUser[]> {
+  const { data } = await api.get<DownlineUser[]>(`/users/members/${role}`);
+  return data;
+}
+
+export interface UpdateUserInput {
+  username?: string;
+  password?: string;
+}
+
+export async function updateUser(id: number, input: UpdateUserInput): Promise<User> {
+  const { data } = await api.patch<User>(`/users/${id}`, input);
+  return data;
+}
+
 // ── Wallet / transfers ──
 
 export interface TransferInput {

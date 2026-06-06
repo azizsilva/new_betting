@@ -79,3 +79,29 @@ usersRouter.patch(
     res.json(await userService.setStatus(req.user!.id, id, status));
   }),
 );
+
+// GET /users/members/:role — all accounts of that role in the actor's subtree.
+usersRouter.get(
+  "/members/:role",
+  asyncHandler(async (req, res) => {
+    const role = z
+      .enum(["owner", "partner", "super_admin", "admin", "agent", "player"])
+      .parse(req.params.role);
+    res.json(await userService.listMembersByRole(req.user!.id, role));
+  }),
+);
+
+// PATCH /users/:id — edit username / password (hierarchy-gated).
+usersRouter.patch(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    const id = z.coerce.number().parse(req.params.id);
+    const body = z
+      .object({
+        username: z.string().min(3).max(50).optional(),
+        password: z.string().min(4).optional(),
+      })
+      .parse(req.body);
+    res.json(await userService.updateUser(req.user!.id, id, body));
+  }),
+);
