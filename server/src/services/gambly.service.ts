@@ -88,7 +88,7 @@ async function launchGamblyGameV1(params: GamblyLaunchParams): Promise<GamblyLau
   const transferId = data.transfer_id || `${memberAccount}:${params.gameUid}:${Date.now()}`;
 
   try {
-    await prisma.gameSession.upsert({
+    prisma.gameSession.upsert({
       where: { sessionId: transferId },
       create: {
         sessionId: transferId,
@@ -98,9 +98,9 @@ async function launchGamblyGameV1(params: GamblyLaunchParams): Promise<GamblyLau
         gameId: params.gameUid.slice(0, 100),
       },
       update: { userId: params.user.id, login: memberAccount.slice(0, 100), currency: CURRENCY },
-    });
+    }).catch((err) => logger.error({ transferId, err: err.message }, "gambly gameSession upsert failed"));
   } catch (err) {
-    logger.error({ transferId, err: (err as Error).message }, "gambly gameSession upsert failed");
+    // ignore
   }
 
   return { gameUrl: data.game_url };

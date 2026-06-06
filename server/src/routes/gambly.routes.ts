@@ -94,19 +94,20 @@ gamblyRouter.post(
       homeUrl: env.CLIENT_ORIGIN.split(",")[0]!.trim(),
     });
 
+    // Send response immediately for faster perceived launch time
+    res.json({ url: result.gameUrl });
+
     // Best-effort recent-game tracking (never break the launch on a race).
     try {
       const gameId = body.gameUid.slice(0, 50);
-      await prisma.recentGame.upsert({
+      prisma.recentGame.upsert({
         where: { userId_gameId: { userId: user.id, gameId } },
         create: { userId: user.id, gameId },
         update: {},
-      });
+      }).catch((err) => logger.warn({ err: err.message }, "gambly recentGame upsert skipped"));
     } catch (err) {
-      logger.warn({ err: (err as Error).message }, "gambly recentGame upsert skipped");
+      // ignore
     }
-
-    res.json({ url: result.gameUrl });
   }),
 );
 
