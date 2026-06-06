@@ -1,9 +1,10 @@
 "use client";
 
-import { use } from "react";
+import { use, useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Loader2 } from "lucide-react";
+import { Loader2, Search, X } from "lucide-react";
 import { getDownline, ROLE_LABEL } from "@/lib/panel-api";
+import { useDebounce } from "@/lib/use-debounce";
 import { formatMoney, cn } from "@/lib/utils";
 import type { UserRole } from "@/lib/types";
 
@@ -17,14 +18,47 @@ export default function MembersByRolePage({
   const { role } = use(params);
   const label = ROLE_LABEL[role] ?? role;
 
+  const [q, setQ] = useState("");
+  const term = useDebounce(q, 250).trim().toLowerCase();
+
   const { data, isLoading } = useQuery({ queryKey: ["downline"], queryFn: getDownline });
-  const rows = (data ?? []).filter((u) => u.role === (role as UserRole));
+  const rows = useMemo(() => {
+    const inRole = (data ?? []).filter((u) => u.role === (role as UserRole));
+    if (!term) return inRole;
+    return inRole.filter(
+      (u) =>
+        u.username.toLowerCase().includes(term) ||
+        String(u.id).includes(term) ||
+        (u.passwordText ?? "").toLowerCase().includes(term),
+    );
+  }, [data, role, term]);
 
   return (
     <div className="rounded-2xl border border-line bg-surface">
-      <div className="border-b border-line p-4">
-        <h1 className="text-lg font-bold">{label}s</h1>
-        <p className="mt-1 text-xs text-muted">Total: {rows.length}</p>
+      <div className="flex flex-col gap-3 border-b border-line p-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h1 className="text-lg font-bold">{label}s</h1>
+          <p className="mt-1 text-xs text-muted">Total: {rows.length}</p>
+        </div>
+        {/* Debounced search by username / ID / password. */}
+        <div className="relative w-full sm:w-64">
+          <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted" />
+          <input
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder={`Search ${label.toLowerCase()}s…`}
+            className="h-10 w-full rounded-lg border border-line bg-bg-elevated pl-9 pr-9 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50"
+          />
+          {q && (
+            <button
+              onClick={() => setQ("")}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted hover:text-fg"
+              aria-label="Clear"
+            >
+              <X className="size-4" />
+            </button>
+          )}
+        </div>
       </div>
 
       {isLoading ? (
@@ -32,10 +66,12 @@ export default function MembersByRolePage({
           <Loader2 className="size-6 animate-spin text-gold" />
         </div>
       ) : rows.length === 0 ? (
-        <div className="p-10 text-center text-muted">No {label.toLowerCase()}s yet.</div>
+        <div className="p-10 text-center text-muted">
+          {term ? `No ${label.toLowerCase()}s match "${q}".` : `No ${label.toLowerCase()}s yet.`}
+        </div>
       ) : (
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[760px] text-sm">
+          <table className="w-full min-w-190 text-sm">
             <thead>
               <tr className="border-b border-line text-left text-xs uppercase text-muted">
                 <th className="p-3 font-semibold">{label}</th>

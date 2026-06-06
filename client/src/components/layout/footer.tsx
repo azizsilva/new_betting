@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Send, MessageCircle, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
+import { FaTelegram, FaInstagram, FaEnvelope } from "react-icons/fa6";
 import { Logo } from "@/components/logo";
 
 const ACTIVITIES = [
@@ -29,18 +30,29 @@ export function Footer() {
           <p className="mt-3 text-sm text-muted">© 2020–{new Date().getFullYear()} AfroBet216</p>
           <div className="mt-4 flex gap-2">
             <a
-              href="#"
+              href="https://t.me/afrobet216"
+              target="_blank"
+              rel="noopener noreferrer"
               className="grid size-9 place-items-center rounded-lg border border-line text-fg hover:border-gold/50 hover:text-gold"
               aria-label="Telegram"
             >
-              <Send className="size-4" />
+              <FaTelegram className="size-4" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/afrobet216"
+              target="_blank"
+              rel="noopener noreferrer"
               className="grid size-9 place-items-center rounded-lg border border-line text-fg hover:border-gold/50 hover:text-gold"
               aria-label="Instagram"
             >
-              <MessageCircle className="size-4" />
+              <FaInstagram className="size-4" />
+            </a>
+            <a
+              href="mailto:contact@afrobet216.com"
+              className="grid size-9 place-items-center rounded-lg border border-line text-fg hover:border-gold/50 hover:text-gold"
+              aria-label="Email"
+            >
+              <FaEnvelope className="size-4" />
             </a>
           </div>
         </div>

@@ -1,10 +1,11 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { use, useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { Loader2, X, AlertTriangle } from "lucide-react";
 import { openGame } from "@/lib/casino-api";
+import { fetchMe } from "@/lib/auth-api";
 import { useAuthStore } from "@/store/auth";
 import { useUiStore } from "@/store/ui";
 
@@ -23,9 +24,40 @@ export default function PlayGamePage({
   const account: "slots" | "live" | "gambly" =
     accParam === "live" ? "live" : accParam === "gambly" ? "gambly" : "slots";
   const accessToken = useAuthStore((s) => s.accessToken);
+  const setUser = useAuthStore((s) => s.setUser);
   const openLoginModal = useUiStore((s) => s.openLoginModal);
   const [url, setUrl] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  // Pull the latest balance from the server and update the store (no reload).
+  const refreshBalance = useCallback(async () => {
+    try {
+      const me = await fetchMe();
+      setUser(me);
+    } catch {
+      /* ignore — balance just stays as-is */
+    }
+  }, [setUser]);
+
+  // While in-game, refresh the balance periodically so bets/wins reflect live,
+  // and once more when the tab regains focus or the player navigates away.
+  useEffect(() => {
+    if (!url) return;
+    const id = setInterval(refreshBalance, 8000);
+    const onVis = () => document.visibilityState === "visible" && refreshBalance();
+    document.addEventListener("visibilitychange", onVis);
+    return () => {
+      clearInterval(id);
+      document.removeEventListener("visibilitychange", onVis);
+      void refreshBalance(); // final sync on unmount (exit)
+    };
+  }, [url, refreshBalance]);
+
+  // Exit → sync balance first, then leave (header shows the cut balance instantly).
+  const exit = useCallback(() => {
+    void refreshBalance();
+    router.push("/casino");
+  }, [refreshBalance, router]);
 
   useEffect(() => {
     // Safety net behind the card-level gate: guests can't open a session.
@@ -71,7 +103,7 @@ export default function PlayGamePage({
       <div className="flex items-center justify-between border-b border-line bg-surface px-4 py-2">
         <span className="text-sm font-semibold text-fg/80">Game</span>
         <button
-          onClick={() => router.push("/casino")}
+          onClick={exit}
           className="flex items-center gap-1.5 rounded-lg bg-bg-elevated px-3 py-1.5 text-sm font-medium text-fg hover:text-danger"
           aria-label="Exit game"
         >
@@ -85,7 +117,7 @@ export default function PlayGamePage({
             <AlertTriangle className="size-8 text-danger" />
             <p className="max-w-sm px-6 text-sm">{error}</p>
             <button
-              onClick={() => router.push("/casino")}
+              onClick={exit}
               className="rounded-lg bg-gold-gradient px-4 py-2 text-sm font-bold text-brand-foreground"
             >
               Back to casino

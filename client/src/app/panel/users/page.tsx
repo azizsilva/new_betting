@@ -6,6 +6,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Search, Loader2, CheckCircle2, XCircle, Settings, RefreshCw } from "lucide-react";
 import { toast } from "sonner";
 import { getDownline, setUserStatus, ROLE_LABEL } from "@/lib/panel-api";
+import { useDebounce } from "@/lib/use-debounce";
 import { StatsBar } from "@/components/panel/stats-bar";
 import { InlineBanking } from "@/components/panel/inline-banking";
 import { useAuthStore } from "@/store/auth";
@@ -32,15 +33,20 @@ export default function DashboardPage() {
     onError: () => toast.error("Could not update status"),
   });
 
+  const term = useDebounce(q, 250).trim().toLowerCase();
   const rows = useMemo(() => {
-    const term = q.trim().toLowerCase();
     return (data ?? []).filter((u) => {
       if (statusFilter !== "all" && u.status !== statusFilter) return false;
-      if (term && !u.username.toLowerCase().includes(term) && !String(u.id).includes(term))
+      if (
+        term &&
+        !u.username.toLowerCase().includes(term) &&
+        !String(u.id).includes(term) &&
+        !(u.passwordText ?? "").toLowerCase().includes(term)
+      )
         return false;
       return true;
     });
-  }, [data, q, statusFilter]);
+  }, [data, term, statusFilter]);
 
   const childLabel = rows[0]?.role ? ROLE_LABEL[rows[0].role] ?? rows[0].role : "Downline";
 
@@ -97,7 +103,7 @@ export default function DashboardPage() {
           <div className="p-10 text-center text-muted">No {childLabel.toLowerCase()} found.</div>
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[920px] text-sm">
+            <table className="w-full min-w-230 text-sm">
               <thead>
                 <tr className="border-b border-line text-left text-xs uppercase text-muted">
                   <th className="p-3 font-semibold">Username</th>
