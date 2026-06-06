@@ -26,7 +26,6 @@ const NAV = [
   { label: "Casino", href: "/casino?tab=casino", tab: "casino" },
   { label: "Live Casino", href: "/casino?tab=live-casino", tab: "live-casino", live: true },
   { label: "Instant", href: "/casino?tab=instant", tab: "instant" },
-  { label: "Promotions", href: "/promotions" },
 ];
 
 // Active when the path matches — and, for the /casino tabs, when the ?tab also

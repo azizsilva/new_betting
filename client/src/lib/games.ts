@@ -255,16 +255,12 @@ interface CuratedPick {
 }
 
 const HOME_CASINO: CuratedPick[] = [
-  { slug: "munchymilo", name: "Munchy Milo", provider: "Hacksaw" },
-  { slug: "bookofdeadgocollect", name: "Book of Dead Go Collect", provider: "Play'n GO" },
-  { slug: "jellyexpress", name: "Jelly Express", provider: "Pragmatic Play" },
-  { slug: "powerofthormegaways", name: "Power of Thor Megaways", provider: "Pragmatic Play" },
-  { slug: "bigbassholdspinnermegaways", name: "Big Bass Hold & Spinner Megaways", provider: "Pragmatic Play" },
-  { slug: "bigbasskeepingitreel", name: "Big Bass Keeping It Reel", provider: "Pragmatic Play" },
-  { slug: "sweetbonanza1000", name: "Sweet Bonanza 1000", provider: "Pragmatic Play" },
-  { slug: "madamedestinymegaways", name: "Madame Destiny Megaways", provider: "Pragmatic Play" },
-  { slug: "aztecgemsmegaways", name: "Aztec Gems Megaways", provider: "Pragmatic Play" },
-  { slug: "parthenonquestforimmortality", name: "Parthenon: Quest for Immortality", provider: "NetEnt" },
+  { slug: "gatesofolympus",            name: "Gates of Olympus",           provider: "Pragmatic Play" },
+  { slug: "alwaysfruits",              name: "Always Fruits",              provider: "Pragmatic Play" },
+  { slug: "hothotfruits",              name: "Hot Hot Fruits",             provider: "Pragmatic Play" },
+  { slug: "wanteddeadorawild",         name: "Wanted Dead or a Wild",      provider: "Hacksaw" },
+  { slug: "bigbassholdspinnermegaways", name: "Big Bass Hold & Spinner",   provider: "Pragmatic Play" },
+  { slug: "billyonair",                name: "Billy on Air",               provider: "Pragmatic Play" },
 ];
 
 // Live games — local Evolution art, launched via Gamblly. `match` lists the

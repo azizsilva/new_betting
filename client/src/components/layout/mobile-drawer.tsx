@@ -18,7 +18,6 @@ const NAV = [
   { label: "Casino",      href: "/casino?tab=casino",       icon: "icon-games" },
   { label: "Live Casino", href: "/casino?tab=live-casino",  icon: "icon-live-casino-nav" },
   { label: "Instant",     href: "/casino?tab=instant",      icon: "icon-crash-rocket" },
-  { label: "Promotions",  href: "/promotions",              icon: "icon-promotions" },
 ];
 
 const COMMUNITY = [
