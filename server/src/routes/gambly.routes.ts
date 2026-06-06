@@ -123,7 +123,7 @@ const callbackSchema = z.object({
   action: z.string().default("bet_win"),
   game_uid: z.string().optional(),
   game_name: z.string().optional(),
-  txn_id: z.string().min(1),
+  txn_id: z.string().optional(),
   game_round: z.string().optional(),
   currency_code: z.string().optional(),
   api_key: z.string().optional(),
@@ -169,6 +169,7 @@ gamblyRouter.post(
 
       // bet>0 → debit (idempotent on txn_id+"bet").
       if (bet > 0) {
+        if (!b.txn_id) throw new Error("Missing txn_id for bet");
         const r = await processGameCallback({
           userId: session.userId,
           action: "bet",
@@ -185,6 +186,7 @@ gamblyRouter.post(
 
       // win>0 → credit (idempotent on txn_id+"win"; distinct action key).
       if (win > 0) {
+        if (!b.txn_id) throw new Error("Missing txn_id for win");
         const r = await processGameCallback({
           userId: session.userId,
           action: "win",
@@ -201,6 +203,7 @@ gamblyRouter.post(
 
       // refund/rollback → restore the stake.
       if (b.action === "refund" && bet === 0) {
+        if (!b.txn_id) throw new Error("Missing txn_id for refund");
         const r = await processGameCallback({
           userId: session.userId,
           action: "refund",

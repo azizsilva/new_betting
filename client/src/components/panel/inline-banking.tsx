@@ -6,6 +6,8 @@ import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { isAxiosError } from "axios";
 import { transfer } from "@/lib/panel-api";
+import { fetchMe } from "@/lib/auth-api";
+import { useAuthStore } from "@/store/auth";
 
 // Inline amount + D / W buttons (xbet banking row): deposit credit down to the
 // user, or withdraw it back up. Optimistically refetches downline + stats.
@@ -16,11 +18,19 @@ export function InlineBanking({ userId }: { userId: number }) {
   const mut = useMutation({
     mutationFn: (type: "deposit" | "withdrawal") =>
       transfer({ targetUserId: userId, amount, type }),
-    onSuccess: (_d, type) => {
+    onSuccess: async (_d, type) => {
       qc.invalidateQueries({ queryKey: ["downline"] });
       qc.invalidateQueries({ queryKey: ["downline-stats"] });
       qc.invalidateQueries({ queryKey: ["me"] });
       qc.invalidateQueries({ queryKey: ["transactions"] });
+      
+      try {
+        const me = await fetchMe();
+        useAuthStore.getState().setUser(me);
+      } catch {
+        /* ignore */
+      }
+
       toast.success(`${type === "deposit" ? "Deposited" : "Withdrew"} ${amount}`);
       setAmount("");
     },

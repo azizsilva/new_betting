@@ -7,6 +7,8 @@ import { Loader2, ArrowLeftRight } from "lucide-react";
 import { toast } from "sonner";
 import { isAxiosError } from "axios";
 import { getDownline, transfer } from "@/lib/panel-api";
+import { fetchMe } from "@/lib/auth-api";
+import { useAuthStore } from "@/store/auth";
 import { formatMoney, cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -24,10 +26,18 @@ function TransferInner() {
 
   const mut = useMutation({
     mutationFn: transfer,
-    onSuccess: () => {
+    onSuccess: async () => {
       qc.invalidateQueries({ queryKey: ["downline"] });
       qc.invalidateQueries({ queryKey: ["transactions"] });
       qc.invalidateQueries({ queryKey: ["me"] });
+      
+      try {
+        const me = await fetchMe();
+        useAuthStore.getState().setUser(me);
+      } catch {
+        /* ignore */
+      }
+
       toast.success("Transfer completed");
       setAmount("");
       setDescription("");

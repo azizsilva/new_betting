@@ -31,30 +31,15 @@ export function Jackpots() {
 
   useEffect(() => {
     let frameId: number;
-    let lastTime = performance.now();
 
-    // Read saved values or start from zero
-    const savedStr = localStorage.getItem("afrobet_jackpot_values");
-    let currentValues = savedStr ? JSON.parse(savedStr) : [0, 0, 0];
-
-    const tick = (time: number) => {
-      const delta = (time - lastTime) / 1000;
-      lastTime = time;
-
-      // Pure incremental counter, not a clock
-      currentValues = currentValues.map((val: number, i: number) => {
-        let next = val + INITIAL_JACKPOTS[i].speed * delta;
-        if (next >= 1000000) {
-          next = 0; // reset to 000000.00 when reaching 1,000,000
-        }
-        return next;
-      });
-
-      setAmounts([...currentValues]);
-      
-      // Save state so it continues exactly where it left off on refresh
-      localStorage.setItem("afrobet_jackpot_values", JSON.stringify(currentValues));
-
+    const tick = () => {
+      // Calculate amount based on exact time so it continues across refreshes
+      const now = Date.now() / 1000;
+      setAmounts(
+        INITIAL_JACKPOTS.map((j) => {
+          return (now * j.speed) % 100000;
+        })
+      );
       frameId = requestAnimationFrame(tick);
     };
 
@@ -63,11 +48,10 @@ export function Jackpots() {
   }, []);
 
   const formatAmount = (val: number) => {
-    // Format without leading zeros so it doesn't look like a time
     const s = val.toFixed(2);
     const parts = s.split(".");
     return {
-      amount: parts[0],
+      amount: parts[0]!.padStart(6, "0"),
       cents: parts[1],
     };
   };
