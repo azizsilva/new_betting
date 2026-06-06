@@ -53,11 +53,15 @@ export default function PlayGamePage({
     };
   }, [url, refreshBalance]);
 
+  const [isExiting, setIsExiting] = useState(false);
+
   // Exit → sync balance first, then leave (header shows the cut balance instantly).
-  const exit = useCallback(() => {
-    void refreshBalance();
+  const exit = useCallback(async () => {
+    if (isExiting) return;
+    setIsExiting(true);
+    await refreshBalance();
     router.push("/casino");
-  }, [refreshBalance, router]);
+  }, [refreshBalance, router, isExiting]);
 
   useEffect(() => {
     // Safety net behind the card-level gate: guests can't open a session.
@@ -104,10 +108,12 @@ export default function PlayGamePage({
         <span className="text-sm font-semibold text-fg/80">Game</span>
         <button
           onClick={exit}
-          className="flex items-center gap-1.5 rounded-lg bg-bg-elevated px-3 py-1.5 text-sm font-medium text-fg hover:text-danger"
+          disabled={isExiting}
+          className="flex items-center gap-1.5 rounded-lg bg-bg-elevated px-3 py-1.5 text-sm font-medium text-fg hover:text-danger disabled:opacity-50"
           aria-label="Exit game"
         >
-          <X className="size-4" /> Exit
+          {isExiting ? <Loader2 className="size-4 animate-spin" /> : <X className="size-4" />} 
+          {isExiting ? "Syncing..." : "Exit"}
         </button>
       </div>
 

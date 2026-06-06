@@ -278,7 +278,7 @@ function ok(balance: number) {
 // Resolve the most recent session for a member_account (player_uid).
 async function resolveSession(playerUid: string) {
   return prisma.gameSession.findFirst({
-    where: { login: playerUid },
+    where: { login: { equals: playerUid, mode: "insensitive" } },
     orderBy: { createdAt: "desc" },
   });
 }

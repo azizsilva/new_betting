@@ -255,7 +255,7 @@ casinoRouter.post(
       : null;
     if (!session && bodyLogin) {
       session = await prisma.gameSession.findFirst({
-        where: { login: bodyLogin },
+        where: { login: { equals: bodyLogin, mode: "insensitive" } },
         orderBy: { createdAt: "desc" },
       });
     }
