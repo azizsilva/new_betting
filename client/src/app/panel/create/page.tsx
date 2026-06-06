@@ -18,8 +18,6 @@ export default function CreateUserPage() {
   const [form, setForm] = useState({
     username: "",
     password: "",
-    mobile: "",
-    email: "",
     role: (roles[0] ?? "player") as UserRole,
     rate: 100,
   });
@@ -30,7 +28,7 @@ export default function CreateUserPage() {
       qc.invalidateQueries({ queryKey: ["downline"] });
       qc.invalidateQueries({ queryKey: ["subtree"] });
       toast.success(`Created ${u.username} (ID ${u.id})`);
-      setForm((f) => ({ ...f, username: "", password: "", mobile: "", email: "" }));
+      setForm((f) => ({ ...f, username: "", password: "" }));
     },
     onError: (e) =>
       toast.error(
@@ -65,8 +63,6 @@ export default function CreateUserPage() {
           mut.mutate({
             username: form.username.trim(),
             password: form.password,
-            mobile: form.mobile.trim(),
-            email: form.email.trim() || undefined,
             role: form.role,
             rate: Number(form.rate),
           });
@@ -78,12 +74,6 @@ export default function CreateUserPage() {
         </Field>
         <Field label="Password">
           <input className={input} type="text" value={form.password} onChange={(e) => set("password", e.target.value)} required minLength={4} />
-        </Field>
-        <Field label="Mobile">
-          <input className={input} value={form.mobile} onChange={(e) => set("mobile", e.target.value)} required />
-        </Field>
-        <Field label="Email (optional)">
-          <input className={input} type="email" value={form.email} onChange={(e) => set("email", e.target.value)} />
         </Field>
         <Field label="Role">
           <select className={input} value={form.role} onChange={(e) => set("role", e.target.value)}>

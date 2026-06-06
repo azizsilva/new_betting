@@ -14,6 +14,7 @@ export interface SubtreeNode {
 export interface DownlineUser extends User {
   childrenCount: number;
   availBalance: string;
+  passwordText?: string; // plaintext password shown in staff tables (panel req)
 }
 
 export async function getDownline(): Promise<DownlineUser[]> {
@@ -41,7 +42,7 @@ export async function getSubtree(): Promise<SubtreeNode[]> {
 export interface CreateUserInput {
   username: string;
   password: string;
-  mobile: string;
+  mobile?: string;
   email?: string;
   role: UserRole;
   rate?: number;

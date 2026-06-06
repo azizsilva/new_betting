@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { z } from "zod";
 import { asyncHandler } from "../middleware/error.js";
-import { authenticate } from "../middleware/auth.js";
+import { authenticate, requireRole } from "../middleware/auth.js";
 import { processGameCallback } from "../services/gameCallback.service.js";
 import { getUserGames, openGame } from "../services/gambleHub.service.js";
 import { verifyHmac } from "../lib/hmac.js";
@@ -67,6 +67,7 @@ const openSchema = z.object({
 casinoRouter.post(
   "/open",
   authenticate,
+  requireRole("player"), // only players can enter/play games
   asyncHandler(async (req, res) => {
     const body = openSchema.parse(req.body);
     const user = await prisma.user.findUnique({

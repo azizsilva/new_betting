@@ -19,6 +19,8 @@ export async function listDownline(actorId: number) {
     const availBalance = D(u.balance).add(u.creditRef).sub(u.exposure);
     return {
       ...sanitize(u),
+      // Staff downline tables show the member's plaintext password (panel req).
+      passwordText: u.passwordText ?? "",
       childrenCount: _count.children,
       availBalance: availBalance.toString(),
     };

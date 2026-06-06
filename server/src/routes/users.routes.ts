@@ -20,7 +20,7 @@ const ROLES = [
 const createSchema = z.object({
   username: z.string().min(3).max(50),
   password: z.string().min(4),
-  mobile: z.string().min(3).max(15),
+  mobile: z.string().max(15).optional(),
   email: z.string().email().optional(),
   role: z.enum(ROLES),
   rate: z.number().min(0).max(100).optional(),

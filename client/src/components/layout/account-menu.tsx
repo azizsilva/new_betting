@@ -20,6 +20,9 @@ export function AccountMenu({ user }: { user: User }) {
   const ref = useRef<HTMLDivElement>(null);
   const { data: cashback } = useCashback();
   const countdown = useCountdown(cashback?.nextPayoutAt);
+  // admin_provider has an unlimited network balance (infinite source).
+  const unlimited = user.role === "admin_provider";
+  const balanceText = unlimited ? "∞" : formatMoney(user.balance, "");
 
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
@@ -48,7 +51,7 @@ export function AccountMenu({ user }: { user: User }) {
         className="flex h-10 items-center gap-2 rounded-lg border border-line bg-surface px-3 transition-colors hover:border-gold/40"
       >
         <Wallet className="size-4 text-gold" />
-        <span className="text-sm font-semibold tabular-nums">{formatMoney(user.balance, "")}</span>
+        <span className="text-sm font-semibold tabular-nums">{balanceText}</span>
         <ChevronDown className={cn("size-4 text-muted transition-transform", open && "rotate-180")} />
       </button>
 
@@ -59,7 +62,7 @@ export function AccountMenu({ user }: { user: User }) {
             <div className="flex items-center justify-between">
               <span className="text-xs text-muted">Balance</span>
               <span className="font-bold tabular-nums">
-                {formatMoney(user.balance, "")} <span className="text-xs text-muted">TND</span>
+                {balanceText} {!unlimited && <span className="text-xs text-muted">TND</span>}
               </span>
             </div>
             <div className="mt-1 flex items-center justify-between">

@@ -39,6 +39,7 @@ export default function MembersByRolePage({
             <thead>
               <tr className="border-b border-line text-left text-xs uppercase text-muted">
                 <th className="p-3 font-semibold">{label}</th>
+                <th className="p-3 font-semibold">Password</th>
                 <th className="p-3 text-right font-semibold">Commission %</th>
                 <th className="p-3 text-right font-semibold">Balance</th>
                 <th className="p-3 text-right font-semibold">Credit Limit</th>
@@ -52,6 +53,7 @@ export default function MembersByRolePage({
                     <div className="font-semibold text-gold">{u.username}</div>
                     <div className="text-[11px] text-muted">ID {u.id}</div>
                   </td>
+                  <td className="p-3 font-mono text-xs">{u.passwordText || "—"}</td>
                   <td className="p-3 text-right tabular-nums">{Number(u.rate).toFixed(2)}</td>
                   <td className="p-3 text-right font-semibold tabular-nums">{formatMoney(u.balance, "")}</td>
                   <td className="p-3 text-right tabular-nums text-muted">{formatMoney(u.creditRef, "")}</td>

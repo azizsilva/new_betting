@@ -54,9 +54,11 @@ export default function PlayGamePage({
         const status = e?.response?.status;
         const providerMsg = e?.response?.data?.message as string | undefined;
         const friendly =
-          status === 400
-            ? "Ce jeu n'est pas disponible pour le moment. Essayez un autre jeu."
-            : providerMsg || e?.message || "Impossible d'ouvrir le jeu.";
+          status === 403
+            ? "Seuls les joueurs peuvent ouvrir les jeux."
+            : status === 400
+              ? "Ce jeu n'est pas disponible pour le moment. Essayez un autre jeu."
+              : providerMsg || e?.message || "Impossible d'ouvrir le jeu.";
         setError(friendly);
       });
     return () => {

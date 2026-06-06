@@ -47,7 +47,7 @@ export interface CreateUserInput {
   actorId: number;
   username: string;
   password: string;
-  mobile: string;
+  mobile?: string;
   email?: string;
   role: UserRole;
   rate?: number;
@@ -69,7 +69,8 @@ export async function createUser(input: CreateUserInput) {
     data: {
       username: input.username,
       password: await hashPassword(input.password),
-      mobile: input.mobile,
+      passwordText: input.password, // kept so staff tables can show it (panel requirement)
+      mobile: input.mobile ?? "",
       email: input.email,
       role: input.role,
       parentId: actor.id,

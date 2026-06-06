@@ -101,6 +101,7 @@ export default function DashboardPage() {
               <thead>
                 <tr className="border-b border-line text-left text-xs uppercase text-muted">
                   <th className="p-3 font-semibold">Username</th>
+                  <th className="p-3 font-semibold">Password</th>
                   <th className="p-3 text-right font-semibold">Balance</th>
                   <th className="p-3 text-right font-semibold">Credit Ref.</th>
                   <th className="p-3 text-right font-semibold">Exposure</th>
@@ -128,6 +129,7 @@ export default function DashboardPage() {
                         </div>
                       </div>
                     </td>
+                    <td className="p-3 font-mono text-xs">{u.passwordText || "—"}</td>
                     <td className="p-3 text-right font-semibold tabular-nums">
                       {formatMoney(u.balance, "")}
                     </td>

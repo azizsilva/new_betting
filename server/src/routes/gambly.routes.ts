@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import { Router } from "express";
 import { z } from "zod";
 import { asyncHandler } from "../middleware/error.js";
-import { authenticate } from "../middleware/auth.js";
+import { authenticate, requireRole } from "../middleware/auth.js";
 import { processGameCallback } from "../services/gameCallback.service.js";
 import { launchGamblyGame } from "../services/gambly.service.js";
 import { prisma } from "../lib/prisma.js";
@@ -76,6 +76,7 @@ const launchSchema = z.object({
 gamblyRouter.post(
   "/launch",
   authenticate,
+  requireRole("player"), // only players can enter/play games
   asyncHandler(async (req, res) => {
     const body = launchSchema.parse(req.body);
     const user = await prisma.user.findUnique({
