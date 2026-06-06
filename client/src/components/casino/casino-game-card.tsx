@@ -47,19 +47,35 @@ export function CasinoGameCard({ game, large }: { game: Game; large?: boolean })
       {/* The game art fills the whole card (kingsbet365 style) — the title is
           part of the artwork, so no text overlay when an image is present. */}
       {hasImage && (
-        // eslint-disable-next-line @next/next/no-img-element -- provider images come from arbitrary hosts
-        <img
-          src={game.imageUrl}
-          alt={game.name}
-          loading="lazy"
-          decoding="async"
-          onLoad={() => setLoaded(true)}
-          onError={() => setImgError(true)}
-          className={cn(
-            "absolute inset-0 size-full object-cover transition-opacity duration-300",
-            loaded ? "opacity-100" : "opacity-0",
-          )}
-        />
+        game.imageUrl?.endsWith(".svg") ? (
+          /* SVGs with embedded images must use <object> — <img> sandboxes them
+             and blocks internal <image xlink:href> / base64 resources */
+          <object
+            data={game.imageUrl}
+            type="image/svg+xml"
+            aria-label={game.name}
+            onLoad={() => setLoaded(true)}
+            onError={() => setImgError(true)}
+            className={cn(
+              "absolute inset-0 size-full pointer-events-none transition-opacity duration-300",
+              loaded ? "opacity-100" : "opacity-0",
+            )}
+          />
+        ) : (
+          // eslint-disable-next-line @next/next/no-img-element -- provider images come from arbitrary hosts
+          <img
+            src={game.imageUrl}
+            alt={game.name}
+            loading="lazy"
+            decoding="async"
+            onLoad={() => setLoaded(true)}
+            onError={() => setImgError(true)}
+            className={cn(
+              "absolute inset-0 size-full object-cover transition-opacity duration-300",
+              loaded ? "opacity-100" : "opacity-0",
+            )}
+          />
+        )
       )}
 
       {/* NEW badge */}
