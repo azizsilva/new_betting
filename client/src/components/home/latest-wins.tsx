@@ -1,44 +1,43 @@
 import { History } from "lucide-react";
 
-const LATEST_WINS = [
-  {
-    id: 1,
-    game: "Parthenon: Quest for Immortality",
-    multiplier: 668.7,
-    gain: 267.48,
-    image: "/images/NE-parthenonquestforimmortality.png",
-  },
-  {
-    id: 2,
-    game: "MONOPOLY Live",
-    multiplier: 36.6,
-    gain: 366.0,
-    image: "/images/EVO-monopoly.png",
-  },
-  {
-    id: 3,
-    game: "MONOPOLY Live",
-    multiplier: 5.5,
-    gain: 220.0,
-    image: "/images/EVO-monopoly.png",
-  },
-  {
-    id: 4,
-    game: "Lightning Storm",
-    multiplier: 71.77,
-    gain: 300.0,
-    image: "/images/EVO-lightningstorm.png",
-  },
-  {
-    id: 5,
-    game: "Mega Ball",
-    multiplier: 5.17,
-    gain: 206.8,
-    image: "/images/EVO-crazytime.png",
-  },
+import { useEffect, useState } from "react";
+import { api } from "@/lib/api";
+
+interface WinRecord {
+  id: number;
+  game: string;
+  multiplier: number;
+  gain: number;
+  image: string;
+}
+
+const FALLBACK_WINS: WinRecord[] = [
+  { id: -1, game: "Parthenon: Quest for Immortality", multiplier: 668.7, gain: 267.48, image: "/images/NE-parthenonquestforimmortality.png" },
+  { id: -2, game: "MONOPOLY Live", multiplier: 36.6, gain: 366.0, image: "/images/EVO-monopoly.png" },
+  { id: -3, game: "Lightning Storm", multiplier: 71.77, gain: 300.0, image: "/images/EVO-lightningstorm.png" },
+  { id: -4, game: "Mega Ball", multiplier: 5.17, gain: 206.8, image: "/images/EVO-crazytime.png" },
 ];
 
 export function LatestWins() {
+  const [wins, setWins] = useState<WinRecord[]>(FALLBACK_WINS);
+
+  useEffect(() => {
+    const fetchWins = async () => {
+      try {
+        const { data } = await api.get<WinRecord[]>("/casino/latest-wins");
+        if (data && data.length > 0) {
+          setWins(data);
+        }
+      } catch (err) {
+        // ignore and keep fallbacks
+      }
+    };
+
+    fetchWins();
+    const interval = setInterval(fetchWins, 60000); // refresh every minute
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="w-full">
       <div className="mb-4 flex items-center gap-2">
@@ -49,7 +48,7 @@ export function LatestWins() {
       </div>
 
       <div className="flex flex-col gap-2">
-        {LATEST_WINS.map((win) => (
+        {wins.map((win) => (
           <div 
             key={win.id}
             className="flex items-center justify-between rounded-xl bg-surface-2/60 px-4 py-3 hover:bg-surface-2 transition-colors"

@@ -19,6 +19,42 @@ const DEFAULT_CURRENCY = (env.GAMBLEHUB_CURRENCY || "TND").toUpperCase();
 // ─── Player-facing ────────────────────────────────────────────────────────────
 
 casinoRouter.get(
+  "/latest-wins",
+  asyncHandler(async (req, res) => {
+    // Fetch real wins from the provider callback events
+    const events = await prisma.gameCallbackEvent.findMany({
+      where: { winAmount: { gt: 0 } },
+      orderBy: { createdAt: "desc" },
+      take: 10,
+    });
+
+    const mapped = events.map((ev) => {
+      const bet = Number(ev.betAmount) || 1;
+      const win = Number(ev.winAmount);
+      return {
+        id: Number(ev.id),
+        game: ev.gameUid || "Casino Game",
+        multiplier: win / bet,
+        gain: win,
+        image: "/images/EVO-crazytime.png", // Hardcoded default fallback for now
+      };
+    });
+
+    // If we don't have enough real wins, pad with some realistic fake ones
+    // so the UI never looks empty.
+    const fakeWins = [
+      { id: -1, game: "Parthenon: Quest for Immortality", multiplier: 668.7, gain: 267.48, image: "/images/NE-parthenonquestforimmortality.png" },
+      { id: -2, game: "MONOPOLY Live", multiplier: 36.6, gain: 366.0, image: "/images/EVO-monopoly.png" },
+      { id: -3, game: "Lightning Storm", multiplier: 71.77, gain: 300.0, image: "/images/EVO-lightningstorm.png" },
+      { id: -4, game: "Mega Ball", multiplier: 5.17, gain: 206.8, image: "/images/EVO-crazytime.png" },
+    ];
+
+    const results = [...mapped, ...fakeWins].slice(0, 6);
+    res.json(results);
+  }),
+);
+
+casinoRouter.get(
   "/recent",
   authenticate,
   asyncHandler(async (req, res) => {
