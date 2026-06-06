@@ -57,3 +57,8 @@ export async function openGame(
   });
   return data;
 }
+
+export async function withdrawGambly(): Promise<{ status: boolean; amount: number }> {
+  const { data } = await api.post("/gambly/withdraw");
+  return data;
+}

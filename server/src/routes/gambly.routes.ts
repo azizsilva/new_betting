@@ -6,7 +6,7 @@ import { z } from "zod";
 import { asyncHandler } from "../middleware/error.js";
 import { authenticate, requireRole } from "../middleware/auth.js";
 import { processGameCallback } from "../services/gameCallback.service.js";
-import { launchGamblyGame } from "../services/gambly.service.js";
+import { launchGamblyGame, withdrawGamblyBalance } from "../services/gambly.service.js";
 import { prisma } from "../lib/prisma.js";
 import { env } from "../config/env.js";
 import { logger } from "../lib/logger.js";
@@ -106,7 +106,17 @@ gamblyRouter.post(
       logger.warn({ err: (err as Error).message }, "gambly recentGame upsert skipped");
     }
 
-    res.json({ url: result.url, sessionId: result.transferId });
+    res.json({ url: result.gameUrl });
+  }),
+);
+
+// ─── V2 Withdraw Balance ────────────────────────────────────────────────────
+gamblyRouter.post(
+  "/withdraw",
+  requireAuth,
+  asyncHandler(async (req, res) => {
+    const amount = await withdrawGamblyBalance(req.user!.id);
+    res.json({ status: true, amount });
   }),
 );
 

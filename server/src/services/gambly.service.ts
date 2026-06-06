@@ -4,78 +4,69 @@ import { logger } from "../lib/logger.js";
 import { prisma } from "../lib/prisma.js";
 import { AppError, BadRequest } from "../lib/errors.js";
 
-// ─── Gamblly V1 Seamless Wallet ───────────────────────────────────────────────
-// Balance stays in OUR DB (users.balance). On launch we POST /v1/gameLaunch.php
-// (form-encoded) and get back a game_url + transfer_id. During play Gamblly
-// calls our callback for every bet/win; we apply it and return the new balance.
-// Callback URL is configured in the Gamblly panel (no per-launch callback field).
-
-const BASE = (env.GAMBLY_API_BASE_URL || "https://game.gambllyapi.com/production/").replace(/\/$/, "");
+const BASE = "https://game.gambllyapi.com/production";
 const KEY = env.GAMBLY_API_KEY;
-const CURRENCY = (env.GAMBLY_CURRENCY || "TND").toUpperCase();
-
-function assertConfigured() {
-  if (!KEY) throw new AppError(503, "Gamblly is not configured", "GAMBLY_DISABLED");
-}
-
-// fetch with a hard timeout so a hanging provider returns a clean error.
-async function fetchT(url: string, init: RequestInit, timeoutMs = 12_000): Promise<Response> {
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
-  try {
-    return await fetch(url, { ...init, signal: ctrl.signal });
-  } finally {
-    clearTimeout(timer);
-  }
-}
-
-interface LaunchResponse {
-  success?: boolean;
-  game_url?: string;
-  transfer_id?: string;
-  msg?: string;
-  code?: number;
-}
+const CURRENCY = "TND";
 
 export interface GamblyLaunchParams {
-  user: Pick<User, "id" | "username">;
+  user: { id: number; username: string };
   gameUid: string;
   language?: string;
   homeUrl: string;
 }
 
 export interface GamblyLaunchResult {
-  url: string;
-  transferId: string;
+  gameUrl: string;
+}
+
+function assertConfigured() {
+  if (!KEY) throw new AppError(503, "Gamblly is not configured", "GAMBLY_DISABLED");
+}
+
+async function fetchT(url: string, init?: RequestInit) {
+  const res = await fetch(url, init);
+  if (!res.ok) {
+    const txt = await res.text().catch(() => "");
+    logger.error({ status: res.status, txt }, "Gamblly HTTP error");
+    throw BadRequest(`Provider HTTP ${res.status}`);
+  }
+  return res;
 }
 
 /**
- * Launch a Gamblly game (V1 seamless). member_account = our username so the
- * callback can resolve the player. Persists a GameSession (keyed by transfer_id)
- * mapping the provider session back to our user + currency.
+ * Launch a Gamblly game (V2 Transfer Wallet).
+ * Deducts the user's full balance and transfers it to the game.
  */
 export async function launchGamblyGame(params: GamblyLaunchParams): Promise<GamblyLaunchResult> {
   assertConfigured();
 
+  const user = await prisma.user.findUnique({ where: { id: params.user.id } });
+  if (!user) throw BadRequest("User not found");
+
   const memberAccount = params.user.username;
-  const form = new URLSearchParams({
-    api_key: KEY,
+  const transferId = `txn_${Date.now()}_${user.id}`;
+  const creditAmount = Number(user.balance);
+
+  // V2 Launch Payload (JSON)
+  const payload = {
+    agency_uid: KEY,
     member_account: memberAccount,
     game_uid: params.gameUid,
+    credit_amount: creditAmount,
     currency_code: CURRENCY,
     language: params.language ?? "en",
-    platform: "1", // 1 = web
+    platform: "web",
     home_url: params.homeUrl,
-    ...(env.GAMBLY_CALLBACK_URL ? { callback_url: env.GAMBLY_CALLBACK_URL } : {}),
-  });
+    transfer_id: transferId,
+    timestamp: Date.now()
+  };
 
-  let res: Response;
   let rawText: string;
   try {
-    res = await fetchT(`${BASE}/v1/gameLaunch.php`, {
+    const res = await fetchT(`${BASE}/v2/gameLaunch.php`, {
       method: "POST",
-      headers: { "content-type": "application/x-www-form-urlencoded", accept: "application/json" },
-      body: form,
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload),
     });
     rawText = await res.text();
   } catch (err) {
@@ -83,39 +74,99 @@ export async function launchGamblyGame(params: GamblyLaunchParams): Promise<Gamb
     throw BadRequest("Could not reach the game provider. Please try again.");
   }
 
-  let data: LaunchResponse = {};
+  let data: any = {};
   try {
-    data = JSON.parse(rawText) as LaunchResponse;
-  } catch {
-    logger.error({ gameUid: params.gameUid, status: res.status, body: rawText.slice(0, 200) }, "gambly launch non-JSON");
-    throw BadRequest("Game provider returned an unexpected response.");
+    data = JSON.parse(rawText);
+  } catch (e) {
+    logger.error({ rawText }, "gambly v2 invalid json");
+    throw BadRequest("Provider returned invalid data");
   }
 
-  if (!res.ok || data.success === false || !data.game_url) {
-    const msg = data.msg || `Game could not be opened (${res.status})`;
-    logger.warn({ gameUid: params.gameUid, status: res.status, code: data.code, msg }, "gambly launch failed");
-    throw BadRequest(msg);
+  if (data.code !== 0) {
+    logger.error({ data }, "gambly v2 launch rejected");
+    throw BadRequest(data.msg || "Provider rejected game launch");
   }
 
-  const transferId = data.transfer_id || `${memberAccount}:${params.gameUid}:${Date.now()}`;
+  const gameUrl = data.payload?.game_launch_url;
+  if (!gameUrl) {
+    throw BadRequest("Provider returned no game URL");
+  }
 
-  // Map the session → our user. Keyed by transfer_id (sessionId). The callback
-  // identifies the player by member_account (player_uid), so login fallback works.
-  try {
-    await prisma.gameSession.upsert({
-      where: { sessionId: transferId },
-      create: {
-        sessionId: transferId,
-        userId: params.user.id,
-        login: memberAccount.slice(0, 100),
-        currency: CURRENCY,
-        gameId: params.gameUid.slice(0, 100),
-      },
-      update: { userId: params.user.id, login: memberAccount.slice(0, 100), currency: CURRENCY },
+  // Deduct balance & Save session
+  await prisma.$transaction(async (tx) => {
+    // Zero out the user's balance
+    await tx.user.update({
+      where: { id: user.id },
+      data: { balance: { decrement: creditAmount } },
     });
-  } catch (err) {
-    logger.error({ transferId, err: (err as Error).message }, "gambly gameSession upsert failed");
+    // Create session to track the transfer
+    await tx.gameSession.create({
+      data: {
+        userId: user.id,
+        login: memberAccount,
+        currency: CURRENCY,
+        sessionId: transferId,
+        gameId: params.gameUid,
+      },
+    });
+  });
+
+  return { gameUrl };
+}
+
+/**
+ * Withdraw balance from Gamblly V2 session and add it back to the user.
+ */
+export async function withdrawGamblyBalance(userId: number): Promise<number> {
+  assertConfigured();
+
+  // Find the most recent active session
+  const session = await prisma.gameSession.findFirst({
+    where: { userId },
+    orderBy: { createdAt: "desc" },
+  });
+
+  if (!session || !session.sessionId) {
+    return 0; // No active session
   }
 
-  return { url: data.game_url, transferId };
+  const payload = {
+    agency_uid: KEY,
+    member_account: session.login,
+    transfer_id: session.sessionId,
+    home_url: "https://afrobet216.com", // Recommended by V2 docs
+    timestamp: Date.now()
+  };
+
+  try {
+    const res = await fetchT(`${BASE}/v2/getWithdraw.php`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const text = await res.text();
+    const data = JSON.parse(text);
+
+    if (data.status === true || data.code === 0) {
+      const amount = Number(data.amount || data.payload?.balance || 0);
+
+      await prisma.$transaction(async (tx) => {
+        // Add back to user
+        await tx.user.update({
+          where: { id: userId },
+          data: { balance: { increment: amount } },
+        });
+        // Delete session
+        await tx.gameSession.delete({
+          where: { id: session.id },
+        });
+      });
+
+      return amount;
+    }
+  } catch (err) {
+    logger.error({ err }, "Failed to withdraw gambly balance");
+  }
+
+  return 0;
 }
