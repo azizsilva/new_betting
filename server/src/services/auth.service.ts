@@ -10,8 +10,8 @@ import {
 import { BadRequest, Forbidden, Unauthorized } from "../lib/errors.js";
 import { creatableRoles } from "../domain/hierarchy.js";
 
-function tokensFor(user: { id: number; role: UserRole | null }) {
-  const payload: AccessPayload = { sub: user.id, role: user.role ?? "player" };
+function tokensFor(user: { id: number; role: UserRole | null; sessionToken?: string | null }) {
+  const payload: AccessPayload = { sub: user.id, role: user.role ?? "player", sid: user.sessionToken ?? undefined };
   return {
     accessToken: signAccessToken(payload),
     refreshToken: signRefreshToken(payload),
@@ -40,7 +40,7 @@ export async function login(username: string, password: string, ip?: string) {
     },
   });
 
-  return { user: sanitize(user), ...tokensFor(user) };
+  return { user: sanitize(user), ...tokensFor({ ...user, sessionToken }) };
 }
 
 export interface CreateUserInput {
@@ -93,7 +93,7 @@ export async function createUser(input: CreateUserInput) {
 }
 
 export function refresh(payload: AccessPayload) {
-  return tokensFor({ id: payload.sub, role: payload.role });
+  return tokensFor({ id: payload.sub, role: payload.role, sessionToken: payload.sid });
 }
 
 export async function logout(userId: number) {

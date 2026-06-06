@@ -18,10 +18,21 @@ api.interceptors.request.use((config) => {
 // On 401, try a one-shot refresh, then retry; otherwise log out.
 let refreshing: Promise<string | null> | null = null;
 
+import { toast } from "sonner";
+
 api.interceptors.response.use(
   (res) => res,
   async (error) => {
     const original = error.config;
+    
+    // Check if the session was overridden by another device login
+    if (error.response?.status === 401 && error.response?.data?.error?.message === "SESSION_OVERRIDDEN") {
+      const { logout } = useAuthStore.getState();
+      logout();
+      toast.error("Quelqu'un a ouvert ce compte sur un autre appareil.", { duration: 5000 });
+      return Promise.reject(error);
+    }
+
     if (error.response?.status === 401 && !original._retry) {
       original._retry = true;
       const { refreshToken, setTokens, logout } = useAuthStore.getState();

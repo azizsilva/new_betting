@@ -6,6 +6,7 @@ import { env } from "../config/env.js";
 export interface AccessPayload {
   sub: number; // userId
   role: UserRole;
+  sid?: string; // session_token to prevent multiple logins
 }
 
 export function signAccessToken(payload: AccessPayload): string {

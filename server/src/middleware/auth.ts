@@ -13,19 +13,32 @@ declare global {
   }
 }
 
-export function authenticate(req: Request, _res: Response, next: NextFunction) {
+export const authenticate = async (req: Request, _res: Response, next: NextFunction) => {
   const header = req.headers.authorization;
   const token = header?.startsWith("Bearer ") ? header.slice(7) : undefined;
   if (!token) return next(Unauthorized("Missing access token"));
 
   try {
     const payload = verifyAccessToken(token);
+    
+    // Check if session token matches the one in DB to prevent multiple logins
+    if (payload.sid) {
+      const { prisma } = await import("../lib/prisma.js");
+      const user = await prisma.user.findUnique({
+        where: { id: payload.sub },
+        select: { sessionToken: true }
+      });
+      if (!user || user.sessionToken !== payload.sid) {
+        return next(Unauthorized("SESSION_OVERRIDDEN"));
+      }
+    }
+
     req.user = { id: payload.sub, role: payload.role };
     next();
-  } catch {
+  } catch (err) {
     next(Unauthorized("Invalid or expired token"));
   }
-}
+};
 
 export const requireRole =
   (...roles: UserRole[]) =>
