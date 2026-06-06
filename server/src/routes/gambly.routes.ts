@@ -113,7 +113,7 @@ gamblyRouter.post(
 // ─── V2 Withdraw Balance ────────────────────────────────────────────────────
 gamblyRouter.post(
   "/withdraw",
-  requireAuth,
+  authenticate,
   asyncHandler(async (req, res) => {
     const amount = await withdrawGamblyBalance(req.user!.id);
     res.json({ status: true, amount });
