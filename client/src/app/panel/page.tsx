@@ -76,7 +76,7 @@ export default function DashboardPage() {
 
   if (user.role === "admin_provider" || user.role === "owner") {
     stats = [
-      { title: "Network Balance", value: formatMoney(computedStats.totalBalance, "TND"), trend: "+12.5%", desc: "Direct downline balance", subDesc: "Current period", icon: DollarSign },
+      { title: "Network Balance", value: user.role === "admin_provider" ? "Unlimited" : formatMoney(computedStats.totalBalance, "TND"), trend: "+12.5%", desc: "Direct downline balance", subDesc: "Current period", icon: DollarSign },
       { title: "Total Partners", value: computedStats.partners.toString(), trend: "+5%", desc: "Active network partners", subDesc: "Acquisition on track", icon: Users },
       { title: "Total Agents", value: computedStats.agents.toString(), trend: "+8.2%", desc: "Active agents", subDesc: "Steady growth", icon: Users },
       { title: "Active Players", value: computedStats.players.toString(), trend: "+15%", desc: "Total players in network", subDesc: "Engagement exceed targets", icon: Activity },

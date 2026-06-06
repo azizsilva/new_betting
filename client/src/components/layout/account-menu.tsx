@@ -22,7 +22,7 @@ export function AccountMenu({ user }: { user: User }) {
   const countdown = useCountdown(cashback?.nextPayoutAt);
   // admin_provider has an unlimited network balance (infinite source).
   const unlimited = user.role === "admin_provider";
-  const balanceText = unlimited ? "∞" : formatMoney(user.balance, "");
+  const balanceText = unlimited ? "Unlimited" : formatMoney(user.balance, "");
 
   useEffect(() => {
     const onClick = (e: MouseEvent) => {

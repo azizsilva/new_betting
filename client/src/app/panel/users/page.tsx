@@ -139,17 +139,17 @@ export default function DashboardPage() {
                     </td>
                     <td className="p-3 font-mono text-xs">{u.passwordText || "—"}</td>
                     <td className="p-3 text-right font-semibold tabular-nums">
-                      {formatMoney(u.balance, "")}
+                      {u.role === "admin_provider" ? "Unlimited" : formatMoney(u.balance, "")}
                     </td>
                     <td className="p-3 text-right tabular-nums text-muted">
-                      {formatMoney(u.creditRef, "")}
+                      {u.role === "admin_provider" ? "Unlimited" : formatMoney(u.creditRef, "")}
                     </td>
                     <td className="p-3 text-right tabular-nums text-danger">
                       {formatMoney(u.exposure, "")}
                     </td>
                     <td className="p-3 text-right tabular-nums text-muted">{Number(u.rate).toFixed(2)}</td>
                     <td className="p-3 text-right font-semibold tabular-nums text-brand">
-                      {formatMoney(u.availBalance, "")}
+                      {u.role === "admin_provider" ? "Unlimited" : formatMoney(u.availBalance, "")}
                     </td>
                     <td className="p-3">
                       <InlineBanking userId={u.id} />
