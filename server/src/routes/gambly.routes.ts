@@ -135,6 +135,8 @@ const callbackSchema = z.object({
   currency_code: str.optional(),
   api_key: str.optional(),
   msg: str.optional(),
+});
+
 gamblyRouter.all(
   "/callback",
   asyncHandler(async (req, res) => {
