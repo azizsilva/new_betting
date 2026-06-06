@@ -66,6 +66,7 @@ export async function launchGamblyGame(params: GamblyLaunchParams): Promise<Gamb
     language: params.language ?? "en",
     platform: "1", // 1 = web
     home_url: params.homeUrl,
+    ...(env.GAMBLY_CALLBACK_URL ? { callback_url: env.GAMBLY_CALLBACK_URL } : {}),
   });
 
   let res: Response;
