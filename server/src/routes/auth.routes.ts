@@ -49,6 +49,9 @@ authRouter.get(
   "/me",
   authenticate,
   asyncHandler(async (req, res) => {
+    // Attempt to rescue any stuck V2 Gamblly balance (e.g. user closed tab during Sportsbook)
+    import("../services/gambly.service.js").then((s) => s.withdrawGamblyBalance(req.user!.id).catch(() => {}));
+
     const { prisma } = await import("../lib/prisma.js");
     const user = await prisma.user.findUnique({ where: { id: req.user!.id } });
     if (!user) throw Unauthorized();
