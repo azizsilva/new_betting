@@ -51,7 +51,7 @@ export function Jackpots() {
     const s = val.toFixed(2);
     const parts = s.split(".");
     return {
-      amount: parts[0]!.padStart(3, "0"),
+      amount: parts[0]!.padStart(6, "0"),
       cents: parts[1],
     };
   };
