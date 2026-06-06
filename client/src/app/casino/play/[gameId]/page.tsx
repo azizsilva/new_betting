@@ -63,7 +63,13 @@ export default function PlayGamePage({
     router.push("/casino");
   }, [refreshBalance, router, isExiting, account]);
 
+  const [isHydrated, setIsHydrated] = useState(false);
+  useEffect(() => setIsHydrated(true), []);
+
   useEffect(() => {
+    // Wait for Zustand persist hydration before booting
+    if (!isHydrated) return;
+
     // Safety net behind the card-level gate: guests can't open a session.
     if (!accessToken) {
       toast.error("Please log in to play");
@@ -100,7 +106,7 @@ export default function PlayGamePage({
     return () => {
       cancelled = true;
     };
-  }, [gameId, account, accessToken, openLoginModal, router]);
+  }, [gameId, account, accessToken, openLoginModal, router, isHydrated]);
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-black">
