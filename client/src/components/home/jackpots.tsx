@@ -7,22 +7,22 @@ const INITIAL_JACKPOTS = [
     tier: "Gold Jackpot",
     bg: "linear-gradient(135deg,#f6dd86,#d9af49 55%,#a9802f)",
     text: "#3a2a06",
-    winner: "Tony",
-    speed: 13.5, // increments per second
+    winner: "Mahden28",
+    speed: 0.15, // increments per second (very slow)
   },
   {
     tier: "Silver Jackpot",
     bg: "linear-gradient(135deg,#e6e8ec,#c2c5cc 55%,#9a9da6)",
     text: "#2c2e33",
-    winner: "Alex",
-    speed: 8.2,
+    winner: "zooba55",
+    speed: 0.08,
   },
   {
     tier: "Bronze Jackpot",
     bg: "linear-gradient(135deg,#e7b591,#c9885a 55%,#9c6238)",
     text: "#3a1f0c",
-    winner: "jhon",
-    speed: 4.1,
+    winner: "2955xx",
+    speed: 0.04,
   },
 ];
 

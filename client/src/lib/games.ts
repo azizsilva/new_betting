@@ -256,8 +256,8 @@ interface CuratedPick {
 
 const HOME_CASINO: CuratedPick[] = [
   { slug: "gatesofolympus",            name: "Gates of Olympus",           provider: "Pragmatic Play" },
-  { slug: "alwaysfruits",              name: "Always Fruits",              provider: "Pragmatic Play" },
-  { slug: "hothotfruits",              name: "Hot Hot Fruits",             provider: "Pragmatic Play" },
+  { slug: "allwaysfruits",             name: "All Ways Fruits",            provider: "Amatic" },
+  { slug: "hothotfruit",               name: "Hot Hot Fruit",              provider: "Habanero" },
   { slug: "wanteddeadorawild",         name: "Wanted Dead or a Wild",      provider: "Hacksaw" },
   { slug: "bigbassholdspinnermegaways", name: "Big Bass Hold & Spinner",   provider: "Pragmatic Play" },
   { slug: "billyonair",                name: "Billy on Air",               provider: "Pragmatic Play" },
