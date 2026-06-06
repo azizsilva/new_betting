@@ -114,11 +114,17 @@ gamblyRouter.post(
 // Authenticated by api_key in the body + IP/domain whitelist on Gamblly's side.
 // We must apply the balance change and return the latest balance.
 
-const num = z.union([z.number(), z.string()]).transform((v) => Number(v) || 0);
-const str = z.union([z.string(), z.number()]).transform(String);
+const debugLogs: any[] = [];
+
+gamblyRouter.get("/debug", (req, res) => {
+  res.json(debugLogs);
+});
+
+const num = z.union([z.number(), z.string(), z.null()]).transform((v) => Number(v) || 0);
+const str = z.union([z.string(), z.number(), z.null()]).transform((v) => v === null ? undefined : String(v));
 
 const callbackSchema = z.object({
-  player_uid: str.refine(s => s.length > 0, "Missing player_uid"),
+  player_uid: str.refine((s): s is string => typeof s === "string" && s.length > 0, "Missing player_uid"),
   bet_amount: num.optional(),
   win_amount: num.optional(),
   action: str.default("bet_win"),
@@ -134,6 +140,14 @@ const callbackSchema = z.object({
 gamblyRouter.post(
   "/callback",
   asyncHandler(async (req, res) => {
+    debugLogs.unshift({
+      time: new Date().toISOString(),
+      contentType: req.headers["content-type"],
+      body: req.body,
+      query: req.query,
+    });
+    if (debugLogs.length > 20) debugLogs.pop();
+
     // 1) Authenticate the caller by the shared agency API key in the body.
     const bodyKey = (req.body as { api_key?: string })?.api_key ?? "";
     if (!env.GAMBLY_API_KEY || bodyKey !== env.GAMBLY_API_KEY) {
