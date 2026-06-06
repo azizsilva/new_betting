@@ -4,7 +4,7 @@ import { use, useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { Loader2, X, AlertTriangle } from "lucide-react";
-import { openGame, withdrawGambly } from "@/lib/casino-api";
+import { openGame } from "@/lib/casino-api";
 import { fetchMe } from "@/lib/auth-api";
 import { useAuthStore } from "@/store/auth";
 import { useUiStore } from "@/store/ui";
@@ -54,17 +54,10 @@ export default function PlayGamePage({
   }, [url, refreshBalance]);
 
   // Exit → sync balance first, then leave (header shows the cut balance instantly).
-  const exit = useCallback(async () => {
-    if (account === "gambly") {
-      try {
-        await withdrawGambly();
-      } catch (e) {
-        /* ignore */
-      }
-    }
+  const exit = useCallback(() => {
     void refreshBalance();
     router.push("/casino");
-  }, [account, refreshBalance, router]);
+  }, [refreshBalance, router]);
 
   useEffect(() => {
     // Safety net behind the card-level gate: guests can't open a session.

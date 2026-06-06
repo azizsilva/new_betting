@@ -6,7 +6,7 @@ import { z } from "zod";
 import { asyncHandler } from "../middleware/error.js";
 import { authenticate, requireRole } from "../middleware/auth.js";
 import { processGameCallback } from "../services/gameCallback.service.js";
-import { launchGamblyGame, withdrawGamblyBalance } from "../services/gambly.service.js";
+import { launchGamblyGame } from "../services/gambly.service.js";
 import { prisma } from "../lib/prisma.js";
 import { env } from "../config/env.js";
 import { logger } from "../lib/logger.js";
@@ -110,15 +110,7 @@ gamblyRouter.post(
   }),
 );
 
-// ─── V2 Withdraw Balance ────────────────────────────────────────────────────
-gamblyRouter.post(
-  "/withdraw",
-  authenticate,
-  asyncHandler(async (req, res) => {
-    const amount = await withdrawGamblyBalance(req.user!.id);
-    res.json({ status: true, amount });
-  }),
-);
+
 
 // ─── Seamless wallet callback (server-to-server, Gamblly → us) ──────────────────
 // Authenticated by api_key in the body + IP/domain whitelist on Gamblly's side.
@@ -164,35 +156,34 @@ const callbackSchema = z.object({
 });
 
 gamblyRouter.all(
-  "/callback",
+  ["/callback", "/callback_9fb89"],
   asyncHandler(async (req, res) => {
+    const combinedData = { ...(req.query || {}), ...(req.body || {}) };
+    
     debugLogs.unshift({
       time: new Date().toISOString(),
       method: req.method,
       contentType: req.headers["content-type"],
       body: req.body,
       query: req.query,
+      combined: combinedData,
     });
     if (debugLogs.length > 20) debugLogs.pop();
 
-    if (req.method !== "POST") {
-      res.status(405).send("Method Not Allowed");
-      return;
-    }
-
     // 1) Authenticate the caller by the shared agency API key in the body.
-    const bodyKey = (req.body as { api_key?: string })?.api_key ?? "";
+    const bodyKey = (combinedData as { api_key?: string })?.api_key ?? "";
     if (!env.GAMBLY_API_KEY || bodyKey !== env.GAMBLY_API_KEY) {
       logger.warn({ ip: req.ip, hasKey: Boolean(bodyKey) }, "gambly callback: bad api_key");
       return res.status(401).json({ balance: 0, status: false, msg: "unauthorized" });
     }
 
-    const parsed = callbackSchema.safeParse(req.body);
-    if (!parsed.success) {
-      logger.warn({ issues: parsed.error.issues.slice(0, 3) }, "gambly callback: invalid body");
-      return res.status(400).json({ balance: 0, status: false, msg: "invalid request" });
+    const parseResult = callbackSchema.safeParse(combinedData);
+    if (!parseResult.success) {
+      logger.warn({ err: parseResult.error.format(), combinedData }, "gambly callback validation failed");
+      res.status(400).json({ status: false, message: "Invalid payload format" });
+      return;
     }
-    const b = parsed.data;
+    const b = parseResult.data;
 
     // 2) deposit_required is an informational system notice — ack, no balance change.
     if (b.action === "deposit_required") {
