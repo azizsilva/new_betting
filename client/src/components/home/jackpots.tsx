@@ -63,10 +63,11 @@ export function Jackpots() {
   }, []);
 
   const formatAmount = (val: number) => {
+    // Format without leading zeros so it doesn't look like a time
     const s = val.toFixed(2);
     const parts = s.split(".");
     return {
-      amount: parts[0]!.padStart(6, "0"),
+      amount: parts[0],
       cents: parts[1],
     };
   };
