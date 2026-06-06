@@ -58,11 +58,7 @@ export default function PlayGamePage({
   const exit = useCallback(async () => {
     if (isExiting) return;
     setIsExiting(true);
-    if (account === "gambly") {
-      // For V2 Transfer Wallet games (like Sportsbook), this pulls the balance back.
-      // For V1 games, it safely does nothing (returns 0).
-      await withdrawGambly();
-    }
+    await refreshBalance();
     await refreshBalance();
     router.push("/casino");
   }, [refreshBalance, router, isExiting, account]);

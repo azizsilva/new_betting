@@ -33,15 +33,8 @@ async function fetchT(url: string, init?: RequestInit) {
   return res;
 }
 
-/**
- * Hybrid Launch: Sportsbook strictly requires V2 (Transfer Wallet).
- * Casino games use V1 (Seamless Wallet) for real-time balance.
- */
 export async function launchGamblyGame(params: GamblyLaunchParams): Promise<GamblyLaunchResult> {
   assertConfigured();
-  if (params.gameUid === "8a704858d5deb4af1ddc722092ac7614") {
-    return launchGamblyGameV2(params);
-  }
   return launchGamblyGameV1(params);
 }
 

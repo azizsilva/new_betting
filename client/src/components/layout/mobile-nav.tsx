@@ -85,7 +85,7 @@ export function MobileNav() {
     <nav className="fixed inset-x-0 bottom-0 z-[55] border-t border-gold/20 bg-surface shadow-[0_-6px_24px_rgba(0,0,0,0.8)] lg:hidden">
       <div className="mx-auto flex max-w-md items-end justify-around px-2 pb-[max(24px,env(safe-area-inset-bottom))] pt-2">
         <Tab id="sport" icon="icon-sports" label="Sport" href="/casino/play/8a704858d5deb4af1ddc722092ac7614?account=gambly" />
-        <Tab id="live" icon="icon-live-sport" label="Live" href="/casino/play/8a704858d5deb4af1ddc722092ac7614?account=gambly" />
+        <Tab id="live" icon="icon-live-sport" label="Live Casino" href="/casino?tab=live-casino" />
         <Tab id="home" icon="icon-home" label="Home" href="/" center />
         <Tab id="casino" icon="icon-casino" label="Casino" href="/casino" />
         <Tab id="menu" icon="icon-menu" label="Menu" onClick={toggleDrawer} />
