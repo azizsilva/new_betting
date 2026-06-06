@@ -31,12 +31,45 @@ casinoRouter.get(
     const mapped = events.map((ev) => {
       const bet = Number(ev.betAmount) || 1;
       const win = Number(ev.winAmount);
+      
+      let rawUid = ev.gameUid || "Casino Game";
+      let gameName = "Live Casino";
+      let image = "/images/EVO-crazytime.png";
+
+      if (rawUid.includes(':')) {
+        const parts = rawUid.split(':');
+        if (parts.length >= 2 && parts[1]) {
+          const provider = parts[1].toLowerCase();
+          
+          if (provider.includes("hacksaw")) {
+            gameName = "Hacksaw Slots";
+            image = "/images/HAK-munchymilo.png";
+          } else if (provider.includes("pragmatic")) {
+            gameName = "Pragmatic Play";
+            image = "/images/PPC-sweetbonanza1000.png";
+          } else if (provider.includes("evolution")) {
+            gameName = "Evolution Live";
+            image = "/images/EVO-lightningstorm.png";
+          } else {
+            gameName = provider.charAt(0).toUpperCase() + provider.slice(1) + " Game";
+          }
+        }
+      } else if (rawUid.length > 20 && /^[a-f0-9]+$/i.test(rawUid)) {
+        gameName = "Crazy Time"; // Long hex hashes in Gamblly are usually Evolution games
+        image = "/images/EVO-crazytime.png";
+      } else if (rawUid.toLowerCase().includes("greece")) {
+        gameName = "Greek Roulette";
+        image = "/images/EVO-autolightningroulette.png";
+      } else {
+        gameName = rawUid;
+      }
+
       return {
         id: Number(ev.id),
-        game: ev.gameUid || "Casino Game",
-        multiplier: win / bet,
+        game: gameName,
+        multiplier: Number((win / bet).toFixed(2)),
         gain: win,
-        image: "/images/EVO-crazytime.png", // Hardcoded default fallback for now
+        image,
       };
     });
 
