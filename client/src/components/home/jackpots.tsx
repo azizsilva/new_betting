@@ -31,14 +31,13 @@ export function Jackpots() {
 
   useEffect(() => {
     let frameId: number;
-    const start = Date.now();
 
     const tick = () => {
-      // Calculate elapsed time so it always starts from 00.00 when the page loads
-      const elapsed = (Date.now() - start) / 1000;
+      // Calculate amount based on exact time so it continues across refreshes
+      const now = Date.now() / 1000;
       setAmounts(
         INITIAL_JACKPOTS.map((j) => {
-          return (elapsed * j.speed) % 100000;
+          return (now * j.speed) % 100000;
         })
       );
       frameId = requestAnimationFrame(tick);
