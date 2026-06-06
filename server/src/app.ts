@@ -20,6 +20,23 @@ export function createApp() {
       credentials: true,
     }),
   );
+
+  // GLOBAL DEBUG LOGGER to catch literally any request from Gamblly
+  const globalDebug: any[] = [];
+  app.get("/api/global-debug", (req, res) => res.json(globalDebug));
+  app.use((req, res, next) => {
+    if (!req.path.includes("debug") && !req.path.includes("auth")) {
+      globalDebug.unshift({
+        time: new Date().toISOString(),
+        path: req.originalUrl,
+        method: req.method,
+        ip: req.ip,
+      });
+      if (globalDebug.length > 50) globalDebug.pop();
+    }
+    next();
+  });
+
   // Capture the raw request body so seamless-wallet callbacks can verify the
   // HMAC signature over the exact bytes received (doc §7, byte-for-byte).
   app.use(
