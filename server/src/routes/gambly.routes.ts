@@ -115,19 +115,20 @@ gamblyRouter.post(
 // We must apply the balance change and return the latest balance.
 
 const num = z.union([z.number(), z.string()]).transform((v) => Number(v) || 0);
+const str = z.union([z.string(), z.number()]).transform(String);
 
 const callbackSchema = z.object({
-  player_uid: z.string().min(1),
+  player_uid: str.refine(s => s.length > 0, "Missing player_uid"),
   bet_amount: num.optional(),
   win_amount: num.optional(),
-  action: z.string().default("bet_win"),
-  game_uid: z.string().optional(),
-  game_name: z.string().optional(),
-  txn_id: z.string().optional(),
-  game_round: z.string().optional(),
-  currency_code: z.string().optional(),
-  api_key: z.string().optional(),
-  msg: z.string().optional(),
+  action: str.default("bet_win"),
+  game_uid: str.optional(),
+  game_name: str.optional(),
+  txn_id: str.optional(),
+  game_round: str.optional(),
+  currency_code: str.optional(),
+  api_key: str.optional(),
+  msg: str.optional(),
 });
 
 gamblyRouter.post(

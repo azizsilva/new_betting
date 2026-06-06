@@ -30,6 +30,7 @@ export function createApp() {
       },
     }),
   );
+  app.use(express.urlencoded({ extended: true }));
   app.use(cookieParser());
   app.use(pinoHttp({ logger }));
 
