@@ -7,7 +7,7 @@ export async function loginRequest(username: string, password: string): Promise<
 }
 
 export async function fetchMe(): Promise<User> {
-  const { data } = await api.get<User>("/auth/me");
+  const { data } = await api.get<User>("/auth/me", { params: { _t: Date.now() } });
   return data;
 }
 

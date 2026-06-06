@@ -52,6 +52,11 @@ authRouter.get(
     const { prisma } = await import("../lib/prisma.js");
     const user = await prisma.user.findUnique({ where: { id: req.user!.id } });
     if (!user) throw Unauthorized();
+    
+    res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+    res.setHeader("Pragma", "no-cache");
+    res.setHeader("Expires", "0");
+    
     res.json(authService.sanitize(user));
   }),
 );
