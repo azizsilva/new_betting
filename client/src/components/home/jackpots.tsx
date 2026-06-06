@@ -32,12 +32,21 @@ export function Jackpots() {
   useEffect(() => {
     let frameId: number;
 
+    // Use localStorage so the jackpot starts at exactly 0 on the very first visit
+    // but continues counting seamlessly if the user refreshes the page.
+    let startStr = localStorage.getItem("afrobet_jackpot_start");
+    if (!startStr) {
+      startStr = Date.now().toString();
+      localStorage.setItem("afrobet_jackpot_start", startStr);
+    }
+    const startTime = parseInt(startStr, 10);
+
     const tick = () => {
-      // Calculate amount based on exact time so it continues across refreshes
-      const now = Date.now() / 1000;
+      const elapsed = (Date.now() - startTime) / 1000;
       setAmounts(
         INITIAL_JACKPOTS.map((j) => {
-          return (now * j.speed) % 100000;
+          // Count up to 1,000,000 then reset
+          return (elapsed * j.speed) % 1000000;
         })
       );
       frameId = requestAnimationFrame(tick);
