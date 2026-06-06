@@ -42,6 +42,24 @@ export function IconSprite() {
           </g>
         </symbol>
 
+        {/* Live in-play — wifi/signal waves */}
+        <symbol id="icon-live-in-play" viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
+            <circle cx="12" cy="17" r="1.5" fill="currentColor" stroke="none" />
+            <path d="M8.5 13.5a5 5 0 0 1 7 0" />
+            <path d="M5.5 10.5a9 9 0 0 1 13 0" />
+          </g>
+        </symbol>
+
+        {/* Crash rocket */}
+        <symbol id="icon-crash-rocket" viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M4.5 19.5 9 15M15 4c3 .7 5 2.7 5.5 5.5-2.3 5.5-5.8 9-9.8 10.7L8.5 18C10.8 14 14.3 10.5 15 4z" />
+            <path d="M9 15c-1.6.6-2.6 1.7-3.2 3.7 2-.6 3.2.6 3.8 2.1.6 1.6 2.1.5 3.7-.1" />
+            <circle cx="15.5" cy="10" r="1.5" fill="currentColor" stroke="none" />
+          </g>
+        </symbol>
+
         {/* ── Category nav icons (40×40 usage) ── */}
         {/* Soccer ball — circle + centered pentagon + 5 seams to the edge */}
         <symbol id="icon-sports" viewBox="0 0 32 32">
