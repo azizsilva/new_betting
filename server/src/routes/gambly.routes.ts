@@ -120,6 +120,22 @@ gamblyRouter.get("/debug", (req, res) => {
   res.json(debugLogs);
 });
 
+// Capture absolutely all requests sent to /api/gambly/* to debug wrong URLs
+gamblyRouter.all("*", (req, res, next) => {
+  if (!req.path.includes("debug")) {
+    debugLogs.unshift({
+      time: new Date().toISOString(),
+      path: req.originalUrl,
+      method: req.method,
+      contentType: req.headers["content-type"],
+      body: req.body,
+      query: req.query,
+    });
+    if (debugLogs.length > 20) debugLogs.pop();
+  }
+  next();
+});
+
 const num = z.union([z.number(), z.string(), z.null()]).transform((v) => Number(v) || 0);
 const str = z.union([z.string(), z.number(), z.null()]).transform((v) => v === null ? undefined : String(v));
 
