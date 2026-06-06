@@ -30,7 +30,7 @@ export function Footer() {
           <p className="mt-3 text-sm text-muted">© 2020–{new Date().getFullYear()} AfroBet216</p>
           <div className="mt-4 flex gap-2">
             <a
-              href="https://t.me/afrobet216"
+              href="https://t.me/Afrobet216"
               target="_blank"
               rel="noopener noreferrer"
               className="grid size-9 place-items-center rounded-lg border border-line text-fg hover:border-gold/50 hover:text-gold"
@@ -48,7 +48,7 @@ export function Footer() {
               <FaInstagram className="size-4" />
             </a>
             <a
-              href="mailto:contact@afrobet216.com"
+              href="mailto:Afrobet216@gmail.com"
               className="grid size-9 place-items-center rounded-lg border border-line text-fg hover:border-gold/50 hover:text-gold"
               aria-label="Email"
             >
