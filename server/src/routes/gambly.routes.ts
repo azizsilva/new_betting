@@ -135,18 +135,22 @@ const callbackSchema = z.object({
   currency_code: str.optional(),
   api_key: str.optional(),
   msg: str.optional(),
-});
-
-gamblyRouter.post(
+gamblyRouter.all(
   "/callback",
   asyncHandler(async (req, res) => {
     debugLogs.unshift({
       time: new Date().toISOString(),
+      method: req.method,
       contentType: req.headers["content-type"],
       body: req.body,
       query: req.query,
     });
     if (debugLogs.length > 20) debugLogs.pop();
+
+    if (req.method !== "POST") {
+      res.status(405).send("Method Not Allowed");
+      return;
+    }
 
     // 1) Authenticate the caller by the shared agency API key in the body.
     const bodyKey = (req.body as { api_key?: string })?.api_key ?? "";
