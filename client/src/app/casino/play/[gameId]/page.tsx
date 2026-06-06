@@ -4,7 +4,7 @@ import { use, useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { Loader2, X, AlertTriangle } from "lucide-react";
-import { openGame } from "@/lib/casino-api";
+import { openGame, withdrawGambly } from "@/lib/casino-api";
 import { fetchMe } from "@/lib/auth-api";
 import { useAuthStore } from "@/store/auth";
 import { useUiStore } from "@/store/ui";
@@ -55,13 +55,17 @@ export default function PlayGamePage({
 
   const [isExiting, setIsExiting] = useState(false);
 
-  // Exit → sync balance first, then leave (header shows the cut balance instantly).
   const exit = useCallback(async () => {
     if (isExiting) return;
     setIsExiting(true);
+    if (account === "gambly") {
+      // For V2 Transfer Wallet games (like Sportsbook), this pulls the balance back.
+      // For V1 games, it safely does nothing (returns 0).
+      await withdrawGambly();
+    }
     await refreshBalance();
     router.push("/casino");
-  }, [refreshBalance, router, isExiting]);
+  }, [refreshBalance, router, isExiting, account]);
 
   useEffect(() => {
     // Safety net behind the card-level gate: guests can't open a session.

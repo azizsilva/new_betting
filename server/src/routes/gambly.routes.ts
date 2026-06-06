@@ -6,7 +6,7 @@ import { z } from "zod";
 import { asyncHandler } from "../middleware/error.js";
 import { authenticate, requireRole } from "../middleware/auth.js";
 import { processGameCallback } from "../services/gameCallback.service.js";
-import { launchGamblyGame } from "../services/gambly.service.js";
+import { launchGamblyGame, withdrawGamblyBalance } from "../services/gambly.service.js";
 import { prisma } from "../lib/prisma.js";
 import { env } from "../config/env.js";
 import { logger } from "../lib/logger.js";
@@ -107,6 +107,15 @@ gamblyRouter.post(
     }
 
     res.json({ url: result.gameUrl });
+  }),
+);
+
+gamblyRouter.post(
+  "/withdraw",
+  authenticate,
+  asyncHandler(async (req, res) => {
+    const amount = await withdrawGamblyBalance(req.user!.id);
+    res.json({ success: true, amount });
   }),
 );
 

@@ -57,3 +57,12 @@ export async function openGame(
   });
   return data;
 }
+// Withdraw balance after a V2 game session ends
+export async function withdrawGambly(): Promise<{ success: boolean; amount: number }> {
+  try {
+    const { data } = await api.post("/gambly/withdraw");
+    return data;
+  } catch {
+    return { success: false, amount: 0 };
+  }
+}
