@@ -62,8 +62,8 @@ export function CasinoBrowser() {
     const term = q.trim().toLowerCase();
     const inTab = games.filter((g) => {
       if (g.tab !== tab) return false;
-      // Live Casino = Gamblly live games only (Evolution/Ezugi/Pragmatic Live).
-      if (tab === "live-casino" && g.account !== "gambly") return false;
+      // Live Casino = gambly + GambleHub live account games.
+      if (tab === "live-casino" && g.account === "slots") return false;
       if (quick !== "all" && !g.tags.includes(quick as never)) return false;
       if (provider && g.provider !== provider) return false;
       if (term && !g.name.toLowerCase().includes(term) && !g.provider.toLowerCase().includes(term))
@@ -85,7 +85,7 @@ export function CasinoBrowser() {
     // Only keep curated cards that resolved to a real Gamblly game on the live
     // tab (so we never show a card that can't launch via Gamblly).
     const curatedShown =
-      tab === "live-casino" ? curated.filter((g) => g.account === "gambly") : curated;
+      tab === "live-casino" ? curated.filter((g) => g.account !== "slots") : curated;
 
     const curatedIds = new Set(curatedShown.map((g) => g.id));
     const rest = inTab.filter((g) => !curatedIds.has(g.id));
