@@ -28,7 +28,9 @@ interface OpenGameResponse {
   message?: string;
   content?: {
     game?: { url?: string };
-    gameRes?: { sessionId?: string };
+    // GambleHub may use gameRes or gameSession, sessionId or session_id
+    gameRes?: { sessionId?: string; session_id?: string };
+    gameSession?: { sessionId?: string; session_id?: string };
   };
 }
 
@@ -247,7 +249,13 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
   }
 
   const url = data.content?.game?.url;
-  const sessionId = data.content?.gameRes?.sessionId;
+  // GambleHub may return sessionId under different keys — try all known variants.
+  const gameResObj = data.content?.gameRes ?? data.content?.gameSession;
+  const sessionId = gameResObj?.sessionId ?? gameResObj?.session_id;
+
+  // Log the full raw response so we can inspect the exact shape in pm2 logs.
+  logger.info({ account: acc.kind, gameId: params.gameId, url: url?.slice(0, 60), sessionId, rawContent: JSON.stringify(data.content).slice(0, 300) }, "openGame raw response");
+
   if (!url || !sessionId) {
     logger.warn({ account: acc.kind, gameId: params.gameId, data }, "openGame missing url/sessionId");
     throw BadRequest("Game session could not be created.");
