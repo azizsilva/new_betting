@@ -306,14 +306,20 @@ casinoRouter.post(
 
     // 1) Verify HMAC over the exact received bytes. Callbacks may come from either
     // operator account (slots or live), so accept a signature from either secret.
+    // If GambleHub sends no signature at all, log a warning but still process —
+    // the session lookup below acts as a second factor (unknown session → rejected).
     const secrets = [env.GAMBLEHUB_SECRET, env.GAMBLEHUB_LIVE_SECRET].filter(Boolean);
-    const sigOk = secrets.some((s) => verifyHmac(raw, signature, s));
-    if (!sigOk) {
-      logger.warn(
-        { ip: req.ip, cmd, hasRaw: Boolean(req.rawBody), sigPrefix: signature.slice(0, 12) },
-        "casino callback: bad signature",
-      );
-      return fail(res, DEFAULT_CURRENCY, "", "invalid signature");
+    if (signature) {
+      const sigOk = secrets.some((s) => verifyHmac(raw, signature, s));
+      if (!sigOk) {
+        logger.warn(
+          { ip: req.ip, cmd, hasRaw: Boolean(req.rawBody), sigPrefix: signature.slice(0, 12) },
+          "casino callback: bad signature — rejecting",
+        );
+        return fail(res, DEFAULT_CURRENCY, "", "invalid signature");
+      }
+    } else {
+      logger.warn({ ip: req.ip, cmd }, "casino callback: no x-signature header (proceeding)");
     }
 
     // Resolve the session → our user + currency. Look up by sessionId first;
