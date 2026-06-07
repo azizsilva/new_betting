@@ -15,7 +15,7 @@ export function MobileNav() {
   const { drawerOpen, toggleDrawer, closeDrawer } = useUiStore();
   const [sportOpen, setSportOpen] = useState(false);
 
-  const active = drawerOpen
+  const active: "menu" | "home" | "sport" | "live" | "casino" | "" = drawerOpen
     ? "menu"
     : pathname === "/"
       ? "home"
