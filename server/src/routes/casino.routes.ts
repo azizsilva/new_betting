@@ -242,10 +242,15 @@ interface CallbackOk {
 
 const num = z.union([z.number(), z.string()]).transform((v) => Number(v) || 0);
 
+// GambleHub sends "sessionId" (camelCase) in POST body, "sessionid" (lowercase) in GET.
+// Accept both with .or() so Zod doesn't reject either variant.
+const sessionidField = z.union([z.string(), z.undefined()]).optional();
+
 const balanceSchema = z.object({
   cmd: z.literal("getBalance"),
   login: z.string(),
-  sessionid: z.string(),
+  sessionid: sessionidField,
+  sessionId: sessionidField,
 });
 
 const writeBetSchema = z.object({
@@ -253,7 +258,8 @@ const writeBetSchema = z.object({
   bet: num.optional(),
   win: num.optional(),
   login: z.string(),
-  sessionid: z.string(),
+  sessionid: sessionidField,
+  sessionId: sessionidField,
   transactionId: z.string().min(1),
   round_finished: z.boolean().nullable().optional(),
   info: z.string().optional(),
@@ -263,7 +269,8 @@ const rollbackSchema = z.object({
   cmd: z.literal("rollback"),
   bet: num.optional(),
   login: z.string(),
-  sessionid: z.string(),
+  sessionid: sessionidField,
+  sessionId: sessionidField,
   transactionId: z.string().min(1),
   gameId: z.string().optional(),
 });
@@ -292,8 +299,9 @@ casinoRouter.all(
     const raw = req.rawBody ?? Buffer.from(JSON.stringify(combined));
     const signature = (req.headers["x-signature"] as string) || "";
 
-    const cmd = (combined as { cmd?: string })?.cmd;
-    const sessionid = (combined as { sessionid?: string })?.sessionid ?? "";
+    const cmd = (combined as any)?.cmd;
+    // GambleHub sends "sessionId" (camelCase) in POST body but "sessionid" (lowercase) in GET params.
+    const sessionid: string = (combined as any)?.sessionId ?? (combined as any)?.sessionid ?? "";
 
     // Log every callback so we can inspect exact incoming fields.
     callbackDebugLog.unshift({
