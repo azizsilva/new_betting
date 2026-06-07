@@ -278,6 +278,10 @@ function fail(res: import("express").Response, currency: string, login: string, 
   });
 }
 
+// Ring buffer of recent callback hits for live debugging.
+const callbackDebugLog: object[] = [];
+casinoRouter.get("/callback-debug", (_req, res) => res.json(callbackDebugLog));
+
 casinoRouter.post(
   "/callback",
   asyncHandler(async (req, res) => {
@@ -286,6 +290,19 @@ casinoRouter.post(
 
     const cmd = (req.body as { cmd?: string })?.cmd;
     const sessionid = (req.body as { sessionid?: string })?.sessionid ?? "";
+
+    // Log every callback so we can inspect exact incoming fields.
+    callbackDebugLog.unshift({
+      time: new Date().toISOString(),
+      cmd,
+      sessionid: (sessionid || "").slice(0, 30),
+      login: (req.body as { login?: string })?.login ?? "",
+      hasRaw: Boolean(req.rawBody),
+      rawLen: raw.length,
+      sigPrefix: signature.slice(0, 16),
+      body: req.body,
+    });
+    if (callbackDebugLog.length > 30) callbackDebugLog.pop();
 
     // 1) Verify HMAC over the exact received bytes. Callbacks may come from either
     // operator account (slots or live), so accept a signature from either secret.
