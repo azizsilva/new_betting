@@ -282,25 +282,30 @@ function fail(res: import("express").Response, currency: string, login: string, 
 const callbackDebugLog: object[] = [];
 casinoRouter.get("/callback-debug", (_req, res) => res.json(callbackDebugLog));
 
-casinoRouter.post(
+// GambleHub sends callbacks as GET with query params OR POST with JSON body.
+// Accept both methods on the same handler.
+casinoRouter.all(
   "/callback",
   asyncHandler(async (req, res) => {
-    const raw = req.rawBody ?? Buffer.from(JSON.stringify(req.body ?? {}));
+    // Merge query params + body so GET and POST are handled identically.
+    const combined = { ...(req.query ?? {}), ...(req.body ?? {}) };
+    const raw = req.rawBody ?? Buffer.from(JSON.stringify(combined));
     const signature = (req.headers["x-signature"] as string) || "";
 
-    const cmd = (req.body as { cmd?: string })?.cmd;
-    const sessionid = (req.body as { sessionid?: string })?.sessionid ?? "";
+    const cmd = (combined as { cmd?: string })?.cmd;
+    const sessionid = (combined as { sessionid?: string })?.sessionid ?? "";
 
     // Log every callback so we can inspect exact incoming fields.
     callbackDebugLog.unshift({
       time: new Date().toISOString(),
+      method: req.method,
       cmd,
       sessionid: (sessionid || "").slice(0, 30),
-      login: (req.body as { login?: string })?.login ?? "",
+      login: (combined as { login?: string })?.login ?? "",
       hasRaw: Boolean(req.rawBody),
       rawLen: raw.length,
       sigPrefix: signature.slice(0, 16),
-      body: req.body,
+      combined,
     });
     if (callbackDebugLog.length > 30) callbackDebugLog.pop();
 
@@ -325,7 +330,7 @@ casinoRouter.post(
     // Resolve the session → our user + currency. Look up by sessionId first;
     // if the provider's sessionid differs from what openGame returned, fall back
     // to the player login (most recent session for that login).
-    const bodyLogin = (req.body as { login?: string })?.login ?? "";
+    const bodyLogin = (combined as { login?: string })?.login ?? "";
     let session = sessionid
       ? await prisma.gameSession.findUnique({ where: { sessionId: sessionid } })
       : null;
@@ -347,7 +352,7 @@ casinoRouter.post(
     try {
       switch (cmd) {
         case "getBalance": {
-          balanceSchema.parse(req.body);
+          balanceSchema.parse(combined);
           const user = await prisma.user.findUnique({
             where: { id: session.userId },
             select: { balance: true },
@@ -364,7 +369,7 @@ casinoRouter.post(
         }
 
         case "writeBet": {
-          const b = writeBetSchema.parse(req.body);
+          const b = writeBetSchema.parse(combined);
           const bet = b.bet ?? 0;
           const win = b.win ?? 0;
           const gameRound = b.transactionId; // per-round key for exposure tracking
@@ -380,7 +385,7 @@ casinoRouter.post(
               gameUid: session.gameId,
               gameRound,
               betAmount: bet,
-              raw: req.body,
+              raw: combined,
               requestIp: req.ip,
               requestUa: req.headers["user-agent"],
             });
@@ -397,7 +402,7 @@ casinoRouter.post(
               gameUid: session.gameId,
               gameRound,
               winAmount: win,
-              raw: req.body,
+              raw: combined,
               requestIp: req.ip,
               requestUa: req.headers["user-agent"],
             });
@@ -424,7 +429,7 @@ casinoRouter.post(
         }
 
         case "rollback": {
-          const b = rollbackSchema.parse(req.body);
+          const b = rollbackSchema.parse(combined);
           // Refund the staked amount; keyed on the SAME transactionId as the bet,
           // but action "refund" so it's independently idempotent.
           const r = await processGameCallback({
