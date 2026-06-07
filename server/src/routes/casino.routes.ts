@@ -268,7 +268,7 @@ const rollbackSchema = z.object({
 });
 
 function fail(res: import("express").Response, currency: string, login: string, message: string) {
-  return res.status(400).json({
+  return res.status(200).json({
     status: "fail",
     balance: 0,
     currency,
