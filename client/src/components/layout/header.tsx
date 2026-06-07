@@ -13,19 +13,15 @@ import { useUiStore } from "@/store/ui";
 import { isStaffRole } from "@/lib/auth-api";
 import { cn } from "@/lib/utils";
 
-// Gamblly sportsbook game_uid ("SPORT 2") — launched in an iframe like any game.
-const SPORT_GAME_UID = "8a704858d5deb4af1ddc722092ac7614";
-const SPORT_HREF = `/casino/play/${SPORT_GAME_UID}?account=gambly`;
+const SPORT1_HREF = "/casino/play/8a704858d5deb4af1ddc722092ac7614?account=gambly";
+const SPORT2_HREF = `/casino/play/${encodeURIComponent("swa:0:0")}?account=slots`;
 
-// Casino sub-sections are tabs on /casino (kingsbet365 style): the header link
-// carries the ?tab= so clicking it both navigates AND highlights correctly.
-// Sport / Live Sports launch the Gamblly sportsbook (seamless wallet → balance).
 const NAV = [
-  { label: "Sport", href: SPORT_HREF },
-  { label: "Live Sports", href: SPORT_HREF },
-  { label: "Casino", href: "/casino?tab=casino", tab: "casino" },
+  { label: "Sport 1",     href: SPORT1_HREF },
+  { label: "Sport 2",     href: SPORT2_HREF },
+  { label: "Casino",      href: "/casino?tab=casino",      tab: "casino" },
   { label: "Live Casino", href: "/casino?tab=live-casino", tab: "live-casino", live: true },
-  { label: "Instant", href: "/casino?tab=instant", tab: "instant" },
+  { label: "Instant",     href: "/casino?tab=instant",     tab: "instant" },
 ];
 
 // Active when the path matches — and, for the /casino tabs, when the ?tab also
