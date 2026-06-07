@@ -58,6 +58,7 @@ export function createApp() {
       limit: 300,
       standardHeaders: "draft-7",
       legacyHeaders: false,
+      skip: (req) => req.path.includes("/casino/callback"),
     }),
   );
 
