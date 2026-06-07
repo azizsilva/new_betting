@@ -38,10 +38,17 @@ export function CasinoBrowser() {
 
   // Shared live catalog (same query as the homepage rows → fetched once, cached).
   const { games, isLoading, isError } = useGames();
-  const providers = useMemo(
-    () => Array.from(new Set(games.map((g) => g.provider))).sort(),
-    [games],
-  );
+
+  // Only show providers that actually have games in the current tab (so selecting
+  // "slot-pragmatic" on Live Casino tab doesn't yield 0 results).
+  const providers = useMemo(() => {
+    const tabGames = games.filter((g) => {
+      if (g.tab !== tab) return false;
+      if (tab === "live-casino" && g.account === "slots") return false;
+      return true;
+    });
+    return Array.from(new Set(tabGames.map((g) => g.provider))).sort();
+  }, [games, tab]);
 
   // Debounce writes to the URL.
   useEffect(() => {
@@ -103,6 +110,7 @@ export function CasinoBrowser() {
             key={t.id}
             onClick={() => {
               setTab(t.id === "casino" ? null : t.id);
+              setProvider(null);
               setVisible(PAGE_SIZE);
             }}
             className={cn(

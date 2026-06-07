@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { SpriteIcon } from "@/components/icon-sprite";
 
-// Gamblly sportsbook game_uid ("SPORT 2" / BetBy), launched in the iframe.
-const SPORT_HREF = "/casino/play/8a704858d5deb4af1ddc722092ac7614?account=gambly";
+const SPORT1_HREF = "/casino/play/8a704858d5deb4af1ddc722092ac7614?account=gambly";
+const SPORT2_HREF = `/casino/play/${encodeURIComponent("swa:0:0")}?account=slots`;
 
 const CATS = [
-  { label: "Sport", href: SPORT_HREF, icon: "icon-sports" },
-  { label: "Live Sports", href: SPORT_HREF, icon: "icon-live-sport" },
-  { label: "Casino", href: "/casino?tab=casino", icon: "icon-casino" },
-  { label: "Live Casino", href: "/casino?tab=live-casino", icon: "icon-live-casino-nav" },
-  { label: "Instant", href: "/casino?tab=instant", icon: "icon-instant" },
-  { label: "Promotions", href: "/promotions", icon: "icon-promotions" },
+  { label: "Sport 1",     href: SPORT1_HREF,                icon: "icon-sports" },
+  { label: "Sport 2",     href: SPORT2_HREF,                icon: "icon-live-sport" },
+  { label: "Casino",      href: "/casino?tab=casino",       icon: "icon-casino" },
+  { label: "Live Casino", href: "/casino?tab=live-casino",  icon: "icon-live-casino-nav" },
+  { label: "Instant",     href: "/casino?tab=instant",      icon: "icon-instant" },
+  { label: "Promotions",  href: "/promotions",              icon: "icon-promotions" },
 ];
 
 export function CategoryTiles() {
