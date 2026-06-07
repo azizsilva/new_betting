@@ -7,6 +7,7 @@ import { api } from "@/lib/api";
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { Users, DollarSign, TrendingUp, Activity, Loader2 } from "lucide-react";
 import { formatMoney } from "@/lib/utils";
+import { LiveActivityFeed } from "@/components/panel/LiveActivityFeed";
 
 type SubtreeUser = {
   id: number;
@@ -164,59 +165,67 @@ export default function DashboardPage() {
         ))}
       </div>
 
-      {/* Chart */}
-      <div className="rounded-xl border border-line bg-surface p-5">
-        <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
-          <div>
-            <h2 className="text-lg font-bold">Network Growth</h2>
-            <p className="text-sm text-muted">Partners and Users over the last {timeframe === "3months" ? "3 months" : timeframe === "30days" ? "30 days" : "7 days"}</p>
+      {/* Analytics Section */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        {/* Chart */}
+        <div className="rounded-xl border border-line bg-surface p-5 lg:col-span-2">
+          <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+            <div>
+              <h2 className="text-lg font-bold">Network Growth</h2>
+              <p className="text-sm text-muted">Partners and Users over the last {timeframe === "3months" ? "3 months" : timeframe === "30days" ? "30 days" : "7 days"}</p>
+            </div>
+            <div className="flex rounded-lg border border-line bg-bg-elevated p-1">
+              <button 
+                onClick={() => setTimeframe("3months")}
+                className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${timeframe === "3months" ? "bg-surface text-fg shadow-sm" : "text-muted hover:text-fg"}`}
+              >
+                Last 3 months
+              </button>
+              <button 
+                onClick={() => setTimeframe("30days")}
+                className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${timeframe === "30days" ? "bg-surface text-fg shadow-sm" : "text-muted hover:text-fg"}`}
+              >
+                Last 30 days
+              </button>
+              <button 
+                onClick={() => setTimeframe("7days")}
+                className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${timeframe === "7days" ? "bg-surface text-fg shadow-sm" : "text-muted hover:text-fg"}`}
+              >
+                Last 7 days
+              </button>
+            </div>
           </div>
-          <div className="flex rounded-lg border border-line bg-bg-elevated p-1">
-            <button 
-              onClick={() => setTimeframe("3months")}
-              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${timeframe === "3months" ? "bg-surface text-fg shadow-sm" : "text-muted hover:text-fg"}`}
-            >
-              Last 3 months
-            </button>
-            <button 
-              onClick={() => setTimeframe("30days")}
-              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${timeframe === "30days" ? "bg-surface text-fg shadow-sm" : "text-muted hover:text-fg"}`}
-            >
-              Last 30 days
-            </button>
-            <button 
-              onClick={() => setTimeframe("7days")}
-              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${timeframe === "7days" ? "bg-surface text-fg shadow-sm" : "text-muted hover:text-fg"}`}
-            >
-              Last 7 days
-            </button>
+          
+          <div className="h-[300px] w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={dynamicChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                <defs>
+                  <linearGradient id="colorPartners" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#f59e0b" stopOpacity={0.3}/>
+                    <stop offset="95%" stopColor="#f59e0b" stopOpacity={0}/>
+                  </linearGradient>
+                  <linearGradient id="colorUsers" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.3}/>
+                    <stop offset="95%" stopColor="#10b981" stopOpacity={0}/>
+                  </linearGradient>
+                </defs>
+                <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: "#a1a1aa" }} dy={10} minTickGap={30} />
+                <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: "#a1a1aa" }} />
+                <Tooltip 
+                  contentStyle={{ backgroundColor: "#18181b", borderColor: "#27272a", borderRadius: "8px" }}
+                  itemStyle={{ color: "#e4e4e7" }}
+                  labelStyle={{ color: "#a1a1aa" }}
+                />
+                <Area type="monotone" dataKey="users" name="Active Users" stroke="#10b981" fillOpacity={1} fill="url(#colorUsers)" />
+                <Area type="monotone" dataKey="partners" name="Partners" stroke="#f59e0b" fillOpacity={1} fill="url(#colorPartners)" />
+              </AreaChart>
+            </ResponsiveContainer>
           </div>
         </div>
-        
-        <div className="h-[300px] w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={dynamicChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-              <defs>
-                <linearGradient id="colorPartners" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#f59e0b" stopOpacity={0.3}/>
-                  <stop offset="95%" stopColor="#f59e0b" stopOpacity={0}/>
-                </linearGradient>
-                <linearGradient id="colorUsers" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#10b981" stopOpacity={0.3}/>
-                  <stop offset="95%" stopColor="#10b981" stopOpacity={0}/>
-                </linearGradient>
-              </defs>
-              <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: "#a1a1aa" }} dy={10} minTickGap={30} />
-              <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: "#a1a1aa" }} />
-              <Tooltip 
-                contentStyle={{ backgroundColor: "#18181b", borderColor: "#27272a", borderRadius: "8px" }}
-                itemStyle={{ color: "#e4e4e7" }}
-                labelStyle={{ color: "#a1a1aa" }}
-              />
-              <Area type="monotone" dataKey="users" name="Active Users" stroke="#10b981" fillOpacity={1} fill="url(#colorUsers)" />
-              <Area type="monotone" dataKey="partners" name="Partners" stroke="#f59e0b" fillOpacity={1} fill="url(#colorPartners)" />
-            </AreaChart>
-          </ResponsiveContainer>
+
+        {/* Live Feed */}
+        <div className="lg:col-span-1">
+          <LiveActivityFeed />
         </div>
       </div>
     </div>

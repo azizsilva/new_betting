@@ -4,6 +4,7 @@ import { asyncHandler } from "../middleware/error.js";
 import { authenticate, requireRole } from "../middleware/auth.js";
 import { processGameCallback } from "../services/gameCallback.service.js";
 import { getUserGames, openGame } from "../services/gambleHub.service.js";
+import * as userService from "../services/user.service.js";
 import { verifyHmac } from "../lib/hmac.js";
 import { prisma } from "../lib/prisma.js";
 import { env } from "../config/env.js";
@@ -97,6 +98,57 @@ casinoRouter.get(
       take: 20,
     });
     res.json(rows);
+  }),
+);
+
+casinoRouter.get(
+  "/live-feed",
+  authenticate,
+  requireRole("admin_provider", "owner", "partner", "super_admin", "admin", "agent"),
+  asyncHandler(async (req, res) => {
+    const subtree = await userService.listSubtree(req.user!.id);
+    const ids = subtree.map((u) => u.id);
+    
+    // Add the user's own ID as well, just in case they play (agents shouldn't play, but just in case)
+    ids.push(req.user!.id);
+
+    const events = await prisma.gameCallbackEvent.findMany({
+      where: { 
+        userId: { in: ids },
+        action: { in: ["bet", "win"] }
+      },
+      orderBy: { createdAt: "desc" },
+      take: 30,
+    });
+
+    const mapped = events.map((ev) => {
+      let gameName = ev.gameUid || "Casino Game";
+      if (gameName.includes(':')) {
+        const parts = gameName.split(':');
+        if (parts.length >= 2 && parts[1]) {
+           const provider = parts[1].toLowerCase();
+           if (provider.includes("hacksaw")) gameName = "Hacksaw Slots";
+           else if (provider.includes("pragmatic")) gameName = "Pragmatic Play";
+           else if (provider.includes("evolution")) gameName = "Evolution Live";
+           else gameName = provider.charAt(0).toUpperCase() + provider.slice(1);
+        }
+      } else if (gameName.length > 20 && /^[a-f0-9]+$/i.test(gameName)) {
+        gameName = "Crazy Time";
+      } else if (gameName.toLowerCase().includes("greece")) {
+        gameName = "Greek Roulette";
+      }
+
+      return {
+        id: Number(ev.id),
+        username: ev.username,
+        action: ev.action,
+        game: gameName,
+        amount: ev.action === "win" ? Number(ev.winAmount) : Number(ev.betAmount),
+        createdAt: ev.createdAt,
+      };
+    });
+
+    res.json(mapped);
   }),
 );
 
