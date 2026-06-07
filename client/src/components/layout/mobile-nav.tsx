@@ -25,72 +25,42 @@ export function MobileNav() {
           ? "casino"
           : "";
 
-  const Tab = ({
-    id, icon, label, href, center, onClick,
-  }: {
-    id: string; icon: string; label: string;
-    href?: string; center?: boolean; onClick?: () => void;
-  }) => {
-    const isActive = active === id;
-    const content = center ? (
-      <>
-        <span className={cn(
-          "grid size-12 place-items-center rounded-full border-4 border-bg transition-colors",
-          isActive ? "bg-gold-gradient text-brand-foreground gold-glow" : "bg-surface-2 text-gold",
-        )}>
-          <SpriteIcon id={icon} size={22} />
-        </span>
-        <span className={cn("text-[10px] font-medium", isActive ? "text-gold" : "text-muted")}>{label}</span>
-      </>
-    ) : (
-      <>
-        <SpriteIcon id={icon} size={22} className={isActive ? "text-gold" : "text-muted"} />
-        <span className={cn("text-[10px] font-medium", isActive ? "text-gold" : "text-muted")}>{label}</span>
-      </>
-    );
-
-    const cls = cn("flex flex-1 flex-col items-center gap-1", center ? "-mt-5" : "py-1.5");
-
-    if (href) return <Link href={href} onClick={closeDrawer} className={cls}>{content}</Link>;
-    return <button onClick={onClick} className={cls} aria-label={label}>{content}</button>;
-  };
-
   return (
     <>
-      {/* Sport picker popup */}
+      {/* Sport picker popup — appears above the nav bar */}
       {sportOpen && (
         <div className="fixed inset-0 z-[60]" onClick={() => setSportOpen(false)}>
           <div
-            className="absolute bottom-[72px] left-2 w-52 overflow-hidden rounded-2xl border border-gold/20 bg-[#1a1a1a] shadow-2xl"
+            className="absolute bottom-[80px] left-2 w-56 overflow-hidden rounded-2xl border border-gold/30 bg-[#1c1c1c] shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-gold/60">
+            <div className="px-4 py-2.5 text-[10px] font-bold uppercase tracking-widest text-gold/50 border-b border-white/5">
               Choisir le sport
             </div>
             <Link
               href={SPORT1_HREF}
               onClick={() => { setSportOpen(false); closeDrawer(); }}
-              className="flex items-center gap-3 px-3 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5"
+              className="flex items-center gap-3 px-4 py-3.5 transition-colors hover:bg-white/5 active:bg-white/10"
             >
-              <span className="grid size-8 place-items-center rounded-lg bg-gold/10">
-                <SpriteIcon id="icon-sports" size={18} className="text-gold" />
+              <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-gold/15">
+                <SpriteIcon id="icon-sports" size={20} className="text-gold" />
               </span>
               <div>
-                <div className="text-white">Sport 1</div>
+                <div className="text-sm font-bold text-white">Sport 1</div>
                 <div className="text-[10px] text-white/40">Gambly Sportsbook</div>
               </div>
             </Link>
-            <div className="mx-3 h-px bg-white/5" />
+            <div className="mx-4 h-px bg-white/5" />
             <Link
               href={SPORT2_HREF}
               onClick={() => { setSportOpen(false); closeDrawer(); }}
-              className="flex items-center gap-3 px-3 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5"
+              className="flex items-center gap-3 px-4 py-3.5 transition-colors hover:bg-white/5 active:bg-white/10"
             >
-              <span className="grid size-8 place-items-center rounded-lg bg-gold/10">
-                <SpriteIcon id="icon-live-in-play" size={18} className="text-gold" />
+              <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-gold/15">
+                <SpriteIcon id="icon-live-in-play" size={20} className="text-gold" />
               </span>
               <div>
-                <div className="text-white">Sport 2</div>
+                <div className="text-sm font-bold text-white">Sport 2</div>
                 <div className="text-[10px] text-white/40">Altenar · Tous les matchs</div>
               </div>
             </Link>
@@ -98,24 +68,121 @@ export function MobileNav() {
         </div>
       )}
 
-      <nav className="fixed inset-x-0 bottom-0 z-[55] border-t border-gold/20 bg-surface shadow-[0_-6px_24px_rgba(0,0,0,0.8)] lg:hidden">
-        <div className="mx-auto flex max-w-md items-end justify-around px-2 pb-[max(24px,env(safe-area-inset-bottom))] pt-2">
-          {/* Sport tab — tapping opens picker */}
+      <nav className="fixed inset-x-0 bottom-0 z-[55] border-t border-white/5 bg-[#111111] shadow-[0_-4px_20px_rgba(0,0,0,0.9)] lg:hidden">
+        <div className="mx-auto flex max-w-md items-end justify-around px-1 pb-[max(20px,env(safe-area-inset-bottom))] pt-2">
+
+          {/* Sport — opens picker */}
           <button
             onClick={() => setSportOpen((o) => !o)}
-            className="flex flex-1 flex-col items-center gap-1 py-1.5"
+            className="flex flex-1 flex-col items-center gap-1 py-1"
             aria-label="Sport"
           >
-            <SpriteIcon id="icon-sports" size={22} className={active === "sport" ? "text-gold" : "text-muted"} />
-            <span className={cn("text-[10px] font-medium", active === "sport" ? "text-gold" : "text-muted")}>
+            <span className={cn(
+              "grid size-11 place-items-center rounded-xl transition-colors",
+              active === "sport" || sportOpen
+                ? "bg-gold-gradient shadow-[0_2px_12px_rgba(212,175,55,0.4)]"
+                : "bg-transparent",
+            )}>
+              <SpriteIcon
+                id="icon-sports"
+                size={22}
+                className={active === "sport" || sportOpen ? "text-black" : "text-white/60"}
+              />
+            </span>
+            <span className={cn(
+              "text-[10px] font-semibold",
+              active === "sport" || sportOpen ? "text-gold" : "text-white/40",
+            )}>
               Sport
             </span>
           </button>
 
-          <Tab id="live" icon="icon-live-casino-nav" label="Live" href="/casino?tab=live-casino" />
-          <Tab id="home" icon="icon-home" label="Home" href="/" center />
-          <Tab id="casino" icon="icon-casino" label="Casino" href="/casino" />
-          <Tab id="menu" icon="icon-menu" label="Menu" onClick={toggleDrawer} />
+          {/* Live Casino */}
+          <Link
+            href="/casino?tab=live-casino"
+            onClick={closeDrawer}
+            className="flex flex-1 flex-col items-center gap-1 py-1"
+          >
+            <span className={cn(
+              "grid size-11 place-items-center rounded-xl transition-colors",
+              active === "live" ? "bg-gold-gradient shadow-[0_2px_12px_rgba(212,175,55,0.4)]" : "bg-transparent",
+            )}>
+              <SpriteIcon
+                id="icon-live-casino-nav"
+                size={22}
+                className={active === "live" ? "text-black" : "text-white/60"}
+              />
+            </span>
+            <span className={cn("text-[10px] font-semibold", active === "live" ? "text-gold" : "text-white/40")}>
+              Live
+            </span>
+          </Link>
+
+          {/* Home — center raised circle (X10BET style) */}
+          <Link
+            href="/"
+            onClick={closeDrawer}
+            className="flex flex-1 flex-col items-center gap-1 -mt-4"
+          >
+            <span className={cn(
+              "grid size-14 place-items-center rounded-full border-4 border-[#111111] shadow-lg transition-colors",
+              active === "home"
+                ? "bg-gold-gradient shadow-[0_2px_16px_rgba(212,175,55,0.5)]"
+                : "bg-[#2a2a2a]",
+            )}>
+              <SpriteIcon
+                id="icon-home"
+                size={24}
+                className={active === "home" ? "text-black" : "text-gold"}
+              />
+            </span>
+            <span className={cn("text-[10px] font-semibold", active === "home" ? "text-gold" : "text-white/40")}>
+              Home
+            </span>
+          </Link>
+
+          {/* Casino */}
+          <Link
+            href="/casino"
+            onClick={closeDrawer}
+            className="flex flex-1 flex-col items-center gap-1 py-1"
+          >
+            <span className={cn(
+              "grid size-11 place-items-center rounded-xl transition-colors",
+              active === "casino" ? "bg-gold-gradient shadow-[0_2px_12px_rgba(212,175,55,0.4)]" : "bg-transparent",
+            )}>
+              <SpriteIcon
+                id="icon-casino"
+                size={22}
+                className={active === "casino" ? "text-black" : "text-white/60"}
+              />
+            </span>
+            <span className={cn("text-[10px] font-semibold", active === "casino" ? "text-gold" : "text-white/40")}>
+              Casino
+            </span>
+          </Link>
+
+          {/* Menu */}
+          <button
+            onClick={toggleDrawer}
+            className="flex flex-1 flex-col items-center gap-1 py-1"
+            aria-label="Menu"
+          >
+            <span className={cn(
+              "grid size-11 place-items-center rounded-xl transition-colors",
+              active === "menu" ? "bg-gold-gradient shadow-[0_2px_12px_rgba(212,175,55,0.4)]" : "bg-transparent",
+            )}>
+              <SpriteIcon
+                id="icon-menu"
+                size={22}
+                className={active === "menu" ? "text-black" : "text-white/60"}
+              />
+            </span>
+            <span className={cn("text-[10px] font-semibold", active === "menu" ? "text-gold" : "text-white/40")}>
+              Menu
+            </span>
+          </button>
+
         </div>
       </nav>
     </>
