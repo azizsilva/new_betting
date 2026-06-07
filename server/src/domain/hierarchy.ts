@@ -3,6 +3,7 @@ import type { UserRole } from "@prisma/client";
 // Ordered top → bottom. Lower index = more authority.
 //   admin_provider → owner → partner → super_admin → admin → agent → player
 export const ROLE_ORDER: UserRole[] = [
+  "bigboss",
   "admin_provider",
   "owner",
   "partner",

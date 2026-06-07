@@ -1,6 +1,7 @@
 // Shared types mirroring the BetSlate backend API.
 
 export type UserRole =
+  | "bigboss"
   | "admin_provider"
   | "owner"
   | "partner"

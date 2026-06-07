@@ -109,6 +109,7 @@ export async function getTransactions(limit = 50): Promise<Txn[]> {
 // The role an actor of `role` can create directly below itself.
 // Chain: admin_provider → owner → partner → super_admin → admin → agent → player.
 export const ROLE_ORDER: UserRole[] = [
+  "bigboss",
   "admin_provider",
   "owner",
   "partner",
@@ -126,6 +127,7 @@ export function creatableRoles(role: UserRole | null): UserRole[] {
 }
 
 export const ROLE_LABEL: Record<string, string> = {
+  bigboss: "Big Boss",
   admin_provider: "Admin Provider",
   owner: "Owner",
   partner: "Partner",

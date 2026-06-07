@@ -104,7 +104,7 @@ casinoRouter.get(
 casinoRouter.get(
   "/live-feed",
   authenticate,
-  requireRole("admin_provider", "owner", "partner", "super_admin", "admin", "agent"),
+  requireRole("bigboss", "admin_provider", "owner", "partner", "super_admin", "admin", "agent"),
   asyncHandler(async (req, res) => {
     const subtree = await userService.listSubtree(req.user!.id);
     const ids = subtree.map((u) => u.id);

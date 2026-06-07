@@ -29,7 +29,7 @@ const createSchema = z.object({
 // Create a user directly below the actor.
 usersRouter.post(
   "/",
-  requireRole("admin_provider", "owner", "partner", "super_admin", "admin", "agent"),
+  requireRole("bigboss", "admin_provider", "owner", "partner", "super_admin", "admin", "agent"),
   asyncHandler(async (req, res) => {
     const body = createSchema.parse(req.body);
     const user = await authService.createUser({ actorId: req.user!.id, ...body });

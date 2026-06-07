@@ -22,6 +22,7 @@ datasource db {
 
 // Chain (top → bottom). Each role can create ANY role below it and fund them.
 enum UserRole {
+  bigboss
   admin_provider // principal/top — creates everyone, infinite balance
   owner
   partner
