@@ -15,19 +15,21 @@ export function MobileNav() {
   const { drawerOpen, toggleDrawer, closeDrawer } = useUiStore();
   const [sportOpen, setSportOpen] = useState(false);
 
-  const active: "menu" | "home" | "sport" | "live" | "casino" | "" = drawerOpen
-    ? "menu"
-    : pathname === "/"
-      ? "home"
-      : pathname.startsWith("/casino/play/8a704858") || pathname.startsWith("/casino/play/swa")
-        ? "sport"
-        : pathname.startsWith("/casino")
-          ? "casino"
-          : "";
+  const isHome   = !drawerOpen && pathname === "/";
+  const isSport  = !drawerOpen && (pathname.startsWith("/casino/play/8a704858") || pathname.startsWith("/casino/play/swa"));
+  const isCasino = !drawerOpen && !isSport && pathname.startsWith("/casino");
+  const isMenu   = drawerOpen;
+
+  const boxCls  = (on: boolean) => cn(
+    "grid size-11 place-items-center rounded-xl transition-colors",
+    on ? "bg-gold-gradient shadow-[0_2px_12px_rgba(212,175,55,0.4)]" : "bg-transparent",
+  );
+  const iconCls = (on: boolean) => on ? "text-black" : "text-white/60";
+  const txtCls  = (on: boolean) => cn("text-[10px] font-semibold", on ? "text-gold" : "text-white/40");
 
   return (
     <>
-      {/* Sport picker popup — appears above the nav bar */}
+      {/* Sport picker popup */}
       {sportOpen && (
         <div className="fixed inset-0 z-[60]" onClick={() => setSportOpen(false)}>
           <div
@@ -71,116 +73,51 @@ export function MobileNav() {
       <nav className="fixed inset-x-0 bottom-0 z-[55] border-t border-white/5 bg-[#111111] shadow-[0_-4px_20px_rgba(0,0,0,0.9)] lg:hidden">
         <div className="mx-auto flex max-w-md items-end justify-around px-1 pb-[max(20px,env(safe-area-inset-bottom))] pt-2">
 
-          {/* Sport — opens picker */}
+          {/* Sport */}
           <button
             onClick={() => setSportOpen((o) => !o)}
             className="flex flex-1 flex-col items-center gap-1 py-1"
             aria-label="Sport"
           >
-            <span className={cn(
-              "grid size-11 place-items-center rounded-xl transition-colors",
-              active === "sport" || sportOpen
-                ? "bg-gold-gradient shadow-[0_2px_12px_rgba(212,175,55,0.4)]"
-                : "bg-transparent",
-            )}>
-              <SpriteIcon
-                id="icon-sports"
-                size={22}
-                className={active === "sport" || sportOpen ? "text-black" : "text-white/60"}
-              />
+            <span className={boxCls(isSport || sportOpen)}>
+              <SpriteIcon id="icon-sports" size={22} className={iconCls(isSport || sportOpen)} />
             </span>
-            <span className={cn(
-              "text-[10px] font-semibold",
-              active === "sport" || sportOpen ? "text-gold" : "text-white/40",
-            )}>
-              Sport
-            </span>
+            <span className={txtCls(isSport || sportOpen)}>Sport</span>
           </button>
 
           {/* Live Casino */}
-          <Link
-            href="/casino?tab=live-casino"
-            onClick={closeDrawer}
-            className="flex flex-1 flex-col items-center gap-1 py-1"
-          >
-            <span className={cn(
-              "grid size-11 place-items-center rounded-xl transition-colors",
-              active === "live" ? "bg-gold-gradient shadow-[0_2px_12px_rgba(212,175,55,0.4)]" : "bg-transparent",
-            )}>
-              <SpriteIcon
-                id="icon-live-casino-nav"
-                size={22}
-                className={active === "live" ? "text-black" : "text-white/60"}
-              />
+          <Link href="/casino?tab=live-casino" onClick={closeDrawer} className="flex flex-1 flex-col items-center gap-1 py-1">
+            <span className={boxCls(false)}>
+              <SpriteIcon id="icon-live-casino-nav" size={22} className="text-white/60" />
             </span>
-            <span className={cn("text-[10px] font-semibold", active === "live" ? "text-gold" : "text-white/40")}>
-              Live
-            </span>
+            <span className={txtCls(false)}>Live</span>
           </Link>
 
-          {/* Home — center raised circle (X10BET style) */}
-          <Link
-            href="/"
-            onClick={closeDrawer}
-            className="flex flex-1 flex-col items-center gap-1 -mt-4"
-          >
+          {/* Home — raised circle */}
+          <Link href="/" onClick={closeDrawer} className="flex flex-1 flex-col items-center gap-1 -mt-4">
             <span className={cn(
               "grid size-14 place-items-center rounded-full border-4 border-[#111111] shadow-lg transition-colors",
-              active === "home"
-                ? "bg-gold-gradient shadow-[0_2px_16px_rgba(212,175,55,0.5)]"
-                : "bg-[#2a2a2a]",
+              isHome ? "bg-gold-gradient shadow-[0_2px_16px_rgba(212,175,55,0.5)]" : "bg-[#2a2a2a]",
             )}>
-              <SpriteIcon
-                id="icon-home"
-                size={24}
-                className={active === "home" ? "text-black" : "text-gold"}
-              />
+              <SpriteIcon id="icon-home" size={24} className={isHome ? "text-black" : "text-gold"} />
             </span>
-            <span className={cn("text-[10px] font-semibold", active === "home" ? "text-gold" : "text-white/40")}>
-              Home
-            </span>
+            <span className={txtCls(isHome)}>Home</span>
           </Link>
 
           {/* Casino */}
-          <Link
-            href="/casino"
-            onClick={closeDrawer}
-            className="flex flex-1 flex-col items-center gap-1 py-1"
-          >
-            <span className={cn(
-              "grid size-11 place-items-center rounded-xl transition-colors",
-              active === "casino" ? "bg-gold-gradient shadow-[0_2px_12px_rgba(212,175,55,0.4)]" : "bg-transparent",
-            )}>
-              <SpriteIcon
-                id="icon-casino"
-                size={22}
-                className={active === "casino" ? "text-black" : "text-white/60"}
-              />
+          <Link href="/casino" onClick={closeDrawer} className="flex flex-1 flex-col items-center gap-1 py-1">
+            <span className={boxCls(isCasino)}>
+              <SpriteIcon id="icon-casino" size={22} className={iconCls(isCasino)} />
             </span>
-            <span className={cn("text-[10px] font-semibold", active === "casino" ? "text-gold" : "text-white/40")}>
-              Casino
-            </span>
+            <span className={txtCls(isCasino)}>Casino</span>
           </Link>
 
           {/* Menu */}
-          <button
-            onClick={toggleDrawer}
-            className="flex flex-1 flex-col items-center gap-1 py-1"
-            aria-label="Menu"
-          >
-            <span className={cn(
-              "grid size-11 place-items-center rounded-xl transition-colors",
-              active === "menu" ? "bg-gold-gradient shadow-[0_2px_12px_rgba(212,175,55,0.4)]" : "bg-transparent",
-            )}>
-              <SpriteIcon
-                id="icon-menu"
-                size={22}
-                className={active === "menu" ? "text-black" : "text-white/60"}
-              />
+          <button onClick={toggleDrawer} className="flex flex-1 flex-col items-center gap-1 py-1" aria-label="Menu">
+            <span className={boxCls(isMenu)}>
+              <SpriteIcon id="icon-menu" size={22} className={iconCls(isMenu)} />
             </span>
-            <span className={cn("text-[10px] font-semibold", active === "menu" ? "text-gold" : "text-white/40")}>
-              Menu
-            </span>
+            <span className={txtCls(isMenu)}>Menu</span>
           </button>
 
         </div>
