@@ -4,7 +4,7 @@ import { logger } from "../lib/logger.js";
 import { prisma } from "../lib/prisma.js";
 import { AppError, BadRequest } from "../lib/errors.js";
 
-const BASE = "https://game.gambllyapi.com/production";
+const BASE = "https://game.gamblly-api.com/production";
 const KEY = env.GAMBLY_API_KEY;
 const CURRENCY = "TND";
 
@@ -42,7 +42,9 @@ async function launchGamblyGameV1(params: GamblyLaunchParams): Promise<GamblyLau
   const user = await prisma.user.findUnique({ where: { id: params.user.id } });
   if (!user) throw BadRequest("User not found");
 
-  const memberAccount = params.user.username;
+  // Append userId suffix so two users whose names strip to the same string never
+  // share a member_account on Gambly's side.
+  const memberAccount = `${params.user.username.replace(/[^a-zA-Z0-9_]/g, "_")}_${params.user.id}`;
   const currentBalance = Number(user.balance);
 
   const form = new URLSearchParams({
@@ -110,7 +112,7 @@ async function launchGamblyGameV2(params: GamblyLaunchParams): Promise<GamblyLau
   const user = await prisma.user.findUnique({ where: { id: params.user.id } });
   if (!user) throw BadRequest("User not found");
 
-  const memberAccount = params.user.username;
+  const memberAccount = `${params.user.username.replace(/[^a-zA-Z0-9_]/g, "_")}_${params.user.id}`;
   const transferId = `txn_${Date.now()}_${user.id}`;
   const creditAmount = Number(user.balance);
 

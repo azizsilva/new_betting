@@ -58,6 +58,10 @@ export default function PlayGamePage({
   const exit = useCallback(async () => {
     if (isExiting) return;
     setIsExiting(true);
+    if (account === "gambly") {
+      // Pull balance back from the Gambly session into our wallet before navigating away.
+      await withdrawGambly().catch(() => {});
+    }
     await refreshBalance();
     await refreshBalance();
     router.push("/casino");

@@ -171,8 +171,9 @@ casinoRouter.get(
     const all = [...slotsGames.map((g) => tag(g, "slots")), ...liveGames.map((g) => tag(g, "live"))];
 
     res.setHeader("Cache-Control", "no-store");
-    // Only enabled games with a real thumbnail (skip the imageless IGT/Amatic ones).
-    res.json(all.filter((g) => g.isEnabled && g.imageUrl));
+    // Return all enabled games. Cards without an imageUrl fall back to their
+    // gradient hue in the UI — no server-side filtering by thumbnail.
+    res.json(all.filter((g) => g.isEnabled));
   }),
 );
 

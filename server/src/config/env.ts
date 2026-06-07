@@ -27,7 +27,7 @@ const schema = z.object({
   IGAMING_API_KEY: z.string().optional().default(""),
   IGAMING_OPERATOR_ID: z.string().optional().default(""),
   // Gamblly game launcher (V1 seamless wallet). Base URL ends with /production/.
-  GAMBLY_API_BASE_URL: z.string().optional().default("https://game.gambllyapi.com/production/"),
+  GAMBLY_API_BASE_URL: z.string().optional().default("https://game.gamblly-api.com/production/"),
   GAMBLY_API_KEY: z.string().optional().default(""), // agency_uid
   GAMBLY_CALLBACK_URL: z.string().optional().default(""), // our public callback (set in Gambly panel)
   GAMBLY_CURRENCY: z.string().optional().default("TND"),

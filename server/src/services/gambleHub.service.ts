@@ -195,7 +195,10 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
   // Ensure we have the API user_id (captured from login) before signing.
   if (!acc.envUserId && !acc.resolvedUserId) await getToken(acc);
 
-  const playerLogin = params.user.username;
+  // GambleHub requires player_login to be alphanumeric + underscores only.
+  // Append the numeric user id so two users whose names strip to the same
+  // string never share a login key on the provider side.
+  const playerLogin = `${params.user.username.replace(/[^a-zA-Z0-9_]/g, "_")}_${params.user.id}`;
 
   const payload: Record<string, string> = {
     currency: params.currency,
@@ -206,7 +209,10 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
     player_login: playerLogin,
     user_id: userId(acc),
   };
-  if (env.GAMBLEHUB_CALLBACK_URL) payload.callbackUrl = env.GAMBLEHUB_CALLBACK_URL;
+  // Always include callbackUrl so GambleHub knows where to POST balance callbacks.
+  // Without this the panel default is used — which may point to a stale URL.
+  const callbackUrl = env.GAMBLEHUB_CALLBACK_URL;
+  if (callbackUrl) payload.callbackUrl = callbackUrl;
 
   // Sign the EXACT bytes we send (doc §7: byte-for-byte) with this account's secret.
   const rawBody = JSON.stringify(payload);
