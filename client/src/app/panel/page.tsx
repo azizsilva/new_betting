@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useAuthStore } from "@/store/auth";
 import { api } from "@/lib/api";
@@ -8,31 +8,18 @@ import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "rec
 import { Users, DollarSign, TrendingUp, Activity, Loader2 } from "lucide-react";
 import { formatMoney } from "@/lib/utils";
 
-// Dummy chart data (since we don't have historical data in the backend yet)
-const chartData = [
-  { name: "Apr 3", partners: 12, users: 200 },
-  { name: "Apr 10", partners: 15, users: 210 },
-  { name: "Apr 17", partners: 18, users: 250 },
-  { name: "Apr 24", partners: 13, users: 190 },
-  { name: "May 1", partners: 20, users: 280 },
-  { name: "May 8", partners: 25, users: 320 },
-  { name: "May 15", partners: 19, users: 260 },
-  { name: "May 23", partners: 21, users: 300 },
-  { name: "May 31", partners: 24, users: 350 },
-  { name: "Jun 7", partners: 28, users: 380 },
-  { name: "Jun 14", partners: 38, users: 426 },
-];
-
 type SubtreeUser = {
   id: number;
   username: string;
   role: string;
   balance: string;
   parent_id: number;
+  created_at: string;
 };
 
 export default function DashboardPage() {
   const { user } = useAuthStore();
+  const [timeframe, setTimeframe] = useState<"3months" | "30days" | "7days">("3months");
 
   // Fetch full subtree to calculate role-based counts
   const { data: subtree, isLoading } = useQuery<SubtreeUser[]>({
@@ -60,6 +47,61 @@ export default function DashboardPage() {
 
     return { totalUsers, players, partners, agents, admins, totalBalance };
   }, [subtree, user?.id]);
+
+  const dynamicChartData = useMemo(() => {
+    if (!subtree) return [];
+
+    const now = new Date();
+    let daysToSubtract = 90;
+    
+    if (timeframe === "3months") daysToSubtract = 90;
+    else if (timeframe === "30days") daysToSubtract = 30;
+    else if (timeframe === "7days") daysToSubtract = 7;
+    
+    const startDate = new Date();
+    startDate.setDate(now.getDate() - daysToSubtract);
+    startDate.setHours(0, 0, 0, 0);
+
+    let totalPartners = 0;
+    let totalUsers = 0;
+    
+    // Baseline calculations (users created before startDate)
+    subtree.forEach(u => {
+      if (new Date(u.created_at) < startDate) {
+        totalUsers++;
+        if (u.role === "partner") totalPartners++;
+      }
+    });
+
+    const activeTimeline = [];
+    
+    for (let i = 0; i <= daysToSubtract; i++) {
+      const currentDayStart = new Date(startDate);
+      currentDayStart.setDate(startDate.getDate() + i);
+      currentDayStart.setHours(0, 0, 0, 0);
+      
+      const currentDayEnd = new Date(currentDayStart);
+      currentDayEnd.setHours(23, 59, 59, 999);
+      
+      // Count new users for this day
+      subtree.forEach(u => {
+        const ud = new Date(u.created_at);
+        if (ud >= currentDayStart && ud <= currentDayEnd) {
+          totalUsers++;
+          if (u.role === "partner") totalPartners++;
+        }
+      });
+      
+      const dateStr = currentDayStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      activeTimeline.push({
+        name: dateStr,
+        partners: totalPartners,
+        users: totalUsers
+      });
+    }
+    
+    return activeTimeline;
+  }, [subtree, timeframe]);
 
   if (!user) return null;
 
@@ -127,18 +169,33 @@ export default function DashboardPage() {
         <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
           <div>
             <h2 className="text-lg font-bold">Network Growth</h2>
-            <p className="text-sm text-muted">Partners and Users over the last 3 months</p>
+            <p className="text-sm text-muted">Partners and Users over the last {timeframe === "3months" ? "3 months" : timeframe === "30days" ? "30 days" : "7 days"}</p>
           </div>
           <div className="flex rounded-lg border border-line bg-bg-elevated p-1">
-            <button className="rounded-md bg-surface px-3 py-1.5 text-sm font-medium text-fg shadow-sm">Last 3 months</button>
-            <button className="rounded-md px-3 py-1.5 text-sm font-medium text-muted hover:text-fg">Last 30 days</button>
-            <button className="rounded-md px-3 py-1.5 text-sm font-medium text-muted hover:text-fg">Last 7 days</button>
+            <button 
+              onClick={() => setTimeframe("3months")}
+              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${timeframe === "3months" ? "bg-surface text-fg shadow-sm" : "text-muted hover:text-fg"}`}
+            >
+              Last 3 months
+            </button>
+            <button 
+              onClick={() => setTimeframe("30days")}
+              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${timeframe === "30days" ? "bg-surface text-fg shadow-sm" : "text-muted hover:text-fg"}`}
+            >
+              Last 30 days
+            </button>
+            <button 
+              onClick={() => setTimeframe("7days")}
+              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${timeframe === "7days" ? "bg-surface text-fg shadow-sm" : "text-muted hover:text-fg"}`}
+            >
+              Last 7 days
+            </button>
           </div>
         </div>
         
         <div className="h-[300px] w-full">
           <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+            <AreaChart data={dynamicChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorPartners" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor="#f59e0b" stopOpacity={0.3}/>
@@ -149,7 +206,7 @@ export default function DashboardPage() {
                   <stop offset="95%" stopColor="#10b981" stopOpacity={0}/>
                 </linearGradient>
               </defs>
-              <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: "#a1a1aa" }} dy={10} />
+              <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: "#a1a1aa" }} dy={10} minTickGap={30} />
               <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: "#a1a1aa" }} />
               <Tooltip 
                 contentStyle={{ backgroundColor: "#18181b", borderColor: "#27272a", borderRadius: "8px" }}

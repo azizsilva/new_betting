@@ -50,16 +50,16 @@ export async function downlineStats(actorId: number) {
 // Whole subtree under a user (recursive CTE — fast on Postgres).
 export async function listSubtree(actorId: number) {
   return prisma.$queryRaw<
-    Array<{ id: number; username: string; role: string; balance: string; parent_id: number }>
+    Array<{ id: number; username: string; role: string; balance: string; parent_id: number; created_at: Date }>
   >`
     WITH RECURSIVE tree AS (
-      SELECT id, username, role, balance, parent_id, 1 AS depth
+      SELECT id, username, role, balance, parent_id, created_at, 1 AS depth
       FROM users WHERE parent_id = ${actorId}
       UNION ALL
-      SELECT u.id, u.username, u.role, u.balance, u.parent_id, t.depth + 1
+      SELECT u.id, u.username, u.role, u.balance, u.parent_id, u.created_at, t.depth + 1
       FROM users u JOIN tree t ON u.parent_id = t.id
     )
-    SELECT id, username, role, balance::text AS balance, parent_id FROM tree
+    SELECT id, username, role, balance::text AS balance, parent_id, created_at FROM tree
     ORDER BY depth, username;
   `;
 }
