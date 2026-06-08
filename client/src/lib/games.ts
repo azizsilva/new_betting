@@ -153,157 +153,291 @@ function localImage(g: CatalogGame): string | undefined {
   return LOCAL_IMAGES[slug(g.title)];
 }
 
-// GambleHub returns raw internal provider slugs (slot-croco, sg, sgx, etc.).
-// Map them to proper display names for the UI filter + card labels.
+// GambleHub returns raw internal provider slugs. Map every known slug to a
+// clean display name used in the filter dropdown and on game cards.
 const PROVIDER_DISPLAY: Record<string, string> = {
-  // Pragmatic Play variants
-  "pragmaticplay":          "Pragmatic Play",
-  "pragmatic-play":         "Pragmatic Play",
-  "pragmatic_play":         "Pragmatic Play",
-  "pragmatic":              "Pragmatic Play",
-  "slot-pragmatic":         "Pragmatic Play",
-  "slot-pp":                "Pragmatic Play",
-  "pp":                     "Pragmatic Play",
+  // ── Pragmatic Play ──────────────────────────────────────────────────────────
+  "pragmaticplay":           "Pragmatic Play",
+  "pragmatic-play":          "Pragmatic Play",
+  "pragmatic_play":          "Pragmatic Play",
+  "pragmatic":               "Pragmatic Play",
+  "slot-pragmatic":          "Pragmatic Play",
+  "slot-pp":                 "Pragmatic Play",
+  "pp":                      "Pragmatic Play",
 
-  // Evolution
-  "evolution":              "Evolution",
-  "evolution-gaming":       "Evolution",
-  "evolutiongaming":        "Evolution",
-  "live-evolution":         "Evolution",
+  // ── Evolution ───────────────────────────────────────────────────────────────
+  "evolution":               "Evolution",
+  "evolution-gaming":        "Evolution",
+  "evolutiongaming":         "Evolution",
+  "live-evolution":          "Evolution",
+  "evo":                     "Evolution",
 
-  // Hacksaw Gaming
-  "hacksaw":                "Hacksaw Gaming",
-  "hacksaw-gaming":         "Hacksaw Gaming",
-  "slot-hacksaw":           "Hacksaw Gaming",
+  // ── Hacksaw Gaming ──────────────────────────────────────────────────────────
+  "hacksaw":                 "Hacksaw Gaming",
+  "hacksaw-gaming":          "Hacksaw Gaming",
+  "slot-hacksaw":            "Hacksaw Gaming",
 
-  // Nolimit City
-  "nolimitcity":            "Nolimit City",
-  "nolimit-city":           "Nolimit City",
-  "nolimit":                "Nolimit City",
-  "slot-nolimit":           "Nolimit City",
+  // ── Nolimit City ────────────────────────────────────────────────────────────
+  "nolimitcity":             "Nolimit City",
+  "nolimit-city":            "Nolimit City",
+  "nolimit":                 "Nolimit City",
+  "slot-nolimit":            "Nolimit City",
+  "nlc":                     "Nolimit City",
 
-  // Play'n GO
-  "playngo":                "Play'n GO",
-  "play-n-go":              "Play'n GO",
-  "playingo":               "Play'n GO",
+  // ── Play'n GO ───────────────────────────────────────────────────────────────
+  "playngo":                 "Play'n GO",
+  "play-n-go":               "Play'n GO",
+  "playingo":                "Play'n GO",
+  "png":                     "Play'n GO",
 
-  // NetEnt / Red Tiger
-  "netent":                 "NetEnt",
-  "net-ent":                "NetEnt",
-  "redtiger":               "Red Tiger",
-  "red-tiger":              "Red Tiger",
+  // ── NetEnt ──────────────────────────────────────────────────────────────────
+  "netent":                  "NetEnt",
+  "net-ent":                 "NetEnt",
+  "net_ent":                 "NetEnt",
 
-  // Spribe
-  "spribe":                 "Spribe",
+  // ── Red Tiger ───────────────────────────────────────────────────────────────
+  "redtiger":                "Red Tiger",
+  "red-tiger":               "Red Tiger",
+  "red_tiger":               "Red Tiger",
 
-  // Ezugi
-  "ezugi":                  "Ezugi",
+  // ── Spribe ──────────────────────────────────────────────────────────────────
+  "spribe":                  "Spribe",
 
-  // Relax Gaming
-  "relaxgaming":            "Relax Gaming",
-  "relax-gaming":           "Relax Gaming",
-  "relax":                  "Relax Gaming",
+  // ── Ezugi ───────────────────────────────────────────────────────────────────
+  "ezugi":                   "Ezugi",
 
-  // Push Gaming
-  "pushgaming":             "Push Gaming",
-  "push-gaming":            "Push Gaming",
-  "push":                   "Push Gaming",
+  // ── Relax Gaming ────────────────────────────────────────────────────────────
+  "relaxgaming":             "Relax Gaming",
+  "relax-gaming":            "Relax Gaming",
+  "relax_gaming":            "Relax Gaming",
+  "relax":                   "Relax Gaming",
 
-  // Big Time Gaming
-  "bigtimegaming":          "Big Time Gaming",
-  "btg":                    "Big Time Gaming",
+  // ── Push Gaming ─────────────────────────────────────────────────────────────
+  "pushgaming":              "Push Gaming",
+  "push-gaming":             "Push Gaming",
+  "push":                    "Push Gaming",
 
-  // Thunderkick
-  "thunderkick":            "Thunderkick",
+  // ── Big Time Gaming ─────────────────────────────────────────────────────────
+  "bigtimegaming":           "Big Time Gaming",
+  "big-time-gaming":         "Big Time Gaming",
+  "btg":                     "Big Time Gaming",
 
-  // Yggdrasil
-  "yggdrasil":              "Yggdrasil",
+  // ── Thunderkick ─────────────────────────────────────────────────────────────
+  "thunderkick":             "Thunderkick",
 
-  // Quickspin
-  "quickspin":              "Quickspin",
+  // ── Yggdrasil ───────────────────────────────────────────────────────────────
+  "yggdrasil":               "Yggdrasil",
+  "ygg":                     "Yggdrasil",
 
-  // Microgaming
-  "microgaming":            "Microgaming",
+  // ── Quickspin ───────────────────────────────────────────────────────────────
+  "quickspin":               "Quickspin",
 
-  // iSoftBet
-  "isoftbet":               "iSoftBet",
+  // ── Microgaming ─────────────────────────────────────────────────────────────
+  "microgaming":             "Microgaming",
 
-  // Endorphina
-  "endorphina":             "Endorphina",
+  // ── iSoftBet ────────────────────────────────────────────────────────────────
+  "isoftbet":                "iSoftBet",
+  "isb":                     "iSoftBet",
 
-  // Amatic
-  "amatic":                 "Amatic",
+  // ── Endorphina ──────────────────────────────────────────────────────────────
+  "endorphina":              "Endorphina",
 
-  // Habanero
-  "habanero":               "Habanero",
-  "slot-habanero":          "Habanero",
+  // ── Amatic ──────────────────────────────────────────────────────────────────
+  "amatic":                  "Amatic",
 
-  // GameArt
-  "gameart":                "GameArt",
+  // ── Habanero ────────────────────────────────────────────────────────────────
+  "habanero":                "Habanero",
+  "slot-habanero":           "Habanero",
+  "slothabanero":            "Habanero",
 
-  // Iron Dog Studio
-  "irondogstudio":          "Iron Dog Studio",
-  "irondog":                "Iron Dog Studio",
+  // ── GameArt ─────────────────────────────────────────────────────────────────
+  "gameart":                 "GameArt",
+  "game-art":                "GameArt",
 
-  // ReelPlay
-  "reelplay":               "ReelPlay",
+  // ── Iron Dog Studio / 1x2 Gaming ────────────────────────────────────────────
+  "irondogstudio":           "Iron Dog Studio",
+  "irondog":                 "Iron Dog Studio",
+  "iron-dog":                "Iron Dog Studio",
+  "1x2gaming":               "1x2 Gaming",
+  "1x2":                     "1x2 Gaming",
+  "1x2network":              "1x2 Gaming",
 
-  // PG Soft
-  "pgsoft":                 "PG Soft",
-  "pg-soft":                "PG Soft",
-  "pg":                     "PG Soft",
+  // ── ReelPlay ────────────────────────────────────────────────────────────────
+  "reelplay":                "ReelPlay",
+  "reel-play":               "ReelPlay",
 
-  // Wazdan
-  "wazdan":                 "Wazdan",
+  // ── PG Soft ─────────────────────────────────────────────────────────────────
+  "pgsoft":                  "PG Soft",
+  "pg-soft":                 "PG Soft",
+  "pg_soft":                 "PG Soft",
+  "pg":                      "PG Soft",
 
-  // Tom Horn
-  "tomhorn":                "Tom Horn",
-  "tom-horn":               "Tom Horn",
+  // ── Wazdan ──────────────────────────────────────────────────────────────────
+  "wazdan":                  "Wazdan",
 
-  // Spinomenal
-  "spinomenal":             "Spinomenal",
+  // ── Tom Horn ────────────────────────────────────────────────────────────────
+  "tomhorn":                 "Tom Horn",
+  "tom-horn":                "Tom Horn",
+  "tom_horn":                "Tom Horn",
 
-  // Kalamba
-  "kalamba":                "Kalamba Games",
-  "kalambagames":           "Kalamba Games",
+  // ── Spinomenal ──────────────────────────────────────────────────────────────
+  "spinomenal":              "Spinomenal",
 
-  // Betsoft
-  "betsoft":                "Betsoft",
+  // ── Kalamba Games ───────────────────────────────────────────────────────────
+  "kalamba":                 "Kalamba Games",
+  "kalambagames":            "Kalamba Games",
+  "kalamba-games":           "Kalamba Games",
 
-  // 1x2 Gaming / Iron Dog
-  "1x2gaming":              "1x2 Gaming",
+  // ── Betsoft ─────────────────────────────────────────────────────────────────
+  "betsoft":                 "Betsoft",
 
-  // Booming Games
-  "booominggames":          "Booming Games",
-  "boominggames":           "Booming Games",
-  "booming":                "Booming Games",
+  // ── Booming Games ───────────────────────────────────────────────────────────
+  "booominggames":           "Booming Games",
+  "boominggames":            "Booming Games",
+  "booming-games":           "Booming Games",
+  "booming":                 "Booming Games",
 
-  // GreenTube / Novomatic
-  "greentube":              "Greentube",
-  "novomatic":              "Novomatic",
+  // ── Greentube / Novomatic ───────────────────────────────────────────────────
+  "greentube":               "Greentube",
+  "novomatic":               "Novomatic",
 
-  // Skywind
-  "skywind":                "Skywind",
+  // ── Skywind ─────────────────────────────────────────────────────────────────
+  "skywind":                 "Skywind",
 
-  // Slot Mill
-  "slotmill":               "Slot Mill",
-  "slot-mill":              "Slot Mill",
+  // ── Slot Mill ───────────────────────────────────────────────────────────────
+  "slotmill":                "Slot Mill",
+  "slot-mill":               "Slot Mill",
 
-  // Mascot Gaming
-  "mascot":                 "Mascot Gaming",
-  "mascotgaming":           "Mascot Gaming",
+  // ── Mascot Gaming ───────────────────────────────────────────────────────────
+  "mascot":                  "Mascot Gaming",
+  "mascotgaming":            "Mascot Gaming",
+  "mascot-gaming":           "Mascot Gaming",
 
-  // Slot-croco, sg, sgx, vegas — GambleHub internal labels
-  "slot-croco":             "Swintt",
-  "slotcroco":              "Swintt",
-  "sg":                     "Scientific Games",
-  "sgx":                    "Scientific Games",
-  "vegas":                  "Vegas Slots",
-  "swintt":                 "Swintt",
+  // ── Ruby Play ───────────────────────────────────────────────────────────────
+  "rubyplay":                "Ruby Play",
+  "ruby-play":               "Ruby Play",
+  "ruby_play":               "Ruby Play",
 
-  // Tada
-  "tada":                   "TaDa Gaming",
-  "tada-gaming":            "TaDa Gaming",
+  // ── WMS / Scientific Games / SG Digital ─────────────────────────────────────
+  "wms":                     "WMS",
+  "sg":                      "SG Digital",
+  "sgx":                     "SG Digital",
+  "sgdigital":               "SG Digital",
+  "sg-digital":              "SG Digital",
+  "scientific-games":        "SG Digital",
+  "scientificgames":         "SG Digital",
+
+  // ── Swintt (slot-croco) ──────────────────────────────────────────────────────
+  "slot-croco":              "Swintt",
+  "slotcroco":               "Swintt",
+  "swintt":                  "Swintt",
+
+  // ── Vegas / Vegas BB ────────────────────────────────────────────────────────
+  "vegas":                   "Vegas Slots",
+  "vegas_bb":                "Vegas BB",
+  "vegas-bb":                "Vegas BB",
+  "vegasbb":                 "Vegas BB",
+
+  // ── Vibra Gaming ────────────────────────────────────────────────────────────
+  "vibragaming":             "Vibra Gaming",
+  "vibra-gaming":            "Vibra Gaming",
+  "vibra_gaming":            "Vibra Gaming",
+  "vibra":                   "Vibra Gaming",
+
+  // ── Zitro ───────────────────────────────────────────────────────────────────
+  "zitro":                   "Zitro",
+  "zitro-games":             "Zitro",
+
+  // ── TaDa Gaming ─────────────────────────────────────────────────────────────
+  "tada":                    "TaDa Gaming",
+  "tada-gaming":             "TaDa Gaming",
+  "tadagaming":              "TaDa Gaming",
+
+  // ── Fugaso ──────────────────────────────────────────────────────────────────
+  "fugaso":                  "Fugaso",
+
+  // ── 3 Oaks Gaming ───────────────────────────────────────────────────────────
+  "3oaks":                   "3 Oaks Gaming",
+  "3-oaks":                  "3 Oaks Gaming",
+  "3oaksgaming":             "3 Oaks Gaming",
+  "threeoaks":               "3 Oaks Gaming",
+
+  // ── Evoplay ─────────────────────────────────────────────────────────────────
+  "evoplay":                 "Evoplay",
+  "evo-play":                "Evoplay",
+
+  // ── BGaming ─────────────────────────────────────────────────────────────────
+  "bgaming":                 "BGaming",
+  "b-gaming":                "BGaming",
+
+  // ── Playson ─────────────────────────────────────────────────────────────────
+  "playson":                 "Playson",
+
+  // ── Swintt ──────────────────────────────────────────────────────────────────
+  "mancala":                 "Mancala Gaming",
+  "mancalagaming":           "Mancala Gaming",
+
+  // ── Turbo Games ─────────────────────────────────────────────────────────────
+  "turbogames":              "Turbo Games",
+  "turbo-games":             "Turbo Games",
+  "turbo":                   "Turbo Games",
+
+  // ── SmartSoft ───────────────────────────────────────────────────────────────
+  "smartsoft":               "SmartSoft Gaming",
+  "smartsoftgaming":         "SmartSoft Gaming",
+
+  // ── Jili ────────────────────────────────────────────────────────────────────
+  "jili":                    "Jili",
+
+  // ── CQ9 ─────────────────────────────────────────────────────────────────────
+  "cq9":                     "CQ9 Gaming",
+  "cq9gaming":               "CQ9 Gaming",
+
+  // ── Fazi ────────────────────────────────────────────────────────────────────
+  "fazi":                    "Fazi",
+
+  // ── Apollo Games ────────────────────────────────────────────────────────────
+  "apollo":                  "Apollo Games",
+  "apollogames":             "Apollo Games",
+
+  // ── Playtech ────────────────────────────────────────────────────────────────
+  "playtech":                "Playtech",
+
+  // ── IGT ─────────────────────────────────────────────────────────────────────
+  "igt":                     "IGT",
+
+  // ── Aristocrat ──────────────────────────────────────────────────────────────
+  "aristocrat":              "Aristocrat",
+
+  // ── Gamomat ─────────────────────────────────────────────────────────────────
+  "gamomat":                 "Gamomat",
+
+  // ── Stakelogic ──────────────────────────────────────────────────────────────
+  "stakelogic":              "Stakelogic",
+
+  // ── Fantasma Games ──────────────────────────────────────────────────────────
+  "fantasma":                "Fantasma Games",
+  "fantasmagames":           "Fantasma Games",
+
+  // ── Northern Lights / Rabcat ────────────────────────────────────────────────
+  "rabcat":                  "Rabcat",
+  "northern-lights":         "Northern Lights Gaming",
+
+  // ── Elk Studios ─────────────────────────────────────────────────────────────
+  "elk":                     "ELK Studios",
+  "elkstudios":              "ELK Studios",
+
+  // ── Golden Hero ─────────────────────────────────────────────────────────────
+  "goldenhero":              "Golden Hero",
+  "golden-hero":             "Golden Hero",
+
+  // ── Ortiz Gaming ────────────────────────────────────────────────────────────
+  "ortiz":                   "Ortiz Gaming",
+  "ortizgaming":             "Ortiz Gaming",
+
+  // ── Leap Gaming ─────────────────────────────────────────────────────────────
+  "leap":                    "Leap Gaming",
+  "leapgaming":              "Leap Gaming",
 };
 
 function normalizeProvider(raw: string): string {
