@@ -541,11 +541,12 @@ function tabFor(g: CatalogGame): GameTab {
 
 // Derive quick-filter tags from the game title/provider so the New/Megaways/
 // Bonus Buy/Crash filters actually match something.
-const CRASH_NAMES = /(aviator|balloon|\bdice\b|\bgoal\b|\bhilo\b|\bmines\b|plinko|crash|spaceman|jetx|rocket)/i;
+const CRASH_NAMES = /(aviator|balloon|\bdice\b|\bgoal\b|\bhilo\b|\bmines\b|plinko|crash|spaceman|jetx|rocket|keno)/i;
+const BONUS_BUY_NAMES = /(bonus.?buy|buy.?bonus|buy.?feature|feature.?buy|achat.?bonus|\bbb\b|bonus.?round|bonus.?spin|instant.?win|bonus.?game|power.?bonus)/i;
 function tagsFor(g: CatalogGame): GameTag[] {
   const t: GameTag[] = [];
   if (/megaways/i.test(g.title)) t.push("megaways");
-  if (/(bonus buy|buy bonus|buy feature|achat bonus)/i.test(g.title)) t.push("bonus-buy");
+  if (BONUS_BUY_NAMES.test(g.title)) t.push("bonus-buy");
   if (CRASH_NAMES.test(g.title) || /spribe/i.test(g.provider)) t.push("crash");
   return t;
 }
