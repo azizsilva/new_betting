@@ -108,8 +108,8 @@ export interface CatalogGame {
   account?: "slots" | "live" | "gambly"; // which operator account this game belongs to
 }
 
-const LIVE_PROVIDERS = /(evolution|ezugi|pragmatic.?play.?live|live)/i;
-const INSTANT_PROVIDERS = /(spribe|aviator|turbo|smartsoft|crash)/i;
+const LIVE_PROVIDERS = /(evolution|ezugi|pragmatic.?play.?live|live|altenar)/i;
+const INSTANT_PROVIDERS = /(spribe|aviator|turbo|smartsoft|crash|firekirin|fisho)/i;
 
 function slug(s: string): string {
   return s.toLowerCase().replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "");
@@ -438,6 +438,47 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   // ── Leap Gaming ─────────────────────────────────────────────────────────────
   "leap":                    "Leap Gaming",
   "leapgaming":              "Leap Gaming",
+
+  // ── GambleHub aggregated sub-providers ──────────────────────────────────────
+  // These are the internal labels GambleHub uses for aggregated studios.
+  // ag = Asia Gaming (fish/table/slots)
+  "ag":                      "Asia Gaming",
+  // SL-Games = SL-Games aggregator (slots)
+  "sl-games":                "SL Games",
+  "slgames":                 "SL Games",
+  "sl_games":                "SL Games",
+  // slot7zon = Slot7zon slots
+  "slot7zon":                "Slot7zon",
+  // Games 001 / 002 / 003 = GambleHub internal slot packs
+  "games 001":               "Games Pack 1",
+  "games001":                "Games Pack 1",
+  "games 002":               "Games Pack 2",
+  "games002":                "Games Pack 2",
+  "games 003":               "Games Pack 3",
+  "games003":                "Games Pack 3",
+  // x-games variants
+  "x-games (firekirin)":     "FireKirin",
+  "x-games(firekirin)":      "FireKirin",
+  "xgamesfirekirin":         "FireKirin",
+  "firekirin":               "FireKirin",
+  "x-games (fisho)":         "Fisho Games",
+  "x-games(fisho)":          "Fisho Games",
+  "xgamesfisho":             "Fisho Games",
+  "x-games (slots)":         "X-Games Slots",
+  "x-games(slots)":          "X-Games Slots",
+  "xgamesslots":             "X-Games Slots",
+  "x-games":                 "X-Games",
+  "xgames":                  "X-Games",
+  // nova = Nova slots aggregator
+  "nova":                    "Nova Games",
+  // algNET = AlgNET gaming
+  "algnet":                  "AlgNET",
+  // pixmove = Pixmove
+  "pixmove":                 "Pixmove",
+  // Altenar = sportsbook / virtual sports provider
+  "altenar":                 "Altenar",
+  // Ezugi (live dealer — already mapped above but add lowercase variant)
+  "ezugi":                   "Ezugi",
 };
 
 function normalizeProvider(raw: string): string {
@@ -467,18 +508,17 @@ function tagsFor(g: CatalogGame): GameTag[] {
 }
 
 // Convert the provider catalog into the UI's Game shape, dropping duplicates.
-// The catalog can repeat the same game (same id, or same title+provider); we keep
-// the first occurrence so the lobby doesn't show 4× "Madame Destiny".
+// Dedup by game id only — different providers can have games with the same title
+// (e.g. "Roulette" from Ezugi AND from ag). Title+provider dedup was hiding
+// thousands of valid games from aggregated sub-providers.
 export function mapCatalog(games: CatalogGame[]): Game[] {
-  const seen = new Set<string>();
+  const seenId = new Set<string>();
   const out: Game[] = [];
   let i = 0;
   for (const g of games) {
-    const dedupeKey = g.id || `${slug(g.provider)}:${slug(g.title)}`;
-    const titleKey = `${slug(g.provider)}:${slug(g.title)}`;
-    if (seen.has(dedupeKey) || seen.has(titleKey)) continue;
-    seen.add(dedupeKey);
-    seen.add(titleKey);
+    // Skip if no id (malformed entry) or exact duplicate id.
+    if (!g.id || seenId.has(g.id)) continue;
+    seenId.add(g.id);
     const tags = tagsFor(g);
     // First 40 catalog entries flagged "new" (the catalog is roughly newest-first).
     if (i < 40) tags.push("new");
@@ -491,10 +531,10 @@ export function mapCatalog(games: CatalogGame[]): Game[] {
       tab: g.account === "live" || g.account === "gambly" ? "live-casino" : tabFor(g),
       account: g.account,
       tags,
-      // Every 9th game becomes a large featured card (same rhythm as kingsbet365).
+      // Every 9th game becomes a large featured card.
       featured: i % 9 === 0,
       hue: hue(i),
-      // Prefer our local downloaded art, then the provider's own image.
+      // Prefer our local downloaded art, then the provider's own CDN image.
       imageUrl: localImage(g) || g.imageUrl || undefined,
     });
     i++;
