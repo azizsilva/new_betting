@@ -13,7 +13,18 @@ export function createApp() {
   const app = express();
 
   app.set("trust proxy", 1);
-  app.use(helmet());
+  app.use(
+    helmet({
+      contentSecurityPolicy: {
+        directives: {
+          defaultSrc: ["'self'"],
+          imgSrc: ["'self'", "data:", "https:"],
+          frameSrc: ["'self'", "https:"],
+          connectSrc: ["'self'", "https:"],
+        },
+      },
+    }),
+  );
   app.use(
     cors({
       origin: env.CLIENT_ORIGIN.split(",").map((s) => s.trim()),
