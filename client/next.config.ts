@@ -5,6 +5,13 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "flagcdn.com" },
       { protocol: "https", hostname: "www.kingsbet.cz" },
+      { protocol: "https", hostname: "static.slot7hub.com" },
+      { protocol: "https", hostname: "**.slot7hub.com" },
+      { protocol: "https", hostname: "**.gamble-hub.net" },
+      { protocol: "https", hostname: "**.gambllyapi.com" },
+      { protocol: "https", hostname: "**.amatic.com" },
+      { protocol: "https", hostname: "**.pragmaticplay.net" },
+      { protocol: "https", hostname: "**.evolutiongaming.com" },
     ],
   },
   async redirects() {
