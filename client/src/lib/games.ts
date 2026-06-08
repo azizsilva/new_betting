@@ -477,8 +477,6 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   "pixmove":                 "Pixmove",
   // Altenar = sportsbook / virtual sports provider
   "altenar":                 "Altenar",
-  // Ezugi (live dealer — already mapped above but add lowercase variant)
-  "ezugi":                   "Ezugi",
 };
 
 function normalizeProvider(raw: string): string {
