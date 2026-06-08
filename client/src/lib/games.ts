@@ -503,7 +503,6 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   "nolimit city":            "Nolimit City",
   "playn go":                "Play'n GO",
   "play n go":               "Play'n GO",
-  "ruby play":               "Ruby Play",
   "relax gaming":            "Relax Gaming",
   "push gaming":             "Push Gaming",
   "big time gaming":         "Big Time Gaming",
