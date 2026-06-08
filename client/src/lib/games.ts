@@ -518,13 +518,7 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   "elk studios":             "ELK Studios",
   "tada gaming":             "TaDa Gaming",
   "vibra gaming":            "Vibra Gaming",
-  "tom horn gaming":         "Tom Horn Gaming",
-  "sg digital":              "SG Digital",
-  "scientific games":        "SG Digital",
   "amatic industries":       "Amatic",
-  "x-games (firekirin)":     "FireKirin",
-  "x-games (fisho)":         "Fisho Games",
-  "x-games (slots)":         "X-Games Slots",
 };
 
 function normalizeProvider(raw: string): string {
