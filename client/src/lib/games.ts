@@ -276,9 +276,13 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   "wazdan":                  "Wazdan",
 
   // ── Tom Horn ────────────────────────────────────────────────────────────────
-  "tomhorn":                 "Tom Horn",
-  "tom-horn":                "Tom Horn",
-  "tom_horn":                "Tom Horn",
+  "tomhorn":                 "Tom Horn Gaming",
+  "tom-horn":                "Tom Horn Gaming",
+  "tom_horn":                "Tom Horn Gaming",
+  "tom horn":                "Tom Horn Gaming",
+  "tomhorngaming":           "Tom Horn Gaming",
+  "tom-horn-gaming":         "Tom Horn Gaming",
+  "tom horn gaming":         "Tom Horn Gaming",
 
   // ── Spinomenal ──────────────────────────────────────────────────────────────
   "spinomenal":              "Spinomenal",
@@ -317,15 +321,18 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   "rubyplay":                "Ruby Play",
   "ruby-play":               "Ruby Play",
   "ruby_play":               "Ruby Play",
+  "ruby play":               "Ruby Play",
 
   // ── WMS / Scientific Games / SG Digital ─────────────────────────────────────
-  "wms":                     "WMS",
+  "wms":                     "SG Digital",
   "sg":                      "SG Digital",
   "sgx":                     "SG Digital",
   "sgdigital":               "SG Digital",
   "sg-digital":              "SG Digital",
+  "sg digital":              "SG Digital",
   "scientific-games":        "SG Digital",
   "scientificgames":         "SG Digital",
+  "scientific games":        "SG Digital",
 
   // ── Swintt (slot-croco) ──────────────────────────────────────────────────────
   "slot-croco":              "Swintt",
@@ -477,6 +484,48 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   "pixmove":                 "Pixmove",
   // Altenar = sportsbook / virtual sports provider
   "altenar":                 "Altenar",
+
+  // ── TVBet ────────────────────────────────────────────────────────────────────
+  "tvbet":                   "TVBet",
+  "tv-bet":                  "TVBet",
+  "tv bet":                  "TVBet",
+
+  // ── Pascal Gaming ────────────────────────────────────────────────────────────
+  "pascal":                  "Pascal Gaming",
+  "pascalgaming":            "Pascal Gaming",
+  "pascal-gaming":           "Pascal Gaming",
+  "pascal gaming":           "Pascal Gaming",
+
+  // ── Space/exact variants GambleHub sends for already-mapped providers ────────
+  "pragmatic play":          "Pragmatic Play",
+  "evolution gaming":        "Evolution",
+  "hacksaw gaming":          "Hacksaw Gaming",
+  "nolimit city":            "Nolimit City",
+  "playn go":                "Play'n GO",
+  "play n go":               "Play'n GO",
+  "ruby play":               "Ruby Play",
+  "relax gaming":            "Relax Gaming",
+  "push gaming":             "Push Gaming",
+  "big time gaming":         "Big Time Gaming",
+  "pg soft":                 "PG Soft",
+  "iron dog studio":         "Iron Dog Studio",
+  "iron dog":                "Iron Dog Studio",
+  "kalamba games":           "Kalamba Games",
+  "booming games":           "Booming Games",
+  "slot mill":               "Slot Mill",
+  "mascot gaming":           "Mascot Gaming",
+  "3 oaks gaming":           "3 Oaks Gaming",
+  "3 oaks":                  "3 Oaks Gaming",
+  "elk studios":             "ELK Studios",
+  "tada gaming":             "TaDa Gaming",
+  "vibra gaming":            "Vibra Gaming",
+  "tom horn gaming":         "Tom Horn Gaming",
+  "sg digital":              "SG Digital",
+  "scientific games":        "SG Digital",
+  "amatic industries":       "Amatic",
+  "x-games (firekirin)":     "FireKirin",
+  "x-games (fisho)":         "Fisho Games",
+  "x-games (slots)":         "X-Games Slots",
 };
 
 function normalizeProvider(raw: string): string {
