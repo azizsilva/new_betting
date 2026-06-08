@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Wallet, ChevronDown, UserCog, ArrowLeftRight, LogOut, Plus, LayoutDashboard } from "lucide-react";
+import { Wallet, ChevronDown, UserCog, ArrowLeftRight, LogOut, LayoutDashboard } from "lucide-react";
 import { toast } from "sonner";
 import { useAuthStore } from "@/store/auth";
 import { api } from "@/lib/api";
@@ -86,13 +86,6 @@ export function AccountMenu({ user }: { user: User }) {
                 </span>
               </span>
             </div>
-            <Link
-              href="/profile"
-              onClick={() => setOpen(false)}
-              className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-lg bg-gold-gradient py-2 text-sm font-bold text-brand-foreground hover:brightness-110"
-            >
-              <Plus className="size-4" /> Deposit
-            </Link>
           </div>
 
           {/* Links */}
