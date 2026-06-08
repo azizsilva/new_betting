@@ -153,11 +153,171 @@ function localImage(g: CatalogGame): string | undefined {
   return LOCAL_IMAGES[slug(g.title)];
 }
 
+// GambleHub returns raw internal provider slugs (slot-croco, sg, sgx, etc.).
+// Map them to proper display names for the UI filter + card labels.
+const PROVIDER_DISPLAY: Record<string, string> = {
+  // Pragmatic Play variants
+  "pragmaticplay":          "Pragmatic Play",
+  "pragmatic-play":         "Pragmatic Play",
+  "pragmatic_play":         "Pragmatic Play",
+  "pragmatic":              "Pragmatic Play",
+  "slot-pragmatic":         "Pragmatic Play",
+  "slot-pp":                "Pragmatic Play",
+  "pp":                     "Pragmatic Play",
+
+  // Evolution
+  "evolution":              "Evolution",
+  "evolution-gaming":       "Evolution",
+  "evolutiongaming":        "Evolution",
+  "live-evolution":         "Evolution",
+
+  // Hacksaw Gaming
+  "hacksaw":                "Hacksaw Gaming",
+  "hacksaw-gaming":         "Hacksaw Gaming",
+  "slot-hacksaw":           "Hacksaw Gaming",
+
+  // Nolimit City
+  "nolimitcity":            "Nolimit City",
+  "nolimit-city":           "Nolimit City",
+  "nolimit":                "Nolimit City",
+  "slot-nolimit":           "Nolimit City",
+
+  // Play'n GO
+  "playngo":                "Play'n GO",
+  "play-n-go":              "Play'n GO",
+  "playingo":               "Play'n GO",
+
+  // NetEnt / Red Tiger
+  "netent":                 "NetEnt",
+  "net-ent":                "NetEnt",
+  "redtiger":               "Red Tiger",
+  "red-tiger":              "Red Tiger",
+
+  // Spribe
+  "spribe":                 "Spribe",
+
+  // Ezugi
+  "ezugi":                  "Ezugi",
+
+  // Relax Gaming
+  "relaxgaming":            "Relax Gaming",
+  "relax-gaming":           "Relax Gaming",
+  "relax":                  "Relax Gaming",
+
+  // Push Gaming
+  "pushgaming":             "Push Gaming",
+  "push-gaming":            "Push Gaming",
+  "push":                   "Push Gaming",
+
+  // Big Time Gaming
+  "bigtimegaming":          "Big Time Gaming",
+  "btg":                    "Big Time Gaming",
+
+  // Thunderkick
+  "thunderkick":            "Thunderkick",
+
+  // Yggdrasil
+  "yggdrasil":              "Yggdrasil",
+
+  // Quickspin
+  "quickspin":              "Quickspin",
+
+  // Microgaming
+  "microgaming":            "Microgaming",
+
+  // iSoftBet
+  "isoftbet":               "iSoftBet",
+
+  // Endorphina
+  "endorphina":             "Endorphina",
+
+  // Amatic
+  "amatic":                 "Amatic",
+
+  // Habanero
+  "habanero":               "Habanero",
+  "slot-habanero":          "Habanero",
+
+  // GameArt
+  "gameart":                "GameArt",
+
+  // Iron Dog Studio
+  "irondogstudio":          "Iron Dog Studio",
+  "irondog":                "Iron Dog Studio",
+
+  // ReelPlay
+  "reelplay":               "ReelPlay",
+
+  // PG Soft
+  "pgsoft":                 "PG Soft",
+  "pg-soft":                "PG Soft",
+  "pg":                     "PG Soft",
+
+  // Wazdan
+  "wazdan":                 "Wazdan",
+
+  // Tom Horn
+  "tomhorn":                "Tom Horn",
+  "tom-horn":               "Tom Horn",
+
+  // Spinomenal
+  "spinomenal":             "Spinomenal",
+
+  // Kalamba
+  "kalamba":                "Kalamba Games",
+  "kalambagames":           "Kalamba Games",
+
+  // Betsoft
+  "betsoft":                "Betsoft",
+
+  // 1x2 Gaming / Iron Dog
+  "1x2gaming":              "1x2 Gaming",
+
+  // Booming Games
+  "booominggames":          "Booming Games",
+  "boominggames":           "Booming Games",
+  "booming":                "Booming Games",
+
+  // GreenTube / Novomatic
+  "greentube":              "Greentube",
+  "novomatic":              "Novomatic",
+
+  // Skywind
+  "skywind":                "Skywind",
+
+  // Slot Mill
+  "slotmill":               "Slot Mill",
+  "slot-mill":              "Slot Mill",
+
+  // Mascot Gaming
+  "mascot":                 "Mascot Gaming",
+  "mascotgaming":           "Mascot Gaming",
+
+  // Slot-croco, sg, sgx, vegas — GambleHub internal labels
+  "slot-croco":             "Swintt",
+  "slotcroco":              "Swintt",
+  "sg":                     "Scientific Games",
+  "sgx":                    "Scientific Games",
+  "vegas":                  "Vegas Slots",
+  "swintt":                 "Swintt",
+
+  // Tada
+  "tada":                   "TaDa Gaming",
+  "tada-gaming":            "TaDa Gaming",
+};
+
+function normalizeProvider(raw: string): string {
+  if (!raw) return "Unknown";
+  const key = raw.toLowerCase().trim();
+  return PROVIDER_DISPLAY[key] ?? raw; // fall back to raw if not in map
+}
+
 // Bucket a provider catalog entry into one of the lobby tabs.
 function tabFor(g: CatalogGame): GameTab {
-  if (LIVE_PROVIDERS.test(g.provider) || /live|roulette|baccarat|blackjack/i.test(g.title))
+  const p = normalizeProvider(g.provider);
+  if (LIVE_PROVIDERS.test(p) || /live|roulette|baccarat|blackjack/i.test(g.title))
     return "live-casino";
-  if (INSTANT_PROVIDERS.test(g.provider)) return "instant";
+  if (INSTANT_PROVIDERS.test(p)) return "instant";
   return "casino";
 }
 
@@ -188,11 +348,12 @@ export function mapCatalog(games: CatalogGame[]): Game[] {
     const tags = tagsFor(g);
     // First 40 catalog entries flagged "new" (the catalog is roughly newest-first).
     if (i < 40) tags.push("new");
+    const provider = normalizeProvider(g.provider);
     out.push({
       id: g.id,
       gameId: g.id,
       name: g.title,
-      provider: g.provider || "Unknown",
+      provider,
       tab: g.account === "live" || g.account === "gambly" ? "live-casino" : tabFor(g),
       account: g.account,
       tags,
