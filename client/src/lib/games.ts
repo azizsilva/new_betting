@@ -155,127 +155,145 @@ function localImage(g: CatalogGame): string | undefined {
 
 // GambleHub returns raw internal provider slugs. Map every known slug to a
 // clean display name used in the filter dropdown and on game cards.
+// Built from the exact provider list returned by the live API (102 providers).
 const PROVIDER_DISPLAY: Record<string, string> = {
-  // ── Pragmatic Play ──────────────────────────────────────────────────────────
+  // Pragmatic Play
+  "pragmatic":               "Pragmatic Play",
   "pragmaticplay":           "Pragmatic Play",
   "pragmatic-play":          "Pragmatic Play",
   "pragmatic_play":          "Pragmatic Play",
-  "pragmatic":               "Pragmatic Play",
+  "pragmatic play":          "Pragmatic Play",
   "slot-pragmatic":          "Pragmatic Play",
   "slot-pp":                 "Pragmatic Play",
   "pp":                      "Pragmatic Play",
 
-  // ── Evolution ───────────────────────────────────────────────────────────────
+  // Evolution
   "evolution":               "Evolution",
   "evolution-gaming":        "Evolution",
   "evolutiongaming":         "Evolution",
+  "evolution gaming":        "Evolution",
   "live-evolution":          "Evolution",
   "evo":                     "Evolution",
 
-  // ── Hacksaw Gaming ──────────────────────────────────────────────────────────
+  // Hacksaw Gaming
   "hacksaw":                 "Hacksaw Gaming",
   "hacksaw-gaming":          "Hacksaw Gaming",
+  "hacksaw gaming":          "Hacksaw Gaming",
   "slot-hacksaw":            "Hacksaw Gaming",
 
-  // ── Nolimit City ────────────────────────────────────────────────────────────
+  // Nolimit City
   "nolimitcity":             "Nolimit City",
   "nolimit-city":            "Nolimit City",
+  "nolimit city":            "Nolimit City",
   "nolimit":                 "Nolimit City",
   "slot-nolimit":            "Nolimit City",
   "nlc":                     "Nolimit City",
 
-  // ── Play'n GO ───────────────────────────────────────────────────────────────
+  // Play'n GO
   "playngo":                 "Play'n GO",
   "play-n-go":               "Play'n GO",
+  "play_n_go":               "Play'n GO",
+  "playn go":                "Play'n GO",
+  "play n go":               "Play'n GO",
   "playingo":                "Play'n GO",
   "png":                     "Play'n GO",
 
-  // ── NetEnt ──────────────────────────────────────────────────────────────────
+  // NetEnt
   "netent":                  "NetEnt",
   "net-ent":                 "NetEnt",
   "net_ent":                 "NetEnt",
 
-  // ── Red Tiger ───────────────────────────────────────────────────────────────
+  // Red Tiger
   "redtiger":                "Red Tiger",
   "red-tiger":               "Red Tiger",
   "red_tiger":               "Red Tiger",
 
-  // ── Spribe ──────────────────────────────────────────────────────────────────
+  // Spribe
   "spribe":                  "Spribe",
 
-  // ── Ezugi ───────────────────────────────────────────────────────────────────
+  // Ezugi
   "ezugi":                   "Ezugi",
 
-  // ── Relax Gaming ────────────────────────────────────────────────────────────
+  // Relax Gaming
   "relaxgaming":             "Relax Gaming",
   "relax-gaming":            "Relax Gaming",
   "relax_gaming":            "Relax Gaming",
+  "relax gaming":            "Relax Gaming",
   "relax":                   "Relax Gaming",
 
-  // ── Push Gaming ─────────────────────────────────────────────────────────────
+  // Push Gaming
   "pushgaming":              "Push Gaming",
   "push-gaming":             "Push Gaming",
+  "push gaming":             "Push Gaming",
   "push":                    "Push Gaming",
 
-  // ── Big Time Gaming ─────────────────────────────────────────────────────────
+  // Big Time Gaming
   "bigtimegaming":           "Big Time Gaming",
   "big-time-gaming":         "Big Time Gaming",
+  "big time gaming":         "Big Time Gaming",
   "btg":                     "Big Time Gaming",
 
-  // ── Thunderkick ─────────────────────────────────────────────────────────────
+  // Thunderkick
   "thunderkick":             "Thunderkick",
 
-  // ── Yggdrasil ───────────────────────────────────────────────────────────────
+  // Yggdrasil
   "yggdrasil":               "Yggdrasil",
   "ygg":                     "Yggdrasil",
 
-  // ── Quickspin ───────────────────────────────────────────────────────────────
+  // Quickspin
   "quickspin":               "Quickspin",
 
-  // ── Microgaming ─────────────────────────────────────────────────────────────
+  // Microgaming
   "microgaming":             "Microgaming",
 
-  // ── iSoftBet ────────────────────────────────────────────────────────────────
+  // iSoftBet
   "isoftbet":                "iSoftBet",
   "isb":                     "iSoftBet",
 
-  // ── Endorphina ──────────────────────────────────────────────────────────────
+  // Endorphina
   "endorphina":              "Endorphina",
 
-  // ── Amatic ──────────────────────────────────────────────────────────────────
+  // Amatic
   "amatic":                  "Amatic",
+  "amatic industries":       "Amatic",
 
-  // ── Habanero ────────────────────────────────────────────────────────────────
+  // Habanero
   "habanero":                "Habanero",
   "slot-habanero":           "Habanero",
   "slothabanero":            "Habanero",
 
-  // ── GameArt ─────────────────────────────────────────────────────────────────
+  // GameArt
   "gameart":                 "GameArt",
   "game-art":                "GameArt",
 
-  // ── Iron Dog Studio / 1x2 Gaming ────────────────────────────────────────────
+  // Iron Dog Studio
   "irondogstudio":           "Iron Dog Studio",
   "irondog":                 "Iron Dog Studio",
   "iron-dog":                "Iron Dog Studio",
+  "iron dog":                "Iron Dog Studio",
+  "iron dog studio":         "Iron Dog Studio",
+
+  // 1x2 Gaming
   "1x2gaming":               "1x2 Gaming",
   "1x2":                     "1x2 Gaming",
   "1x2network":              "1x2 Gaming",
 
-  // ── ReelPlay ────────────────────────────────────────────────────────────────
+  // ReelPlay
   "reelplay":                "ReelPlay",
   "reel-play":               "ReelPlay",
 
-  // ── PG Soft ─────────────────────────────────────────────────────────────────
+  // PG Soft
   "pgsoft":                  "PG Soft",
   "pg-soft":                 "PG Soft",
   "pg_soft":                 "PG Soft",
+  "pgsof":                   "PG Soft",
+  "pg soft":                 "PG Soft",
   "pg":                      "PG Soft",
 
-  // ── Wazdan ──────────────────────────────────────────────────────────────────
+  // Wazdan
   "wazdan":                  "Wazdan",
 
-  // ── Tom Horn ────────────────────────────────────────────────────────────────
+  // Tom Horn Gaming
   "tomhorn":                 "Tom Horn Gaming",
   "tom-horn":                "Tom Horn Gaming",
   "tom_horn":                "Tom Horn Gaming",
@@ -284,46 +302,50 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   "tom-horn-gaming":         "Tom Horn Gaming",
   "tom horn gaming":         "Tom Horn Gaming",
 
-  // ── Spinomenal ──────────────────────────────────────────────────────────────
+  // Spinomenal
   "spinomenal":              "Spinomenal",
 
-  // ── Kalamba Games ───────────────────────────────────────────────────────────
+  // Kalamba Games
   "kalamba":                 "Kalamba Games",
   "kalambagames":            "Kalamba Games",
   "kalamba-games":           "Kalamba Games",
+  "kalamba games":           "Kalamba Games",
 
-  // ── Betsoft ─────────────────────────────────────────────────────────────────
+  // Betsoft
   "betsoft":                 "Betsoft",
 
-  // ── Booming Games ───────────────────────────────────────────────────────────
+  // Booming Games
   "booominggames":           "Booming Games",
   "boominggames":            "Booming Games",
   "booming-games":           "Booming Games",
+  "booming games":           "Booming Games",
   "booming":                 "Booming Games",
 
-  // ── Greentube / Novomatic ───────────────────────────────────────────────────
+  // Greentube / Novomatic
   "greentube":               "Greentube",
   "novomatic":               "Novomatic",
 
-  // ── Skywind ─────────────────────────────────────────────────────────────────
+  // Skywind
   "skywind":                 "Skywind",
 
-  // ── Slot Mill ───────────────────────────────────────────────────────────────
+  // Slot Mill
   "slotmill":                "Slot Mill",
   "slot-mill":               "Slot Mill",
+  "slot mill":               "Slot Mill",
 
-  // ── Mascot Gaming ───────────────────────────────────────────────────────────
+  // Mascot Gaming
   "mascot":                  "Mascot Gaming",
   "mascotgaming":            "Mascot Gaming",
   "mascot-gaming":           "Mascot Gaming",
+  "mascot gaming":           "Mascot Gaming",
 
-  // ── Ruby Play ───────────────────────────────────────────────────────────────
+  // Ruby Play
   "rubyplay":                "Ruby Play",
   "ruby-play":               "Ruby Play",
   "ruby_play":               "Ruby Play",
   "ruby play":               "Ruby Play",
 
-  // ── WMS / Scientific Games / SG Digital ─────────────────────────────────────
+  // SG Digital / WMS / Scientific Games
   "wms":                     "SG Digital",
   "sg":                      "SG Digital",
   "sgx":                     "SG Digital",
@@ -334,193 +356,174 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   "scientificgames":         "SG Digital",
   "scientific games":        "SG Digital",
 
-  // ── Swintt (slot-croco) ──────────────────────────────────────────────────────
+  // Swintt (slot-croco)
   "slot-croco":              "Swintt",
   "slotcroco":               "Swintt",
   "swintt":                  "Swintt",
 
-  // ── Vegas / Vegas BB ────────────────────────────────────────────────────────
+  // Vegas / Vegas BB
   "vegas":                   "Vegas Slots",
   "vegas_bb":                "Vegas BB",
   "vegas-bb":                "Vegas BB",
   "vegasbb":                 "Vegas BB",
 
-  // ── Vibra Gaming ────────────────────────────────────────────────────────────
+  // Vibra Gaming
   "vibragaming":             "Vibra Gaming",
   "vibra-gaming":            "Vibra Gaming",
   "vibra_gaming":            "Vibra Gaming",
+  "vibra gaming":            "Vibra Gaming",
   "vibra":                   "Vibra Gaming",
 
-  // ── Zitro ───────────────────────────────────────────────────────────────────
+  // Zitro
   "zitro":                   "Zitro",
   "zitro-games":             "Zitro",
 
-  // ── TaDa Gaming ─────────────────────────────────────────────────────────────
+  // TaDa Gaming
   "tada":                    "TaDa Gaming",
   "tada-gaming":             "TaDa Gaming",
   "tadagaming":              "TaDa Gaming",
+  "tada gaming":             "TaDa Gaming",
 
-  // ── Fugaso ──────────────────────────────────────────────────────────────────
+  // Fugaso
   "fugaso":                  "Fugaso",
 
-  // ── 3 Oaks Gaming ───────────────────────────────────────────────────────────
+  // 3 Oaks Gaming
   "3oaks":                   "3 Oaks Gaming",
   "3-oaks":                  "3 Oaks Gaming",
   "3oaksgaming":             "3 Oaks Gaming",
+  "3 oaks":                  "3 Oaks Gaming",
+  "3 oaks gaming":           "3 Oaks Gaming",
   "threeoaks":               "3 Oaks Gaming",
 
-  // ── Evoplay ─────────────────────────────────────────────────────────────────
+  // Evoplay
   "evoplay":                 "Evoplay",
   "evo-play":                "Evoplay",
 
-  // ── BGaming ─────────────────────────────────────────────────────────────────
+  // BGaming
   "bgaming":                 "BGaming",
   "b-gaming":                "BGaming",
 
-  // ── Playson ─────────────────────────────────────────────────────────────────
+  // Playson
   "playson":                 "Playson",
 
-  // ── Swintt ──────────────────────────────────────────────────────────────────
+  // Mancala Gaming
   "mancala":                 "Mancala Gaming",
   "mancalagaming":           "Mancala Gaming",
 
-  // ── Turbo Games ─────────────────────────────────────────────────────────────
+  // Turbo Games
   "turbogames":              "Turbo Games",
   "turbo-games":             "Turbo Games",
   "turbo":                   "Turbo Games",
 
-  // ── SmartSoft ───────────────────────────────────────────────────────────────
+  // SmartSoft
   "smartsoft":               "SmartSoft Gaming",
   "smartsoftgaming":         "SmartSoft Gaming",
 
-  // ── Jili ────────────────────────────────────────────────────────────────────
+  // Jili
   "jili":                    "Jili",
 
-  // ── CQ9 ─────────────────────────────────────────────────────────────────────
+  // CQ9
   "cq9":                     "CQ9 Gaming",
   "cq9gaming":               "CQ9 Gaming",
 
-  // ── Fazi ────────────────────────────────────────────────────────────────────
+  // Fazi
   "fazi":                    "Fazi",
 
-  // ── Apollo Games ────────────────────────────────────────────────────────────
+  // Apollo Games
   "apollo":                  "Apollo Games",
   "apollogames":             "Apollo Games",
 
-  // ── Playtech ────────────────────────────────────────────────────────────────
+  // Playtech
   "playtech":                "Playtech",
 
-  // ── IGT ─────────────────────────────────────────────────────────────────────
+  // IGT
   "igt":                     "IGT",
 
-  // ── Aristocrat ──────────────────────────────────────────────────────────────
+  // Aristocrat
   "aristocrat":              "Aristocrat",
 
-  // ── Gamomat ─────────────────────────────────────────────────────────────────
+  // Gamomat
   "gamomat":                 "Gamomat",
 
-  // ── Stakelogic ──────────────────────────────────────────────────────────────
+  // Stakelogic
   "stakelogic":              "Stakelogic",
 
-  // ── Fantasma Games ──────────────────────────────────────────────────────────
+  // Fantasma Games
   "fantasma":                "Fantasma Games",
   "fantasmagames":           "Fantasma Games",
 
-  // ── Northern Lights / Rabcat ────────────────────────────────────────────────
+  // Rabcat / Northern Lights
   "rabcat":                  "Rabcat",
   "northern-lights":         "Northern Lights Gaming",
 
-  // ── Elk Studios ─────────────────────────────────────────────────────────────
+  // ELK Studios
   "elk":                     "ELK Studios",
   "elkstudios":              "ELK Studios",
+  "elk studios":             "ELK Studios",
 
-  // ── Golden Hero ─────────────────────────────────────────────────────────────
+  // Golden Hero
   "goldenhero":              "Golden Hero",
   "golden-hero":             "Golden Hero",
 
-  // ── Ortiz Gaming ────────────────────────────────────────────────────────────
+  // Ortiz Gaming
   "ortiz":                   "Ortiz Gaming",
   "ortizgaming":             "Ortiz Gaming",
 
-  // ── Leap Gaming ─────────────────────────────────────────────────────────────
+  // Leap Gaming
   "leap":                    "Leap Gaming",
   "leapgaming":              "Leap Gaming",
 
-  // ── GambleHub aggregated sub-providers ──────────────────────────────────────
-  // These are the internal labels GambleHub uses for aggregated studios.
-  // ag = Asia Gaming (fish/table/slots)
-  "ag":                      "Asia Gaming",
-  // SL-Games = SL-Games aggregator (slots)
-  "sl-games":                "SL Games",
-  "slgames":                 "SL Games",
-  "sl_games":                "SL Games",
-  // slot7zon = Slot7zon slots
-  "slot7zon":                "Slot7zon",
-  // Games 001 / 002 / 003 = GambleHub internal slot packs
-  "games 001":               "Games Pack 1",
-  "games001":                "Games Pack 1",
-  "games 002":               "Games Pack 2",
-  "games002":                "Games Pack 2",
-  "games 003":               "Games Pack 3",
-  "games003":                "Games Pack 3",
-  // x-games variants
-  "x-games (firekirin)":     "FireKirin",
-  "x-games(firekirin)":      "FireKirin",
-  "xgamesfirekirin":         "FireKirin",
-  "firekirin":               "FireKirin",
-  "x-games (fisho)":         "Fisho Games",
-  "x-games(fisho)":          "Fisho Games",
-  "xgamesfisho":             "Fisho Games",
-  "x-games (slots)":         "X-Games Slots",
-  "x-games(slots)":          "X-Games Slots",
-  "xgamesslots":             "X-Games Slots",
-  "x-games":                 "X-Games",
-  "xgames":                  "X-Games",
-  // nova = Nova slots aggregator
-  "nova":                    "Nova Games",
-  // algNET = AlgNET gaming
-  "algnet":                  "AlgNET",
-  // pixmove = Pixmove
-  "pixmove":                 "Pixmove",
-  // Altenar = sportsbook / virtual sports provider
-  "altenar":                 "Altenar",
+  // EGT / EGT Digital
+  "egt":                     "EGT",
+  "egt digital":             "EGT Digital",
+  "egtdigital":              "EGT Digital",
 
-  // ── TVBet ────────────────────────────────────────────────────────────────────
+  // Misc providers from live API
+  "creedroomz":              "Creedroomz",
+  "hsd":                     "HSD",
+  "bg":                      "BG Gaming",
+  "jdb":                     "JDB",
+  "vivo gaming":             "Vivo Gaming",
+  "vivo live dealers":       "Vivo Live",
+  "ib":                      "IB Games",
+  "ib games":                "IB Games",
+  "altente":                 "Altente",
+  "altenar":                 "Altenar",
+  "cp":                      "CP Games",
+  "pascal":                  "Pascal Gaming",
+  "pascal gaming":           "Pascal Gaming",
+  "fc":                      "FC Gaming",
+  "wg":                      "WG Gaming",
+  "fishing":                 "Fishing Games",
+  "fish":                    "Fishing Games",
+  "algnet":                  "AlgNET",
+  "bally":                   "Bally",
+  "ainsworthanywhere":       "Ainsworth",
+  "ainsworth":               "Ainsworth",
+  "jacktop":                 "Jacktop",
+  "igrosoft":                "Igrosoft",
+  "egaming":                 "eGaming",
+  "7mojos":                  "7Mojos",
+  "firekirin":               "FireKirin",
   "tvbet":                   "TVBet",
   "tv-bet":                  "TVBet",
-  "tv bet":                  "TVBet",
-
-  // ── Pascal Gaming ────────────────────────────────────────────────────────────
-  "pascal":                  "Pascal Gaming",
-  "pascalgaming":            "Pascal Gaming",
-  "pascal-gaming":           "Pascal Gaming",
-  "pascal gaming":           "Pascal Gaming",
-
-  // ── Space/exact variants GambleHub sends for already-mapped providers ────────
-  "pragmatic play":          "Pragmatic Play",
-  "evolution gaming":        "Evolution",
-  "hacksaw gaming":          "Hacksaw Gaming",
-  "nolimit city":            "Nolimit City",
-  "playn go":                "Play'n GO",
-  "play n go":               "Play'n GO",
-  "relax gaming":            "Relax Gaming",
-  "push gaming":             "Push Gaming",
-  "big time gaming":         "Big Time Gaming",
-  "pg soft":                 "PG Soft",
-  "iron dog studio":         "Iron Dog Studio",
-  "iron dog":                "Iron Dog Studio",
-  "kalamba games":           "Kalamba Games",
-  "booming games":           "Booming Games",
-  "slot mill":               "Slot Mill",
-  "mascot gaming":           "Mascot Gaming",
-  "3 oaks gaming":           "3 Oaks Gaming",
-  "3 oaks":                  "3 Oaks Gaming",
-  "elk studios":             "ELK Studios",
-  "tada gaming":             "TaDa Gaming",
-  "vibra gaming":            "Vibra Gaming",
-  "amatic industries":       "Amatic",
-};
-
+  "kajot":                   "Kajot",
+  "royal":                   "Royal Games",
+  "nardsclub":               "NardsClub",
+  "apex":                    "Apex Gaming",
+  "platipus live":           "Platipus Live",
+  "merkur":                  "Merkur",
+  "inbet":                   "Inbet",
+  "dlv":                     "DLV",
+  "rplslots":                "RPL Slots",
+  "agt":                     "AGT",
+  "aviatrix":                "Aviatrix",
+  "bingo":                   "Bingo",
+  "blueprintgaming":         "Blueprint Gaming",
+  "keno":                    "Keno",
+  "nova":                    "Nova Games",
+  "pixmove":                 "Pixmove",
+}
 function normalizeProvider(raw: string): string {
   if (!raw) return "Unknown";
   const key = raw.toLowerCase().trim();
