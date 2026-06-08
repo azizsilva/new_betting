@@ -207,6 +207,7 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   "redtiger":                "Red Tiger",
   "red-tiger":               "Red Tiger",
   "red_tiger":               "Red Tiger",
+  "red tiger":               "Red Tiger",
 
   // Spribe
   "spribe":                  "Spribe",
@@ -479,6 +480,7 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   "egtdigital":              "EGT Digital",
 
   // Misc providers from live API
+  "ag":                      "AGT",
   "creedroomz":              "Creedroomz",
   "hsd":                     "HSD",
   "bg":                      "BG Gaming",
@@ -516,7 +518,6 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   "inbet":                   "Inbet",
   "dlv":                     "DLV",
   "rplslots":                "RPL Slots",
-  "agt":                     "AGT",
   "aviatrix":                "Aviatrix",
   "bingo":                   "Bingo",
   "blueprintgaming":         "Blueprint Gaming",
