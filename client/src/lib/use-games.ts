@@ -11,8 +11,10 @@ export function useGames() {
   const query = useQuery({
     queryKey: ["casino-games"],
     queryFn: () => fetchGames(),
-    staleTime: 5 * 60_000,
-    select: mapCatalog, // map provider catalog → UI Game[] once, memoized by RQ
+    staleTime: 5 * 60_000,   // don't refetch for 5 min after a successful load
+    gcTime: 30 * 60_000,     // keep data in memory for 30 min (survives tab switches)
+    refetchOnWindowFocus: false, // don't re-hit the API every time user alt-tabs back
+    select: mapCatalog,
   });
 
   const games: Game[] = query.data ?? [];

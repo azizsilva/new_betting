@@ -152,6 +152,17 @@ casinoRouter.get(
   }),
 );
 
+// ── Server-side catalog cache (avoids hitting GambleHub on every page load) ──
+// GambleHub takes 2–5 s to respond; caching for 5 min makes the lobby instant
+// for all users after the first request. Cache is per-currency (almost always
+// just TND) and is invalidated automatically after TTL.
+const CATALOG_TTL_MS = 5 * 60 * 1000; // 5 minutes
+interface CatalogEntry {
+  data: ReturnType<typeof Array.prototype.filter>;
+  expiresAt: number;
+}
+const catalogCache = new Map<string, CatalogEntry>();
+
 // Game catalog for the lobby. The catalog is operator-wide (fetched with the
 // operator token, not the player's), so it's public — guests can browse. Playing
 // a game (POST /open) still requires the visitor to be logged in.
@@ -159,6 +170,14 @@ casinoRouter.get(
   "/games",
   asyncHandler(async (req, res) => {
     const currency = (req.query.currency as string)?.toUpperCase() || DEFAULT_CURRENCY;
+
+    // Serve from cache if fresh.
+    const cached = catalogCache.get(currency);
+    if (cached && cached.expiresAt > Date.now()) {
+      res.setHeader("Cache-Control", "public, max-age=60, stale-while-revalidate=300");
+      res.setHeader("X-Cache", "HIT");
+      return res.json(cached.data);
+    }
 
     // Fetch both operator catalogs (slots + live) in parallel and merge. Tag each
     // game with its source account so /open knows which credentials to sign with.
@@ -169,11 +188,17 @@ casinoRouter.get(
 
     const tag = (g: (typeof slotsGames)[number], kind: "slots" | "live") => ({ ...g, account: kind });
     const all = [...slotsGames.map((g) => tag(g, "slots")), ...liveGames.map((g) => tag(g, "live"))];
+    const enabled = all.filter((g) => g.isEnabled);
 
-    res.setHeader("Cache-Control", "no-store");
+    // Store in cache.
+    catalogCache.set(currency, { data: enabled, expiresAt: Date.now() + CATALOG_TTL_MS });
+
+    // Tell browsers + CDN/nginx to cache for 60 s; serve stale up to 5 min while revalidating.
+    res.setHeader("Cache-Control", "public, max-age=60, stale-while-revalidate=300");
+    res.setHeader("X-Cache", "MISS");
     // Return all enabled games. Cards without an imageUrl fall back to their
     // gradient hue in the UI — no server-side filtering by thumbnail.
-    res.json(all.filter((g) => g.isEnabled));
+    res.json(enabled);
   }),
 );
 
