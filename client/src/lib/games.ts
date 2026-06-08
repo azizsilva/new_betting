@@ -524,6 +524,12 @@ const PROVIDER_DISPLAY: Record<string, string> = {
   "keno":                    "Keno",
   "nova":                    "Nova Games",
   "pixmove":                 "Pixmove",
+
+  // New slugs from 7087-game catalog
+  "amusnet":                 "Amusnet",
+  "boongo":                  "Boongo",
+  "hacksaw2":                "Hacksaw Gaming",
+  "sports-betby":            "BetBy Sports",
 }
 function normalizeProvider(raw: string): string {
   if (!raw) return "Unknown";
