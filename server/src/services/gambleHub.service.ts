@@ -220,6 +220,8 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
   const rawBody = JSON.stringify(payload);
   const signature = signHmacSha256Hex(rawBody, acc.secret);
 
+  logger.info({ account: acc.kind, gameId: params.gameId, payload }, "openGame request sent to GambleHub");
+
   let res: Response;
   let rawText: string;
   try {
@@ -234,6 +236,8 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
     throw BadRequest("Could not reach the game provider. Please try again.");
   }
 
+  logger.info({ account: acc.kind, gameId: params.gameId, status: res.status, body: rawText.slice(0, 500) }, "openGame response from GambleHub");
+
   let data: OpenGameResponse = {} as OpenGameResponse;
   try {
     data = JSON.parse(rawText) as OpenGameResponse;
@@ -244,7 +248,7 @@ export async function openGame(params: OpenGameParams): Promise<OpenGameResult> 
 
   if (!res.ok || data.status !== "success") {
     const msg = data.message || data.error || `Game could not be opened (${res.status})`;
-    logger.warn({ account: acc.kind, gameId: params.gameId, status: res.status, error: data.error, msg }, "openGame failed");
+    logger.error({ account: acc.kind, gameId: params.gameId, status: res.status, error: data.error, message: data.message, fullBody: rawText.slice(0, 500) }, "openGame failed");
     throw BadRequest(msg);
   }
 
