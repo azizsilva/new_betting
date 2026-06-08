@@ -68,7 +68,7 @@ function LoginForm({ onDone }: { onDone: () => void }) {
               placeholder="Entrez votre nom d'utilisateur"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="flex h-11 w-full rounded-md border border-line bg-bg-elevated px-10 py-2 text-sm text-fg placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50 disabled:opacity-50"
+              className="flex h-11 w-full rounded-md border border-line bg-bg-elevated px-10 py-2 text-sm text-fg placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50 disabled:opacity-50 text-[16px] md:text-sm"
               disabled={loading}
               autoFocus
             />
@@ -80,7 +80,7 @@ function LoginForm({ onDone }: { onDone: () => void }) {
               placeholder="Entrez votre mot de passe"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="flex h-11 w-full rounded-md border border-line bg-bg-elevated px-10 py-2 text-sm text-fg placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50 disabled:opacity-50"
+              className="flex h-11 w-full rounded-md border border-line bg-bg-elevated px-10 py-2 text-sm text-fg placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50 disabled:opacity-50 text-[16px] md:text-sm"
               disabled={loading}
             />
             <button

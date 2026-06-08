@@ -33,7 +33,7 @@ const hue = (i: number) => HUES[i % HUES.length]!;
 
 const RAW: Array<Omit<Game, "hue">> = [
   { id: "munchy-milo", name: "Munchy Milo", provider: "Hacksaw", tab: "casino", tags: ["new"], featured: true },
-  { id: "book-of-dead", name: "Book of Dead", provider: "Play'n GO", tab: "casino", tags: [] },
+  { id: "5-lions-megaways", name: "5 Lions Megaways", provider: "Pragmatic Play", tab: "casino", tags: ["megaways"], imageUrl: "/images/PPC-5lionsmegaways.jpeg" },
   { id: "jelly-express", name: "Jelly Express", provider: "Pragmatic Play", tab: "casino", tags: ["new"] },
   { id: "power-of-thor", name: "Power of Thor", provider: "Pragmatic Play", tab: "casino", tags: ["megaways"] },
   { id: "big-bass-hold", name: "Big Bass Hold & Spin", provider: "Pragmatic Play", tab: "casino", tags: ["bonus-buy"] },
@@ -50,7 +50,7 @@ const RAW: Array<Omit<Game, "hue">> = [
   { id: "wanted-dead", name: "Wanted Dead or a Wild", provider: "Hacksaw", tab: "casino", tags: ["bonus-buy"], featured: true },
   { id: "amazon-riches", name: "Amazon Riches", provider: "Endorphina", tab: "casino", tags: [], featured: true },
   { id: "chilli-heat", name: "Chilli Heat", provider: "Pragmatic Play", tab: "casino", tags: [], featured: true },
-  { id: "5-lions", name: "5 Lions Megaways", provider: "Pragmatic Play", tab: "casino", tags: ["megaways"] },
+  { id: "candy-bonanza-2", name: "Candy Bonanza 2", provider: "Pragmatic Play", tab: "casino", tags: [] },
   { id: "1m-fortunes", name: "1 Million Fortunes Megaways", provider: "Iron Dog Studio", tab: "casino", tags: ["megaways"] },
   { id: "20-hot-fruits", name: "20 Hot Super Fruits", provider: "GameArt", tab: "casino", tags: [] },
   { id: "3-christmas", name: "3 Christmas Fortunes", provider: "Iron Dog Studio", tab: "casino", tags: [] },
@@ -120,8 +120,8 @@ function slug(s: string): string {
 // is named). Add files here as you download more art.
 const LOCAL_IMAGES: Record<string, string> = {
   munchymilo: "/images/HAK-munchymilo.png",
-  bookofdeadgocollect: "/images/PNG-bookofdeadgocollect.png",
-  bookofdead: "/images/PNG-bookofdeadgocollect.png",
+  "5lionsmegaways": "/images/PPC-5lionsmegaways.jpeg",
+  "5lions": "/images/PPC-5lionsmegaways.jpeg",
   jellyexpress: "/images/PPC-jellyexpress.png",
   powerofthormegaways: "/images/PPC-powerofthormegaways.png",
   powerofthor: "/images/PPC-powerofthormegaways.png",
@@ -210,7 +210,7 @@ export function mapCatalog(games: CatalogGame[]): Game[] {
 // Pin a hand-picked set to the front of the casino grid (kingsbet365 order), the
 // first as a large featured tile. Only games present in the catalog are pinned.
 const CASINO_PINNED = [
-  "bookofdead",
+  "5lionsmegaways",
   "jellyexpress",
   "bigbassholdspinnermegaways",
   "bigbasskeepingitreel",
