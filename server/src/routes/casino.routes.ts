@@ -172,14 +172,23 @@ casinoRouter.get(
 
     // Normalise iGamingAPI shape → { id, title, imageUrl, provider, isEnabled, account }
     // iGamingAPI fields: id(number), game_name, category, game_img, brand_title
-    const games = raw.map((g) => ({
-      id: String(g.id),
-      title: g.game_name,
-      imageUrl: g.game_img ?? "",
-      provider: g.brand_title,
-      isEnabled: true,
-      account: "slots" as const,
-    }));
+    const CF_BASE = "https://imagedelivery.net/nVyft9zNw2I0pNVtrnC1zA";
+    const games = raw.map((g) => {
+      // igamingapis.com/img/{id}.png URLs are broken (404 on their CDN).
+      // The Cloudflare delivery URL uses the same numeric id — swap it out.
+      let imageUrl = g.game_img ?? "";
+      if (imageUrl.includes("igamingapis.com/img/")) {
+        imageUrl = `${CF_BASE}/${g.id}/public`;
+      }
+      return {
+        id: String(g.id),
+        title: g.game_name,
+        imageUrl,
+        provider: g.brand_title,
+        isEnabled: true,
+        account: "slots" as const,
+      };
+    });
 
     catalogCache = { data: games, expiresAt: Date.now() + CATALOG_TTL_MS };
 
