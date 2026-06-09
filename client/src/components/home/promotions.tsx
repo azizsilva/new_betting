@@ -5,8 +5,8 @@ import { Section, SectionHeader } from "@/components/ui/section";
 
 // Two promo cards (local art). Square-ish source images shown side by side.
 const PROMOS = [
-  { src: "/images/image_1.jpeg", alt: "Promotion", href: "/promotions", w: 1310, h: 1201 },
-  { src: "/images/image_2.jpeg", alt: "Promotion", href: "/promotions", w: 1277, h: 1232 },
+  { src: "/images/fire_section2.jpeg", alt: "Promotion", href: "/promotions", w: 1310, h: 1201 },
+  { src: "/images/fire_section3.jpeg", alt: "Promotion", href: "/promotions", w: 1277, h: 1232 },
 ];
 
 export function Promotions() {

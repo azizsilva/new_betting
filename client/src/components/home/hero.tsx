@@ -10,8 +10,8 @@ import { cn } from "@/lib/utils";
 // Hero banners — the images already carry their own text/art, so we don't
 // overlay any copy on top of them.
 const SLIDES = [
-  { image: "/images/banner_2.jpeg", alt: "Promotion" },
-  { image: "/images/banner_1.jpeg", alt: "Promotion" },
+  { image: "/images/fire_bg1.jpeg", alt: "Promotion" },
+  { image: "/images/fire_section_1.jpeg", alt: "Promotion" },
 ];
 
 export function Hero() {
@@ -37,7 +37,7 @@ export function Hero() {
         <div className="flex">
           {SLIDES.map((s) => (
             <div key={s.image} className="relative min-w-0 flex-[0_0_100%]">
-              <div className="relative aspect-1600/800 w-full">
+              <div className="relative aspect-video w-full">
                 <Image
                   src={s.image}
                   alt={s.alt}

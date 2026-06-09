@@ -52,9 +52,9 @@ function LoginForm({ onDone }: { onDone: () => void }) {
       <div className="mb-2 flex flex-col items-center gap-2">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/map-Photoroom.png"
-          alt="BetSlate"
-          className="size-16 object-contain"
+          src="/images/map_fire.jpeg"
+          alt="Firebet24"
+          className="size-16 object-contain rounded-lg"
         />
         <h2 className="text-xl font-bold text-fg">Se connecter</h2>
       </div>

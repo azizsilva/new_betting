@@ -13,8 +13,8 @@ export function Logo({
 }) {
   const logo = (
     <img
-      src="/images/logo_2_afroo-removebg-preview.png"
-      alt="BetSlate"
+      src="/images/fire_logo-Photoroom.png"
+      alt="Firebet24"
       style={{ height: size }}
       className={cn("w-auto object-contain", className)}
     />
