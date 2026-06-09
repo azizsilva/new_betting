@@ -1,7 +1,15 @@
 import axios from "axios";
 import { useAuthStore } from "@/store/auth";
 
-export const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000/api";
+// In production the Next.js app is served behind an Nginx reverse proxy that
+// forwards /api/* → localhost:4000. Using a relative base means the browser
+// never tries to reach localhost:4000 directly (which breaks when the client
+// is loaded from a remote IP). Falls back to localhost only in local dev.
+export const API_BASE =
+  process.env.NEXT_PUBLIC_API_URL ??
+  (typeof window !== "undefined" && window.location.hostname !== "localhost"
+    ? "/api"
+    : "http://localhost:4000/api");
 
 export const api = axios.create({
   baseURL: API_BASE,
