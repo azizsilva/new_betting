@@ -640,12 +640,12 @@ interface CuratedPick {
 }
 
 const HOME_CASINO: CuratedPick[] = [
-  { slug: "gatesofolympus",            name: "Gates of Olympus",           provider: "Pragmatic Play" },
-  { slug: "allwaysfruits",             name: "All Ways Fruits",            provider: "Amatic" },
-  { slug: "hothotfruit",               name: "Hot Hot Fruit",              provider: "Habanero" },
-  { slug: "wanteddeadorawild",         name: "Wanted Dead or a Wild",      provider: "Hacksaw" },
-  { slug: "bigbassholdspinnermegaways", name: "Big Bass Hold & Spinner",   provider: "Pragmatic Play" },
-  { slug: "billyonair",                name: "Billy on Air",               provider: "Pragmatic Play" },
+  { slug: "sweetbonanza1000",          name: "Sweet Bonanza 1000",         provider: "Pragmatic Play",  match: ["sweetbonanza1000","sweetbonanza"] },
+  { slug: "bigbassholdspinnermegaways",name: "Big Bass Hold & Spinner",    provider: "Pragmatic Play",  match: ["bigbassholdspinnermegaways","bigbassholdspin"] },
+  { slug: "jellyexpress",              name: "Jelly Express",              provider: "Pragmatic Play",  match: ["jellyexpress"] },
+  { slug: "5lionsmegaways",            name: "5 Lions Megaways",           provider: "Pragmatic Play",  match: ["5lionsmegaways","5lions"] },
+  { slug: "madamedestinymegaways",     name: "Madame Destiny",             provider: "Pragmatic Play",  match: ["madamedestinymegaways","madamedestiny"] },
+  { slug: "powerofthormegaways",       name: "Power of Thor Megaways",     provider: "Pragmatic Play",  match: ["powerofthormegaways","powerofthor"] },
 ];
 
 // Live games — local Evolution art, launched via Gamblly. `match` lists the
@@ -689,6 +689,11 @@ function curatedRow(all: Game[], picks: CuratedPick[], defaultAccount?: "slots" 
 }
 
 export function homeCasinoRow(all: Game[]): Game[] {
+  // Use the first 6 slot games from the live iGamingAPI catalog so we always
+  // show real CDN images from the provider — no hardcoded local art needed.
+  const fromCatalog = all.filter((g) => g.tab === "casino" && g.account === "slots" && g.imageUrl).slice(0, 6);
+  if (fromCatalog.length >= 6) return fromCatalog;
+  // Fallback to curated picks if the catalog hasn't loaded yet.
   return curatedRow(all, HOME_CASINO);
 }
 export function homeLiveRow(all: Game[]): Game[] {

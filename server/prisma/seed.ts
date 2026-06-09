@@ -133,6 +133,7 @@ async function main() {
 
   // ── Players created by the agent (the public can't self-register) ──
   const players = [
+    { username: "aziz123", password: "aziz123", mobile: "9120000000", balance: 1000 },
     { username: "azizsila", password: "player123", mobile: "9120000001", balance: 452.38 },
     { username: "player2", password: "player123", mobile: "9120000002", balance: 1200 },
     { username: "player3", password: "player123", mobile: "9120000003", balance: 0 },
