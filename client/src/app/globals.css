@@ -7,18 +7,18 @@
    ───────────────────────────────────────────────────────────── */
 
 @theme {
-  /* Brand — pink accent on pure black */
-  --color-brand: #ec4899; /* signature pink accent */
-  --color-brand-2: #f9a8d4; /* light pink (gradient top) */
-  --color-brand-3: #be185d; /* deep pink (gradient bottom) */
-  --color-brand-foreground: #1a0010;
-  --color-green: #2fbf4f; /* green secondary accent */
+  /* Brand — fire red accent on pure black */
+  --color-brand: #e8321a; /* signature fire red */
+  --color-brand-2: #ff6b47; /* light red/orange (gradient top) */
+  --color-brand-3: #b91c0a; /* deep red (gradient bottom) */
+  --color-brand-foreground: #1a0000;
+  --color-green: #2fbf4f;
   --color-green-2: #66e07f;
   --color-cyan: #22d3ee;
-  --color-gold: #ec4899;
+  --color-gold: #e8321a;
   --color-silver: #c9ccd2;
   --color-bronze: #c9885a;
-  --color-danger: #ec4040; /* EN DIRECT red */
+  --color-danger: #ec4040;
 
   /* Surfaces — pure black palette */
   --color-bg: #060606;
@@ -30,7 +30,7 @@
   --color-fg: #f3f3f5;
 
   /* Pink gradient used on primary buttons */
-  --gradient-gold: linear-gradient(180deg, #f9a8d4 0%, #ec4899 45%, #be185d 100%);
+  --gradient-gold: linear-gradient(180deg, #ff6b47 0%, #e8321a 45%, #b91c0a 100%);
 
   --radius: 0.625rem;
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
