@@ -37,14 +37,15 @@ export function Hero() {
         <div className="flex">
           {SLIDES.map((s) => (
             <div key={s.image} className="relative min-w-0 flex-[0_0_100%]">
-              <div className="relative aspect-video w-full">
+              <div className="relative w-full">
                 <Image
                   src={s.image}
                   alt={s.alt}
-                  fill
+                  width={1600}
+                  height={800}
                   priority
                   sizes="100vw"
-                  className="object-cover"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>
