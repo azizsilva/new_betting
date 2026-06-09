@@ -6,9 +6,8 @@ export interface OpenGameResult {
   sessionId: string;
 }
 
-// Fetch the live game catalog. Currency is optional — when omitted the server
-// uses its configured default (GAMBLEHUB_CURRENCY, e.g. TND). Merges the Gamblly
-// live-casino games (separate provider) so the Live Casino tab shows them.
+// Fetch the slots catalog from iGamingAPI and merge Gambly live-casino games.
+// iGamingAPI games go to the Casino/Slots tab; Gambly games go to Live Casino.
 export async function fetchGames(currency?: string): Promise<CatalogGame[]> {
   const [casino, gambly] = await Promise.all([
     api
@@ -37,7 +36,7 @@ export async function fetchGamblyLiveGames(): Promise<CatalogGame[]> {
 }
 
 // Open a game session → returns the iframe url + session id.
-// account "gambly" routes to the Gamblly V1 launcher; otherwise Gamble Hub.
+// account "gambly" routes to the Gambly V1 launcher; otherwise iGamingAPI slots.
 export async function openGame(
   gameId: string,
   opts: { demo?: boolean; language?: string; account?: "slots" | "live" | "gambly" } = {},

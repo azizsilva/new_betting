@@ -32,24 +32,21 @@ const schema = z.object({
   GAMBLY_CALLBACK_URL: z.string().optional().default(""), // our public callback (set in Gambly panel)
   GAMBLY_CURRENCY: z.string().optional().default("TND"),
 
-  // Gamble Hub aggregator (Evolution, Amatic, slots, …) — seamless wallet.
-  // Defaults to PRODUCTION hosts. For stage testing override in .env with the
-  // -dev hosts: office-api-dev.gamble-hub.net / client-api-dev.gamble-hub.net.
-  GAMBLEHUB_OFFICE_URL: z.string().default("https://office-api.gamble-hub.net"),
-  GAMBLEHUB_CLIENT_URL: z.string().default("https://client-api.gamble-hub.net"),
-  GAMBLEHUB_LOGIN: z.string().optional().default(""),
-  GAMBLEHUB_PASSWORD: z.string().optional().default(""),
-  GAMBLEHUB_USER_ID: z.string().optional().default(""),
-  GAMBLEHUB_SECRET: z.string().optional().default(""), // HMAC-SHA256 user secret
-  GAMBLEHUB_CALLBACK_URL: z.string().optional().default(""), // override admin default; empty = use panel default
-  GAMBLEHUB_CURRENCY: z.string().optional().default("TND"), // catalog + session currency
+  // iGamingAPI aggregator (slots) — seamless wallet.
+  IGAMINGAPI_OFFICE_URL: z.string().default("https://office-api.igamingapi.com"),
+  IGAMINGAPI_CLIENT_URL: z.string().default("https://client-api.igamingapi.com"),
+  IGAMINGAPI_LOGIN: z.string().optional().default(""),
+  IGAMINGAPI_PASSWORD: z.string().optional().default(""),
+  IGAMINGAPI_USER_ID: z.string().optional().default(""),
+  IGAMINGAPI_SECRET: z.string().optional().default(""),
+  IGAMINGAPI_CALLBACK_URL: z.string().optional().default(""),
+  IGAMINGAPI_CURRENCY: z.string().optional().default("TND"),
 
-  // Separate LIVE-casino account (Evolution live games are under a different
-  // operator account than slots). Falls back to the main account if unset.
-  GAMBLEHUB_LIVE_LOGIN: z.string().optional().default(""),
-  GAMBLEHUB_LIVE_PASSWORD: z.string().optional().default(""),
-  GAMBLEHUB_LIVE_USER_ID: z.string().optional().default(""),
-  GAMBLEHUB_LIVE_SECRET: z.string().optional().default(""),
+  // Separate LIVE-casino account. Falls back to the main account if unset.
+  IGAMINGAPI_LIVE_LOGIN: z.string().optional().default(""),
+  IGAMINGAPI_LIVE_PASSWORD: z.string().optional().default(""),
+  IGAMINGAPI_LIVE_USER_ID: z.string().optional().default(""),
+  IGAMINGAPI_LIVE_SECRET: z.string().optional().default(""),
 
   PSP_API_BASE_URL: z.string().optional().default(""),
   PSP_API_KEY: z.string().optional().default(""),

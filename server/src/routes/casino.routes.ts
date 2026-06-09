@@ -3,7 +3,7 @@ import { z } from "zod";
 import { asyncHandler } from "../middleware/error.js";
 import { authenticate, requireRole } from "../middleware/auth.js";
 import { processGameCallback } from "../services/gameCallback.service.js";
-import { getUserGames, openGame } from "../services/gambleHub.service.js";
+import { getUserGames, openGame } from "../services/igamingapi.service.js";
 import * as userService from "../services/user.service.js";
 import { verifyHmac } from "../lib/hmac.js";
 import { prisma } from "../lib/prisma.js";
@@ -14,8 +14,8 @@ import { NotFound } from "../lib/errors.js";
 export const casinoRouter = Router();
 
 // Default session currency. Games are registered under TND in this operator's account.
-// Override with GAMBLEHUB_CURRENCY env var if needed.
-const DEFAULT_CURRENCY = (env.GAMBLEHUB_CURRENCY || "TND").toUpperCase();
+// Override with IGAMINGAPI_CURRENCY env var if needed.
+const DEFAULT_CURRENCY = (env.IGAMINGAPI_CURRENCY || "TND").toUpperCase();
 
 // ─── Player-facing ────────────────────────────────────────────────────────────
 
@@ -152,53 +152,40 @@ casinoRouter.get(
   }),
 );
 
-// ── Server-side catalog cache (avoids hitting GambleHub on every page load) ──
-// GambleHub takes 2–5 s to respond; caching for 5 min makes the lobby instant
-// for all users after the first request. Cache is per-currency (almost always
-// just TND) and is invalidated automatically after TTL.
-const CATALOG_TTL_MS = 5 * 60 * 1000; // 5 minutes
-interface CatalogEntry {
-  data: ReturnType<typeof Array.prototype.filter>;
-  expiresAt: number;
-}
-const catalogCache = new Map<string, CatalogEntry>();
+// ── Server-side catalog cache (5 min TTL) ─────────────────────────────────────
+const CATALOG_TTL_MS = 5 * 60 * 1000;
+let catalogCache: { data: object[]; expiresAt: number } | null = null;
 
-// Game catalog for the lobby. The catalog is operator-wide (fetched with the
-// operator token, not the player's), so it's public — guests can browse. Playing
-// a game (POST /open) still requires the visitor to be logged in.
+// GET /casino/games — slots catalog from iGamingAPI (public, guests can browse).
+// Live casino games come from Gambly via a separate /gambly/games route.
 casinoRouter.get(
   "/games",
   asyncHandler(async (req, res) => {
-    const currency = (req.query.currency as string)?.toUpperCase() || DEFAULT_CURRENCY;
-
     // Serve from cache if fresh.
-    const cached = catalogCache.get(currency);
-    if (cached && cached.expiresAt > Date.now()) {
+    if (catalogCache && catalogCache.expiresAt > Date.now()) {
       res.setHeader("Cache-Control", "public, max-age=60, stale-while-revalidate=300");
       res.setHeader("X-Cache", "HIT");
-      return res.json(cached.data);
+      return res.json(catalogCache.data);
     }
 
-    // Fetch both operator catalogs (slots + live) in parallel and merge. Tag each
-    // game with its source account so /open knows which credentials to sign with.
-    const [slotsGames, liveGames] = await Promise.all([
-      getUserGames(currency, "slots").catch(() => []),
-      getUserGames(currency, "live").catch(() => []),
-    ]);
+    const raw = await getUserGames();
 
-    const tag = (g: (typeof slotsGames)[number], kind: "slots" | "live") => ({ ...g, account: kind });
-    const all = [...slotsGames.map((g) => tag(g, "slots")), ...liveGames.map((g) => tag(g, "live"))];
-    const enabled = all.filter((g) => g.isEnabled);
+    // Normalise iGamingAPI shape → { id, title, imageUrl, provider, isEnabled, account }
+    // iGamingAPI fields: id(number), game_name, category, game_img, brand_title
+    const games = raw.map((g) => ({
+      id: String(g.id),
+      title: g.game_name,
+      imageUrl: g.game_img ?? "",
+      provider: g.brand_title,
+      isEnabled: true,
+      account: "slots" as const,
+    }));
 
-    // Store in cache.
-    catalogCache.set(currency, { data: enabled, expiresAt: Date.now() + CATALOG_TTL_MS });
+    catalogCache = { data: games, expiresAt: Date.now() + CATALOG_TTL_MS };
 
-    // Tell browsers + CDN/nginx to cache for 60 s; serve stale up to 5 min while revalidating.
     res.setHeader("Cache-Control", "public, max-age=60, stale-while-revalidate=300");
     res.setHeader("X-Cache", "MISS");
-    // Return all enabled games. Cards without an imageUrl fall back to their
-    // gradient hue in the UI — no server-side filtering by thumbnail.
-    res.json(enabled);
+    res.json(games);
   }),
 );
 
@@ -208,7 +195,7 @@ const openSchema = z.object({
   demo: z.boolean().optional(),
   language: z.string().min(2).max(5).optional(),
   exitUrl: z.string().url().optional(),
-  account: z.enum(["slots", "live"]).optional(),
+  account: z.enum(["slots", "live"]).optional(), // kept for compat, only "slots" used
 });
 
 casinoRouter.post(
@@ -234,7 +221,6 @@ casinoRouter.post(
       language: body.language ?? user.language,
       demo: body.demo,
       exitUrl: body.exitUrl ?? env.CLIENT_ORIGIN.split(",")[0]!.trim(),
-      kind: body.account ?? "slots",
     });
 
     // Track recently played (best-effort). Never let a logging write — or a
@@ -267,7 +253,7 @@ interface CallbackOk {
 
 const num = z.union([z.number(), z.string()]).transform((v) => Number(v) || 0);
 
-// GambleHub sends "sessionId" (camelCase) in POST body, "sessionid" (lowercase) in GET.
+// iGamingAPI sends "sessionId" (camelCase) in POST body, "sessionid" (lowercase) in GET.
 // Accept both with .or() so Zod doesn't reject either variant.
 const sessionidField = z.union([z.string(), z.undefined()]).optional();
 
@@ -314,7 +300,7 @@ function fail(res: import("express").Response, currency: string, login: string, 
 const callbackDebugLog: object[] = [];
 casinoRouter.get("/callback-debug", (_req, res) => res.json(callbackDebugLog));
 
-// GambleHub sends callbacks as GET with query params OR POST with JSON body.
+// iGamingAPI sends callbacks as GET with query params OR POST with JSON body.
 // Accept both methods on the same handler.
 casinoRouter.all(
   "/callback",
@@ -325,7 +311,7 @@ casinoRouter.all(
     const signature = (req.headers["x-signature"] as string) || "";
 
     const cmd = (combined as any)?.cmd;
-    // GambleHub sends "sessionId" (camelCase) in POST body but "sessionid" (lowercase) in GET params.
+    // iGamingAPI sends "sessionId" (camelCase) in POST body but "sessionid" (lowercase) in GET params.
     const sessionid: string = (combined as any)?.sessionId ?? (combined as any)?.sessionid ?? "";
 
     // Log every callback so we can inspect exact incoming fields.
@@ -344,9 +330,9 @@ casinoRouter.all(
 
     // 1) Verify HMAC over the exact received bytes. Callbacks may come from either
     // operator account (slots or live), so accept a signature from either secret.
-    // If GambleHub sends no signature at all, log a warning but still process —
+    // If iGamingAPI sends no signature at all, log a warning but still process —
     // the session lookup below acts as a second factor (unknown session → rejected).
-    const secrets = [env.GAMBLEHUB_SECRET, env.GAMBLEHUB_LIVE_SECRET].filter(Boolean);
+    const secrets = [env.IGAMINGAPI_SECRET, env.IGAMINGAPI_LIVE_SECRET].filter(Boolean);
     if (signature) {
       const sigOk = secrets.some((s) => verifyHmac(raw, signature, s));
       if (!sigOk) {

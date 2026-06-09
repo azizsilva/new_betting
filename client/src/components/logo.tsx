@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-// AfroBet216 brand logo.
+// BetSlate brand logo.
 export function Logo({
   size = 40,
   href = "/",
@@ -14,7 +14,7 @@ export function Logo({
   const logo = (
     <img
       src="/images/logo_2_afroo-removebg-preview.png"
-      alt="AfroBet216"
+      alt="BetSlate"
       style={{ height: size }}
       className={cn("w-auto object-contain", className)}
     />

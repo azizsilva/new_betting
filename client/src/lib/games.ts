@@ -96,7 +96,7 @@ export const QUICK_FILTERS: { id: GameTag | "all"; label: string }[] = [
   { id: "crash", label: "Crash Games" },
 ];
 
-// ─── Live catalog mapping (Gamble Hub) ────────────────────────────────────────
+// ─── Live catalog mapping (iGamingAPI slots + Gambly live) ───────────────────
 
 // Raw shape returned by GET /casino/games.
 export interface CatalogGame {
@@ -153,9 +153,8 @@ function localImage(g: CatalogGame): string | undefined {
   return LOCAL_IMAGES[slug(g.title)];
 }
 
-// GambleHub returns raw internal provider slugs. Map every known slug to a
+// iGamingAPI returns raw internal provider slugs. Map every known slug to a
 // clean display name used in the filter dropdown and on game cards.
-// Built from the exact provider list returned by the live API (102 providers).
 const PROVIDER_DISPLAY: Record<string, string> = {
   // Pragmatic Play
   "pragmatic":               "Pragmatic Play",

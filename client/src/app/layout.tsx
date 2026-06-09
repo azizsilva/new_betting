@@ -9,10 +9,10 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 const SITE = {
-  name: "AfroBet216",
+  name: "BetSlate",
   description:
-    "AfroBet216 — paris sportifs en direct & casino en ligne. Cotes en temps réel sur le football, le tennis et plus, plus des milliers de jeux de casino, machines à sous et casino live (Evolution).",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://afrobet216.com",
+    "BetSlate — paris sportifs en direct & casino en ligne. Cotes en temps réel sur le football, le tennis et plus, plus des milliers de jeux de casino, machines à sous et casino live (Evolution).",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://betslate.com",
 };
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   keywords: [
-    "afrobet216",
+    "betslate",
     "paris sportifs",
     "casino en ligne",
     "machines à sous",

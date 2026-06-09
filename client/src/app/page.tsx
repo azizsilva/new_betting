@@ -7,7 +7,7 @@ import { Promotions } from "@/components/home/promotions";
 import { HomeCasinoRow, HomeLiveRow } from "@/components/casino/home-game-rows";
 import { LatestWins } from "@/components/home/latest-wins";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://afrobet216.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://betslate.com";
 
 // Structured data → richer Google results (org + site search box).
 const jsonLd = {
@@ -15,13 +15,13 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      name: "AfroBet216",
+      name: "BetSlate",
       url: SITE_URL,
       logo: `${SITE_URL}/logo.png`,
     },
     {
       "@type": "WebSite",
-      name: "AfroBet216",
+      name: "BetSlate",
       url: SITE_URL,
       potentialAction: {
         "@type": "SearchAction",

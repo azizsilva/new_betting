@@ -112,7 +112,7 @@ export function PanelShell({ children }: { children: ReactNode }) {
         <div className="mx-auto flex w-full flex-col items-center justify-between gap-2 px-4 py-4 text-xs text-muted sm:flex-row sm:px-6">
           <div className="flex items-center gap-2">
             <Logo size={28} href={null} className="h-7 w-auto" />
-            <span>© {new Date().getFullYear()} AfroBet216 — Control Panel</span>
+            <span>© {new Date().getFullYear()} BetSlate — Control Panel</span>
           </div>
           <span>Logged in as {user.username} · {ROLE_LABEL[user.role ?? ""] ?? user.role}</span>
         </div>

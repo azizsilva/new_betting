@@ -9,10 +9,10 @@ import { GameGridSkeleton } from "@/components/ui/skeleton";
 export const metadata: Metadata = {
   title: "Casino — Machines à Sous, Casino Live & Jeux Instantanés",
   description:
-    "Jouez à des milliers de jeux de casino sur AfroBet216 — machines à sous, tables de casino live (Evolution), Megaways, bonus-buy et jeux crash des meilleurs fournisseurs.",
+    "Jouez à des milliers de jeux de casino sur BetSlate — machines à sous, tables de casino live (Evolution), Megaways, bonus-buy et jeux crash des meilleurs fournisseurs.",
   alternates: { canonical: "/casino" },
   openGraph: {
-    title: "Casino — Machines à Sous, Casino Live & Jeux Instantanés · AfroBet216",
+    title: "Casino — Machines à Sous, Casino Live & Jeux Instantanés · BetSlate",
     description:
       "Des milliers de jeux de casino : machines à sous, casino live, Megaways, bonus-buy et crash.",
     url: "/casino",

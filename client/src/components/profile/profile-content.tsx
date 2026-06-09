@@ -58,7 +58,7 @@ export function ProfileContent({ user, active }: { user: User; active: string })
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/logo_2_afroo-removebg-preview.png"
-          alt="AfroBet216"
+          alt="BetSlate"
           className="mx-auto h-16 w-auto object-contain"
         />
         <h2 className="mt-4 text-2xl font-bold">Welcome to your personal space</h2>

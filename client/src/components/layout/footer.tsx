@@ -48,14 +48,14 @@ export function Footer() {
         <div>
           <Logo size={64} className="h-16 w-auto" />
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
-            The administration of &ldquo;AfroBet216&rdquo; undertakes to provide a service —
+            The administration of &ldquo;BetSlate&rdquo; undertakes to provide a service —
             accepting a bet on a sporting result. The user undertakes to pay by crediting funds to
             the gaming account. All rights reserved and protected by law.
           </p>
-          <p className="mt-3 text-sm text-muted">© 2020–{new Date().getFullYear()} AfroBet216</p>
+          <p className="mt-3 text-sm text-muted">© 2020–{new Date().getFullYear()} BetSlate</p>
           <div className="mt-4 flex gap-2">
             <a
-              href="https://t.me/Afrobet216"
+              href="https://t.me/BetSlate"
               target="_blank"
               rel="noopener noreferrer"
               className="grid size-9 place-items-center rounded-lg border border-line text-fg hover:border-gold/50 hover:text-gold"
@@ -64,7 +64,7 @@ export function Footer() {
               <TelegramIcon className="size-4" />
             </a>
             <a
-              href="https://www.instagram.com/afrobet216"
+              href="https://www.instagram.com/betslate"
               target="_blank"
               rel="noopener noreferrer"
               className="grid size-9 place-items-center rounded-lg border border-line text-fg hover:border-gold/50 hover:text-gold"
@@ -73,7 +73,7 @@ export function Footer() {
               <InstagramIcon className="size-4" />
             </a>
             <a
-              href="mailto:Afrobet216@gmail.com"
+              href="mailto:betslate@gmail.com"
               className="grid size-9 place-items-center rounded-lg border border-line text-fg hover:border-gold/50 hover:text-gold"
               aria-label="Email"
             >

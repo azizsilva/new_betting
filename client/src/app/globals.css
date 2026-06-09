@@ -7,15 +7,15 @@
    ───────────────────────────────────────────────────────────── */
 
 @theme {
-  /* Brand — AfroBet216 gold + green on pure black (matches the logo) */
-  --color-brand: #e8c349; /* signature gold accent */
-  --color-brand-2: #f6dd86; /* light gold (gradient top) */
-  --color-brand-3: #b8862f; /* deep gold (gradient bottom) */
-  --color-brand-foreground: #100b02;
-  --color-green: #2fbf4f; /* logo green secondary accent */
+  /* Brand — pink accent on pure black */
+  --color-brand: #ec4899; /* signature pink accent */
+  --color-brand-2: #f9a8d4; /* light pink (gradient top) */
+  --color-brand-3: #be185d; /* deep pink (gradient bottom) */
+  --color-brand-foreground: #1a0010;
+  --color-green: #2fbf4f; /* green secondary accent */
   --color-green-2: #66e07f;
   --color-cyan: #22d3ee;
-  --color-gold: #e8c349;
+  --color-gold: #ec4899;
   --color-silver: #c9ccd2;
   --color-bronze: #c9885a;
   --color-danger: #ec4040; /* EN DIRECT red */
@@ -29,8 +29,8 @@
   --color-muted: #8a8a92;
   --color-fg: #f3f3f5;
 
-  /* Gold gradient used on primary buttons */
-  --gradient-gold: linear-gradient(180deg, #f6dd86 0%, #e8c349 45%, #b8862f 100%);
+  /* Pink gradient used on primary buttons */
+  --gradient-gold: linear-gradient(180deg, #f9a8d4 0%, #ec4899 45%, #be185d 100%);
 
   --radius: 0.625rem;
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
@@ -79,7 +79,7 @@
   .odds-flash {
     animation: odds-flash 0.7s ease-out;
   }
-  /* Gold gradient surfaces (buttons, accents) */
+  /* Pink gradient surfaces (buttons, accents) */
   .bg-gold-gradient {
     background: var(--gradient-gold);
   }

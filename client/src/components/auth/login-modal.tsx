@@ -53,7 +53,7 @@ function LoginForm({ onDone }: { onDone: () => void }) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/map-Photoroom.png"
-          alt="AfroBet216"
+          alt="BetSlate"
           className="size-16 object-contain"
         />
         <h2 className="text-xl font-bold text-fg">Se connecter</h2>
