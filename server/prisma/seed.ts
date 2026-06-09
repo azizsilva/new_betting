@@ -1,5 +1,13 @@
+import { fileURLToPath } from "node:url";
+import path from "node:path";
+import dotenv from "dotenv";
 import { PrismaClient, type UserRole } from "@prisma/client";
 import argon2 from "argon2";
+
+// Load .env from server root (works from any cwd)
+const here = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.resolve(here, "../.env") });
+dotenv.config();
 
 const prisma = new PrismaClient();
 
